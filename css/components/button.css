@@ -1,0 +1,232 @@
+/* ========================================
+   Button Component - Apple Design + Impact
+   ======================================== */
+
+/* Button - NO INIT ANIMATIONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(0) scale(1);
+}
+
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button sizes */
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-2xl);
+}
+
+/* Button variants */
+
+/* Primary - VÝRAZNÝ CTA */
+.btn--primary {
+  background: linear-gradient(135deg,
+    rgba(0, 122, 255, 1) 0%,
+    rgba(0, 102, 255, 1) 100%
+  );
+  color: rgba(255, 255, 255, 1);
+  font-weight: var(--font-bold);
+  border: 1px solid rgba(90, 200, 250, 0.5);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(135deg,
+    rgba(0, 140, 255, 1) 0%,
+    rgba(0, 122, 255, 1) 100%
+  );
+  transition: all var(--transition-base);
+}
+
+.btn--primary:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* Outline - Subtle glass */
+.btn--outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-base);
+}
+
+.btn--outline:active {
+  transform: translateY(0) scale(1);
+}
+
+/* Ghost */
+.btn--ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.btn--ghost:hover {
+  background-color: var(--color-light-dark);
+  transition: all var(--transition-base);
+}
+
+/* Link style button */
+.btn--link {
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 0;
+}
+
+.btn--link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  transition: all var(--transition-base);
+}
+
+/* Full width */
+.btn--block {
+  width: 100%;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.btn-group--center {
+  justify-content: center;
+}
+
+/* Icon buttons */
+.btn--icon {
+  padding: var(--space-3);
+  width: 44px;
+  height: 44px;
+}
+
+.btn--icon.btn--sm {
+  padding: var(--space-2);
+  width: 36px;
+  height: 36px;
+}
+
+.btn--icon.btn--lg {
+  padding: var(--space-4);
+  width: 52px;
+  height: 52px;
+}
+
+/* ========================================
+   Theme Toggle Button
+   ======================================== */
+
+.theme-toggle {
+  position: fixed;
+  top: var(--space-5);
+  right: var(--space-5);
+  z-index: var(--z-fixed);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid var(--theme-border-color-strong);
+  border-radius: var(--radius-full);
+  background: var(--theme-glass-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px var(--theme-shadow-color);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle__icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--theme-text-primary);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+}
+
+/* Dark theme: show sun (to switch to light) */
+.theme-toggle__icon--sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-toggle__icon--moon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+/* Light theme: show moon (to switch to dark) */
+.light-theme .theme-toggle__icon--sun,
+[data-theme="light"] .theme-toggle__icon--sun {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.light-theme .theme-toggle__icon--moon,
+[data-theme="light"] .theme-toggle__icon--moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Switching animation */
+.theme-toggle--switching {
+  animation: themeToggleSpin 0.5s ease;
+}
+
+@keyframes themeToggleSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.8); }
+  100% { transform: rotate(360deg) scale(1); }
+}

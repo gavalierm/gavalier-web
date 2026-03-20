@@ -1,0 +1,59 @@
+/* ========================================
+   Clients & Partners Logos Section
+   3 riadky, horizontálny scroll
+   ======================================== */
+
+.section.clients-logos {
+  padding: var(--space-10) 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.clients-logos .container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  display: block;
+}
+
+.clients-logos__grid {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: 280px;
+  gap: var(--space-8);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: var(--space-6) var(--space-6);
+  width: 100%;
+}
+
+.clients-logos__grid::-webkit-scrollbar {
+  display: none;
+}
+
+.clients-logos__item {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.clients-logos__logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-logos__logo img,
+.clients-logos__logo svg {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  filter: var(--theme-logo-filter);
+  transition: filter 0.3s ease;
+}

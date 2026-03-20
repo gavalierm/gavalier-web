@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marcel Gavalier - Solution Architect s 12+ rokmi skúseností. Programovanie, webové aplikácie, audio & video produkcia, live streaming a IT poradenstvo. Správne riešenia pre váš biznis.">
+  <meta name="keywords" content="programátor Košice, webové aplikácie, JavaScript developer, PHP developer, audio produkcia, video produkcia, live streaming, FOH sound engineer, IT konzultant, solution architect, technické poradenstvo">
+  <meta name="author" content="Marcel Gavalier">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://gavalier.sk/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gavalier.sk/">
+  <meta property="og:title" content="Marcel Gavalier - Solution Architect | Programátor | Audio Video expert">
+  <meta property="og:description" content="12+ rokov skúseností v IT, programovaní a audio/video produkcii. Komplexné riešenia: webové aplikácie, live streaming, FOH sound engineering a IT poradenstvo.">
+  <meta property="og:image" content="https://gavalier.sk/assets/og_image.png">
+  <meta property="og:image:width" content="1212">
+  <meta property="og:image:height" content="716">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:site_name" content="Gavalier">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gavalier.sk/">
+  <meta name="twitter:title" content="Marcel Gavalier - Solution Architect | Programátor | Audio Video expert">
+  <meta name="twitter:description" content="12+ rokov skúseností v IT, programovaní a audio/video produkcii. Komplexné riešenia pre váš biznis.">
+  <meta name="twitter:image" content="https://gavalier.sk/assets/og_image.png">
+
+  <!-- Additional SEO -->
+  <meta name="geo.region" content="SK-KI">
+  <meta name="geo.placename" content="Košice">
+  <meta name="geo.position" content="48.7164;21.2611">
+  <meta name="ICBM" content="48.7164, 21.2611">
+
+  <title>Marcel Gavalier - Solution Architect | Programátor | Audio & Video | IT Poradenstvo</title>
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FAFAFA">
+
+  <!-- Disable browser scroll restoration before any rendering -->
+  <script>if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
+
+  <!-- Minimal inline CSS for LCP placeholder only -->
+  <style>
+    /* Typewriter placeholder - prevent flash before JS loads */
+    .typed-text-untyped{color:rgba(255,255,255,1)}
+    .typed-text-typed{visibility:hidden;pointer-events:none}
+  </style>
+
+  <!-- Fonts - Optimized with preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets - Preload critical, defer non-critical -->
+  <link rel="preload" as="style" href="css/variables.css">
+  <link rel="preload" as="style" href="css/base.css">
+  <link rel="preload" as="style" href="css/layout.css">
+  <link rel="preload" as="style" href="css/components/hero.css">
+  <link rel="preload" as="style" href="css/sections/floating-icons.css">
+
+  <!-- Module Preload - Only critical modules for LCP -->
+  <link rel="modulepreload" href="js/main.js">
+  <link rel="modulepreload" href="js/utils/animations.js">
+  <link rel="modulepreload" href="js/utils/typewriter.js">
+  <link rel="modulepreload" href="js/utils/icon-click.js">
+
+  <!-- Core CSS - synchronous loading -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/card-unified.css">
+  <link rel="stylesheet" href="css/components/utilities.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/sections/floating-icons.css">
+  <link rel="stylesheet" href="css/sections/programming.css">
+  <link rel="stylesheet" href="css/sections/streaming.css">
+  <link rel="stylesheet" href="css/sections/audio-lights.css">
+  <link rel="stylesheet" href="css/sections/it-networks.css">
+  <link rel="stylesheet" href="css/sections/swiss-knife.css">
+  <link rel="stylesheet" href="css/sections/process.css">
+  <link rel="stylesheet" href="css/sections/experience.css">
+  <link rel="stylesheet" href="css/sections/clients-logos.css">
+  <link rel="stylesheet" href="css/sections/how-it-works.css">
+  <link rel="stylesheet" href="css/themes/light-theme.css">
+
+  <!-- Non-critical CSS - lazy loading -->
+  <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/cursor.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/cursor.css">
+  </noscript>
+
+  <!-- Schema.org Structured Data for SEO and AI -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://gavalier.sk/#person",
+        "name": "Marcel Gavalier",
+        "givenName": "Marcel",
+        "familyName": "Gavalier",
+        "url": "https://gavalier.sk/",
+        "image": "https://gavalier.sk/assets/og_image.png",
+        "email": "marcel@gavalier.sk",
+        "telephone": "+421915697915",
+        "jobTitle": "Solution Architect",
+        "description": "Solution Architect s 12+ rokmi skúseností v programovaní, webových aplikáciách, audio & video produkcii a IT poradenstve.",
+        "knowsAbout": [
+          "Web Development",
+          "JavaScript",
+          "PHP",
+          "Python",
+          "Audio Production",
+          "Video Production",
+          "Live Streaming",
+          "FOH Sound Engineering",
+          "IT Consulting",
+          "Network Architecture",
+          "Linux Administration"
+        ],
+        "sameAs": [
+          "https://gavalier.sk/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Košice",
+          "addressCountry": "SK"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://gavalier.sk/#service",
+        "name": "Gavalier",
+        "legalName": "Marcel Gavalier",
+        "url": "https://gavalier.sk/",
+        "logo": "https://gavalier.sk/assets/logo.min.svg",
+        "image": "https://gavalier.sk/assets/og_image.png",
+        "description": "Profesionálne IT služby, programovanie webových aplikácií, audio & video produkcia, live streaming a IT poradenstvo s 12+ rokmi skúseností.",
+        "priceRange": "$$",
+        "telephone": "+421915697915",
+        "email": "marcel@gavalier.sk",
+        "vatID": "SK1080715911",
+        "taxID": "47786825",
+        "founder": {
+          "@id": "https://gavalier.sk/#person"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Košice",
+          "addressCountry": "SK"
+        },
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Slovakia"
+          },
+          {
+            "@type": "Country",
+            "name": "Czech Republic"
+          }
+        ],
+        "serviceType": [
+          "Web Development",
+          "Custom Web Applications",
+          "Audio Production",
+          "Video Production",
+          "Live Streaming",
+          "FOH Sound Engineering",
+          "IT Consulting",
+          "Network Architecture",
+          "Technical Advisory"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT a Audio/Video služby",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gavalier.sk/#programovanie",
+                "name": "Programovanie a Webové Aplikácie",
+                "description": "Vývoj webových aplikácií, e-commerce riešení, custom CMS a API integrácie. HTML, CSS, JavaScript, PHP, Python.",
+                "serviceType": "Web Development",
+                "url": "https://gavalier.sk/#programovanie",
+                "provider": {
+                  "@id": "https://gavalier.sk/#service"
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Slovakia"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gavalier.sk/#streaming",
+                "name": "Audio & Video Produkcia",
+                "description": "Audio produkcia, video produkcia, live streaming, FOH sound engineering, stage design a kamerová práca.",
+                "serviceType": "Media Production",
+                "url": "https://gavalier.sk/#streaming",
+                "provider": {
+                  "@id": "https://gavalier.sk/#service"
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Slovakia"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gavalier.sk/#it-networks",
+                "name": "IT Poradenstvo a Siete",
+                "description": "Technické poradenstvo, sieťová architektúra, Linux administrácia, hardware konzultácie a IT riešenia.",
+                "serviceType": "IT Consulting",
+                "url": "https://gavalier.sk/#it-networks",
+                "provider": {
+                  "@id": "https://gavalier.sk/#service"
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Slovakia"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gavalier.sk/#swiss-knife",
+                "name": "IT Poradenstvo a Technické Riešenia",
+                "description": "Profesionálne IT poradenstvo, výber hardvéru, softvérové riešenia a technická podpora.",
+                "serviceType": "Technology Consulting",
+                "url": "https://gavalier.sk/#swiss-knife",
+                "provider": {
+                  "@id": "https://gavalier.sk/#service"
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "Slovakia"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gavalier.sk/#website",
+        "url": "https://gavalier.sk/",
+        "name": "Gavalier - Solution Architect",
+        "description": "Profesionálne IT služby, programovanie a audio/video produkcia",
+        "publisher": {
+          "@id": "https://gavalier.sk/#person"
+        },
+        "inLanguage": "sk-SK"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://gavalier.sk/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://gavalier.sk/"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://gavalier.sk/#services-list",
+        "name": "Hlavné služby",
+        "description": "Prehľad hlavných služieb a odborností",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Programovanie a Webové Aplikácie",
+            "url": "https://gavalier.sk/#programovanie",
+            "description": "Vývoj moderných webových aplikácií, e-commerce riešení a custom software na mieru"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Audio & Video Produkcia",
+            "url": "https://gavalier.sk/#streaming",
+            "description": "Profesionálna audio a video produkcia, live streaming a FOH sound engineering"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IT Siete a Infraštruktúra",
+            "url": "https://gavalier.sk/#it-networks",
+            "description": "Návrh a správa IT sietí, servery, Linux administrácia a network architektúra"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Technické Poradenstvo",
+            "url": "https://gavalier.sk/#swiss-knife",
+            "description": "Technické poradenstvo, výber hardvéru a softvéru, IT stratégie pre firmy"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body id="top" class="light-theme">
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Prepnúť tému">
+    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section with Floating Services -->
+    <section class="hero" id="hero">
+      <!-- Label -->
+      <span class="hero__label">Marcel Gavalier</span>
+
+      <!-- Title with typewriter -->
+      <h1 class="hero__title">
+        <span class="hero__title-line1">Vitajte, som</span>
+        <span class="hero__title-line2">
+          <span id="typewriterContainer" class="hero__typewriter-container">
+            <!-- Text 1: Marcel Gavalier -->
+            <span class="hero__typewriter-text hero__typewriter-text--active" data-text-index="0">
+              <span class="typewriter__placeholder">Marcel Gavalier</span>
+              <span class="typewriter__colored">Marcel Gavalier</span>
+              <span class="typewriter__cursor"></span>
+            </span>
+            <!-- Text 2: Solution Architect -->
+            <span class="hero__typewriter-text" data-text-index="1">
+              <span class="typewriter__placeholder">Solution Architect</span>
+              <span class="typewriter__colored">Solution Architect</span>
+              <span class="typewriter__cursor"></span>
+            </span>
+            <!-- Text 3: Programátor -->
+            <span class="hero__typewriter-text" data-text-index="2">
+              <span class="typewriter__placeholder">Programátor</span>
+              <span class="typewriter__colored">Programátor</span>
+              <span class="typewriter__cursor"></span>
+            </span>
+            <!-- Text 4: Audio Video expert -->
+            <span class="hero__typewriter-text" data-text-index="3">
+              <span class="typewriter__placeholder">Audio Video expert</span>
+              <span class="typewriter__colored">Audio Video expert</span>
+              <span class="typewriter__cursor"></span>
+            </span>
+            <!-- Text 5: IT-čkar -->
+            <span class="hero__typewriter-text" data-text-index="4">
+              <span class="typewriter__placeholder">IT-čkar</span>
+              <span class="typewriter__colored">IT-čkar</span>
+              <span class="typewriter__cursor"></span>
+            </span>
+          </span>
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="section__description hero__subtitle">
+        Služby, ktoré pracujú pre vás a prinášajú nových zákazníkov.
+        IT infraštruktúra so security, ktorá beží spoľahlivo.
+        Video a audio riešenia v prémiovej kvalite, ktoré upútajú pozornosť.
+        Som človek, ktorý vám pomôže správnym výberom ušetriť peniaze.
+      </p>
+
+      <!-- Services Hub - 4 kartičky -->
+      <div class="hero__cards container">
+        <div class="card-grid">
+          <!-- Web Development Card -->
+          <a href="#programovanie" class="card card--service accent-blue" data-service="web">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="card__title">Weby</h2>
+            <p class="card__description">
+              Web, ktorý vám privádza zákazníkov. Dizajn, kódovanie, hosting, SEO – všetko z jednej ruky.
+            </p>
+            <div class="card__cta">
+              Pozrieť
+            </div>
+          </a>
+
+          <!-- Audio & Video Card -->
+          <a href="#streaming" class="card card--service accent-purple" data-service="video">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="card__title">Audio & Video</h2>
+            <p class="card__description">
+              Profesionálne video, streaming a ozvučenie, ktoré dá vašej akcii prémiovú úroveň a zanechá dojem.
+            </p>
+            <div class="card__cta">
+              Pozrieť
+            </div>
+          </a>
+
+          <!-- IT Networks Card -->
+          <a href="#it-networks" class="card card--service accent-green" data-service="it">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="card__title">IT Siete</h2>
+            <p class="card__description">
+              IT infraštruktúra, ktorá beží spoľahlivo. Sieť, servery a security, aby ste sa mohli nerušene venovať svojmu podnikaniu.
+            </p>
+            <div class="card__cta">
+              Pozrieť
+            </div>
+          </a>
+
+          <!-- Swiss Knife Card -->
+          <a href="#swiss-knife" class="card card--service accent-red" data-service="swiss-knife">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h2 class="card__title">Švajčiarsky nožík</h2>
+            <p class="card__description">
+              Pomôžem vám vybrať správne riešenie, ktoré sa oplatí. Riešim problémy a šetrím vám peniaze, nie len predávam techniku.
+            </p>
+            <div class="card__cta">
+              Pozrieť
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="section__cta hero__cta">
+        <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+      </div>
+
+      <!-- Floating Service Icons - Absolutely positioned -->
+      <div class="hero__icons">
+        <!-- Icon 1 - Swiss Knife -->
+        <div class="floating-icon floating-icon--red floating-icon--small floating-icon--1" aria-label="Švajčiarsky nožík">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Icon 2 - IT Networks -->
+        <div class="floating-icon floating-icon--green floating-icon--medium floating-icon--2" aria-label="IT Siete">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Icon 3 - Weby -->
+        <div class="floating-icon floating-icon--blue floating-icon--large floating-icon--3" aria-label="Weby">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Icon 5 - Lightning -->
+        <div class="floating-icon floating-icon--blue floating-icon--small floating-icon--5" aria-label="Rýchlosť">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+        </div>
+        <!-- Icon 6 - Settings -->
+        <div class="floating-icon floating-icon--purple floating-icon--medium floating-icon--6" aria-label="Nastavenia">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+        </div>
+        <!-- Icon 9 - Trend -->
+        <div class="floating-icon floating-icon--green floating-icon--medium floating-icon--9" aria-label="Rast">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients & Partners Logos Section -->
+    <section class="section clients-logos section--dark">
+      <div class="container">
+        <div class="clients-logos__grid">
+          <!-- Client/Partner Logos -->
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.fotokurzy-kosice.sk/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/kurzy-foto.svg" alt="Kurzy Fotografovania" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.hbreavis.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/hbreavis.svg" alt="HB Reavis" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.cvi.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/cvi.svg" alt="CVI" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.trend.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/trend.svg" alt="Trend" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.websupport.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/websupport.svg" alt="WebSupport" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://mikrotik.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/MikroTik_Logo.svg" alt="MikroTik" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://newlevel.media" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/newlevelmedia.svg" alt="New Level Media" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.setrisova.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/setrisova.svg" alt="Šetrišová" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.skarper-professional.com" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/skarper-professional.svg" alt="Skarper Professional" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.trendkonferencie.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/trendkonferencie.svg" alt="Trend Konferencie" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.solutera.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/logo-st.svg" alt="Solutera" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.totalmoney.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/totalmoney.svg" alt="TotalMoney" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.newsandmedia.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/news-media-holding.svg" alt="News and Media Holding" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="clients-logos__item">
+            <div class="clients-logos__logo">
+              <a href="https://www.elmino.sk" target="_blank" rel="noopener noreferrer">
+                <img src="assets/clients/elmino.png" alt="Elmino" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section - Network & Single Point of Contact -->
+    <section class="section how-it-works section--dark" id="ako-to-funguje" data-section="ako-to-funguje">
+      <div class="container">
+        <h2 class="section__title">Hotové rýchlo, spoľahlivo a za cenu, ktorá dáva zmysel.</h2>
+        <p class="section__description">Za 12+ rokov som si vybudoval kontakty s ľuďmi, na ktorých sa dá spoľahnúť. Viem, kto robí kvalitne, kto dodá načas, kto vám nezabalí projekt uprostred. Dlhoročné vzťahy, overená spolupráca.</p>
+
+        <div class="how-it-works__content">
+          <p class="how-it-works__text">
+            Keď prídete s projektom, vyhodnotím vaše <strong>potreby</strong> – niekedy stačí šikovný freelancer za rozumnú cenu, inokedy potrebujete top špecialistu s konkrétnymi skúsenosťami. Vyberieme presne toho pravého človeka na prácu, bez predraženia.
+          </p>
+
+          <div class="how-it-works__highlight">
+            <p class="how-it-works__text">
+              So mnou máte <strong>jedného človeka na všetko.</strong> Žiadne behanie medzi dodávateľmi, žiadne hádky kto za čo môže. Jeden telefón, jeden email, jeden človek ktorý to vyrieši.
+            </p>
+          </div>
+
+          <p class="how-it-works__text">
+            A to isté platí pri výbere technológií. WordPress alebo vlastný kód? Router za 50 alebo 300? Koľko kamier na akciu? Aké svetlá? Aké reproduktory? Bude to stačiť?
+          </p>
+
+          <p class="how-it-works__examples">
+            Ja vám pomôžem vybrať presne to, čo potrebujete – bez hrabania sa v Alze a študovania recenzií.
+          </p>
+
+          <p class="how-it-works__benefits">
+            Vy ušetríte čas, nervy a peniaze. Dostanete presne to, čo potrebujete. Bez zbytočností, bez predraženia, s garanciou kvality.
+          </p>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="section__cta">
+          <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programming Section -->
+    <section class="section programming accent-blue" id="programovanie" data-section="programovanie">
+      <div class="container">
+        <!-- Floating Icons - Web Development -->
+        <div class="floating-icons">
+          <div class="floating-icon floating-icon--small floating-icon--blue floating-icon--section-left">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+          </div>
+          <div class="floating-icon floating-icon--medium floating-icon--blue floating-icon--section-right">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+                  <h2 class="section__title">Weby</h2>
+          <p class="section__description">
+            Web, ktorý vám reálne privádza zákazníkov a zarába peniaze. Od dizajnu po hosting a SEO – všetko z jednej ruky, nič vám neunikne.
+          </p>
+
+        <!-- Services Grid -->
+        <div class="card-grid ">
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="card__title">Webstránky na mieru</h3>
+              <p class="card__description">
+                Vytvorím vám web presne podľa vášho biznisu. Funguje na mobile aj počítači, vyzerá profesionálne a privádza zákazníkov – presne to, čo potrebujete na rast.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <h3 class="card__title">Vizuál, ktorý zaujme</h3>
+              <p class="card__description">
+                Dizajn, čo upúta na prvý pohľad. Vlastný návrh alebo overené šablóny – vždy profesionálne, dôveryhodné a také, čo priťahuje platiacich klientov.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+              </div>
+              <h3 class="card__title">Hosting a doména v cene</h3>
+              <p class="card__description">
+                O techniku sa postarám ja. Vy sa sústreďte na biznis a zarábanie, hosting a doména bežia automaticky – bez vašich starostí, len výsledky.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="card__title">Responzívny dizajn</h3>
+              <p class="card__description">
+                Perfektne vyzerá na mobile, tablete aj počítači. Váš web sa prispôsobí hocičomu – zákazník vidí vždy ostré, profesionálne, predajné.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+              <h3 class="card__title">Spravujte web sami</h3>
+              <p class="card__description">
+                Upravuj texty, fotky aj ceny kedykoľvek. Intuitívny systém – žiadne kódovanie, žiadne programátorské múdrosti. Proste klikneš a je to.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 class="card__title">Optimalizácia pre AI vyhľadávače</h3>
+              <p class="card__description">
+                Váš web nájdu nielen ľudia, ale aj AI. Optimalizujem pre ChatGPT, Perplexity, Google – viac viditeľnosti znamená viac zákazníkov a rast vášho biznisu.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="section__cta">
+          <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio & Video Production Section -->
+    <section class="section streaming accent-purple section--dark" id="streaming" data-section="streaming">
+      <div class="container">
+        <!-- Floating Icons - Audio & Video -->
+        <div class="floating-icons">
+          <div class="floating-icon floating-icon--small floating-icon--purple floating-icon--section-left">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+          <div class="floating-icon floating-icon--medium floating-icon--purple floating-icon--section-right">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+                  <h2 class="section__title">Audio & Video</h2>
+          <p class="section__description">
+            Profesionálne video, ozvučenie a stage na úrovni. Dajte vašej akcii kvalitu, ktorá zapôsobí – postarám sa o to, aby všetko hladko fungovalo.
+          </p>
+
+        <!-- Services Grid -->
+        <div class="card-grid ">
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Video produkcia</h3>
+              <p class="card__description">
+                Natočím vám kvalitné multi-cam video, ktoré zaujme. Prezentácie, promo, firemné akcie – všetko vyzerá prémiovo a predáva váš brand.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Live streaming</h3>
+              <p class="card__description">
+                Odvysielam vašu akciu live na net. Rozšírte dosah – zákazníci, partneri, ktokoľvek môže sledovať odkiaľkoľvek a byť súčasťou podujatia.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Profesionálne ozvučenie</h3>
+              <p class="card__description">
+                Ozvučím akciu, konferenciu, koncert. Každý vás počuje krištáľovo jasne – žiadne technické trapasy, len čistý, kvalitný zvuk.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Svetlá na podujatia</h3>
+              <p class="card__description">
+                Svetelné efekty, čo robia atmosféru. Od basic výzdoby až po koncertný lighting pre veľké podujatia.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Video mapping</h3>
+              <p class="card__description">
+                Premietnem video na steny, budovy, čokoľvek. Unikátna vizuálna show, ktorá ohromí hostí a zostane v pamäti.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Úprava akustiky priestorov</h3>
+              <p class="card__description">
+                Upravím akustiku vo vašich priestoroch. Žiadna ozvena, čistý zvuk – lepšia komunikácia, profesionálnejší dojem.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div class="section__cta">
+          <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT Siete Section -->
+    <section class="section it-networks accent-green section--dark" id="it-networks" data-section="it-networks">
+      <div class="container">
+        <!-- Floating Icons - IT Networks -->
+        <div class="floating-icons">
+          <div class="floating-icon floating-icon--small floating-icon--green floating-icon--section-left">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              </svg>
+            </div>
+          </div>
+          <div class="floating-icon floating-icon--medium floating-icon--green floating-icon--section-right">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+                  <h2 class="section__title">IT Siete</h2>
+          <p class="section__description">
+            Počítače, servery, siete – to všetko musí proste fungovať. Postavím vám IT, ktoré beží spoľahlivo bez výpadkov a problémov, aby ste sa mohli sústrediť na zarábanie peňazí.
+          </p>
+
+        <!-- IT Services Grid -->
+        <div class="card-grid ">
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Počítačová sieť</h3>
+              <p class="card__description">
+                Postavím vám sieť, ktorá ťahá a beží spoľahlivo. Rýchla, bezpečná, stabilná – infraštruktúra, čo podporí váš rast, nie vás brzdí.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Zabezpečenie</h3>
+              <p class="card__description">
+                Ochránim vašu firmu pred kyber hrozbami a únikmi dát. Minimalizujem riziká, vy sa sústreďte na zarábanie – security si strážim ja.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Nepretržitá starostlivosť</h3>
+              <p class="card__description">
+                Starám sa o vaše IT nonstop. Niečo spadne? Rýchlo opravím a minimalizujem výpadky – vy pokračujete v práci bez straty peňazí.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Cloud riešenia</h3>
+              <p class="card__description">
+                Presunem vám dáta do cloudu. Pracovať môžete odkiaľkoľvek, dáta sú v bezpečí a automaticky zálohované – mobilita bez rizika.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Servery</h3>
+              <p class="card__description">
+                Nastavím vám servery, čo proste fungujú. Centrálne úložisko dát – rýchly prístup, vysoké security, žiadne straty.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <div class="card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <h3 class="card__title">Zálohovanie dát</h3>
+              <p class="card__description">
+                Automatické zálohy chrániajú váš biznis. Výpadok, porucha? Obnovím všetko rýchlo a bezpečne – žiadna strata dát, žiadna strata peňazí.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="section__cta">
+          <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiss Knife Section - Complete Business Solution -->
+    <section class="section swiss-knife accent-red section--dark" id="swiss-knife" data-section="swiss-knife">
+      <div class="container">
+        <!-- Floating Icons -->
+        <div class="floating-icons">
+          <div class="floating-icon floating-icon--small floating-icon--red floating-icon--section-left">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+          </div>
+          <div class="floating-icon floating-icon--medium floating-icon--red floating-icon--section-right">
+            <div class="floating-icon__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+          </div>
+        </div>
+                  <h2 class="section__title">Ťažké rozhodnutia o IT?</h2>
+          <p class="section__description">
+            Router, server, hosting, tlačiareň? Pomôžem vám vybrať presne to, čo sa oplatí a vydrží. Nič zbytočného, len to, čo reálne potrebujete.
+          </p>
+
+        <!-- Sami → Spolu Comparison -->
+        <div class="swiss-knife__comparison ">
+
+          <!-- Alone -->
+          <article class="card card--swiss card--alone">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="card__title">Milión možností</h3>
+            <p class="card__description">
+              Na Alze je milión produktov, vyznať sa v nich dá zabrať aj ostrielaným hráčom. Samému môže byť ťažké rozhodnúť čo je ideálne riešenie.
+            </p>
+          </article>
+
+          <!-- Together -->
+          <article class="card card--swiss card--together">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="card__title">Rozhodnime to spolu</h3>
+            <p class="card__description">
+              Povediete mi čo potrebujete, ja prefilterujem tie tisícky produktov a vysvetlím vám rozdiel. Vyberieme správne riešenie pre vás.
+            </p>
+            <div class="card__badges">
+              <a href="#experience" class="card__badge">12+ rokov skúseností</a>
+              <a href="#experience" class="card__badge">Záruka spokojnosti</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div class="section__cta">
+          <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section - Ako na to -->
+  <section class="section section--process accent-blue section--dark">
+    <div class="container">
+              <h2 class="section__title">Aký je postup?</h2>
+        <p class="section__description">
+          Ako to funguje od prvého kontaktu po odovzdanie projektu
+        </p>
+
+      <div class="process-steps">
+        <div class="card card--process ">
+          <div class="card__number"><span>1</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Bezplatná konzultácia</h3>
+            <p class="card__description">
+              Zavoláte alebo napíšete, dohodneme sa kedy a kde sa stretneme. Konzultácia je vždy zadarmo.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card--process ">
+          <div class="card__number"><span>2</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Zistíme, čo potrebujete</h3>
+            <p class="card__description">
+              Vysvetlíte svoju predstavu, ja navrhnem riešenie, ktoré bude fungovať pre váš biznis.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card--process ">
+          <div class="card__number"><span>3</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Cenová ponuka</h3>
+            <p class="card__description">
+              Pripravím transparentnú cenovú ponuku a realistické termíny dokedy bude všetko hotové.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card--process ">
+          <div class="card__number"><span>4</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Začínam pracovať</h3>
+            <p class="card__description">
+              Pustím sa do práce a priebežne vás budem informovať o postupe projektu.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card--process ">
+          <div class="card__number"><span>5</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Kontrola a úpravy</h3>
+            <p class="card__description">
+              Ukážem výsledok, zapracujem vaše pripomienky a doladím detaily podľa vašich požiadaviek.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card--process ">
+          <div class="card__number"><span>6</span></div>
+          <div class="card__content">
+            <h3 class="card__title">Odovzdanie projektu</h3>
+            <p class="card__description">
+              Hotovo! Projekt je pripravený a spustený. Odovzdám všetko potrebné a naučím vás s tým pracovať.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section section--stats section--dark">
+    <div class="container">
+      <div class="programming-stats ">
+        <div class="card card--stat">
+          <div class="card__value">58+</div>
+          <div class="card__label">Projektov</div>
+        </div>
+        <div class="card card--stat">
+          <div class="card__value">12+</div>
+          <div class="card__label"><a href="#experience" class="experience-link">Rokov Skúseností</a></div>
+        </div>
+        <div class="card card--stat">
+          <div class="card__value">98%</div>
+          <div class="card__label">Spokojnosť Klientov</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section section--experience section--dark" id="experience" data-section="experience">
+    <div class="container">
+              <h2 class="section__title">Moje osobné skúsenosti</h2>
+        <p class="section__description">
+          12+ rokov praktických skúseností v IT, audio & video produkcii a obchode
+        </p>
+
+      <div class="experience__grid ">
+
+        <!-- IT & Programovanie -->
+        <article class="card card--experience accent-blue">
+          <div class="experience__header">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="card__title">IT & Programovanie</h3>
+          </div>
+          <ul class="experience__list">
+            <li class="experience__item">
+              <span class="experience__label">HTML, CSS, JavaScript</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">PHP, Python, Bash scripting</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Sieťová architektúra WAN/LAN</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">UNIX/Linux administrácia</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">SQL databázy</span>
+              <span class="experience__level experience__level--intermediate">Stredný</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Integrácie tretích strán (API, XML, JSON)</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Audio & Video -->
+        <article class="card card--experience accent-purple">
+          <div class="experience__header">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="card__title">Audio & Video</h3>
+          </div>
+          <ul class="experience__list">
+            <li class="experience__item">
+              <span class="experience__label">Audio produkcia & mixing</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Video produkcia</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">FOH Sound Engineer</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Live produkcia & streaming</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Kamerová práca</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Stage design & osvetlenie</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Obchod & Management -->
+        <article class="card card--experience accent-green">
+          <div class="experience__header">
+            <div class="card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="card__title">Obchod & Management</h3>
+          </div>
+          <ul class="experience__list">
+            <li class="experience__item">
+              <span class="experience__label">Project management</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">B2B predaj & Account management</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Team leadership & coaching</span>
+              <span class="experience__level experience__level--expert">Expert</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Korporátni klienti & zákaznícka starostlivosť</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">HR & PR</span>
+              <span class="experience__level experience__level--advanced">Pokročilý</span>
+            </li>
+            <li class="experience__item">
+              <span class="experience__label">Social media marketing</span>
+              <span class="experience__level experience__level--intermediate">Stredný</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer / Contact Section -->
+  <section id="contact" class="section footer accent-yellow">
+    <div class="container">
+      <!-- Floating Icons -->
+      <div class="floating-icons">
+        <div class="floating-icon floating-icon--small floating-icon--yellow floating-icon--footer-1">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <div class="floating-icon floating-icon--small floating-icon--yellow floating-icon--footer-2">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+        </div>
+        <div class="floating-icon floating-icon--medium floating-icon--yellow floating-icon--footer-3">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+        </div>
+        <div class="floating-icon floating-icon--medium floating-icon--yellow floating-icon--footer-4">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+        </div>
+        <div class="floating-icon floating-icon--large floating-icon--yellow floating-icon--footer-5">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <div class="floating-icon floating-icon--large floating-icon--yellow floating-icon--footer-6">
+          <div class="floating-icon__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <h2 class="section__title">Potrebujete riešenie?</h2>
+      <p class="section__description">Prvá konzultácia je nezáväzná a zadarmo.</p>
+
+      <div class="footer__contact-grid">
+          <a href="mailto:kontakt@gavalier.sk" class="card card--footer-contact">
+            <div class="footer__contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="footer__contact-content">
+              <span class="footer__contact-label">Email</span>
+              <span class="footer__contact-value">marcel@gavalier.sk</span>
+            </div>
+          </a>
+
+          <a href="tel:+421915697915" class="card card--footer-contact">
+            <div class="footer__contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="footer__contact-content">
+              <span class="footer__contact-label">Telefón</span>
+              <span class="footer__contact-value">+421 915 697 915</span>
+            </div>
+          </a>
+      </div>
+
+      <!-- Company Info Card -->
+      <div class="footer__info">
+        <div class="card card--footer-info">
+          <div class="footer__info-header">
+            <h3 class="footer__info-name">Marcel Gavalier</h3>
+            <p class="footer__info-tagline">
+              Programátor • Audio Video expert • IT-čkar
+            </p>
+            <p class="footer__info-motto">
+              12+ rokov skúseností v IT a AVL produkcii
+            </p>
+          </div>
+
+          <div class="footer__info-grid">
+            <div class="footer__info-section">
+              <div class="footer__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="footer__info-content">
+                <h4 class="footer__info-label">Adresa</h4>
+                <p class="footer__info-text">
+                  Jarmočná 30<br>
+                  058 01 Poprad
+                </p>
+              </div>
+            </div>
+
+            <div class="footer__info-section">
+              <div class="footer__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="footer__info-content">
+                <h4 class="footer__info-label">Kontakt</h4>
+                <p class="footer__info-text">
+                  <a href="mailto:marcel@gavalier.sk" class="footer__info-link">marcel@gavalier.sk</a><br>
+                  <a href="tel:+421915697915" class="footer__info-link">+421 915 697 915</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="footer__info-section">
+              <div class="footer__info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="footer__info-content">
+                <h4 class="footer__info-label">Firemné údaje</h4>
+                <p class="footer__info-text">
+                  IČO: 47786825<br>
+                  DIČ: 1080715911
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Marcel Gavalier. Všetky práva vyhradené.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Back to Top Button - Native hash link -->
+  <a href="#top" class="back-to-top" aria-label="Späť na začiatok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </a>
+
+  <script src="js/clients-logos-autoscroll.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* ========================================
+   Streaming Section - Space Vibe
+   ======================================== */
+
+/* Streaming uses .accent-purple class from layout.css */
+
+/* Platforms */
+.streaming-platforms {
+  display: flex;
+  gap: var(--space-8);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-13);
+}
+
+/* Platform - NO INIT ANIMATIONS */
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--theme-bg-card);
+  border: 1px solid rgba(var(--accent), 0.2);
+  border-radius: var(--radius-xl);
+  min-width: 140px;
+  transform: translateY(0);
+}
+
+.platform:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent), 0.5);
+  box-shadow: 0 8px 24px rgba(var(--accent), 0.2);
+  background: var(--theme-bg-card-hover);
+  transition: all var(--transition-base);
+}
+
+.platform__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(var(--accent), 0.3), rgba(var(--accent-light), 0.2));
+  border-radius: var(--radius-lg);
+  font-size: var(--text-3xl);
+}
+
+.platform__name {
+  font-weight: var(--font-semibold);
+  color: var(--theme-text-primary);
+}
+
+.platform__handle {
+  font-size: var(--text-sm);
+  color: rgba(var(--accent-light), 1);
+  font-weight: var(--font-medium);
+}
+
+/* VOD Gallery - Mobile-first */
+.vod-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .vod-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-10);
+  }
+}
+
+/* VOD Card - NO INIT ANIMATIONS */
+.vod-card {
+  background-color: var(--color-gray-800);
+  border: var(--border-width) solid var(--color-gray-700);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.vod-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.vod-card__thumbnail {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-dark);
+  overflow: hidden;
+}
+
+.vod-card__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.vod-card:hover .vod-card__thumbnail img {
+  transform: scale(1.05);
+}
+
+/* VOD Play Button - NO INIT ANIMATIONS */
+.vod-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  font-size: var(--text-2xl);
+}
+
+.vod-card:hover .vod-card__play {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: all var(--transition-base);
+}
+
+.vod-card__content {
+  padding: var(--space-6);
+}
+
+.vod-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.vod-card__meta {
+  display: flex;
+  gap: var(--space-4);
+  color: var(--color-light-dark);
+  font-size: var(--text-sm);
+}

@@ -1,0 +1,357 @@
+/* ========================================
+   Floating Icons - Unified Global Component
+   All floating icons use this single system
+   ======================================== */
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Pause animations during scroll */
+body.is-scrolling .floating-icon {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   BASE FLOATING ICON
+   Color inherits from parent by default
+   ============================================ */
+
+.floating-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid currentColor;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+
+  /* Default color - can be overridden by color classes */
+  color: rgba(0, 122, 255, 0.3);
+
+  /* Base size */
+  width: 60px;
+  height: 60px;
+
+  /* Default animation */
+  animation: iconFloat 6s ease-in-out infinite;
+  will-change: transform;
+  contain: layout style;
+}
+
+/* Icon wrapper */
+.floating-icon__icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-icon__icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+  stroke: currentColor;
+}
+
+/* Hover - desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .floating-icon:hover {
+    animation-play-state: paused;
+    opacity: 1 !important;
+    transform: scale(1.1);
+  }
+}
+
+/* ============================================
+   SIZE VARIANTS
+   ============================================ */
+
+/* Small - appears far away */
+.floating-icon--small {
+  width: 50px;
+  height: 50px;
+  animation: iconFloatSmall 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.floating-icon--small .floating-icon__icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Medium - mid distance */
+.floating-icon--medium {
+  width: 60px;
+  height: 60px;
+  animation: iconFloatMedium 6s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+.floating-icon--medium .floating-icon__icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Large - appears close */
+.floating-icon--large {
+  width: 85px;
+  height: 85px;
+  animation: iconFloatLarge 6s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.floating-icon--large .floating-icon__icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* ============================================
+   FLOAT ANIMATIONS
+   ============================================ */
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes iconFloatSmall {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-10px, -15px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes iconFloatMedium {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes iconFloatLarge {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(10px, -15px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   COLOR VARIANTS
+   Use box-shadow for glow (better performance than filter)
+   ============================================ */
+
+/* Blue */
+.floating-icon--blue {
+  color: #007AFF;
+  border-color: rgba(0, 122, 255, 0.3);
+}
+
+.floating-icon--small.floating-icon--blue {
+  box-shadow:
+    -15px -15px 40px rgba(0, 122, 255, 0.25),
+    0 0 60px rgba(0, 122, 255, 0.15);
+}
+
+.floating-icon--medium.floating-icon--blue {
+  box-shadow:
+    15px -15px 40px rgba(0, 122, 255, 0.25),
+    0 0 60px rgba(0, 122, 255, 0.15);
+}
+
+.floating-icon--large.floating-icon--blue {
+  box-shadow:
+    0 15px 40px rgba(0, 122, 255, 0.25),
+    0 0 60px rgba(0, 122, 255, 0.15);
+}
+
+/* Purple (Apple Purple #AF52DE) */
+.floating-icon--purple {
+  color: #AF52DE;
+  border-color: rgba(175, 82, 222, 0.3);
+}
+
+.floating-icon--small.floating-icon--purple {
+  box-shadow:
+    -15px -15px 40px rgba(175, 82, 222, 0.25),
+    0 0 60px rgba(175, 82, 222, 0.15);
+}
+
+.floating-icon--medium.floating-icon--purple {
+  box-shadow:
+    15px -15px 40px rgba(175, 82, 222, 0.25),
+    0 0 60px rgba(175, 82, 222, 0.15);
+}
+
+.floating-icon--large.floating-icon--purple {
+  box-shadow:
+    0 15px 40px rgba(175, 82, 222, 0.25),
+    0 0 60px rgba(175, 82, 222, 0.15);
+}
+
+/* Green (Apple Green #34C759) */
+.floating-icon--green {
+  color: #34C759;
+  border-color: rgba(52, 199, 89, 0.3);
+}
+
+.floating-icon--small.floating-icon--green {
+  box-shadow:
+    -15px -15px 40px rgba(52, 199, 89, 0.25),
+    0 0 60px rgba(52, 199, 89, 0.15);
+}
+
+.floating-icon--medium.floating-icon--green {
+  box-shadow:
+    15px -15px 40px rgba(52, 199, 89, 0.25),
+    0 0 60px rgba(52, 199, 89, 0.15);
+}
+
+.floating-icon--large.floating-icon--green {
+  box-shadow:
+    0 15px 40px rgba(52, 199, 89, 0.25),
+    0 0 60px rgba(52, 199, 89, 0.15);
+}
+
+/* Red */
+.floating-icon--red {
+  color: #FF3B30;
+  border-color: rgba(255, 59, 48, 0.3);
+}
+
+.floating-icon--small.floating-icon--red {
+  box-shadow:
+    -15px -15px 40px rgba(255, 59, 48, 0.25),
+    0 0 60px rgba(255, 59, 48, 0.15);
+}
+
+.floating-icon--medium.floating-icon--red {
+  box-shadow:
+    15px -15px 40px rgba(255, 59, 48, 0.25),
+    0 0 60px rgba(255, 59, 48, 0.15);
+}
+
+.floating-icon--large.floating-icon--red {
+  box-shadow:
+    0 15px 40px rgba(255, 59, 48, 0.25),
+    0 0 60px rgba(255, 59, 48, 0.15);
+}
+
+/* Yellow */
+.floating-icon--yellow {
+  color: #FFC900;
+  border-color: rgba(255, 201, 0, 0.35);
+}
+
+.floating-icon--small.floating-icon--yellow {
+  box-shadow:
+    -15px -15px 40px rgba(255, 201, 0, 0.3),
+    0 0 60px rgba(255, 201, 0, 0.2);
+}
+
+.floating-icon--medium.floating-icon--yellow {
+  box-shadow:
+    15px -15px 40px rgba(255, 201, 0, 0.3),
+    0 0 60px rgba(255, 201, 0, 0.2);
+}
+
+.floating-icon--large.floating-icon--yellow {
+  box-shadow:
+    0 15px 40px rgba(255, 201, 0, 0.3),
+    0 0 60px rgba(255, 201, 0, 0.2);
+}
+
+/* ============================================
+   CLICK/TAP ESCAPE ANIMATION
+   ============================================ */
+
+.floating-icon.icon-escape-active {
+  animation: iconEscape 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+
+@keyframes iconEscape {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  40% {
+    transform: translate(var(--escape-x, -100px), var(--escape-y, -100px)) rotate(360deg) scale(0.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0, 0) rotate(720deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   POSITION SYSTEM
+   Generic positions reusable across sections
+   ============================================ */
+
+/* Hero section - 12 unique positions for random feel */
+.floating-icon--1  { left: 12%; top: 15%; animation-delay: 0s; }
+.floating-icon--2  { right: 10%; top: 8%; animation-delay: 3s; }
+.floating-icon--3  { left: 18%; top: 22%; animation-delay: 1.5s; }
+.floating-icon--4  { left: 12%; top: 70%; animation-delay: 4.5s; }
+.floating-icon--5  { right: 2%; top: 25%; animation-delay: 2.5s; }
+.floating-icon--6  { right: 22%; top: 28%; animation-delay: 5s; }
+.floating-icon--7  { left: 28%; top: 78%; animation-delay: 1s; }
+.floating-icon--8  { left: 10%; top: 88%; animation-delay: 6s; }
+.floating-icon--9  { left: 5%; top: 8%; animation-delay: 3.5s; }
+.floating-icon--10 { right: 15%; top: 72%; animation-delay: 2s; }
+.floating-icon--11 { right: 25%; top: 82%; animation-delay: 4s; }
+.floating-icon--12 { left: 38%; top: 92%; animation-delay: 5.5s; }
+
+/* Section icons - standard 2-icon layout */
+.floating-icon--section-left {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 20s;
+}
+
+.floating-icon--section-right {
+  top: 18%;
+  right: 12%;
+  animation-delay: 2s;
+  animation-duration: 22s;
+}
+
+/* Footer - 6 icon positions */
+.floating-icon--footer-1 { left: 3%; top: 8%; animation-delay: 0s; animation-duration: 18s; }
+.floating-icon--footer-2 { right: 12%; top: 18%; animation-delay: 0.5s; animation-duration: 20s; }
+.floating-icon--footer-3 { left: 15%; top: 38%; animation-delay: 1s; animation-duration: 22s; }
+.floating-icon--footer-4 { right: 6%; top: 52%; animation-delay: 1.5s; animation-duration: 20s; }
+.floating-icon--footer-5 { left: 7%; bottom: 22%; animation-delay: 2s; animation-duration: 24s; }
+.floating-icon--footer-6 { right: 18%; bottom: 12%; animation-delay: 2.5s; animation-duration: 22s; }
+

@@ -1,0 +1,233 @@
+/* ========================================
+   How It Works Section - Network & Expertise Explanation
+   ======================================== */
+
+/* Green accent - trust, reliability, stability (Apple Green #34C759) */
+.how-it-works {
+  --accent: 52, 199, 89;
+  --accent-light: 48, 209, 88;
+}
+
+/* Light theme - darker green for better contrast */
+.light-theme .how-it-works,
+[data-theme="light"] .how-it-works {
+  --accent: 21, 128, 61;
+  --accent-light: 34, 197, 94;
+}
+
+/* Content Box - NO INIT ANIMATIONS */
+.how-it-works__content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--theme-bg-card);
+  border: 1px solid rgba(var(--accent), 0.2);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-5);
+  box-shadow: var(--theme-shadow-card);
+  /* Performance optimization */
+  contain: layout style paint;
+}
+
+@media (min-width: 640px) {
+  .how-it-works__content {
+    padding: var(--space-8);
+  }
+}
+
+@media (min-width: 768px) {
+  .how-it-works__content {
+    padding: var(--space-10);
+  }
+}
+
+.how-it-works__content:hover {
+  border-color: rgba(var(--accent), 0.4);
+  box-shadow:
+    0 16px 48px rgba(var(--accent), 0.2),
+    0 0 80px rgba(var(--accent), 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section Title - use default spacing from layout.css */
+
+/* Quote - Centered, prominent */
+.how-it-works__quote {
+  text-align: center;
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--theme-text-primary);
+  font-weight: var(--font-medium);
+  margin: 0 auto var(--space-8);
+  padding: var(--space-4) 0;
+  max-width: 800px;
+  position: relative;
+  font-style: italic;
+}
+
+@media (min-width: 640px) {
+  .how-it-works__quote {
+    margin-bottom: var(--space-10);
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+@media (min-width: 768px) {
+  .how-it-works__quote {
+    font-size: var(--text-2xl);
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+.how-it-works__quote::before,
+.how-it-works__quote::after {
+  content: '"';
+  font-size: var(--text-5xl);
+  line-height: 0;
+  color: rgba(var(--accent), 0.3);
+  font-family: Georgia, serif;
+  font-weight: var(--font-bold);
+}
+
+.how-it-works__quote::before {
+  margin-right: var(--space-2);
+}
+
+.how-it-works__quote::after {
+  margin-left: var(--space-2);
+}
+
+/* Text Blocks */
+.how-it-works__text {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .how-it-works__text {
+    font-size: var(--text-xl);
+  }
+}
+
+.how-it-works__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Bold emphasis */
+.how-it-works__text strong {
+  color: rgba(var(--accent-light), 1);
+  font-weight: var(--font-bold);
+  text-shadow: 0 0 20px rgba(var(--accent), calc(0.5 * var(--theme-glow-intensity)));
+}
+
+/* Opening Line - More prominent */
+.how-it-works__opening {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: var(--space-8);
+  line-height: var(--leading-relaxed);
+}
+
+@media (min-width: 768px) {
+  .how-it-works__opening {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* Highlight Box - Bold statement with glowing star accent */
+.how-it-works__highlight {
+  position: relative;
+  margin: var(--space-10) 0;
+  padding: var(--space-8) var(--space-6);
+  padding-top: var(--space-10);
+  text-align: center;
+}
+
+.how-it-works__highlight::before {
+  content: '✦';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: var(--text-5xl);
+  color: rgba(var(--accent-light), 1);
+  text-shadow:
+    0 0 20px rgba(var(--accent), 0.8),
+    0 0 40px rgba(var(--accent), 0.5),
+    0 0 60px rgba(var(--accent), 0.3);
+  animation: starPulse 3s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-50%) scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+.how-it-works__highlight::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--accent), 0.3), transparent);
+  transform: translateY(calc(var(--space-8) * 2));
+}
+
+.how-it-works__highlight .how-it-works__text {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--theme-text-primary);
+  line-height: var(--leading-relaxed);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.how-it-works__highlight .how-it-works__text {
+  margin-bottom: var(--space-4);
+}
+
+.how-it-works__highlight .how-it-works__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Examples - Technology selection - Prominent */
+.how-it-works__examples {
+  font-style: normal;
+  color: var(--theme-text-primary);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-relaxed);
+}
+
+@media (min-width: 768px) {
+  .how-it-works__examples {
+    font-size: var(--text-xl);
+  }
+}
+
+/* Benefits Summary - Final paragraph */
+.how-it-works__benefits {
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--theme-border-color);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  color: var(--theme-text-primary);
+}
+
+@media (min-width: 768px) {
+  .how-it-works__benefits {
+    font-size: var(--text-xl);
+  }
+}
+

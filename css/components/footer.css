@@ -1,0 +1,300 @@
+/* ========================================
+   Footer - Extends .section with yellow accent
+   ======================================== */
+
+/* Override section background with intense yellow gradient - CTA section */
+.footer {
+  --accent: 255, 201, 0;
+  --accent-light: 255, 220, 100;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(var(--accent), 0.4) 0%, transparent 60%),
+    radial-gradient(circle at 20% 50%, rgba(var(--accent), 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(var(--accent), 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(var(--accent), 0.25) 0%, transparent 50%),
+    var(--theme-bg);
+}
+
+/* Intense yellow title glow */
+.footer .section__title {
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 60px rgba(255, 201, 0, 0.6),
+    0 0 120px rgba(255, 201, 0, 0.3);
+}
+
+.footer .section__description {
+  color: var(--theme-text-primary);
+  font-weight: var(--font-semibold);
+}
+
+/* Contact Grid - Mobile-first */
+.footer__contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .footer__contact-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+}
+
+/* Contact Card - NO INIT ANIMATIONS */
+
+/* Contact Icon - Simple & Bold - Mobile-first */
+.footer__contact-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(255, 205, 50, 0.8));
+  border-radius: var(--radius-xl);
+  color: var(--theme-text-primary);
+}
+
+@media (min-width: 768px) {
+  .footer__contact-icon {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+  }
+}
+
+.footer__contact-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 768px) {
+  .footer__contact-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Contact Content */
+.footer__contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  text-align: left;
+}
+
+.footer__contact-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: rgba(255, 215, 100, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Mobile-first contact value */
+.footer__contact-value {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--theme-text-primary);
+  white-space: normal;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .footer__contact-value {
+    font-size: var(--text-2xl);
+    white-space: nowrap;
+    word-break: normal;
+  }
+}
+
+/* Company Info Card - Single Glassmorphism Card - Mobile-first */
+.footer__info {
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-10);
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__info .card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer__info {
+    margin-top: var(--space-13);
+  }
+}
+
+/* Header Section */
+.footer__info-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+@media (min-width: 768px) {
+  .footer__info-header {
+    margin-bottom: var(--space-10);
+    padding-bottom: var(--space-8);
+  }
+}
+
+.footer__info-name {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-black);
+  color: var(--theme-text-primary);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+  text-shadow:
+    0 2px 8px var(--theme-shadow-color),
+    0 0 20px rgba(255, 193, 7, calc(0.4 * var(--theme-glow-intensity)));
+}
+
+@media (min-width: 768px) {
+  .footer__info-name {
+    font-size: var(--text-4xl);
+  }
+}
+
+.footer__info-tagline {
+  font-size: var(--text-sm);
+  color: var(--theme-text-muted);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.03em;
+  user-select: text;
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .footer__info-tagline {
+    font-size: var(--text-base);
+  }
+}
+
+.footer__info-motto {
+  font-size: var(--text-sm);
+  color: rgba(0, 122, 255, 1);
+  font-weight: var(--font-semibold);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  user-select: text;
+  text-shadow: 0 0 12px rgba(0, 122, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+  .footer__info-motto {
+    font-size: var(--text-base);
+  }
+}
+
+/* Grid with 3 sections - flex wrap for responsive */
+.footer__info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
+}
+
+.footer__info-grid > * {
+  flex: 1 1 250px;
+}
+
+/* Each section */
+.footer__info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+/* Info Icon */
+.footer__info-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,
+    rgba(255, 193, 7, 0.4),
+    rgba(255, 205, 50, 0.3)
+  );
+  border-radius: var(--radius-xl);
+  transition: all 0.3s ease;
+  transform: rotate(-8deg);
+}
+
+.footer__info-section:hover .footer__info-icon {
+  animation: iconPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+  background: linear-gradient(135deg,
+    rgba(255, 193, 7, 0.6),
+    rgba(255, 205, 50, 0.5)
+  );
+}
+
+.footer__info-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--theme-text-primary);
+}
+
+/* Content */
+.footer__info-content {
+  flex: 1;
+}
+
+.footer__info-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--theme-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+  text-shadow: 0 2px 4px var(--theme-shadow-color);
+}
+
+.footer__info-text {
+  font-size: var(--text-base);
+  color: var(--theme-text-secondary);
+  line-height: 1.8;
+}
+
+.footer__info-link {
+  color: var(--theme-text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer__info-link:hover {
+  color: rgba(255, 215, 100, 1);
+  text-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+/* Footer Bottom */
+.footer__bottom {
+  padding-top: var(--space-10);
+  border-top: 1px solid var(--theme-border-color);
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: var(--text-sm);
+  color: var(--theme-text-muted);
+  font-weight: var(--font-medium);
+}
+
+/* Floating icons use global positions from floating-icons.css */
+/* Use classes: .floating-icon--footer-1 through .floating-icon--footer-6 */

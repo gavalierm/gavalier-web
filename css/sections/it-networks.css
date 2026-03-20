@@ -1,0 +1,215 @@
+/* ========================================
+   IT Siete Section - Apple Design Style
+   ======================================== */
+
+/* IT Networks uses .accent-green class from layout.css */
+
+/* Services grid for IT - Mobile-first */
+.it-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-13);
+}
+
+@media (min-width: 768px) {
+  .it-services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-10);
+  }
+}
+
+.it-service-card {
+  background: var(--theme-bg-card);
+  border: 1px solid rgba(var(--accent), 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  transform: translateY(0);
+}
+
+.it-service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(var(--accent), 0.2);
+  border-color: rgba(var(--accent), 0.5);
+  background: var(--theme-bg-card-hover);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.it-service-card__icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(var(--accent), 0.9), rgba(var(--accent-light), 0.8));
+  border: 2px solid rgba(var(--accent-light), 0.5);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.it-service-card__icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+}
+
+.it-service-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.it-service-card__description {
+  color: var(--theme-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.it-service-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.it-service-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--theme-text-tertiary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.it-service-card__feature::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(var(--accent), 1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Tech stack for IT */
+.it-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-top: var(--space-13);
+}
+
+/* IT Tech Badge - NO INIT ANIMATIONS */
+.it-tech-badge {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-gray-800);
+  border: var(--border-width) solid var(--color-gray-700);
+  border-radius: var(--radius-full);
+  color: var(--color-gray-100);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  transform: translateY(0);
+}
+
+.it-tech-badge:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 122, 255, 0.1);
+  transform: translateY(-1px);
+  transition: all var(--transition-fast);
+}
+
+/* Case studies */
+.case-studies {
+  margin-top: var(--space-12);
+}
+
+/* Mobile-first case study - NO INIT ANIMATIONS */
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  background-color: var(--color-dark-lighter);
+  border: var(--border-width) solid var(--color-dark-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .case-study {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.case-study:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+  transition: all var(--transition-base);
+}
+
+.case-study:nth-child(even) {
+  direction: rtl;
+}
+
+.case-study:nth-child(even) > * {
+  direction: ltr;
+}
+
+.case-study__image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: var(--color-dark);
+}
+
+.case-study__content {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-study__client {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.case-study__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.case-study__description {
+  color: var(--color-light-dark);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.case-study__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.case-study__tag {
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-dark);
+  border: var(--border-width) solid var(--color-dark-light);
+  color: var(--color-light);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-full);
+}

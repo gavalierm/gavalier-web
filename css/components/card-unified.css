@@ -34,7 +34,7 @@
 /* Base hover - subtle */
 .card:hover {
   transform: translateY(-4px);
-  border-color: var(--theme-text-primary);
+  border-color: var(--theme-border-color-strong);
   box-shadow: none;
   background: var(--theme-bg);
 }

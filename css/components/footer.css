@@ -15,8 +15,8 @@
   flex-direction: column;
   gap: var(--space-8);
   padding: var(--space-10) 0;
-  border-top: 1px solid var(--theme-text-primary);
-  border-bottom: 1px solid var(--theme-text-primary);
+  border-top: 1px solid var(--theme-border-color);
+  border-bottom: 1px solid var(--theme-border-color);
   margin-bottom: var(--space-12);
 }
 
@@ -135,7 +135,7 @@
 .footer__closer {
   margin-top: var(--space-13);
   padding-top: var(--space-10);
-  border-top: 1px solid var(--theme-text-primary);
+  border-top: 1px solid var(--theme-border-color);
 }
 
 .footer__closer-slogan {

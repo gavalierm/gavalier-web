@@ -158,7 +158,7 @@
 }
 
 .article:hover {
-  border-left-color: var(--theme-text-primary);
+  border-left-color: var(--theme-border-color-strong);
 }
 
 .article__title {
@@ -180,7 +180,6 @@
 .article__text strong,
 .article__title strong {
   font-weight: var(--font-bold);
-  color: var(--theme-text-primary);
 }
 
 /* CTA in accordion - left-aligned */

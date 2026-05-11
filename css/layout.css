@@ -91,13 +91,18 @@
 }
 
 /* Blue mark on the first line / sentence of any editorial headline */
-.headline-mark {
+.headline-mark,
+strong {
   background: #007AFF;
   color: #fff;
   padding: 0.05em 0.12em 0.025em;
   line-height: 1.25;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+strong {
+  font-weight: var(--font-bold);
 }
 
 .section-lead__subhead {

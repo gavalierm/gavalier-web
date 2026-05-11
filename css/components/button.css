@@ -85,7 +85,7 @@
 
 .theme-toggle:hover {
   transform: scale(1.05);
-  border-color: var(--theme-text-primary);
+  border-color: var(--theme-border-color-strong);
   box-shadow: none;
 }
 

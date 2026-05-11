@@ -8,7 +8,7 @@
 
 /* Body — extended narrative with pull-quote */
 .how-it-works__body {
-  border-top: 1px solid var(--theme-text-primary);
+  border-top: 1px solid var(--theme-border-color);
   padding-top: var(--space-10);
 }
 
@@ -40,7 +40,7 @@
 .how-it-works__quote {
   margin: var(--space-10) 0;
   padding: var(--space-2) 0 var(--space-2) var(--space-6);
-  border-left: 4px solid var(--theme-text-primary);
+  border-left: 4px solid var(--theme-border-color);
   font-size: var(--text-heading);
   font-weight: var(--font-semibold);
   line-height: 1.4;
@@ -63,7 +63,7 @@
 .how-it-works__closer {
   margin: var(--space-10) 0 0;
   padding-top: var(--space-8);
-  border-top: 1px solid var(--theme-text-primary);
+  border-top: 1px solid var(--theme-border-color);
   font-size: var(--text-body);
   font-weight: var(--font-semibold);
   line-height: 1.55;

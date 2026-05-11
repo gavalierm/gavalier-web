@@ -9,51 +9,39 @@
    ============================================ */
 
 .card {
-  /* Accent inherited from parent section (.programming, .streaming, etc.) */
+  background: var(--theme-bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 
-  /* Glassmorphism */
-  background: var(--theme-bg-card);
-  backdrop-filter: var(--theme-glass-blur);
-  -webkit-backdrop-filter: var(--theme-glass-blur);
+  border: 1px solid var(--theme-border-color-strong);
+  border-radius: var(--radius-lg);
 
-  /* Border - uses accent */
-  border: 2px solid rgba(var(--accent), 0.3);
-  border-radius: var(--radius-2xl);
+  box-shadow: none;
 
-  /* Shadow */
-  box-shadow: var(--theme-shadow-card);
-
-  /* Layout */
-  padding: var(--space-8);
+  padding: var(--space-7);
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 
-  /* Hover transition - only specific properties, not all */
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-              border-color 0.4s ease,
-              box-shadow 0.4s ease,
-              background 0.3s ease;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
   cursor: pointer;
 
-  /* Performance */
   contain: layout style paint;
 }
 
-/* Base hover */
+/* Base hover - subtle */
 .card:hover {
-  transform: translateY(-16px) scale(1.05);
-  border-color: rgba(var(--accent), 0.8);
-  box-shadow:
-    0 24px 80px rgba(var(--accent), calc(0.4 * var(--theme-glow-intensity))),
-    0 0 100px rgba(var(--accent), calc(0.2 * var(--theme-glow-intensity)));
-  background: var(--theme-bg-card-hover);
+  transform: translateY(-4px);
+  border-color: var(--theme-text-primary);
+  box-shadow: none;
+  background: var(--theme-bg);
 }
 
 .card:active {
-  transform: translateY(-6px) scale(1.01);
-  transition: all 0.1s ease;
+  transform: translateY(-1px);
+  transition: transform 0.1s ease;
 }
 
 /* ============================================
@@ -62,52 +50,31 @@
    ============================================ */
 
 .card__icon {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: center;
+  align-self: flex-start;
   position: relative;
-  transform: rotate(-8deg);
   margin-bottom: var(--space-5);
 
-  /* Gradient from accent to lighter accent */
-  background: linear-gradient(135deg, rgba(var(--accent), 0.9), rgba(var(--accent-light), 0.95));
-  border: 2px solid rgba(var(--accent-light), 0.6);
-  border-radius: var(--radius-xl);
-
-  /* Diffuse glow */
-  box-shadow:
-    0 0 40px rgba(var(--accent), 0.4),
-    0 0 80px rgba(var(--accent), 0.2),
-    0 8px 32px rgba(0, 0, 0, 0.3);
-
-  /* Hover transition - only box-shadow, transform handled by animation */
-  transition: box-shadow 0.4s ease;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.25s ease;
 }
 
 .card__icon svg {
-  width: 40px;
-  height: 40px;
-  stroke: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  stroke: var(--theme-text-primary);
+  stroke-width: 1.5;
 }
 
-/* Icon hover - enhanced glow (eccentric - left top) */
 .card:hover .card__icon {
-  animation: iconPop 0.55s cubic-bezier(0.2, 0, 0.2, 1) forwards;
-  box-shadow:
-    -20px -15px 80px rgba(var(--accent), 0.7),
-    -30px -25px 120px rgba(var(--accent), 0.5),
-    -40px -35px 160px rgba(var(--accent), 0.3),
-    0 12px 40px rgba(0, 0, 0, 0.4);
-}
-
-@keyframes iconPop {
-  0% { transform: rotate(-8deg) scale(1); animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0.4); }
-  20% { transform: rotate(-28deg) scale(0.76); animation-timing-function: cubic-bezier(0.2, 0.6, 0.4, 1); }
-  45% { transform: rotate(22deg) scale(1.28); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
-  100% { transform: rotate(10deg) scale(1.05); }
+  transform: translateX(4px);
 }
 
 /* ============================================
@@ -115,153 +82,18 @@
    ============================================ */
 
 .card__title {
-  font-size: var(--text-2xl);
+  font-size: var(--text-heading);
   font-weight: var(--font-bold);
   color: var(--theme-text-primary);
-  text-align: center;
-  line-height: var(--leading-tight);
-  text-shadow:
-    0 2px 8px var(--theme-shadow-color),
-    0 0 20px rgba(var(--accent), calc(0.3 * var(--theme-glow-intensity)));
-  margin: 0 0 var(--space-4) 0;
-}
-
-.card__description {
-  font-size: var(--text-lg);
-  color: var(--theme-text-secondary);
-  line-height: var(--leading-relaxed);
   text-align: left;
-  margin: 0;
-  transition: color 0.3s ease;
-}
-
-.card:hover .card__description {
-  color: var(--theme-text-primary);
-}
-
-/* Card CTA button */
-.card__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: var(--font-bold);
-  color: var(--theme-text-primary);
-  background: linear-gradient(135deg, rgba(var(--accent-light), 0.3), rgba(var(--accent), 0.15));
-  border: 2px solid rgba(var(--accent), 0.4);
-  border-radius: var(--radius-lg);
-  padding: var(--space-3) var(--space-5);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  align-self: center;
-  margin-top: auto;
-  box-shadow: 0 2px 8px rgba(var(--accent), 0.2);
-  transition: all 0.3s ease;
-}
-
-.card:hover .card__cta {
-  background: linear-gradient(135deg, rgba(var(--accent-light), 0.6), rgba(var(--accent), 0.35));
-  border-color: rgba(var(--accent-light), 1);
-  box-shadow:
-    0 4px 16px rgba(var(--accent), 0.4),
-    0 8px 32px rgba(var(--accent), 0.3),
-    0 0 50px rgba(var(--accent), 0.25);
-  transform: translateY(-4px) scale(1.05);
-}
-
-/* Card content wrapper - for grid layout within card */
-.card__content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3) 0;
 }
 
 /* ============================================
    CARD TYPE MODIFIERS
    ============================================ */
-
-/* Service cards - navigation style */
-.card--service {
-  justify-content: space-between;
-  gap: var(--space-6);
-  text-decoration: none;
-}
-
-.card--service .card__icon {
-  width: 100px;
-  height: 100px;
-}
-
-.card--service .card__icon svg {
-  width: 50px;
-  height: 50px;
-}
-
-.card--service .card__title {
-  font-size: var(--text-3xl);
-}
-
-/* Swiss knife cards */
-.card--swiss {
-  text-align: center;
-  align-items: center;
-  gap: var(--space-5);
-}
-
-/* Process step cards */
-.card--process {
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.card--process .card__content {
-  flex: 1;
-  padding: var(--space-6);
-  padding-left: var(--space-8);
-  z-index: 1;
-}
-
-.card--process .card__title {
-  text-align: left;
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-2);
-}
-
-.card--process .card__description {
-  text-align: left;
-}
-
-/* Process number - vertically stretched */
-.card__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  min-width: 80px;
-  font-size: 4rem;
-  font-weight: 100;
-  color: rgba(var(--accent), 0.2);
-  line-height: 1;
-  overflow: hidden;
-}
-
-.card__number span {
-  transform: scaleY(2.5);
-}
-
-@media (min-width: 768px) {
-  .card__number {
-    width: 100px;
-    min-width: 100px;
-    font-size: 5rem;
-  }
-}
 
 /* Stat cards */
 .card--stat {
@@ -273,22 +105,16 @@
 }
 
 .card__value {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-bold);
-  color: rgba(var(--accent), 1);
+  font-size: var(--text-display);
+  font-weight: var(--font-black);
+  color: var(--theme-text-primary);
   line-height: 1;
   margin-bottom: var(--space-3);
-  text-shadow: 0 0 40px rgba(var(--accent), 0.6);
-}
-
-@media (min-width: 768px) {
-  .card__value {
-    font-size: var(--text-6xl);
-  }
+  letter-spacing: -0.03em;
 }
 
 .card__label {
-  font-size: var(--text-lg);
+  font-size: var(--text-body);
   font-weight: var(--font-medium);
   color: var(--theme-text-secondary);
   text-transform: uppercase;
@@ -302,71 +128,3 @@
   padding: var(--space-6);
   gap: var(--space-4);
 }
-
-/* Badges */
-.card__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  justify-content: center;
-  margin-top: var(--space-4);
-}
-
-.card__badge,
-a.card__badge,
-a.card__badge:visited {
-  padding: var(--space-3) var(--space-5);
-  background: rgba(255, 201, 0, 0.2);
-  color: var(--theme-text-secondary);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 201, 0, 0.4);
-  text-decoration: none;
-  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-}
-
-.card__badge:hover,
-a.card__badge:hover {
-  background: rgba(255, 201, 0, 0.35);
-  border-color: rgba(255, 220, 100, 0.8);
-  color: var(--theme-text-primary);
-  transform: translateY(-2px);
-}
-
-
-/* ============================================
-   CARD GRID - Unified Flex system
-   ============================================ */
-
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-6);
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.card-grid .card {
-  width: 280px;
-  flex-shrink: 0;
-}
-
-/*
- * Breakpoint výpočty (box-sizing: border-box, gap: 24px, container padding: 48px, scrollbar: ~17px):
- * 4 karty: 4×280 + 3×24 = 1192px → viewport: 1192 + 48 + 17 = 1257px
- * 5 kariet: 5×280 + 4×24 = 1496px → viewport: 1496 + 48 + 17 = 1561px
- * 6 kariet: 6×280 + 5×24 = 1800px → viewport: 1800 + 48 + 17 = 1865px
- *
- * Medzi 1257px a 1864px by bolo 4+2 alebo 5+1, preto obmedzíme na 3 karty (3+3)
- * 3 karty: 3×280 + 2×24 = 888px
- *
- * Výnimka: Hero má len 4 karty, tam max-width neaplikujeme
- */
-@media (min-width: 1257px) and (max-width: 1864px) {
-  .card-grid:not(.hero__cards .card-grid) {
-    max-width: 888px; /* 3 × 280 + 2 × 24 = 888px */
-  }
-}
-

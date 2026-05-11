@@ -6,41 +6,18 @@
 :root {
   /* ============ Theme Colors - Dark (Default) ============ */
 
-  /* Backgrounds */
-  --theme-bg: #0a0e27;
-  --theme-bg-secondary: #1a1f3a;
-  --theme-bg-tertiary: rgba(26, 31, 58, 0.4);
-  --theme-bg-card: rgba(26, 31, 58, 0.4);
-  --theme-bg-card-hover: rgba(26, 31, 58, 0.6);
+  /* Dark theme (default) — dark grey, not black */
+  --theme-bg: #1f1f23;
+  --theme-bg-secondary: #2a2a2f;
 
-  /* Text */
-  --theme-text-primary: rgba(255, 255, 255, 1);
+  --theme-text-primary: #fff;
   --theme-text-secondary: rgba(255, 255, 255, 0.85);
-  --theme-text-tertiary: rgba(255, 255, 255, 0.75);
-  --theme-text-muted: rgba(255, 255, 255, 0.6);
+  --theme-text-muted: rgba(255, 255, 255, 0.55);
 
-  /* Borders */
-  --theme-border-color: rgba(255, 255, 255, 0.1);
-  --theme-border-color-strong: rgba(255, 255, 255, 0.2);
+  --theme-border-color: rgba(255, 255, 255, 0.15);
+  --theme-border-color-strong: rgba(255, 255, 255, 0.3);
 
-  /* Shadows */
-  --theme-shadow-color: rgba(0, 0, 0, 0.3);
-  --theme-shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --theme-shadow-card-hover: 0 24px 80px rgba(var(--accent), 0.4), 0 0 100px rgba(var(--accent), 0.2);
-
-  /* Glass effect */
-  --theme-glass-bg: rgba(26, 31, 58, 0.4);
-  --theme-glass-blur: blur(12px);
-
-  /* Accent glow intensity */
-  --theme-glow-intensity: 1;
-
-  /* Logo filter (invert to white for dark theme) */
   --theme-logo-filter: brightness(0) invert(1);
-
-  /* Floating icons */
-  --theme-floating-bg: transparent;
-  --theme-floating-opacity: 0.7;
 
 
   /* ============ Colors - Neutral Palette ============ */
@@ -91,27 +68,21 @@
   /* ============ Typography ============ */
 
   /* Font families */
-  --font-primary: 'Inter', 'Inter-fallback', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+  --font-primary: 'Manrope', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
 
-  /* Font sizes - Based on Apple's scale, optimized for readability */
-  --text-xs: 0.75rem;      /* 12px */
-  --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
-  --text-2xl: 1.5rem;      /* 24px */
-  --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-  --text-5xl: 3rem;        /* 48px */
-  --text-6xl: 3.75rem;     /* 60px */
+  /* Font sizes - 4 semantic roles, all responsive via clamp() where it matters */
+  --text-display: clamp(2.5rem, 7vw, 5rem);          /* 40-80px — section-lead, stat values, h1 */
+  --text-heading: clamp(1.8rem, 3.6vw, 2.7rem);      /* 28.8-43.2px — section titles, h2-h3 (+20%) */
+  --text-body: 1.6rem;                                /* 25.6px — paragraphs, h4-h6, default */
+  --text-micro: 0.875rem;                             /* 14px — nav, meta, labels */
 
   /* Font weights */
   --font-regular: 400;
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
-  --font-black: 900;
+  --font-black: 800;
 
   /* Line heights */
   --leading-tight: 1.2;
@@ -173,11 +144,11 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 
-  /* Glow shadows */
-  --shadow-blue-glow: 0 20px 60px rgba(0, 122, 255, 0.35), 0 0 80px rgba(0, 122, 255, 0.15);
-  --shadow-blue-glow-hover: 0 20px 60px rgba(0, 122, 255, 0.4), 0 0 80px rgba(0, 122, 255, 0.2);
-  --shadow-blue-prominent: 0 24px 80px rgba(0, 122, 255, 0.5), 0 0 120px rgba(0, 122, 255, 0.3);
-  --shadow-blue-card: 0 12px 32px rgba(0, 122, 255, 0.2);
+  /* Quiet shadows (formerly neon glows - rip out AI-slop) */
+  --shadow-blue-glow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-blue-glow-hover: 0 12px 32px rgba(0, 0, 0, 0.16);
+  --shadow-blue-prominent: 0 16px 40px rgba(0, 0, 0, 0.2);
+  --shadow-blue-card: 0 2px 8px rgba(0, 0, 0, 0.08);
 
 
   /* ============ Transitions ============ */
@@ -217,11 +188,10 @@
   --backdrop-glass-heavy: blur(20px);
 
 
-  /* ============ Text Shadows ============ */
-
-  --text-shadow-primary: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 122, 255, 0.3);
-  --text-shadow-secondary: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 122, 255, 0.3);
-  --text-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 122, 255, 0.6), 0 0 80px rgba(0, 122, 255, 0.3);
+  /* Text Shadows - disabled (was producing AI-slop neon glow on headings) */
+  --text-shadow-primary: none;
+  --text-shadow-secondary: none;
+  --text-shadow-hover: none;
 
 
   /* ============ Breakpoints ============ */
@@ -252,39 +222,16 @@
 
 .light-theme,
 [data-theme="light"] {
-  /* Backgrounds */
-  --theme-bg: #FFFFFF;
-  --theme-bg-secondary: #F8F9FA;
-  --theme-bg-tertiary: #F0F2F5;
-  --theme-bg-card: rgba(255, 255, 255, 0.4);
-  --theme-bg-card-hover: rgba(255, 255, 255, 0.6);
+  /* Light theme — pure monochrome */
+  --theme-bg: #fff;
+  --theme-bg-secondary: #f5f5f5;
 
-  /* Text */
-  --theme-text-primary: #1C1C1E;
-  --theme-text-secondary: #48484A;
-  --theme-text-tertiary: #636366;
-  --theme-text-muted: #8E8E93;
+  --theme-text-primary: #000;
+  --theme-text-secondary: rgba(0, 0, 0, 0.7);
+  --theme-text-muted: rgba(0, 0, 0, 0.5);
 
-  /* Borders */
-  --theme-border-color: rgba(0, 0, 0, 0.08);
-  --theme-border-color-strong: rgba(0, 0, 0, 0.15);
+  --theme-border-color: rgba(0, 0, 0, 0.1);
+  --theme-border-color-strong: rgba(0, 0, 0, 0.2);
 
-  /* Shadows - stronger for light bg */
-  --theme-shadow-color: rgba(0, 0, 0, 0.1);
-  --theme-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-  --theme-shadow-card-hover: 0 20px 60px rgba(var(--accent), 0.2), 0 8px 24px rgba(0, 0, 0, 0.1);
-
-  /* Glass effect - lighter */
-  --theme-glass-bg: rgba(255, 255, 255, 0.8);
-  --theme-glass-blur: blur(8px);
-
-  /* Accent glow intensity - reduced for light */
-  --theme-glow-intensity: 0.5;
-
-  /* Logo filter (invert to black for light theme) */
   --theme-logo-filter: brightness(0);
-
-  /* Floating icons */
-  --theme-floating-bg: rgba(255, 255, 255, 0.9);
-  --theme-floating-opacity: 1;
 }

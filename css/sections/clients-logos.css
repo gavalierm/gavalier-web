@@ -57,3 +57,9 @@
   filter: var(--theme-logo-filter);
   transition: filter 0.3s ease;
 }
+
+.clients-logos__logo--square img,
+.clients-logos__logo--square svg {
+  max-height: 200px;
+}
+

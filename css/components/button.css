@@ -2,7 +2,7 @@
    Button Component - Apple Design + Impact
    ======================================== */
 
-/* Button - NO INIT ANIMATIONS */
+/* Button - clean monotone */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -10,20 +10,20 @@
   gap: var(--space-3);
   padding: var(--space-4) var(--space-8);
   font-family: var(--font-primary);
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
+  font-size: var(--text-body);
+  font-weight: var(--font-semibold);
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-full);
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
   position: relative;
   overflow: hidden;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transform: translateY(0) scale(1);
+  letter-spacing: -0.005em;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 
 
@@ -38,121 +38,26 @@
   pointer-events: none;
 }
 
-/* Button sizes */
-.btn--sm {
-  padding: var(--space-2) var(--space-4);
-  font-size: var(--text-sm);
-}
-
 .btn--lg {
   padding: var(--space-4) var(--space-8);
-  font-size: var(--text-lg);
+  font-size: var(--text-body);
   border-radius: var(--radius-2xl);
 }
 
-/* Button variants */
-
-/* Primary - VÝRAZNÝ CTA */
 .btn--primary {
-  background: linear-gradient(135deg,
-    rgba(0, 122, 255, 1) 0%,
-    rgba(0, 102, 255, 1) 100%
-  );
-  color: rgba(255, 255, 255, 1);
-  font-weight: var(--font-bold);
-  border: 1px solid rgba(90, 200, 250, 0.5);
+  background: var(--theme-text-primary);
+  color: var(--theme-bg);
+  font-weight: var(--font-semibold);
+  border: none;
 }
 
 .btn--primary:hover {
-  transform: translateY(-3px) scale(1.03);
-  background: linear-gradient(135deg,
-    rgba(0, 140, 255, 1) 0%,
-    rgba(0, 122, 255, 1) 100%
-  );
-  transition: all var(--transition-base);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .btn--primary:active {
-  transform: translateY(-1px) scale(1.01);
-}
-
-/* Outline - Subtle glass */
-.btn--outline {
-  background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn--outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 1);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-base);
-}
-
-.btn--outline:active {
-  transform: translateY(0) scale(1);
-}
-
-/* Ghost */
-.btn--ghost {
-  background-color: transparent;
-  color: var(--color-primary);
-}
-
-.btn--ghost:hover {
-  background-color: var(--color-light-dark);
-  transition: all var(--transition-base);
-}
-
-/* Link style button */
-.btn--link {
-  background-color: transparent;
-  color: var(--color-primary);
-  padding: 0;
-}
-
-.btn--link:hover {
-  color: var(--color-primary-dark);
-  text-decoration: underline;
-  transition: all var(--transition-base);
-}
-
-/* Full width */
-.btn--block {
-  width: 100%;
-}
-
-/* Button group */
-.btn-group {
-  display: flex;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-}
-
-.btn-group--center {
-  justify-content: center;
-}
-
-/* Icon buttons */
-.btn--icon {
-  padding: var(--space-3);
-  width: 44px;
-  height: 44px;
-}
-
-.btn--icon.btn--sm {
-  padding: var(--space-2);
-  width: 36px;
-  height: 36px;
-}
-
-.btn--icon.btn--lg {
-  padding: var(--space-4);
-  width: 52px;
-  height: 52px;
+  transform: translateY(0);
 }
 
 /* ========================================
@@ -161,27 +66,27 @@
 
 .theme-toggle {
   position: fixed;
-  top: var(--space-5);
-  right: var(--space-5);
-  z-index: var(--z-fixed);
-  width: 48px;
-  height: 48px;
+  top: var(--space-10);
+  left: var(--space-3);
+  z-index: 80;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  border: 2px solid var(--theme-border-color-strong);
+  border: 1px solid var(--theme-border-color-strong);
   border-radius: var(--radius-full);
-  background: var(--theme-glass-bg);
+  background: var(--theme-bg);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px var(--theme-shadow-color);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: none;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1);
-  border-color: var(--color-primary);
-  box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+  transform: scale(1.05);
+  border-color: var(--theme-text-primary);
+  box-shadow: none;
 }
 
 .theme-toggle:active {

@@ -5,60 +5,52 @@
   <!-- Homepage -->
   <url>
     <loc>https://gavalier.sk/</loc>
-    <lastmod>2025-11-26</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://gavalier.sk/assets/og_image.png</image:loc>
-      <image:title>Marcel Gavalier - Solution Architect</image:title>
-      <image:caption>Programovanie, Audio &amp; Video Produkcia, IT Poradenstvo</image:caption>
+      <image:loc>https://gavalier.sk/assets/gavo_edited.png</image:loc>
+      <image:title>Marcel Gavalier — Solution Engineer, Coder, AI Engineer, Sieťar, Audio \ Video Producer</image:title>
+      <image:caption>Tri oblasti. 12 rokov. Bez prerušenia. Weby, apky, streamy a siete z jednej ruky.</image:caption>
     </image:image>
   </url>
 
-  <!-- Programovanie Section -->
-  <url>
-    <loc>https://gavalier.sk/#programovanie</loc>
-    <lastmod>2025-11-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Audio & Video Section -->
-  <url>
-    <loc>https://gavalier.sk/#streaming</loc>
-    <lastmod>2025-11-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- IT Networks Section -->
-  <url>
-    <loc>https://gavalier.sk/#it-networks</loc>
-    <lastmod>2025-11-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Swiss Knife Section -->
-  <url>
-    <loc>https://gavalier.sk/#swiss-knife</loc>
-    <lastmod>2025-11-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Experience Section -->
+  <!-- 12 rokov / Tri oblasti -->
   <url>
     <loc>https://gavalier.sk/#experience</loc>
-    <lastmod>2025-11-26</lastmod>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Referencie / Klienti -->
+  <url>
+    <loc>https://gavalier.sk/#referencie</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact Section -->
+  <!-- Služby (akordeóny) -->
+  <url>
+    <loc>https://gavalier.sk/#sluzby</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Ako to funguje / Cena -->
+  <url>
+    <loc>https://gavalier.sk/#ako-to-funguje</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Kontakt -->
   <url>
     <loc>https://gavalier.sk/#contact</loc>
-    <lastmod>2025-11-26</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

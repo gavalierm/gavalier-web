@@ -1,456 +1,140 @@
 /* ========================================
-   Hero Section - Mobile-First Flexbox
+   Hero — brutalist editorial, biggest typography on the page
    ======================================== */
 
 .hero {
-  /* Blue accent for hero */
-  --accent: 0, 122, 255;
-  --accent-light: 90, 200, 250;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
-  /* Mobile-first fixed values instead of clamp() for better resize performance */
-  padding: 2rem 1rem 12rem;
-  /* Same gradient style as other sections */
-  background:
-    radial-gradient(circle at 20% 30%, rgba(var(--accent), 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(var(--accent), 0.15) 0%, transparent 50%),
-    var(--theme-bg);
+  background: var(--theme-bg);
   color: var(--theme-text-primary);
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .hero {
-    padding: 3rem 1.5rem 20rem;
-  }
-}
-
-/* Hero Logo */
-.hero__logo {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 1.5rem;
-  opacity: 1;
-  z-index: 10;
-}
-
-@media (min-width: 768px) {
-  .hero__logo {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 2rem;
-  }
-}
-
-.hero__logo img {
-  width: 100%;
-  height: 100%;
-  animation: logoFloat 4s ease-in-out infinite;
-}
-
-
-@keyframes logoFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.hero__label {
-  display: inline-block;
-  padding: var(--space-3) var(--space-5);
-  background: rgba(0, 122, 255, 0.15);
-  color: var(--color-primary-light);
-  border: 1px solid rgba(0, 122, 255, 0.3);
-  border-radius: var(--radius-full);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-8);
-  opacity: 1;
-  box-shadow: 0 4px 20px rgba(0, 122, 255, 0.2);
-  z-index: 10;
-}
-
-/* Mobile-first title */
-.hero__title {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-bold);
-  line-height: 1.1;
-  color: var(--theme-text-primary);
-  margin-bottom: var(--space-8);
-  letter-spacing: -0.03em;
-  z-index: 10;
-}
-
-@media (min-width: 768px) {
-  .hero__title {
-    font-size: var(--text-6xl);
-  }
-}
-
-.hero__title-line1 {
-  display: block;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .hero__title-line1 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.hero__title-line2 {
-  display: block;
-}
-
-/* Typewriter container - holds all text variants */
-.hero__typewriter-container {
-  display: inline-block;
+/* TOP — byline + title + portrait image */
+.hero__top {
   position: relative;
-  white-space: nowrap;
-  text-shadow: none; /* Remove inherited h1 text-shadow */
+  padding-top: var(--space-13);
+  padding-bottom: var(--space-10);
 }
 
-/* Each text variant - only one visible at a time */
-.hero__typewriter-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  white-space: nowrap;
-  isolation: isolate;
+@media (min-width: 768px) {
+  .hero__top {
+    padding-bottom: var(--space-12);
+  }
 }
 
-.hero__typewriter-text--active {
-  position: relative; /* Important: relative for absolute cursor positioning */
-  display: inline-block;
-}
-
-/* Placeholder text (gray) - NO glow here */
-.typewriter__placeholder {
-  color: rgba(255, 255, 255, 0.4);
-  display: inline-block;
+.hero__top .container,
+.hero__roles-strip .container,
+.hero__bottom .container {
+  max-width: 1024px;
+  align-items: stretch;
   position: relative;
-  z-index: 1;
-}
-
-/* Colored text overlay - clips from left to right, NO shadows */
-.typewriter__colored {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  white-space: nowrap;
-  clip-path: inset(0 100% 0 0);
   z-index: 2;
 }
 
-/* Cursor - third independent layer, 3px bar that moves */
-.typewriter__cursor {
+/* Portrait — anchored top-right, fills hero__top height */
+.hero__portrait {
   position: absolute;
-  top: 0.1em;
-  bottom: 0.1em;
-  left: 0;
-  width: 3px;
-  background: currentColor;
-  z-index: 3;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
   pointer-events: none;
+  user-select: none;
+  z-index: 1;
 }
 
-/* Complete typewriter animation: type → pause → remove */
-.hero__typewriter-text--animate .typewriter__colored {
-  animation: typewriterCycle 4s steps(15) forwards;
-}
-
-/* Cursor moves with same timing as text clip */
-.hero__typewriter-text--animate .typewriter__cursor {
-  animation: cursorMove 4s steps(15) forwards;
-}
-
-@keyframes cursorMove {
-  /* Phase 1: Move right (0-20%) - 0.8s */
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 100%;
-  }
-
-  /* Phase 2: Stay at right (20-80%) - 2.4s */
-  80% {
-    left: 100%;
-  }
-
-  /* Phase 3: Move back to left (80-100%) - 0.8s */
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes cursorBlink {
-  0%, 49% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
-}
-
-@keyframes typewriterCycle {
-  /* Phase 1: Type in (0-20%) - 0.8s */
-  0% {
-    clip-path: inset(0 100% 0 0);
-  }
-  20% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  /* Phase 2: Pause/Display (20-80%) - 2.4s */
-  80% {
-    clip-path: inset(0 0 0 0);
-  }
-
-  /* Phase 3: Remove/Untype (80-100%) - 0.8s */
-  100% {
-    clip-path: inset(0 100% 0 0);
-  }
-}
-
-/* Typewriter color variants - CSS variables per text */
-.hero__typewriter-text[data-text-index="0"] {
-  --tw-color: #FFFFFF;
-  --tw-color-light: #DCDCFF;
-  --tw-glow: 0 6px 25px rgba(255, 255, 255, 0.35), 0 12px 50px rgba(255, 255, 255, 0.25), 0 20px 80px rgba(255, 255, 255, 0.15);
-}
-
-.hero__typewriter-text[data-text-index="1"] {
-  --tw-color: #FF3B30;
-  --tw-color-light: #FF6B5B;
-  --tw-glow: 0 6px 25px rgba(255, 59, 48, 0.7), 0 12px 50px rgba(255, 59, 48, 0.5), 0 20px 80px rgba(255, 59, 48, 0.3);
-}
-
-.hero__typewriter-text[data-text-index="2"] {
-  --tw-color: #007AFF;
-  --tw-color-light: #5AC8FA;
-  --tw-glow: 0 6px 25px rgba(0, 122, 255, 0.7), 0 12px 50px rgba(0, 122, 255, 0.5), 0 20px 80px rgba(0, 122, 255, 0.3);
-}
-
-.hero__typewriter-text[data-text-index="3"] {
-  --tw-color: #AF52DE;
-  --tw-color-light: #BF5AF2;
-  --tw-glow: 0 6px 25px rgba(175, 82, 222, 0.7), 0 12px 50px rgba(175, 82, 222, 0.5), 0 20px 80px rgba(175, 82, 222, 0.3);
-}
-
-.hero__typewriter-text[data-text-index="4"] {
-  --tw-color: #34C759;
-  --tw-color-light: #30D158;
-  --tw-glow: 0 6px 25px rgba(52, 199, 89, 0.7), 0 12px 50px rgba(52, 199, 89, 0.5), 0 20px 80px rgba(52, 199, 89, 0.3);
-}
-
-/* Placeholder - gray text with accent-colored glow underneath */
-.typewriter__placeholder {
-  color: rgba(255, 255, 255, 0.4);
-  text-shadow: var(--tw-glow);
-}
-
-/* Light theme - darker placeholder text */
-.light-theme .typewriter__placeholder,
-[data-theme="light"] .typewriter__placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-/* Fade-in animation for glow when text becomes active */
-.hero__typewriter-text--active .typewriter__placeholder {
-  animation: glowFadeIn 1s ease-out forwards;
-}
-
-@keyframes glowFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Colored text - gradient for depth, NO shadows (clip-path artifacts) */
-.typewriter__colored {
-  background: linear-gradient(135deg, var(--tw-color), var(--tw-color-light));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Light theme - darker/more saturated colors + stronger glow for white background */
-.light-theme .hero__typewriter-text[data-text-index="0"],
-[data-theme="light"] .hero__typewriter-text[data-text-index="0"] {
-  --tw-color: #1C1C1E;
-  --tw-color-light: #48484A;
-  --tw-glow: 0 6px 25px rgba(0, 0, 0, 0.3), 0 12px 50px rgba(0, 0, 0, 0.2), 0 20px 80px rgba(0, 0, 0, 0.1);
-}
-
-.light-theme .hero__typewriter-text[data-text-index="1"],
-[data-theme="light"] .hero__typewriter-text[data-text-index="1"] {
-  --tw-color: #D70015;
-  --tw-color-light: #FF2D55;
-  --tw-glow: 0 6px 25px rgba(215, 0, 21, 0.5), 0 12px 50px rgba(215, 0, 21, 0.35), 0 20px 80px rgba(215, 0, 21, 0.2);
-}
-
-.light-theme .hero__typewriter-text[data-text-index="2"],
-[data-theme="light"] .hero__typewriter-text[data-text-index="2"] {
-  --tw-color: #0051D5;
-  --tw-color-light: #007AFF;
-  --tw-glow: 0 6px 25px rgba(0, 81, 213, 0.5), 0 12px 50px rgba(0, 81, 213, 0.35), 0 20px 80px rgba(0, 81, 213, 0.2);
-}
-
-.light-theme .hero__typewriter-text[data-text-index="3"],
-[data-theme="light"] .hero__typewriter-text[data-text-index="3"] {
-  --tw-color: #8944AB;
-  --tw-color-light: #AF52DE;
-  --tw-glow: 0 6px 25px rgba(137, 68, 171, 0.5), 0 12px 50px rgba(137, 68, 171, 0.35), 0 20px 80px rgba(137, 68, 171, 0.2);
-}
-
-.light-theme .hero__typewriter-text[data-text-index="4"],
-[data-theme="light"] .hero__typewriter-text[data-text-index="4"] {
-  --tw-color: #28A745;
-  --tw-color-light: #34C759;
-  --tw-glow: 0 6px 25px rgba(40, 167, 69, 0.5), 0 12px 50px rgba(40, 167, 69, 0.35), 0 20px 80px rgba(40, 167, 69, 0.2);
-}
-
-/* Hero subtitle - uses .section__description from layout.css */
-.hero__subtitle {
-  z-index: 10;
-}
-
-
-/* ========================================
-   Floating Service Cards - Absolute Positioned
-   ======================================== */
-
-.hero__icons {
+/* Word cloud — behind portrait, fades out to the left (outside the photo) */
+.hero__cloud {
   position: absolute;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, #000 60%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, #000 60%, #000 100%);
 }
 
-/* Pause animations during scroll for smooth performance */
-body.is-scrolling .floating-icon,
-body.is-scrolling .hero__logo img {
-  animation-play-state: paused;
+.hero__cloud-word {
+  position: absolute;
+  opacity: 0.08;
+  color: var(--theme-text-primary);
+  font-weight: var(--font-bold);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
 }
 
-/* ========================================
-   Icon Click/Tap Escape Animation - Unified
-   ======================================== */
+.hero__cloud-word--xl { font-size: clamp(1.25rem, 5vw, 3.75rem); }
+.hero__cloud-word--lg { font-size: clamp(1rem, 3.5vw, 2.5rem); }
+.hero__cloud-word--md { font-size: clamp(0.75rem, 2.5vw, 1.625rem); font-weight: var(--font-semibold); }
+.hero__cloud-word--sm { font-size: clamp(0.625rem, 1.75vw, 1.125rem); font-weight: var(--font-medium); }
 
-/* Escape animation trigger */
-.floating-icon.icon-escape-active {
-  animation: iconEscape 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+/* Eyebrow byline */
+.hero__byline {
+  font-size: var(--text-micro);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--theme-text-primary);
+  margin: 0 0 var(--space-8);
 }
 
-/* Escape animation keyframes */
-@keyframes iconEscape {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  40% {
-    transform: translate(var(--escape-x, -100px), var(--escape-y, -100px)) rotate(360deg) scale(0.5);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translate(0, 0) rotate(720deg) scale(1);
-    opacity: 1;
-  }
+/* Massive headline */
+.hero__title {
+  font-size: clamp(3.5rem, 14vw, 9rem);
+  font-weight: var(--font-black);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  color: var(--theme-text-primary);
+  margin: 0;
 }
 
-/* Escape direction variables for hero icons */
-.floating-icon--1 {
-  --escape-x: -80px;
-  --escape-y: -80px;
-}
 
-.floating-icon--2 {
-  --escape-x: 90px;
-  --escape-y: -70px;
-}
-
-.floating-icon--3 {
-  --escape-x: -100px;
-  --escape-y: 60px;
-}
-
-.floating-icon--4 {
-  --escape-x: 0px;
-  --escape-y: -100px;
-}
-
-.floating-icon--5 {
-  --escape-x: 95px;
-  --escape-y: -65px;
-}
-
-.floating-icon--6 {
-  --escape-x: 85px;
-  --escape-y: 75px;
-}
-
-.floating-icon--7 {
-  --escape-x: -90px;
-  --escape-y: 80px;
-}
-
-.floating-icon--8 {
-  --escape-x: -75px;
-  --escape-y: 95px;
-}
-
-.floating-icon--9 {
-  --escape-x: -85px;
-  --escape-y: -75px;
-}
-
-.floating-icon--10 {
-  --escape-x: 80px;
-  --escape-y: 105px;
-}
-
-.floating-icon--11 {
-  --escape-x: 70px;
-  --escape-y: 90px;
-}
-
-.floating-icon--12 {
-  --escape-x: -60px;
-  --escape-y: 110px;
-}
-
-/* Services Hub inside Hero */
-.hero__cards {
-  z-index: 10;
-  margin-top: 2rem;
+/* ROLES STRIP — full-bleed horizontal lines that visually cut the portrait */
+.hero__roles-strip {
+  border-top: 1px solid var(--theme-text-primary);
+  border-bottom: 1px solid var(--theme-text-primary);
+  padding: var(--space-5) 0;
 }
 
 @media (min-width: 768px) {
-  .hero__cards {
-    margin-top: 3rem;
+  .hero__roles-strip {
+    padding: var(--space-6) 0;
   }
 }
 
-/* Hero CTA - uses .section__cta styles from layout.css */
-/* Just add z-index for hero context */
-.hero__cta {
-  z-index: 10;
+.hero__roles {
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  letter-spacing: -0.005em;
+  color: var(--theme-text-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* BOTTOM — lede + nav */
+.hero__bottom {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-13);
+}
+
+@media (min-width: 768px) {
+  .hero__bottom {
+    padding-top: var(--space-12);
+  }
+}
+
+.hero__lede {
+  font-size: var(--text-body);
+  line-height: 1.55;
+  font-weight: var(--font-medium);
+  color: var(--theme-text-primary);
+  max-width: 720px;
+  margin: 0;
+}
+
+.hero__lede strong {
+  font-weight: var(--font-bold);
 }

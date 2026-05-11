@@ -7,6 +7,9 @@ Allow: /
 # Sitemaps
 Sitemap: https://gavalier.sk/sitemap.xml
 
+# LLM-friendly summary (emerging standard for AI crawlers)
+# https://gavalier.sk/llms.txt
+
 # Allow all major AI crawlers and search engines
 User-agent: Googlebot
 Allow: /

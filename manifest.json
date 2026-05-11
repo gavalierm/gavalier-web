@@ -1,25 +1,21 @@
 {
-  "name": "Marcel Gavalier - Solution Architect",
+  "name": "Marcel Gavalier — Solution Engineer",
   "short_name": "Gavalier",
-  "description": "Solution Architect s 12+ rokmi skúseností. Programovanie, Audio & Video produkcia, IT poradenstvo.",
+  "description": "Solution Engineer. Tri oblasti, 12 rokov, bez prerušenia. Coder, AI Engineer, Sieťar, Audio \\ Video Producer. Weby, apky, streamy a siete z jednej ruky.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0e27",
-  "theme_color": "#007AFF",
+  "background_color": "#ffffff",
+  "theme_color": "#1f1f23",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "assets/logo.svg",
+      "src": "assets/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ],
-  "categories": [
-    "business",
-    "productivity",
-    "education"
-  ],
+  "categories": ["business", "productivity", "developer", "music"],
   "lang": "sk",
   "dir": "ltr",
   "scope": "/",

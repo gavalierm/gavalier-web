@@ -2,22 +2,11 @@
    Cursor Interactions & Hover Effects
    ======================================== */
 
-/* Enhanced cursor for interactive elements */
 a, button, .btn, .card, input, textarea, select,
 [role="button"], [tabindex]:not([tabindex="-1"]) {
   cursor: pointer;
 }
 
-/* GPU Acceleration for smooth animations */
-a, button, .btn, .card, .setup-item__icon,
-.platform, .contact-item {
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-/* Smooth scale effect on links - desktop only */
 @media (hover: hover) and (pointer: fine) {
   a {
     transition: transform 0.2s ease-out;
@@ -25,227 +14,20 @@ a, button, .btn, .card, .setup-item__icon,
   }
 
   a:hover {
-    transform: translateZ(0) scale(1.05);
+    transform: scale(1.05);
   }
-}
 
-/* Button scale and glow on hover - desktop only */
-@media (hover: hover) and (pointer: fine) {
   button:not(:disabled):hover,
   .btn:not(:disabled):hover {
-    transform: translateZ(0) translateY(-2px) scale(1.05);
+    transform: translateY(-2px) scale(1.05);
   }
 }
 
 button:not(:disabled):active,
 .btn:not(:disabled):active {
-  transform: translateZ(0) translateY(0) scale(0.98);
-}
-
-/* Icon hover effects */
-.setup-item__icon,
-.platform__icon,
-.service-category__icon,
-.contact-item__icon {
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.card:hover .setup-item__icon,
-.platform:hover .platform__icon,
-.service-category:hover .service-category__icon,
-.contact-item:hover .contact-item__icon {
-  transform: scale(1.15) rotate(5deg);
-}
-
-/* Setup items hover enhancement */
-.setup-item {
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.setup-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow:
-    0 20px 50px rgba(0, 122, 255, 0.3),
-    0 0 60px rgba(0, 122, 255, 0.15);
-}
-
-.setup-item:active {
-  transform: translateY(-4px) scale(1.01);
-}
-
-/* Platform cards hover */
-.platform {
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.platform:hover {
-  transform: translateY(-6px) scale(1.05);
-}
-
-.platform:active {
-  transform: translateY(-2px) scale(1.02);
-}
-
-/* Stat cards hover */
-
-
-/* Input fields hover */
-input:hover,
-textarea:hover,
-select:hover {
-  border-color: rgba(0, 122, 255, 0.5);
-  box-shadow: 0 0 20px rgba(0, 122, 255, 0.2);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: rgba(0, 122, 255, 0.8);
-  box-shadow:
-    0 0 30px rgba(0, 122, 255, 0.3),
-    inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-
-/* Contact items hover */
-.contact-item {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  cursor: pointer;
-}
-
-.contact-item:hover {
-  transform: translateX(8px);
-  background: rgba(0, 122, 255, 0.05);
-  border-radius: var(--radius-lg);
-  padding: var(--space-3);
-  margin-left: calc(var(--space-3) * -1);
-}
-
-/* Link hover enhancements */
-.card__link,
-.contact-item__value a {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.card__link::after,
-.contact-item__value a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), rgba(90, 200, 250, 1));
-  transition: width 0.3s ease;
-}
-
-.card__link:hover::after,
-.contact-item__value a:hover::after {
-  width: 100%;
-}
-
-/* Tag hover effects */
-.card__tag {
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.card__tag:hover {
-  transform: translateY(-2px) scale(1.05);
-}
-
-/* Tech badge hover */
-.it-tech-badge {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  cursor: default;
-}
-
-.it-tech-badge:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.3);
-}
-
-/* Filter button hover */
-.filter-btn {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.filter-btn:hover:not(.filter-btn--active) {
-  transform: translateY(-2px) scale(1.05);
-}
-
-.filter-btn:active {
   transform: translateY(0) scale(0.98);
 }
 
-/* Menu toggle hover */
-.menu-toggle {
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-toggle:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-.menu-toggle:active {
-  transform: scale(1.05);
-}
-
-/* Ripple effect on click */
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-.btn::after,
-.card::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  pointer-events: none;
-}
-
-.btn:active::after,
-.card:active::after {
-  animation: ripple 0.6s ease-out;
-}
-
-/* Magnetic hover effect for buttons */
-@media (hover: hover) {
-  .btn--primary,
-  .btn--secondary {
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-}
-
-/* Smooth transitions for all interactive elements */
 * {
   -webkit-tap-highlight-color: transparent;
-}
-
-::selection {
-  background: rgba(0, 122, 255, 0.3);
-  color: white;
-}
-
-::-moz-selection {
-  background: rgba(0, 122, 255, 0.3);
-  color: white;
 }

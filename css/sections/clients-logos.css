@@ -1,6 +1,7 @@
 /* ========================================
    Clients & Partners Logos Section
-   3 riadky, horizontálny scroll
+   CSS marquee — plynulý nekonečný horizontálny scroll
+   Desktop: 2 rady (LTR + RTL). Mobile: 3 rady, menšie logá.
    ======================================== */
 
 .section.clients-logos {
@@ -16,30 +17,54 @@
   display: block;
 }
 
-.clients-logos__grid {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-auto-flow: column;
-  grid-auto-columns: 280px;
-  gap: var(--space-8);
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: var(--space-6) var(--space-6);
+.clients-logos__marquee {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
   width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
 }
 
-.clients-logos__grid::-webkit-scrollbar {
+.clients-logos__row {
+  overflow: hidden;
+  width: 100%;
+  contain: layout paint;
+  min-height: 100px;
+}
+
+.clients-logos__track {
+  display: flex;
+  align-items: center;
+  /* No 'gap' — items use margin-right so trailing space exists on every item.
+     This makes the duplicate set start at exactly 50% of track width,
+     so translateX(-50%) loops seamlessly without a half-gap snap. */
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  animation: clients-logos-marquee-ltr 40s linear infinite;
+}
+
+.clients-logos__row--rtl .clients-logos__track {
+  animation-name: clients-logos-marquee-rtl;
+}
+
+/* Desktop: dva rady, mobile-only row skrytý */
+.clients-logos__row--mobile {
   display: none;
 }
 
 .clients-logos__item {
-  width: 280px;
+  flex: 0 0 auto;
+  width: 220px;
+  margin-right: var(--space-8);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-6);
+  padding: var(--space-4) var(--space-6);
 }
 
 .clients-logos__logo {
@@ -52,14 +77,70 @@
 .clients-logos__logo img,
 .clients-logos__logo svg {
   width: 100%;
-  max-height: 120px;
+  height: 100px;
   object-fit: contain;
   filter: var(--theme-logo-filter);
-  transition: filter 0.3s ease;
 }
 
 .clients-logos__logo--square img,
 .clients-logos__logo--square svg {
-  max-height: 200px;
+  height: 160px;
 }
 
+@keyframes clients-logos-marquee-ltr {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes clients-logos-marquee-rtl {
+  from { transform: translate3d(-50%, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
+/* Mobile: tretí rad sa zapne, logá zmenšené, hustejšie balenie */
+@media (max-width: 768px) {
+  .section.clients-logos {
+    padding: var(--space-8) 0;
+  }
+
+  .clients-logos__marquee {
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+  }
+
+  .clients-logos__row--mobile {
+    display: block;
+  }
+
+  .clients-logos__track {
+    animation-duration: 37.5s;
+  }
+
+  .clients-logos__item {
+    width: 120px;
+    margin-right: var(--space-5);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .clients-logos__row {
+    min-height: 50px;
+  }
+
+  .clients-logos__logo img,
+  .clients-logos__logo svg {
+    height: 50px;
+  }
+
+  .clients-logos__logo--square img,
+  .clients-logos__logo--square svg {
+    height: 80px;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .clients-logos__track {
+    animation: none;
+    transform: none;
+  }
+}

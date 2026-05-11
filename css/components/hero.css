@@ -43,34 +43,6 @@
   z-index: 1;
 }
 
-/* Word cloud — behind portrait, fades out to the left (outside the photo) */
-.hero__cloud {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, #000 60%, #000 100%);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 30%, #000 60%, #000 100%);
-}
-
-.hero__cloud-word {
-  position: absolute;
-  opacity: 0.08;
-  color: var(--theme-text-primary);
-  font-weight: var(--font-bold);
-  font-style: italic;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-  line-height: 1;
-  user-select: none;
-  font-variant-numeric: tabular-nums;
-}
-
-.hero__cloud-word--xl { font-size: clamp(1.25rem, 5vw, 3.75rem); }
-.hero__cloud-word--lg { font-size: clamp(1rem, 3.5vw, 2.5rem); }
-.hero__cloud-word--md { font-size: clamp(0.75rem, 2.5vw, 1.625rem); font-weight: var(--font-semibold); }
-.hero__cloud-word--sm { font-size: clamp(0.625rem, 1.75vw, 1.125rem); font-weight: var(--font-medium); }
-
 /* Eyebrow byline */
 .hero__byline {
   font-size: var(--text-micro);

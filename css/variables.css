@@ -6,8 +6,8 @@
 :root {
   /* ============ Theme Colors - Dark (Default) ============ */
 
-  /* Dark theme (default) — dark grey, not black */
-  --theme-bg: #1f1f23;
+  /* Dark theme (default) */
+  --theme-bg: #0d0d0d;
   --theme-bg-secondary: #2a2a2f;
 
   --theme-text-primary: #fff;

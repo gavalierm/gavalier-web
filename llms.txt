@@ -18,7 +18,7 @@ Platí sa za **skúsenosti, nie za hodiny** — za rozhodnutia spravené stokrá
 ### 01. Code & IT
 Programovanie a IT infraštruktúra v jednom.
 
-- **Frontend:** JavaScript, TypeScript, React
+- **Frontend:** JavaScript, TypeScript
 - **Backend:** PHP, Python, Bash
 - **API:** REST, JSON
 - **Databázy:** SQL

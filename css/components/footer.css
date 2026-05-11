@@ -135,7 +135,6 @@
 .footer__closer {
   margin-top: var(--space-13);
   padding-top: var(--space-10);
-  border-top: 1px solid var(--theme-border-color);
 }
 
 .footer__closer-slogan {

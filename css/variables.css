@@ -72,7 +72,7 @@
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
 
   /* Font sizes - 4 semantic roles, all responsive via clamp() where it matters */
-  --text-display: clamp(2.5rem, 7vw, 5rem);          /* 40-80px — section-lead, stat values, h1 */
+  --text-display: clamp(3.5rem, 7vw, 5rem);          /* 56-80px — section-lead, stat values, h1 */
   --text-heading: clamp(1.8rem, 3.6vw, 2.7rem);      /* 28.8-43.2px — section titles, h2-h3 (+20%) */
   --text-body: 1.6rem;                                /* 25.6px — paragraphs, h4-h6, default */
   --text-micro: 0.875rem;                             /* 14px — nav, meta, labels */

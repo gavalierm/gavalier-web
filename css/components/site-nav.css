@@ -1,0 +1,197 @@
+/* ========================================
+   Site Navigation — hamburger + full-screen panel
+   ======================================== */
+
+/* Burger button — left side of the sticky header */
+.site-header__burger {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--theme-text-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-header__burger-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 24px;
+  height: 24px;
+}
+
+.site-header__burger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+/* Burger → X */
+.site-header__burger[aria-expanded="true"] .site-header__burger-line:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.site-header__burger[aria-expanded="true"] .site-header__burger-line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-header__burger:hover {
+    opacity: 0.7;
+  }
+}
+
+.site-header__burger:focus-visible {
+  outline: 2px solid var(--theme-text-primary);
+  outline-offset: -4px;
+}
+
+/* Panel — sits under the sticky header, covers the viewport */
+.site-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  background: var(--theme-bg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-nav[hidden] {
+  display: none;
+}
+
+.site-nav.is-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-nav__inner {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: calc(var(--space-13) + var(--space-8)) var(--space-6) var(--space-10);
+}
+
+@media (min-width: 768px) {
+  .site-nav__inner {
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
+  }
+}
+
+.site-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: nav;
+}
+
+.site-nav__item {
+  counter-increment: nav;
+  margin: 0;
+  border-bottom: 1px solid var(--theme-border-color);
+}
+
+.site-nav__item:first-child {
+  border-top: 1px solid var(--theme-border-color);
+}
+
+.site-nav__link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+  padding: var(--space-4) 0;
+  font-size: var(--text-heading);
+  font-weight: var(--font-black);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--theme-text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+.site-nav__link::before {
+  content: "0" counter(nav);
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  opacity: 0.35;
+  flex: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-nav__link:hover {
+    color: var(--theme-text-primary);
+    gap: var(--space-6);
+  }
+
+  .site-nav__link:hover::before {
+    opacity: 1;
+  }
+}
+
+.site-nav__link:focus-visible {
+  outline: 2px solid var(--theme-text-primary);
+  outline-offset: 4px;
+}
+
+/* Phone — the primary action, kept in view at the end of the panel */
+.site-nav__phone {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-7);
+  border-radius: var(--radius-full);
+  background: var(--theme-text-primary);
+  color: var(--theme-bg);
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-nav__phone::before {
+  content: "☎";
+  font-weight: var(--font-medium);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-nav__phone:hover {
+    color: var(--theme-bg);
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+/* Body scroll lock while the panel is open */
+body.nav-open {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav,
+  .site-nav__link,
+  .site-header__burger-line,
+  .site-nav__phone {
+    transition: none;
+  }
+}

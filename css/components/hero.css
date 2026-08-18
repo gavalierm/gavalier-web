@@ -110,3 +110,8 @@
 .hero__lede strong {
   font-weight: var(--font-bold);
 }
+
+/* Services sneak peek — compact list under the hero lede */
+.hero__services {
+  margin-top: var(--space-8);
+}

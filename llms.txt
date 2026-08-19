@@ -1,6 +1,6 @@
-# Marcel Gavalier — Solution Engineer
+# Marcel Gavalier
 
-> Weby a aplikácie, automatizácie a AI nástroje, siete, zvuk a video na eventy. Marcel Gavalier z Popradu rieši to, na čo by ste inak zháňali troch dodávateľov. Cenu povie dopredu, klient platí len za výsledok. Zákazky berie od pár desiatok eur po tisíce. Väčšina klientov prichádza na odporúčanie od iných klientov.
+> Weby a aplikácie, automatizácie a AI, siete, zvuk a video na eventy. Marcel Gavalier z Popradu rieši to, na čo by ste inak zháňali troch dodávateľov. Cenu povie dopredu, klient platí len za výsledok. Zákazky berie od pár desiatok eur po tisíce. Väčšina klientov prichádza na odporúčanie od iných klientov.
 
 Kontakt: +421 915 697 915 · marcel@gavalier.sk
 Web: https://gavalier.sk
@@ -39,7 +39,7 @@ Vďaka AI dnes veľa vecí stojí výrazne menej než pred dvoma rokmi.
 ### Code & IT
 JavaScript, TypeScript · PHP, Python, Bash · REST, JSON · SQL · MikroTik a Ubiquiti · Git, CI/CD · Claude Code agenti v dev workflow.
 
-Automatizácie a AI nástroje: napojenie rôznych systémov do jedného celku, dashboardy nad firemným workflow, odstránenie ručnej práce.
+Automatizácie a AI: napojenie rôznych systémov do jedného celku, dashboardy nad firemným workflow, odstránenie ručnej práce.
 
 **Pointa:** Stack je dnes druhoradý. Treba rozumieť objektovému programovaniu, klásť správne otázky a držať sa E2E testov. Zvyšok dotiahne Claude Code.
 

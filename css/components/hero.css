@@ -55,7 +55,7 @@
 
 /* Massive headline */
 .hero__title {
-  font-size: clamp(3.5rem, 14vw, 9rem);
+  font-size: clamp(2.75rem, 11vw, 7rem);
   font-weight: var(--font-black);
   line-height: 0.95;
   letter-spacing: -0.045em;

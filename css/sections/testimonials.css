@@ -95,7 +95,7 @@
 }
 
 .testimonials__area {
-  font-size: var(--text-small, 0.875rem);
+  font-size: var(--text-small, 0.75rem);
   font-weight: var(--font-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -105,7 +105,7 @@
 }
 
 .testimonials__text {
-  font-size: var(--text-lead, 1.5rem);
+  font-size: var(--text-lead, 1.125rem);
   font-weight: var(--font-bold);
   letter-spacing: -0.02em;
   line-height: 1.3;
@@ -117,13 +117,13 @@
 
 @media (min-width: 768px) {
   .testimonials__text {
-    font-size: 1.625rem;
+    font-size: 1.25rem;
     line-height: 1.25;
   }
 }
 
 .testimonials__company {
-  font-size: var(--text-small, 0.875rem);
+  font-size: var(--text-small, 0.75rem);
   font-weight: var(--font-bold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -148,7 +148,7 @@
 
 .testimonials__hint {
   display: none;
-  font-size: var(--text-small, 0.875rem);
+  font-size: var(--text-small, 0.75rem);
   font-weight: var(--font-medium);
   color: var(--theme-text-primary);
   opacity: 0.6;

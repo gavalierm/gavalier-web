@@ -30,15 +30,18 @@ Upload na ostrý server agent spúšťa len na pokyn operátora. Pred ním uká�
 Súbor založil agent, je v `.gitignore` a agent ho nevypisuje ani nekopíruje. Heslo
 do neho dopísal operátor sám, aby ostalo mimo prepisu relácie.
 
+Súbor má mať práva `600`.
+
 ```
-FTP_URL=ftps://host/cesta/k/webu/
+FTP_URL=ftp://host/web/
 FTP_USER=...
 FTP_PASS=...
 SITE_URL=https://adresa-webu/
 ```
 
-`SITE_URL` je nepovinná a slúži na kontrolu stavového kódu po uploade. Pri `ftp://` skript
-sám vyžiada TLS cez `--ssl-reqd` a bez TLS sa nepripojí.
+`FTP_URL` musí začínať na `ftp://` a končiť na `/web/`, inak `deploy.sh` odmietne bežať.
+TLS si skript vynúti sám cez `--ssl-reqd` a bez TLS sa nepripojí. `SITE_URL` je nepovinná
+a slúži na kontrolu stavového kódu po uploade.
 
 ## Server
 
@@ -59,7 +62,9 @@ a živé logo sa rozbilo. Agent najprv bez overenia tvrdil, že server odmieta o
 To nebola pravda. Overenie, ktoré chýbalo, bolo `curl -v` s čítaním celej odpovede servera
 a skúšobný upload náhodných dát pod novým menom.
 
-Príčina je TLS 1.3 na dátovom kanáli. Namerané výsledky na 57 kB súbore.
+Príčina súvisí s TLS 1.3, presný mechanizmus overený nie je. Zlyhal aj beh
+s `--ssl-control`, pri ktorom `curl` dátový kanál nešifruje, takže samotné šifrovanie
+dátového kanála príčinou nie je. Namerané výsledky na 57 kB súbore.
 
 - TLS 1.3 s EPSV, s PASV, s obmedzenou rýchlosťou, s `--ssl-control` aj s `APPE` zlyhalo v každom pokuse.
   Súbory od 150 kB vyššie prechádzali, súbory od 20 do 100 kB väčšinou nie.

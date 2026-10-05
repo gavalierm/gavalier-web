@@ -35,14 +35,33 @@ FTP_PASS=...
 SITE_URL=https://adresa-webu/
 ```
 
-`SITE_URL` je nepovinná a slúži na kontrolu stavového kódu po uploade. Schéma v `FTP_URL`
-určuje protokol. Ak server vie, použi `ftps://` alebo `sftp://`, obyčajné `ftp://`
-posiela heslo nešifrované.
+`SITE_URL` je nepovinná a slúži na kontrolu stavového kódu po uploade. Pri `ftp://` skript
+sám vyžiada TLS cez `--ssl-reqd` a bez TLS sa nepripojí.
+
+## Server
+
+Hosting je Websupport. Doména `gavalier.sk` ukazuje na `37.9.175.156`, čo je
+`ing.r2.websupport.sk`. Overené 2026-10-05.
+
+- Pripájame sa na `ing.r2.websupport.sk`, nie na `gavalier.sk`. Certifikát FTP servera
+  je `*.r2.websupport.sk`, takže na `gavalier.sk` overenie certifikátu zlyhá.
+- Explicitné FTPS na porte 21 funguje, handshake s overeným certifikátom prešiel.
+- Port 22 odpovedá ako SFTP, ale `curl` v macOS nemá podporu `sftp`, preto SFTP nepoužívame.
+- Používateľ je `gavo.gavalier.sk`.
 
 ## Stav
 
-`.ftp.env` zatiaľ neexistuje a tag `deployed` tiež nie. Prvé nasadenie ide ako
-`./deploy.sh --all` až po tom, čo operátor súbor založí.
+`.ftp.env` je kompletný a prihlásenie funguje. Koreň webu je `web/` v domovskom adresári
+FTP účtu, čiže `FTP_URL=ftp://ing.r2.websupport.sk/web/`. Tag `deployed` zatiaľ neexistuje,
+prvé nasadenie ide ako `./deploy.sh --all`.
+
+Na serveri ležia veci, ktoré nie sú v gite, a skript sa ich nedotkne, lebo nahráva len
+súbory z gitu.
+
+- `web/.htaccess` patrí serveru a v repozitári nie je.
+- `sub/` vedľa `web/` obsahuje iné weby, napríklad `forestshop`, `baofeng`, `cp`, `cdn`. Do `sub/` sa
+  nikdy nezapisuje. `FTP_URL` musí vždy končiť na `/web/`.
+- `logs/` patrí serveru.
 
 ## Čo skript nerieši
 

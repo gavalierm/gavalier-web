@@ -20,6 +20,9 @@ done
 . ./.ftp.env
 : "${FTP_URL:?v .ftp.env chýba FTP_URL}" "${FTP_USER:?v .ftp.env chýba FTP_USER}" "${FTP_PASS:?v .ftp.env chýba FTP_PASS}"
 FTP_URL="${FTP_URL%/}/"
+# Pri ftp:// vyžaduj TLS, nikdy nepošli heslo nešifrovane
+SSL_OPT=""
+case "$FTP_URL" in ftp://*) SSL_OPT="--ssl-reqd" ;; esac
 
 [ -z "$(git status --porcelain)" ] || { echo "Pracovný strom nie je čistý, najprv commit." >&2; exit 1; }
 git fetch -q origin main
@@ -51,7 +54,7 @@ esc() { local s=${1//\\/\\\\}; printf '%s' "${s//\"/\\\"}"; }
 CRED=$(printf 'user = "%s:%s"\n' "$(esc "$FTP_USER")" "$(esc "$FTP_PASS")")
 
 while IFS= read -r f; do
-  printf '%s\n' "$CRED" | curl -sS --fail -K - --ftp-create-dirs \
+  printf '%s\n' "$CRED" | curl -sS --fail $SSL_OPT -K - --ftp-create-dirs \
     -T "$f" "${FTP_URL}$(printf '%s' "$f" | sed 's/ /%20/g')"
   echo "nahraté $f"
 done <<EOF

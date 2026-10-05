@@ -76,8 +76,11 @@ a hromadný beh až po úspešnej skúške.
 ## Stav
 
 `.ftp.env` je kompletný a prihlásenie funguje. Koreň webu je `web/` v domovskom adresári
-FTP účtu, čiže `FTP_URL=ftp://ing.r2.websupport.sk/web/`. Tag `deployed` zatiaľ neexistuje,
-prvé nasadenie ide ako `./deploy.sh --all`.
+FTP účtu, čiže `FTP_URL=ftp://ing.r2.websupport.sk/web/`. `SITE_URL` je
+`https://www.gavalier.sk/`, lebo `gavalier.sk` presmeruje na `www`.
+
+Prvé nasadenie prebehlo 2026-10-05, tag `deployed` je na `752bd50`. Všetkých 79 súborov
+na živom webe má rovnaký odtlačok SHA-256 ako v gite. Ďalšie nasadenia idú ako `./deploy.sh`.
 
 Na serveri ležia veci, ktoré nie sú v gite, a skript sa ich nedotkne, lebo nahráva len
 súbory z gitu.

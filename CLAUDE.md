@@ -59,8 +59,9 @@ Na serveri ležia veci, ktoré nie sú v gite, a skript sa ich nedotkne, lebo na
 súbory z gitu.
 
 - `web/.htaccess` patrí serveru a v repozitári nie je.
-- `sub/` vedľa `web/` obsahuje iné weby, napríklad `forestshop`, `baofeng`, `cp`, `cdn`. Do `sub/` sa
-  nikdy nezapisuje. `FTP_URL` musí vždy končiť na `/web/`.
+- `sub/` vedľa `web/` obsahuje iné weby, napríklad `forestshop`, `baofeng`, `cp`, `cdn`.
+  Operátor rozhodol, že tento projekt nasadzuje len do `web/` a ostatné adresáre sú mimo
+  zadania. `deploy.sh` odmietne bežať, ak `FTP_URL` nekončí na `/web/`.
 - `logs/` patrí serveru.
 
 ## Čo skript nerieši

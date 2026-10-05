@@ -20,6 +20,8 @@ done
 . ./.ftp.env
 : "${FTP_URL:?v .ftp.env chýba FTP_URL}" "${FTP_USER:?v .ftp.env chýba FTP_USER}" "${FTP_PASS:?v .ftp.env chýba FTP_PASS}"
 FTP_URL="${FTP_URL%/}/"
+# Nasadzuje sa len do web/. Ostatné adresáre na serveri nie sú súčasťou tohto projektu.
+case "$FTP_URL" in */web/) ;; *) echo "FTP_URL musí končiť na /web/" >&2; exit 1 ;; esac
 # Pri ftp:// vyžaduj TLS, nikdy nepošli heslo nešifrovane
 SSL_OPT=""
 case "$FTP_URL" in ftp://*) SSL_OPT="--ssl-reqd" ;; esac

@@ -90,7 +90,12 @@ upload() {
     echo "CHYBA $f má na serveri $got bajtov, má mať $want. Živý súbor sa nezmenil." >&2
     return 1
   fi
-  ftp -Q "-RNFR ${FTP_DIR}${tmp}" -Q "-RNTO ${FTP_DIR}${f}" "$FTP_URL" -o /dev/null
+  # RNFR odpovedá kódom 350, ktorý curl berie ako chybu, preto prefix * pri RNFR
+  if ! ftp -Q "-*RNFR ${FTP_DIR}${tmp}" -Q "-RNTO ${FTP_DIR}${f}" "$FTP_URL" -o /dev/null; then
+    ftp -Q "DELE ${FTP_DIR}${tmp}" "$FTP_URL" -o /dev/null 2>/dev/null || true
+    echo "CHYBA pri premenovaní $f, živý súbor sa nezmenil." >&2
+    return 1
+  fi
 }
 
 while IFS= read -r f; do

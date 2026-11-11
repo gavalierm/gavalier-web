@@ -1,6 +1,6 @@
 # Hosting na Cloudflare (Workers static assets)
 
-Stav: hotovo. Od 2026-11-11 beží gavalier.sk na Cloudflare Workers (static assets), worker `gavalier-web`, nasadený z `main`. Websupport FTP sa už nepoužíva (`deploy.sh` zmazaný).
+Stav: hotovo. Od 2026-11-11 beží gavalier.sk na Cloudflare Workers (static assets), worker `gavalier-web`, nasadzovaný z `main` skriptom `deploy-do-cloudflare.sh`. Websupport FTP sa už nepoužíva (`deploy.sh` zmazaný).
 
 ## Ako to funguje
 
@@ -11,7 +11,13 @@ Stav: hotovo. Od 2026-11-11 beží gavalier.sk na Cloudflare Workers (static ass
 
 ## Nasadenie
 
-Push do `main` = nasadenie, ak je v Cloudflare (Workers & Pages, gavalier-web, Settings, Builds) pripojený GitHub repozitár `gavalierm/gavalier-web` s produkčnou vetvou `main` a deploy príkazom `npx wrangler deploy`. Podľa operátora (2026-11-11) sú Builds pripojené; prvé nasadenie z gitu sa overuje po pushi. Ak by Builds odpojili, nasadzuje Ron na požiadanie poštou.
+Nasadzuje agent webu skriptom `deploy-do-cloudflare.sh` v koreni repozitára, nie Workers Builds (rozhodnutie D-0022 v brain agent-ron, operátor 2026-11-11; prepojenie Builds odpája operátor). Skript beží v hlavnom repe: overí vetvu `main` a čistý strom, urobí `git push origin main` a `npx -y wrangler@4 deploy` s tokenom `~/.config/ron/cloudflare_token` a účtom `7d01ae84d68d5450790bb65ef11ab334`. Sám skript sa na web nenahrá (`.assetsignore`).
+
+```
+sh deploy-do-cloudflare.sh
+```
+
+Pri chybe tokenu alebo účtu Cloudflare píš Ronovi poštou (@ron/main).
 
 ## Overenie po nasadení
 
@@ -21,6 +27,7 @@ curl -sI https://www.gavalier.sk/        # 200
 curl -sI https://www.gavalier.sk/blog    # presmerovanie na /blog/
 for u in /automatizacia/ /tvorba-webu/ /ai-agenti/ /seo-llm-optimalizacia/ /blog/ /robots.txt /sitemap.xml /llms.txt; do curl -s -o /dev/null -w "$u %{http_code}\n" https://www.gavalier.sk$u; done
 curl -s -o /dev/null -w "%{http_code}\n" https://www.gavalier.sk/docs/blog-postup.md   # 404, nepatrí na web
+for u in /docs /deploy.sh /deploy-do-cloudflare.sh; do curl -s -o /dev/null -w "$u %{http_code}\n" https://www.gavalier.sk$u; done   # 404
 ```
 
 ## Návrat späť

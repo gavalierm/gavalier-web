@@ -32,7 +32,7 @@ case "$FTP_URL" in */web/) ;; *) echo "FTP_URL musí končiť na /web/" >&2; exi
 # Server Websupport ukončil prenosy s TLS 1.3 chybou 450 "Link to file server lost".
 # S TLS 1.2 prešlo všetkých 14 pokusov, s TLS 1.3 väčšina neprešla. Presný mechanizmus
 # nie je overený. Beh s --ssl-control, kde sa dátový kanál nešifruje, zlyhal tiež.
-# Podrobnosti sú v CLAUDE.md, sekcia o chybe 450.
+# Podrobnosti sú v skille nasadenie-webu (brain), časť o chybe 450.
 CURL_OPTS="--ssl-reqd --tlsv1.2 --tls-max 1.2"
 case "$FTP_URL" in ftp://*) ;; *) echo "FTP_URL musí začínať ftp://, skript používa explicitné FTPS" >&2; exit 1 ;; esac
 

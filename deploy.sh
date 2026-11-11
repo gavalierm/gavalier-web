@@ -21,9 +21,9 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-[ -f .ftp.env ] || { echo "Chýba .ftp.env" >&2; exit 1; }
-. ./.ftp.env
-: "${FTP_URL:?v .ftp.env chýba FTP_URL}" "${FTP_USER:?v .ftp.env chýba FTP_USER}" "${FTP_PASS:?v .ftp.env chýba FTP_PASS}"
+[ -f local/.ftp.env ] || { echo "Chýba local/.ftp.env" >&2; exit 1; }
+. ./local/.ftp.env
+: "${FTP_URL:?v local/.ftp.env chýba FTP_URL}" "${FTP_USER:?v local/.ftp.env chýba FTP_USER}" "${FTP_PASS:?v local/.ftp.env chýba FTP_PASS}"
 FTP_URL="${FTP_URL%/}/"
 
 # Nasadzuje sa len do web/. Ostatné adresáre na serveri nie sú súčasťou tohto projektu.
@@ -54,7 +54,7 @@ else
 fi
 
 # Súbory, ktoré na server nepatria
-LIST=$(printf '%s\n' "$LIST" | grep -v -E '^(CLAUDE\.md|DECISIONS\.md|deploy\.sh|\.gitignore|docs/)' || true)
+LIST=$(printf '%s\n' "$LIST" | grep -v -E '^(deploy\.sh|\.gitignore|\.gitattributes|\.workflow\.json|\.claude/|agentic/|docs/)' || true)
 
 if [ -n "$ONLY" ]; then
   printf '%s\n' "$LIST" | grep -x -F -- "$ONLY" >/dev/null || { echo "$ONLY nie je v zozname na nahratie" >&2; exit 1; }

@@ -15,7 +15,7 @@ Cieľ: raz mesačne zistiť, či sa web objavuje v odpovediach vyhľadávačov a
 
 ## Nástroje, ktoré treba pripojiť (jednorazovo)
 
-- **Google Search Console** (https://search.google.com/search-console): pridaj doménu gavalier.sk, over vlastníctvo (DNS záznam alebo súbor), odošli `https://gavalier.sk/sitemap.xml`. Sleduj, ktoré stránky sú zaindexované a pri akých dopytoch sa zobrazujú.
+- **Google Search Console** (https://search.google.com/search-console): pridaj doménu gavalier.sk, over vlastníctvo (DNS záznam alebo súbor), odošli `https://www.gavalier.sk/sitemap.xml`. Sleduj, ktoré stránky sú zaindexované a pri akých dopytoch sa zobrazujú.
 - **Bing Webmaster Tools** (https://www.bing.com/webmasters): pridaj web (môžeš importovať z Google Search Console), odošli sitemap. Slúži na viditeľnosť v Bingu.
 - Po pridaní nového článku alebo stránky: skontroluj v Search Console, že je zaindexovaná.
 

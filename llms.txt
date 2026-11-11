@@ -3,22 +3,22 @@
 > Weby a aplikácie, automatizácie a AI, siete, zvuk a video na eventy. Marcel Gavalier z Popradu rieši to, na čo by ste inak zháňali troch dodávateľov. Cenu povie dopredu, klient platí len za výsledok. Zákazky berie od pár desiatok eur po tisíce. Väčšina klientov prichádza na odporúčanie od iných klientov.
 
 Kontakt: +421 915 697 915 · marcel@gavalier.sk
-Web: https://gavalier.sk
+Web: https://www.gavalier.sk
 Adresa: Jarmočná 30, 058 01 Poprad, Slovensko
 IČO: 47 786 825 · DIČ: 1080715911
 
 ## Služby (samostatné stránky)
 
-- [Automatizácia firemných procesov](https://gavalier.sk/automatizacia/): nahradenie opakovanej ručnej práce skriptami a prepojenie systémov, ktoré spolu nehovoria.
-- [Tvorba webu na mieru](https://gavalier.sk/tvorba-webu/): weby, eshopy a PWA aplikácie na mieru, vrátane hostingu, nasadenia a správy.
-- [AI agenti pre firmy](https://gavalier.sk/ai-agenti/): návrh a nasadenie AI agentov a dashboardov nad firemnými údajmi.
-- [SEO a LLM optimalizácia](https://gavalier.sk/seo-llm-optimalizacia/): štruktúrované dáta, sémantické HTML, sitemap a pravidlá pre crawlery vyhľadávačov a AI asistentov.
+- [Automatizácia firemných procesov](https://www.gavalier.sk/automatizacia/): nahradenie opakovanej ručnej práce skriptami a prepojenie systémov, ktoré spolu nehovoria.
+- [Tvorba webu na mieru](https://www.gavalier.sk/tvorba-webu/): weby, eshopy a PWA aplikácie na mieru, vrátane hostingu, nasadenia a správy.
+- [AI agenti pre firmy](https://www.gavalier.sk/ai-agenti/): návrh a nasadenie AI agentov a dashboardov nad firemnými údajmi.
+- [SEO a LLM optimalizácia](https://www.gavalier.sk/seo-llm-optimalizacia/): štruktúrované dáta, sémantické HTML, sitemap a pravidlá pre crawlery vyhľadávačov a AI asistentov.
 
 ## Blog
 
-- [Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov](https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/): ktoré crawlery OpenAI čo robia, čo nastaviť v robots.txt a ako písať text, ktorý vie AI použiť.
-- [Ako automatizovať fakturáciu a e-maily v malej firme](https://gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/): postup od zmapovania procesu po prvú automatizáciu a výpočet úspory.
-- [Všetky články](https://gavalier.sk/blog/)
+- [Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov](https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/): ktoré crawlery OpenAI čo robia, čo nastaviť v robots.txt a ako písať text, ktorý vie AI použiť.
+- [Ako automatizovať fakturáciu a e-maily v malej firme](https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/): postup od zmapovania procesu po prvú automatizáciu a výpočet úspory.
+- [Všetky články](https://www.gavalier.sk/blog/)
 
 ## Záruka
 
@@ -78,6 +78,6 @@ Silná stránka: pochopiť, čo klient naozaj potrebuje (často je to niečo in�
 
 ## Poznámka k tomuto súboru
 
-Tento súbor je stručný prehľad webu https://gavalier.sk. Rovnaké informácie sú na samotnom webe v HTML a v štruktúrovaných dátach schema.org (ProfessionalService, Person, Service, FAQPage, BlogPosting). Google Search súbor llms.txt nepoužíva; slúži ako pomôcka pre nástroje, ktoré ho čítajú.
+Tento súbor je stručný prehľad webu https://www.gavalier.sk. Rovnaké informácie sú na samotnom webe v HTML a v štruktúrovaných dátach schema.org (ProfessionalService, Person, Service, FAQPage, BlogPosting). Google Search súbor llms.txt nepoužíva; slúži ako pomôcka pre nástroje, ktoré ho čítajú.
 
 Najrýchlejšia cesta ku kontaktu je telefón: +421 915 697 915.

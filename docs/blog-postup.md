@@ -1,6 +1,6 @@
 # Blog: ako pridať nový článok
 
-Blog je statické HTML bez databázy a bez build kroku. Každý článok je jeden súbor `blog/<slug>/index.html`, takže adresa je `https://gavalier.sk/blog/<slug>/`.
+Blog je statické HTML bez databázy a bez build kroku. Každý článok je jeden súbor `blog/<slug>/index.html`, takže adresa je `https://www.gavalier.sk/blog/<slug>/`.
 
 ## Kroky
 

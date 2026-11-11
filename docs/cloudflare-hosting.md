@@ -11,7 +11,7 @@ Stav: hotovo. Od 2026-11-11 beží gavalier.sk na Cloudflare Workers (static ass
 
 ## Nasadenie
 
-Push do `main` = nasadenie, ak je v Cloudflare (Workers & Pages, gavalier-web, Settings, Builds) pripojený GitHub repozitár `gavalierm/gavalier-web` s produkčnou vetvou `main` a deploy príkazom `npx wrangler deploy`. Do pripojenia nasadzuje Ron na požiadanie poštou.
+Push do `main` = nasadenie, ak je v Cloudflare (Workers & Pages, gavalier-web, Settings, Builds) pripojený GitHub repozitár `gavalierm/gavalier-web` s produkčnou vetvou `main` a deploy príkazom `npx wrangler deploy`. Podľa operátora (2026-11-11) sú Builds pripojené; prvé nasadenie z gitu sa overuje po pushi. Ak by Builds odpojili, nasadzuje Ron na požiadanie poštou.
 
 ## Overenie po nasadení
 

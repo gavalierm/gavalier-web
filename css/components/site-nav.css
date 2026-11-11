@@ -129,7 +129,7 @@
 }
 
 .site-nav__link::before {
-  content: "0" counter(nav);
+  content: counter(nav, decimal-leading-zero);
   font-size: var(--text-body);
   font-weight: var(--font-bold);
   opacity: 0.35;

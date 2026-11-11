@@ -1,4 +1,4 @@
-# Súbory, ktoré sa nenahrávajú na web (gitignore syntax). Zodpovedá zoznamu vylúčení v deploy.sh.
+# Súbory, ktoré sa nenahrávajú na web (gitignore syntax). Nový súbor, ktorý nepatrí na web, pridaj sem.
 .git
 .github
 .claude
@@ -11,9 +11,7 @@ docs
 scratch
 local
 node_modules
-deploy.sh
 wrangler.jsonc
 blog/_sablona
 blog/ZOZNAM-TEM.md
 .DS_Store
-.ftp.env

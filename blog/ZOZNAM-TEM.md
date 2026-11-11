@@ -1,6 +1,6 @@
 # Zoznam tém pre blog
 
-Tento súbor sa na web nenasadzuje (deploy.sh ho vynecháva). Postup písania a publikovania je v `docs/blog-postup.md`.
+Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písania a publikovania je v `docs/blog-postup.md`.
 
 ## Pravidlá pre všetky články
 

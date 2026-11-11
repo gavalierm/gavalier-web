@@ -24,4 +24,4 @@ Blog je statické HTML bez databázy a bez build kroku. Každý článok je jede
 
 ## Súbory, ktoré sa nenasadzujú
 
-`deploy.sh` vynecháva `docs/`, `blog/_sablona/` a `blog/ZOZNAM-TEM.md`. Nový súbor, ktorý nepatrí na web, pridaj do regulárneho výrazu v `deploy.sh` pred commitom.
+`.assetsignore` vynecháva `docs/`, `blog/_sablona/` a `blog/ZOZNAM-TEM.md`. Nový súbor, ktorý nepatrí na web, pridaj do `.assetsignore` pred commitom.

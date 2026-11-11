@@ -1,3 +1,4 @@
 {
-  "brain": "../gavalier-brain"
+  "brain": "../gavalier-brain",
+  "visibility": "public"
 }

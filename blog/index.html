@@ -39,20 +39,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 
-  <!-- Core CSS -->
-  <link rel="stylesheet" href="/css/variables.css?v=20260514">
-  <link rel="stylesheet" href="/css/base.css?v=20260514">
-  <link rel="stylesheet" href="/css/layout.css?v=20260514">
-  <link rel="stylesheet" href="/css/components/button.css?v=20260514">
-  <link rel="stylesheet" href="/css/components/utilities.css?v=20260514">
-  <link rel="stylesheet" href="/css/components/site-nav.css?v=20261111">
-  <link rel="stylesheet" href="/css/components/footer.css?v=20260514">
-  <link rel="stylesheet" href="/css/sections/experience.css?v=20260514">
-  <link rel="stylesheet" href="/css/sections/how-it-works.css?v=20260514">
-  <link rel="stylesheet" href="/css/components/page.css?v=20261112">
-  <link rel="stylesheet" href="/css/components/blog.css?v=20261112">
+  <!-- CSS blogu (samostatné, bez ostatných štýlov webu) -->
+  <link rel="stylesheet" href="/css/components/blog.css?v=20261113">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -108,168 +98,77 @@
 }
   </script>
 </head>
-<body id="top" class="light-theme">
+<body id="top">
 
-  <!-- Hlavička je na podstránkach stále viditeľná -->
-  <header class="site-header show" id="siteHeader">
-    <button class="site-header__burger" id="menuToggle" type="button"
-            aria-label="Otvoriť menu" aria-expanded="false" aria-controls="siteNav">
-      <span class="site-header__burger-box" aria-hidden="true">
-        <span class="site-header__burger-line"></span>
-        <span class="site-header__burger-line"></span>
-      </span>
-    </button>
-    <a href="/" class="site-header__brand">Marcel Gavalier</a>
-    <img src="/assets/gavo_colored_eye.png" alt="" class="site-header__eye" aria-hidden="true" width="932" height="228">
+  <header class="bar">
+    <div class="wrap bar__in">
+      <a href="/" class="brand">Marcel Gavalier</a>
+      <nav aria-label="Hlavné menu">
+        <a href="/#sluzby" class="hide-s">Služby</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/#contact">Kontakt</a>
+        <button class="theme-btn" id="themeToggle" type="button" aria-label="Prepnúť tému">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <nav class="site-nav" id="siteNav" aria-label="Hlavné menu" hidden>
-    <div class="site-nav__inner">
-      <ol class="site-nav__list">
-        <li class="site-nav__item"><a href="/automatizacia/" class="site-nav__link">Automatizácia</a></li>
-        <li class="site-nav__item"><a href="/tvorba-webu/" class="site-nav__link">Tvorba webu</a></li>
-        <li class="site-nav__item"><a href="/ai-agenti/" class="site-nav__link">AI agenti</a></li>
-        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO a LLM</a></li>
-        <li class="site-nav__item"><a href="/blog/" class="site-nav__link">Blog</a></li>
-        <li class="site-nav__item"><a href="/#zaruka" class="site-nav__link">Záruka</a></li>
-        <li class="site-nav__item"><a href="/#ako-to-funguje" class="site-nav__link">Cena</a></li>
-        <li class="site-nav__item"><a href="/#referencie" class="site-nav__link">Referencie</a></li>
-        <li class="site-nav__item"><a href="/#kto-to-robi" class="site-nav__link">Kto to robí</a></li>
-        <li class="site-nav__item"><a href="/#contact" class="site-nav__link">Kontakt</a></li>
-      </ol>
-      <a href="tel:+421915697915" class="site-nav__phone">+421 915 697 915</a>
+  <main class="wrap">
+    <div class="masthead in">
+      <h1>Blog<i aria-hidden="true">.</i></h1>
+      <p>Praktické návody o automatizácii, tvorbe webov, AI agentoch a viditeľnosti webu vo vyhľadávačoch a v odpovediach AI asistentov. Píše Marcel Gavalier.</p>
     </div>
-  </nav>
 
-  <button id="themeToggle" class="theme-toggle" aria-label="Prepnúť tému">
-    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-    </svg>
-    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-  </button>
-
-  <main class="page-main blog">
-    <section class="section section--narrow">
-    <div class="container">
-    <nav class="breadcrumb" aria-label="Omrvinková navigácia">
-    <ol>
-      <li><a href="/">Domov</a></li>
-      <li><span aria-current="page">Blog</span></li>
-    </ol>
-    </nav>
-      <header class="section-lead">
-        <h1 class="section-lead__headline">Blog</h1>
-        <p class="section-lead__subhead page-answer">Praktické návody o automatizácii, tvorbe webov, AI agentoch a viditeľnosti webu vo vyhľadávačoch a v odpovediach AI asistentov. Píše Marcel Gavalier.</p>
-      </header>
-    </div>
-    <div class="prose">
-      <ul class="post-list">
-        <li class="post-list__item">
-          <p class="post-list__meta"><time datetime="2026-11-11">11. novembra 2026</time></p>
-          <h2 class="post-list__title"><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov</a></h2>
-          <p>Do odpovedí AI asistentov sa web dostane, ak ho vedia prečítať ich crawlery a ak jasne odpovedá na otázky, ktoré ľudia kladú. Zaručiť citáciu nikto nemôže, ale technické prekážky sa dajú odstrániť. Tento článok ukazuje, čo nastaviť v robots.txt, ako písať text a čo sa oplatí merať.</p>
-        </li>
-        <li class="post-list__item">
-          <p class="post-list__meta"><time datetime="2026-11-11">11. novembra 2026</time></p>
-          <h2 class="post-list__title"><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Ako automatizovať fakturáciu a e-maily v malej firme</a></h2>
-          <p>Automatizácia sa oplatí tam, kde človek opakuje ten istý postup podľa jasných pravidiel, napríklad pri vystavovaní faktúr alebo odpovediach na rovnaké e-maily. Najskôr treba proces zmapovať a spočítať, koľko času zaberá, a potom začať najmenším krokom. Článok je postup, nie prípadová štúdia, a čísla si doplníte z vlastnej firmy.</p>
-        </li>
-      </ul>
-      <h2>Služby, o ktorých píšem</h2>
-      <ul class="related">
-        <li><a href="/automatizacia/">Automatizácia firemných procesov<span class="related__desc"></span></a></li>
-        <li><a href="/tvorba-webu/">Tvorba webu na mieru<span class="related__desc"></span></a></li>
-        <li><a href="/ai-agenti/">AI agenti pre firmy<span class="related__desc"></span></a></li>
-        <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia<span class="related__desc"></span></a></li>
-      </ul>
-    </div>
-    </section>
+    <div class="year in" style="--i:1"><span>2026</span><span>2 články</span></div>
+    <ul class="posts">
+      <li class="post in" style="--i:2">
+        <time class="post__date" datetime="2026-11-11">11. nov</time>
+        <div>
+          <h2 class="post__title"><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov</a></h2>
+          <p class="post__desc">Čo nastaviť v robots.txt, ako písať text, ktorý vie AI použiť, a čo sa oplatí merať.</p>
+          <p class="post__meta"><span class="tag">SEO a LLM</span><span class="dot"></span><span>4 min čítania</span><span class="post__go" aria-hidden="true">→</span></p>
+        </div>
+      </li>
+      <li class="post in" style="--i:3">
+        <time class="post__date" datetime="2026-11-11">11. nov</time>
+        <div>
+          <h2 class="post__title"><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Ako automatizovať fakturáciu a e-maily v malej firme</a></h2>
+          <p class="post__desc">Kde sa automatizácia oplatí, ako proces zmapovať a spočítať a prečo začať najmenším krokom.</p>
+          <p class="post__meta"><span class="tag">Automatizácia</span><span class="dot"></span><span>3 min čítania</span><span class="post__go" aria-hidden="true">→</span></p>
+        </div>
+      </li>
+    </ul>
   </main>
 
-  <section id="contact" class="section section--narrow footer">
-    <div class="container">
-
-      <header class="section-lead">
-        <h2 class="section-lead__headline"><span class="headline-mark">Zavolajte.</span></h2>
-        <p class="section-lead__subhead">
-          Jeden hovor vyrieši to, na čo by padlo desať mailov. Poviem vám rovno, či to viem vyriešiť, ako a čo to bude stáť. Ak sa nedovoláte alebo je vám bližšie písať, napíšte &ndash; <strong>ozvem sa</strong>.
-        </p>
-      </header>
-
-      <div class="footer__channels">
-        <a href="tel:+421915697915" class="footer__channel">
-          <span class="footer__channel-label">Telefón</span>
-          <span class="footer__channel-value">+421 915 697 915</span>
-        </a>
-        <a href="mailto:marcel@gavalier.sk" class="footer__channel">
-          <span class="footer__channel-label">Email</span>
-          <span class="footer__channel-value">marcel@gavalier.sk</span>
-        </a>
-      </div>
-
-      <div class="footer__links">
-        <nav aria-label="Služby">
-          <span class="footer__links-title">Služby</span>
-          <ul>
+  <footer class="foot" id="contact">
+    <div class="wrap foot__in">
+      <nav aria-label="Služby">
+        <span class="foot__title">Služby</span>
+        <ul>
           <li><a href="/automatizacia/">Automatizácia firemných procesov</a></li>
           <li><a href="/tvorba-webu/">Tvorba webu na mieru</a></li>
           <li><a href="/ai-agenti/">AI agenti pre firmy</a></li>
           <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia</a></li>
-          </ul>
-        </nav>
-        <nav aria-label="Blog">
-          <span class="footer__links-title">Z blogu</span>
-          <ul>
-          <li><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT</a></li>
-          <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Automatizácia fakturácie a e-mailov</a></li>
+        </ul>
+      </nav>
+      <div>
+        <span class="foot__title">Kontakt</span>
+        <ul>
+          <li><a href="tel:+421915697915">+421 915 697 915</a></li>
+          <li><a href="mailto:marcel@gavalier.sk">marcel@gavalier.sk</a></li>
           <li><a href="/blog/">Všetky články</a></li>
-          </ul>
-        </nav>
+        </ul>
       </div>
-
-      <div class="footer__identity">
-        <p class="footer__name">Marcel Gavalier</p>
-        <p class="footer__role">Coder · AI Engineer · Sieťar · Audio \ Video Engineer</p>
+      <div>
+        <span class="foot__title">Marcel Gavalier</span>
+        <p class="foot__legal">Jarmočná 30, 058 01 Poprad<br>IČO 47 786 825<br>DIČ 1080715911</p>
       </div>
-
-      <dl class="footer__meta">
-        <div class="footer__meta-row">
-          <dt>Sídlo</dt>
-          <dd>Jarmočná 30, 058 01 Poprad</dd>
-        </div>
-        <div class="footer__meta-row">
-          <dt>IČO</dt>
-          <dd>47 786 825</dd>
-        </div>
-        <div class="footer__meta-row">
-          <dt>DIČ</dt>
-          <dd>1080715911</dd>
-        </div>
-      </dl>
-
     </div>
-  </section>
-
-  <a href="#top" class="back-to-top" aria-label="Späť na začiatok">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="19" x2="12" y2="5"></line>
-      <polyline points="5 12 12 5 19 12"></polyline>
-    </svg>
-  </a>
+  </footer>
 
   <script src="/js/theme-switcher.js?v=20260514" defer></script>
-  <script src="/js/back-to-top.js?v=20260514" defer></script>
-  <script src="/js/site-nav.js?v=20260514" defer></script>
 
 </body>
 </html>

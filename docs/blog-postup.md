@@ -17,7 +17,7 @@ Blog je statické HTML bez databázy a bez build kroku. Každý článok je jede
 
 ## Vzhľad
 
-Stránky blogu majú vlastný štýl `css/components/blog.css` (Manrope na nadpisy, Source Serif 4 na text) a nenačítavajú ostatné CSS webu. V článku doplň tému nad nadpisom (`.kicker`, názov služby) a čas čítania v riadku autora: počet slov článku delený 200, zaokrúhlený na minúty. Riadok „Aktualizované“ pridaj až vtedy, keď sa dátum zmeny líši od dátumu publikovania.
+Stránky blogu majú vlastný štýl `css/components/blog.css` (Manrope na nadpisy, Source Serif 4 na text) a nenačítavajú ostatné CSS webu. V článku doplň tému nad nadpisom (`.kicker`, názov služby) a čas čítania v riadku autora: počet slov článku delený 200, zaokrúhlený na minúty. Riadok „Aktualizované“ pridaj až vtedy, keď sa dátum zmeny líši od dátumu publikovania. Sekcia „Čítajte ďalej“ je vodorovný rad kariet (`ul.cards > li.card`: titulok s odkazom, jedna veta, šípka). Hlavička má burger menu (`#menuToggle`, panel `#siteNav`, skript `js/site-nav.js`); pri zmene položiek menu ich uprav vo všetkých stránkach blogu.
 
 ## Pravidlá
 

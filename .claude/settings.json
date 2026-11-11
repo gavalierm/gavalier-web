@@ -1,0 +1,34 @@
+{
+  "enabledPlugins": {
+    "workflow@skills-dir": true,
+    "workflow@inline": false
+  },
+  "autoMemoryEnabled": false,
+  "autoCompactWindow": 200000,
+  "permissions": {
+    "deny": [
+      "Edit(../gavalier-brain/**)",
+      "Edit(~/.claude/**)",
+      "Edit(/.claude/skills/**)"
+    ],
+    "ask": [
+      "Bash(git reset --hard)",
+      "Bash(git reset --hard *)",
+      "Bash(git push --force)",
+      "Bash(git push --force *)",
+      "Bash(git push -f)",
+      "Bash(git push -f *)",
+      "Bash(git branch -D)",
+      "Bash(git branch -D *)",
+      "Bash(git branch -d)",
+      "Bash(git branch -d *)",
+      "Bash(git stash drop)",
+      "Bash(git stash drop *)",
+      "Bash(git rebase -i)",
+      "Bash(git rebase -i *)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
+  }
+}

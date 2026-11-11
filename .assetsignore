@@ -1,0 +1,19 @@
+# Súbory, ktoré sa nenahrávajú na web (gitignore syntax). Zodpovedá zoznamu vylúčení v deploy.sh.
+.git
+.github
+.claude
+.workflow.json
+.gitignore
+.gitattributes
+.assetsignore
+agentic
+docs
+scratch
+local
+node_modules
+deploy.sh
+wrangler.jsonc
+blog/_sablona
+blog/ZOZNAM-TEM.md
+.DS_Store
+.ftp.env

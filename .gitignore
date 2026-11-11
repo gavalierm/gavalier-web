@@ -4,3 +4,7 @@
 .claude/skills/
 local/
 scratch/
+
+# Cloudflare wrangler
+.wrangler/
+node_modules/

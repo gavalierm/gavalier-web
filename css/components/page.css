@@ -229,32 +229,124 @@
   margin: 0;
 }
 
-/* FAQ: otázka a krátka priama odpoveď, bez skrývania textu */
+/* FAQ: rozbaliteľné karty (natívne details/summary, bez JS).
+   Odpovede ostávajú v DOM, čitateľné pre vyhľadávače aj AI. */
 .faq {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--theme-border-color);
+  display: grid;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-6);
 }
 
 .faq__item {
-  margin: 0;
-  padding: var(--space-7) 0;
-  border-bottom: 1px solid var(--theme-border-color);
+  background: var(--theme-bg-secondary);
+  border: 1px solid var(--theme-border-color);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast);
 }
 
-.prose .faq__q {
-  margin: 0 0 var(--space-3);
-  padding: 0;
-  border: 0;
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+.faq__item:hover,
+.faq__item[open] {
+  border-color: var(--theme-border-color-strong);
+}
+
+.faq__q {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  min-height: 3.5rem;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq__q:focus-visible {
+  outline: 2px solid var(--theme-text-primary);
+  outline-offset: 2px;
+}
+
+.prose .faq__q h3 {
+  margin: 0;
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
   font-weight: var(--font-black);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--theme-text-primary);
+}
+
+/* Indikátor plus / mínus */
+.faq__q::after {
+  content: '';
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  color: var(--theme-text-primary);
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 2px 100% no-repeat;
+  transition: transform var(--transition-base);
+}
+
+.faq__item[open] > .faq__q::after {
+  background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat;
+  transform: rotate(180deg);
 }
 
 .prose .faq__a {
   margin: 0;
+  padding: 0 var(--space-5) var(--space-5);
+  max-width: 62ch;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--theme-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .faq__q {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .prose .faq__a {
+    padding: 0 var(--space-6) var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq__item[open] > .faq__a {
+    animation: faq-reveal var(--transition-base) both;
+  }
+}
+
+@keyframes faq-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__item,
+  .faq__q::after {
+    transition: none;
+  }
+}
+
+@media print {
+  .faq__item {
+    background: none;
+    break-inside: avoid;
+  }
+
+  .faq__item::details-content {
+    content-visibility: visible;
+  }
+
+  .faq__q::after {
+    display: none;
+  }
 }
 
 /* Zoznam súvisiacich stránok a článkov */

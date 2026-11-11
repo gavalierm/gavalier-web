@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="/css/components/footer.css?v=20260514">
   <link rel="stylesheet" href="/css/sections/experience.css?v=20260514">
   <link rel="stylesheet" href="/css/sections/how-it-works.css?v=20260514">
-  <link rel="stylesheet" href="/css/components/page.css?v=20261111">
+  <link rel="stylesheet" href="/css/components/page.css?v=20261112">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -221,16 +221,16 @@
       <h2>Druhá sekcia</h2>
       <p>Text.</p>
       <h2>Najčastejšie otázky</h2>
-      <ul class="faq">
-        <li class="faq__item">
-          <h3 class="faq__q">Otázka 1?</h3>
+      <div class="faq">
+        <details class="faq__item" open>
+          <summary class="faq__q"><h3>Otázka 1?</h3></summary>
           <p class="faq__a">Odpoveď 1.</p>
-        </li>
-        <li class="faq__item">
-          <h3 class="faq__q">Otázka 2?</h3>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q"><h3>Otázka 2?</h3></summary>
           <p class="faq__a">Odpoveď 2.</p>
-        </li>
-      </ul>
+        </details>
+      </div>
       <h2>Súvisiaca služba</h2>
       <p>Viac o tom, čo robím a ako to prebieha, nájdete na stránke <a href="/SLUZBA/">Názov služby</a>.</p>
       <h2>Súvisiace stránky a články</h2>

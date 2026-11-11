@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="sk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ako sa objaviť v odpovediach ChatGPT | Marcel Gavalier</title>
+  <meta name="description" content="Čo môžete na vlastnom webe ovplyvniť, aby vás našli ChatGPT, Perplexity a Google: crawlery, robots.txt, štruktúra textu a štruktúrované dáta.">
+  <meta name="author" content="Marcel Gavalier">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/">
+  <meta property="og:title" content="Ako sa objaviť v odpovediach ChatGPT | Marcel Gavalier">
+  <meta property="og:description" content="Čo môžete na vlastnom webe ovplyvniť, aby vás našli ChatGPT, Perplexity a Google: crawlery, robots.txt, štruktúra textu a štruktúrované dáta.">
+  <meta property="og:image" content="https://gavalier.sk/assets/og_image.png">
+  <meta property="og:image:width" content="1212">
+  <meta property="og:image:height" content="716">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Marcel Gavalier">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:site_name" content="Gavalier">
+  <meta property="article:published_time" content="2026-11-11">
+  <meta property="article:modified_time" content="2026-11-11">
+  <meta property="article:author" content="Marcel Gavalier">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/">
+  <meta name="twitter:title" content="Ako sa objaviť v odpovediach ChatGPT | Marcel Gavalier">
+  <meta name="twitter:description" content="Čo môžete na vlastnom webe ovplyvniť, aby vás našli ChatGPT, Perplexity a Google: crawlery, robots.txt, štruktúra textu a štruktúrované dáta.">
+  <meta name="twitter:image" content="https://gavalier.sk/assets/og_image.png">
+  <meta name="twitter:image:alt" content="Marcel Gavalier">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f1f23" media="(prefers-color-scheme: dark)">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="/css/variables.css?v=20260514">
+  <link rel="stylesheet" href="/css/base.css?v=20260514">
+  <link rel="stylesheet" href="/css/layout.css?v=20260514">
+  <link rel="stylesheet" href="/css/components/button.css?v=20260514">
+  <link rel="stylesheet" href="/css/components/utilities.css?v=20260514">
+  <link rel="stylesheet" href="/css/components/site-nav.css?v=20261111">
+  <link rel="stylesheet" href="/css/components/footer.css?v=20260514">
+  <link rel="stylesheet" href="/css/sections/experience.css?v=20260514">
+  <link rel="stylesheet" href="/css/sections/how-it-works.css?v=20260514">
+  <link rel="stylesheet" href="/css/components/page.css?v=20261111">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/#article",
+      "headline": "Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov",
+      "description": "Čo môžete na vlastnom webe ovplyvniť, aby vás našli ChatGPT, Perplexity a Google: crawlery, robots.txt, štruktúra textu a štruktúrované dáta.",
+      "datePublished": "2026-11-11",
+      "dateModified": "2026-11-11",
+      "inLanguage": "sk-SK",
+      "url": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://gavalier.sk/#person",
+        "name": "Marcel Gavalier",
+        "url": "https://gavalier.sk/"
+      },
+      "publisher": {
+        "@id": "https://gavalier.sk/#person"
+      },
+      "image": "https://gavalier.sk/assets/og_image.png",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://gavalier.sk/blog/#blog",
+        "name": "Blog Marcela Gavaliera",
+        "url": "https://gavalier.sk/blog/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domov",
+          "item": "https://gavalier.sk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://gavalier.sk/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov",
+          "item": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Zaručí robots.txt, že ma ChatGPT ocituje?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Robots.txt len určuje, ktorí roboty môžu stránku čítať. Či vás ChatGPT použije v odpovedi, závisí od toho, ako dobre obsah odpovedá na otázku, a nikto vám to nezaručí."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ktorý robot OpenAI musím povoliť, aby ma našlo vyhľadávanie ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OAI-SearchBot. Ak ho robots.txt zablokuje, stránka sa nezobrazí v odpovediach ChatGPT search. GPTBot slúži na trénovanie modelov a ChatGPT-User na priame požiadavky používateľa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Potrebujem súbor llms.txt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie je nutný. Google uvádza, že ho vo vyhľadávaní nepoužíva. Ako stručný prehľad webu pre iné AI nástroje môže byť užitočný, ale nespoliehajte sa na neho."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pomáhajú štruktúrované dáta objaviť sa v odpovediach AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Štruktúrované dáta pomáhajú strojom pochopiť obsah stránky. Google ich pre svoje AI funkcie nevyžaduje. Dôležité je, aby zodpovedali viditeľnému textu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ako často kontrolovať, či sa web v odpovediach AI objavuje?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Odporúčam raz mesačne. Zoberte rovnaký zoznam otázok, zapíšte, či sa web objavil, a porovnávajte výsledky v čase."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body id="top" class="light-theme">
+
+  <!-- Hlavička je na podstránkach stále viditeľná -->
+  <header class="site-header show" id="siteHeader">
+    <button class="site-header__burger" id="menuToggle" type="button"
+            aria-label="Otvoriť menu" aria-expanded="false" aria-controls="siteNav">
+      <span class="site-header__burger-box" aria-hidden="true">
+        <span class="site-header__burger-line"></span>
+        <span class="site-header__burger-line"></span>
+      </span>
+    </button>
+    <a href="/" class="site-header__brand">Marcel Gavalier</a>
+    <img src="/assets/gavo_colored_eye.png" alt="" class="site-header__eye" aria-hidden="true" width="932" height="228">
+  </header>
+
+  <nav class="site-nav" id="siteNav" aria-label="Hlavné menu" hidden>
+    <div class="site-nav__inner">
+      <ol class="site-nav__list">
+        <li class="site-nav__item"><a href="/automatizacia/" class="site-nav__link">Automatizácia</a></li>
+        <li class="site-nav__item"><a href="/tvorba-webu/" class="site-nav__link">Tvorba webu</a></li>
+        <li class="site-nav__item"><a href="/ai-agenti/" class="site-nav__link">AI agenti</a></li>
+        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO a LLM</a></li>
+        <li class="site-nav__item"><a href="/blog/" class="site-nav__link">Blog</a></li>
+        <li class="site-nav__item"><a href="/#zaruka" class="site-nav__link">Záruka</a></li>
+        <li class="site-nav__item"><a href="/#ako-to-funguje" class="site-nav__link">Cena</a></li>
+        <li class="site-nav__item"><a href="/#referencie" class="site-nav__link">Referencie</a></li>
+        <li class="site-nav__item"><a href="/#kto-to-robi" class="site-nav__link">Kto to robí</a></li>
+        <li class="site-nav__item"><a href="/#contact" class="site-nav__link">Kontakt</a></li>
+      </ol>
+      <a href="tel:+421915697915" class="site-nav__phone">+421 915 697 915</a>
+    </div>
+  </nav>
+
+  <button id="themeToggle" class="theme-toggle" aria-label="Prepnúť tému">
+    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <main class="page-main">
+    <section class="section section--narrow">
+    <div class="container">
+    <nav class="breadcrumb" aria-label="Omrvinková navigácia">
+    <ol>
+      <li><a href="/">Domov</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><span aria-current="page">Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov</span></li>
+    </ol>
+    </nav>
+      <header class="section-lead">
+        <h1 class="section-lead__headline section-lead__headline--long"><span class="headline-mark">Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov</span></h1>
+      </header>
+    </div>
+    <article class="prose">
+      <!-- TODO(Marcel): potvrdiť dátum publikácie (nastavený na deň prípravy návrhu). -->
+      <ul class="article-meta">
+        <li>Autor: <a href="/#kto-to-robi">Marcel Gavalier</a></li>
+        <li>Publikované: <time datetime="2026-11-11">11. novembra 2026</time></li>
+        <li>Aktualizované: <time datetime="2026-11-11">11. novembra 2026</time></li>
+      </ul>
+      <div class="article-summary">
+        <span class="article-summary__label">Zhrnutie</span>
+        <p>Do odpovedí AI asistentov sa web dostane, ak ho vedia prečítať ich crawlery a ak jasne odpovedá na otázky, ktoré ľudia kladú. Zaručiť citáciu nikto nemôže, ale technické prekážky sa dajú odstrániť. Tento článok ukazuje, čo nastaviť v robots.txt, ako písať text a čo sa oplatí merať.</p>
+      </div>
+      <h2>Ako ChatGPT nachádza weby</h2>
+      <p>OpenAI používa tri rôzne roboty a každý robí inú vec. Podľa <a href="https://developers.openai.com/api/docs/bots">dokumentácie OpenAI</a> platí:</p>
+      <ul>
+        <li><strong>OAI-SearchBot</strong> slúži na vyhľadávanie v ChatGPT. Ak ho robots.txt zablokuje, stránka sa nezobrazí v odpovediach ChatGPT search. OpenAI odporúča tento robot povoliť, ak chcete, aby sa web objavoval vo výsledkoch.</li>
+        <li><strong>GPTBot</strong> zbiera obsah na trénovanie modelov. Jeho blokovanie sa týka trénovania, nie zobrazovania vo vyhľadávaní.</li>
+        <li><strong>ChatGPT-User</strong> navštívi stránku, keď o to používateľ požiada priamo v ChatGPT. Pravidlá z robots.txt sa pri ňom nemusia uplatniť.</li>
+      </ul>
+      <p>Zmena v robots.txt sa podľa OpenAI prejaví zhruba do 24 hodín.</p>
+
+      <h2>Čo nastaviť v robots.txt</h2>
+      <p>Ak chcete byť vo vyhľadávaní ChatGPT, nesmie ho robots.txt blokovať. Najjednoduchšie je povoliť ho explicitne:</p>
+<pre><code>User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://www.example.sk/sitemap.xml</code></pre>
+      <p>Či povolíte aj GPTBot, je vaše rozhodnutie. Povolenie znamená, že obsah môže byť použitý na trénovanie. Nezabudnite uviesť adresu sitemap.xml.</p>
+
+      <h2>Ako písať text, ktorý vie AI použiť</h2>
+      <ul>
+        <li><strong>Odpoveď v prvom odseku.</strong> Pod nadpisom hneď odpovedzte na otázku, ktorú nadpis kladie. Zvyšok stránky ju rozvedie.</li>
+        <li><strong>Jeden H1 a logické H2 a H3.</strong> Každá sekcia nech odpovedá na jednu konkrétnu otázku.</li>
+        <li><strong>Konkrétne údaje.</strong> Čísla, ceny a dátumy uvádzajte len vtedy, ak sú pravdivé a dajú sa overiť. Vymyslené číslo škodí viac, než pomáha.</li>
+        <li><strong>FAQ na konci stránky.</strong> Krátke otázky a priame odpovede, ktoré zodpovedajú tomu, čo sa ľudia naozaj pýtajú.</li>
+        <li><strong>Dátum poslednej zmeny.</strong> Aktuálnosť je pre čitateľa aj pre robota signál, že sa môžu na obsah spoľahnúť.</li>
+      </ul>
+
+      <h2>Štruktúrované dáta a sitemap</h2>
+      <p>Štruktúrované dáta (JSON-LD, schema.org) vyhľadávačom opisujú, čo je na stránke: organizácia, služba, článok, FAQ, omrvinková navigácia. Dôležité je, aby zodpovedali viditeľnému textu. Google v <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">sprievodcovi pre generatívne AI funkcie</a> uvádza, že na ne netreba žiadne špeciálne značky. Štruktúrované dáta teda nie sú povinný trik, ale poriadok, ktorý uľahčuje strojové čítanie.</p>
+      <p>Sitemap.xml by mal obsahovať skutočné adresy stránok a dátum poslednej zmeny. Pri každom novom článku ho doplňte.</p>
+
+      <h2>Čo nefunguje tak, ako sa tvrdí</h2>
+      <ul>
+        <li><strong>Záruka citácie.</strong> Odpovede AI sa menia a nikto vám citáciu nezaručí. Poctivý prísľub znie len: odstránime prekážky.</li>
+        <li><strong>llms.txt.</strong> Google v spomínanom sprievodcovi uvádza, že vyhľadávanie ho nepoužíva. Pre iné nástroje môže byť užitočnou pomôckou, ale nič sa na nej nezakladá.</li>
+        <li><strong>Rozšírené výsledky FAQ v Google.</strong> Google ich už vo vyhľadávaní nezobrazuje. FAQ na stránke má stále zmysel pre čitateľa aj pre AI, ale nečakajte bohatší výsledok v Google.</li>
+      </ul>
+
+      <h2>Ako zmerať, či to funguje</h2>
+      <ol>
+        <li>Zostavte si zoznam 15 až 20 typických otázok, ktoré by mohol klásť váš zákazník (po slovensky aj po anglicky).</li>
+        <li>Raz mesačne ich zadajte do ChatGPT, Perplexity a Google a zapíšte, či sa objavil váš web a na ktorom mieste.</li>
+        <li>Pripojte web ku Google Search Console a Bing Webmaster Tools. Uvidíte, ktoré stránky sú zaindexované a pri akých dopytoch sa zobrazujú.</li>
+      </ol>
+      <!-- TODO(Marcel): doplniť vlastné meranie na gavalier.sk (napr. po koľkých týždňoch sa web objavil pri ktorej otázke). Nič nevymýšľať, vložiť až po reálnom meraní. -->
+
+      <h2>Kontrolný zoznam</h2>
+      <ul>
+        <li>robots.txt nezakazuje OAI-SearchBot.</li>
+        <li>Sitemap.xml je aktuálna a odkazuje na ňu robots.txt.</li>
+        <li>Každá stránka má jeden H1 a odpoveď v prvom odseku.</li>
+        <li>Štruktúrované dáta zodpovedajú viditeľnému textu a JSON je platný.</li>
+        <li>Obrázky majú alt text a rozmery.</li>
+        <li>Web je pripojený ku Google Search Console a Bing Webmaster Tools.</li>
+      </ul>
+      <h2>Najčastejšie otázky</h2>
+      <ul class="faq">
+        <li class="faq__item">
+          <h3 class="faq__q">Zaručí robots.txt, že ma ChatGPT ocituje?</h3>
+          <p class="faq__a">Nie. Robots.txt len určuje, ktorí roboty môžu stránku čítať. Či vás ChatGPT použije v odpovedi, závisí od toho, ako dobre obsah odpovedá na otázku, a nikto vám to nezaručí.</p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__q">Ktorý robot OpenAI musím povoliť, aby ma našlo vyhľadávanie ChatGPT?</h3>
+          <p class="faq__a">OAI-SearchBot. Ak ho robots.txt zablokuje, stránka sa nezobrazí v odpovediach ChatGPT search. GPTBot slúži na trénovanie modelov a ChatGPT-User na priame požiadavky používateľa.</p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__q">Potrebujem súbor llms.txt?</h3>
+          <p class="faq__a">Nie je nutný. Google uvádza, že ho vo vyhľadávaní nepoužíva. Ako stručný prehľad webu pre iné AI nástroje môže byť užitočný, ale nespoliehajte sa na neho.</p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__q">Pomáhajú štruktúrované dáta objaviť sa v odpovediach AI?</h3>
+          <p class="faq__a">Štruktúrované dáta pomáhajú strojom pochopiť obsah stránky. Google ich pre svoje AI funkcie nevyžaduje. Dôležité je, aby zodpovedali viditeľnému textu.</p>
+        </li>
+        <li class="faq__item">
+          <h3 class="faq__q">Ako často kontrolovať, či sa web v odpovediach AI objavuje?</h3>
+          <p class="faq__a">Odporúčam raz mesačne. Zoberte rovnaký zoznam otázok, zapíšte, či sa web objavil, a porovnávajte výsledky v čase.</p>
+        </li>
+      </ul>
+      <h2>Súvisiaca služba</h2>
+      <p>Viac o tom, čo robím a ako to prebieha, nájdete na stránke <a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia webu</a>.</p>
+      <h2>Súvisiace stránky a články</h2>
+      <ul class="related">
+        <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia webu<span class="related__desc">Čo pri tejto službe robím a ako prebieha.</span></a></li>
+        <li><a href="/tvorba-webu/">Tvorba webu na mieru<span class="related__desc">Nový web postavený s ohľadom na čitateľnosť pre vyhľadávače.</span></a></li>
+        <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Ako automatizovať fakturáciu a e-maily v malej firme<span class="related__desc">Ďalší praktický návod z blogu.</span></a></li>
+      </ul>
+      <h2>Chcete to prebrať?</h2>
+      <p>Zavolajte alebo napíšte. Hovor aj návrh riešenia sú zadarmo a nezáväzné.</p>
+      <div class="page-cta">
+        <a href="tel:+421915697915" class="link-arrow">+421 915 697 915</a>
+        <a href="mailto:marcel@gavalier.sk" class="link-arrow">Napísať</a>
+      </div>
+    </article>
+    </section>
+  </main>
+
+  <section id="contact" class="section section--narrow footer">
+    <div class="container">
+
+      <header class="section-lead">
+        <h2 class="section-lead__headline"><span class="headline-mark">Zavolajte.</span></h2>
+        <p class="section-lead__subhead">
+          Jeden hovor vyrieši to, na čo by padlo desať mailov. Poviem vám rovno, či to viem vyriešiť, ako a čo to bude stáť. Ak sa nedovoláte alebo je vám bližšie písať, napíšte &ndash; <strong>ozvem sa</strong>.
+        </p>
+      </header>
+
+      <div class="footer__channels">
+        <a href="tel:+421915697915" class="footer__channel">
+          <span class="footer__channel-label">Telefón</span>
+          <span class="footer__channel-value">+421 915 697 915</span>
+        </a>
+        <a href="mailto:marcel@gavalier.sk" class="footer__channel">
+          <span class="footer__channel-label">Email</span>
+          <span class="footer__channel-value">marcel@gavalier.sk</span>
+        </a>
+      </div>
+
+      <div class="footer__links">
+        <nav aria-label="Služby">
+          <span class="footer__links-title">Služby</span>
+          <ul>
+          <li><a href="/automatizacia/">Automatizácia firemných procesov</a></li>
+          <li><a href="/tvorba-webu/">Tvorba webu na mieru</a></li>
+          <li><a href="/ai-agenti/">AI agenti pre firmy</a></li>
+          <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Blog">
+          <span class="footer__links-title">Z blogu</span>
+          <ul>
+          <li><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT</a></li>
+          <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Automatizácia fakturácie a e-mailov</a></li>
+          <li><a href="/blog/">Všetky články</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__identity">
+        <p class="footer__name">Marcel Gavalier</p>
+        <p class="footer__role">Coder · AI Engineer · Sieťar · Audio \ Video Engineer</p>
+      </div>
+
+      <dl class="footer__meta">
+        <div class="footer__meta-row">
+          <dt>Sídlo</dt>
+          <dd>Jarmočná 30, 058 01 Poprad</dd>
+        </div>
+        <div class="footer__meta-row">
+          <dt>IČO</dt>
+          <dd>47 786 825</dd>
+        </div>
+        <div class="footer__meta-row">
+          <dt>DIČ</dt>
+          <dd>1080715911</dd>
+        </div>
+      </dl>
+
+    </div>
+  </section>
+
+  <a href="#top" class="back-to-top" aria-label="Späť na začiatok">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/theme-switcher.js?v=20260514" defer></script>
+  <script src="/js/back-to-top.js?v=20260514" defer></script>
+  <script src="/js/site-nav.js?v=20260514" defer></script>
+
+</body>
+</html>

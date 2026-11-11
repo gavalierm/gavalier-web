@@ -30,6 +30,10 @@ User-agent: DuckDuckBot
 Allow: /
 
 # AI Crawlers
+# OAI-SearchBot: vyhľadávanie v ChatGPT; ak je zablokovaný, stránky sa v ChatGPT search nezobrazia
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 

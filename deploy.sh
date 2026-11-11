@@ -54,7 +54,7 @@ else
 fi
 
 # Súbory, ktoré na server nepatria
-LIST=$(printf '%s\n' "$LIST" | grep -v -E '^(deploy\.sh|\.gitignore|\.gitattributes|\.workflow\.json|\.claude/|agentic/|docs/)' || true)
+LIST=$(printf '%s\n' "$LIST" | grep -v -E '^(deploy\.sh|\.gitignore|\.gitattributes|\.workflow\.json|\.claude/|agentic/|docs/|blog/_sablona/|blog/ZOZNAM-TEM\.md)' || true)
 
 if [ -n "$ONLY" ]; then
   printf '%s\n' "$LIST" | grep -x -F -- "$ONLY" >/dev/null || { echo "$ONLY nie je v zozname na nahratie" >&2; exit 1; }

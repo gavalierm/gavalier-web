@@ -1,319 +1,190 @@
-/* ========================================
-   Blog — redakčný vzhľad zoznamu a článkov
-   Platí len pod <main class="blog">, stránky služieb ostávajú nezmenené.
-   Zámer: text na prvom mieste, bez hero nadpisov, zvýraznení a deliacich čiar.
-   ======================================== */
+/* Blog gavalier.sk — samostatný štýl stránok /blog/ (nenačítava ostatné CSS webu)
+   Manrope (nadpisy, navigácia, meta) + Source Serif 4 (čítanie).
+   Svetlá téma je predvolená ako na zvyšku webu. */
 
-.blog {
-  --blog-width: 720px;
-  --blog-muted: var(--theme-text-muted);
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f6f4;
+  --ink: #0a0a0a;
+  --body: #232323;
+  --muted: #6b6b6b;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.85);
+  --accent: #007AFF;        /* modrá webu: značky, čiary, veľké prvky */
+  --accent-ink: #0062d1;    /* tá istá modrá stmavená na drobný text */
+  --sans: 'Manrope', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --col: 720px;
+  --gutter: 7.5rem;
+  --ease: cubic-bezier(.2, .7, .2, 1);
 }
 
-/* Jeden stĺpec pre všetko: hlavička, text, omrvinky */
-.blog .breadcrumb,
-.blog .section-lead,
-.blog .prose {
-  max-width: var(--blog-width);
+:root[data-theme='dark'] {
+  --bg: #0d0d0d;
+  --bg-soft: #17171a;
+  --ink: #f6f6f6;
+  --body: #d2d2d2;
+  --muted: #8f8f8f;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.9);
+  --accent: #2b90ff;
+  --accent-ink: #5aa9ff;
+  color-scheme: dark;
 }
 
-/* Omrvinky: nenápadné, bez veľkých písmen */
-.blog .breadcrumb {
-  margin-bottom: var(--space-8);
-  font-weight: var(--font-medium);
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: 0.875rem;
-  color: var(--blog-muted);
-}
-
-.blog .breadcrumb a,
-.blog .breadcrumb [aria-current] {
-  color: var(--blog-muted);
-}
-
-.blog .breadcrumb [aria-current] {
-  color: var(--theme-text-primary);
-}
-
-/* Žiadne modré zvýraznenie nadpisov ani tučného textu */
-.blog .headline-mark,
-.blog strong {
-  background: none;
-  color: inherit;
-  padding: 0;
-}
-
-.blog strong {
-  font-weight: var(--font-bold);
-}
-
-/* Nadpis: obyčajný, ľavý, nie hero */
-.blog .section-lead {
-  margin-bottom: var(--space-9);
-}
-
-.blog .section-lead__headline {
-  margin-bottom: var(--space-4);
-  font-size: clamp(2rem, 4.4vw, 2.75rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
-
-.blog .section-lead__headline--long {
-  font-size: clamp(1.875rem, 4vw, 2.5rem);
-  line-height: 1.15;
-}
-
-.blog .section-lead__subhead,
-.blog .page-answer {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  font-weight: var(--font-regular);
-  color: var(--blog-muted);
-}
-
-/* ---------- Zoznam článkov ---------- */
-
-.blog .post-list {
-  border: 0;
-}
-
-.blog .post-list__item {
-  position: relative;
-  padding: var(--space-6) 0;
-  border: 0;
-}
-
-.blog .post-list__meta {
-  margin: 0 0 var(--space-2);
-  font-size: 0.875rem;
-  font-weight: var(--font-medium);
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--blog-muted);
-}
-
-.blog .prose .post-list__title {
-  margin: 0 0 var(--space-3);
-  font-size: clamp(1.375rem, 2.6vw, 1.625rem);
-  font-weight: var(--font-bold);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-}
-
-/* Celý riadok je klikateľný */
-.blog .post-list__title a::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-}
-
-.blog .prose .post-list__title a {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  transition: text-decoration-color var(--transition-fast);
-}
-
-.blog .post-list__item:hover .post-list__title a,
-.blog .post-list__title a:focus-visible {
-  text-decoration-color: currentColor;
-  opacity: 1;
-}
-
-.blog .post-list__title a:focus-visible {
-  outline: 2px solid var(--theme-text-primary);
-  outline-offset: 4px;
-}
-
-.blog .prose .post-list__item p:last-child {
+* { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+body {
   margin: 0;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  font-weight: var(--font-regular);
-  color: var(--blog-muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
+::selection { background: var(--accent); color: #fff; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { width: 100%; max-width: calc(var(--col) + 3rem); margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- Hlavička ---------- */
+.bar { border-bottom: 1px solid var(--line); }
+.bar__in { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4rem; }
+.brand { font-weight: 800; font-size: 1.0625rem; letter-spacing: -0.03em; }
+.bar nav { display: flex; align-items: center; gap: 1.5rem; font-size: 0.9375rem; font-weight: 600; color: var(--muted); }
+.bar nav a { transition: color .15s; }
+.bar nav a:hover, .bar nav a[aria-current] { color: var(--ink); }
+.theme-btn { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin-right: -0.5rem; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--muted); cursor: pointer; transition: color .15s, background .15s; }
+.theme-btn:hover { color: var(--ink); background: var(--bg-soft); }
+.theme-btn svg { width: 1.125rem; height: 1.125rem; }
+.theme-btn .moon { display: none; }
+:root[data-theme='dark'] .theme-btn .sun { display: none; }
+:root[data-theme='dark'] .theme-btn .moon { display: block; }
+
+/* ---------- Zoznam ---------- */
+.masthead { padding: 4.5rem 0 3.5rem; }
+.masthead h1 { margin: 0; font-size: clamp(2.5rem, 7vw, 3.5rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1; }
+.masthead h1 i { font-style: normal; color: var(--accent); }
+.masthead p { margin: 1.25rem 0 0; max-width: 34em; font-family: var(--serif); font-size: 1.25rem; line-height: 1.55; color: var(--body); }
+
+.year { display: flex; align-items: baseline; justify-content: space-between; padding: 0 0 0.75rem; border-bottom: 2px solid var(--line-strong); font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; }
+.year span:last-child { color: var(--muted); font-weight: 600; letter-spacing: 0; }
+
+.posts { margin: 0; padding: 0; list-style: none; }
+.post { position: relative; display: grid; grid-template-columns: var(--gutter) 1fr; padding: 2rem 0 2.125rem; border-bottom: 1px solid var(--line); }
+.post__date { padding-top: 0.4rem; font-size: 0.875rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.post__title { margin: 0; font-size: clamp(1.375rem, 3.2vw, 1.625rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; text-wrap: balance; }
+.post__title a { transition: color .15s; }
+.post__title a::after { content: ''; position: absolute; inset: 0; }
+.post__desc { margin: 0.625rem 0 0; max-width: 33em; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.6; color: var(--body); }
+.post__meta { display: flex; align-items: center; gap: 0.625rem; margin: 0.875rem 0 0; font-size: 0.8125rem; font-weight: 600; color: var(--muted); }
+.tag { color: var(--accent-ink); }
+.dot::before { content: '·'; }
+.post__go { margin-left: auto; color: var(--accent); opacity: 0; transform: translateX(-6px); transition: opacity .2s, transform .3s var(--ease); }
+.post:hover .post__title a { color: var(--accent-ink); }
+.post:hover .post__go { opacity: 1; transform: none; }
 
 /* ---------- Článok ---------- */
+.crumb { display: inline-flex; align-items: center; gap: 0.5rem; margin: 3rem 0 2rem; font-size: 0.875rem; font-weight: 600; color: var(--muted); transition: color .15s; }
+.crumb:hover { color: var(--ink); }
+.crumb span { transition: transform .3s var(--ease); }
+.crumb:hover span { transform: translateX(-3px); }
 
-/* Meta riadok pod nadpisom: autor · dátum */
-.blog .article-meta {
-  gap: var(--space-1) 0;
-  margin: 0 0 var(--space-9);
-  font-size: 0.9375rem;
-  font-weight: var(--font-medium);
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--blog-muted);
+.kicker { margin: 0 0 1rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent-ink); }
+.a-title { margin: 0; font-size: clamp(2rem, 5.6vw, 2.875rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.08; text-wrap: balance; }
+.lede { margin: 1.5rem 0 0; font-family: var(--serif); font-size: clamp(1.1875rem, 2.6vw, 1.375rem); line-height: 1.55; color: var(--body); }
+.byline { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.625rem; margin: 2rem 0 0; padding: 1rem 0; border-top: 2px solid var(--line-strong); border-bottom: 1px solid var(--line); font-size: 0.875rem; font-weight: 600; color: var(--muted); }
+.byline strong { color: var(--ink); font-weight: 700; }
+
+.prose { padding-top: 2.5rem; font-family: var(--serif); font-size: 1.1875rem; line-height: 1.7; color: var(--body); }
+.prose > * { max-width: 100%; }
+.prose p { margin: 0 0 1.4em; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; transition: color .15s; }
+.prose a:hover { color: var(--accent-ink); }
+.prose h2 { margin: 2.6em 0 0.7em; font-family: var(--sans); font-size: clamp(1.375rem, 3.4vw, 1.625rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; color: var(--ink); }
+.prose ul, .prose ol { margin: 0 0 1.4em; padding-left: 1.4em; }
+.prose li { margin-bottom: 0.6em; padding-left: 0.2em; }
+.prose li::marker { color: var(--muted); font-family: var(--sans); font-size: 0.85em; font-weight: 700; }
+.prose code { font-family: var(--mono); font-size: 0.82em; padding: 0.15em 0.4em; border-radius: 4px; background: var(--bg-soft); color: var(--ink); }
+.prose pre { margin: 0 0 1.6em; padding: 1.125rem 1.25rem; overflow-x: auto; border-radius: 10px; background: var(--bg-soft); border: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.65; }
+.prose pre code { padding: 0; background: none; font-size: inherit; }
+.note { margin: 0 0 1.6em; padding: 0.25rem 0 0.25rem 1.25rem; border-left: 3px solid var(--accent); color: var(--ink); }
+.note p { margin: 0; }
+
+/* FAQ */
+.faq { margin: 0 0 1.6em; border-top: 1px solid var(--line); font-family: var(--sans); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.125rem 0; cursor: pointer; list-style: none; font-size: 1.0625rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.35; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; flex-shrink: 0; font-size: 1.375rem; font-weight: 500; line-height: 1; color: var(--muted); transition: transform .25s var(--ease), color .15s; }
+.faq details[open] summary::after { transform: rotate(45deg); color: var(--accent); }
+.faq details p { margin: 0 0 1.25rem; max-width: 36em; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65; color: var(--body); }
+
+/* Koniec článku */
+.author { display: grid; gap: 0.5rem; margin: 4rem 0 0; padding: 1.75rem; border-radius: 14px; background: var(--bg-soft); }
+.author__label { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); }
+.author__name { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.03em; }
+.author p { margin: 0; max-width: 34em; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.6; color: var(--body); }
+.author__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 0.5rem; font-size: 0.9375rem; font-weight: 700; }
+.author__links a { border-bottom: 2px solid var(--accent); padding-bottom: 1px; transition: color .15s; }
+.author__links a:hover { color: var(--accent-ink); }
+
+.more { margin: 3.5rem 0 0; }
+.more .year { margin-bottom: 0; }
+.more .post { grid-template-columns: 1fr; padding: 1.5rem 0; }
+
+/* Päta */
+.foot { margin-top: 6rem; border-top: 1px solid var(--line); }
+.foot { font-size: 0.875rem; font-weight: 600; color: var(--muted); }
+.foot a { transition: color .15s; }
+.foot a:hover { color: var(--ink); }
+
+/* Jemný vstup obsahu */
+@media (prefers-reduced-motion: no-preference) {
+  .in { animation: in .5s var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } }
 }
 
-.blog .article-meta li + li::before {
-  content: '·';
-  margin: 0 var(--space-3);
+@media (max-width: 640px) {
+  .bar nav { gap: 1rem; }
+  .bar nav .hide-s { display: none; }
+  .masthead { padding: 3rem 0 2.5rem; }
+  .masthead p { font-size: 1.125rem; }
+  .post { grid-template-columns: 1fr; padding: 1.5rem 0 1.625rem; }
+  .post__date { padding: 0 0 0.5rem; font-size: 0.8125rem; }
+  .post__go { display: none; }
+  .crumb { margin: 2rem 0 1.5rem; }
+  .prose { font-size: 1.125rem; }
+  .author { padding: 1.25rem; }
 }
 
-.blog .article-meta a {
-  color: var(--theme-text-primary);
-  text-decoration: none;
+@media print {
+  .bar, .foot, .crumb, .more, .theme-btn { display: none; }
 }
 
-.blog .article-meta a:hover {
-  text-decoration: underline;
+/* ---------- Doplnky k ostrým stránkam ---------- */
+
+/* FAQ používa pôvodné značky: details.faq__item > summary.faq__q > h3 */
+.faq summary h3 { margin: 0; font: inherit; letter-spacing: inherit; color: inherit; }
+
+/* Zoznam „Čítajte ďalej“: titulok a jedna veta */
+.more .post__title { font-size: 1.25rem; }
+.more .post__desc { margin-top: 0.375rem; font-size: 1rem; }
+
+/* Päta: služby, kontakt, údaje */
+.foot__in { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 0 3rem; }
+.foot__title { display: block; margin: 0 0 0.75rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; color: var(--ink); }
+.foot ul { margin: 0; padding: 0; list-style: none; }
+.foot li { margin: 0 0 0.5rem; }
+.foot__legal { margin: 0; line-height: 1.7; }
+@media (min-width: 641px) {
+  .foot__in { grid-template-columns: 1.3fr 1fr 1fr; gap: 2rem; }
 }
 
-/* Zhrnutie: úvodný odsek, nie karta */
-.blog .article-summary {
-  margin: 0 0 var(--space-9);
-  padding: 0;
-  border: 0;
-}
-
-.blog .article-summary__label {
-  margin-bottom: var(--space-3);
-  font-size: 0.875rem;
-  font-weight: var(--font-medium);
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--blog-muted);
-}
-
-.blog .article-summary p {
-  font-size: 1.3125rem;
-  line-height: 1.6;
-  font-weight: var(--font-medium);
-}
-
-/* Text článku: čitateľný, pokojný rytmus */
-.blog .prose p,
-.blog .prose li {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  font-weight: var(--font-regular);
-}
-
-.blog .prose p {
-  margin-bottom: var(--space-5);
-}
-
-.blog .prose li {
-  margin-bottom: var(--space-3);
-}
-
-.blog .prose ul,
-.blog .prose ol {
-  padding-left: var(--space-6);
-  margin-bottom: var(--space-5);
-}
-
-.blog .prose h2 {
-  margin: var(--space-10) 0 var(--space-4);
-  padding-top: 0;
-  border-top: 0;
-  font-size: clamp(1.5rem, 2.8vw, 1.75rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-.blog .prose h3 {
-  margin: var(--space-8) 0 var(--space-3);
-  font-size: 1.25rem;
-  font-weight: var(--font-bold);
-}
-
-.blog .prose a {
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--theme-border-color-strong);
-  text-underline-offset: 3px;
-  transition: text-decoration-color var(--transition-fast);
-}
-
-.blog .prose a:hover {
-  opacity: 1;
-  text-decoration-color: currentColor;
-}
-
-.blog .prose pre {
-  padding: var(--space-5);
-  border-radius: var(--radius-md);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  overflow-x: auto;
-}
-
-/* FAQ: čisté riadky namiesto kariet */
-.blog .faq {
-  gap: 0;
-  border-top: 1px solid var(--theme-border-color);
-}
-
-.blog .faq__item,
-.blog .faq__item:hover,
-.blog .faq__item[open] {
-  background: none;
-  border: 0;
-  border-bottom: 1px solid var(--theme-border-color);
-  border-radius: 0;
-}
-
-.blog .faq__q,
-.blog .prose .faq__a {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.blog .faq__q {
-  border-radius: 0;
-}
-
-.blog .prose .faq__q h3 {
-  font-size: 1.0625rem;
-  font-weight: var(--font-bold);
-}
-
-.blog .prose .faq__a {
-  font-size: 1.0625rem;
-}
-
-/* Súvisiace odkazy: obyčajný zoznam */
-.blog .related {
-  border: 0;
-}
-
-.blog .related li {
-  border: 0;
-  margin-bottom: var(--space-2);
-}
-
-.blog .prose .related a {
-  padding: var(--space-3) 0;
-  font-weight: var(--font-bold);
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 4px;
-}
-
-.blog .prose .related a:hover {
-  text-decoration-color: currentColor;
-}
-
-.blog .related__desc {
-  font-weight: var(--font-regular);
-  font-size: 1rem;
-  color: var(--blog-muted);
-}
-
-.blog .page-cta {
-  margin-top: var(--space-7);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .blog .prose a,
-  .blog .prose .post-list__title a {
-    transition: none;
-  }
-}
+/* Karta autora: meno je odkaz, odkaz na službu vo vete */
+.author__name { justify-self: start; }
+.author__inline { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; color: var(--ink); }

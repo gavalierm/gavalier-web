@@ -11,9 +11,13 @@ Blog je statické HTML bez databázy a bez build kroku. Každý článok je jede
 5. V JSON-LD (`<script type="application/ld+json">`) uprav `BlogPosting` (`headline`, `description`, `datePublished`, `dateModified`, `url`), `BreadcrumbList` a `FAQPage`. Otázky a odpovede vo FAQPage musia byť rovnaké ako vo viditeľnom FAQ na stránke.
 6. Napíš obsah: jeden H1, odpoveď v prvom odseku (zhrnutie), logické H2/H3, na konci FAQ a odkaz na príslušnú službu.
 7. Pri zmene článku aktualizuj `dateModified` v JSON-LD aj `<time datetime>` v hlavičke článku.
-8. Pridaj článok do `blog/index.html` (zoznam a JSON-LD `blogPost`), do `sitemap.xml` (nový blok `<url>` s `lastmod`) a do `llms.txt` (jedna veta).
+8. Pridaj článok do `blog/index.html` (položka `<li class="post">` navrchu zoznamu: dátum, titulok, jedna veta popisu, téma a čas čítania; uprav počet článkov v riadku roka; JSON-LD `blogPost`), do `sitemap.xml` (nový blok `<url>` s `lastmod`) a do `llms.txt` (jedna veta).
 9. Odkazuj na článok zo súvisiacej stránky služby a naopak.
 10. Skontroluj: JSON-LD je platný JSON, všetky odkazy vedú na existujúce stránky, čísla a ceny sú overené.
+
+## Vzhľad
+
+Stránky blogu majú vlastný štýl `css/components/blog.css` (Manrope na nadpisy, Source Serif 4 na text) a nenačítavajú ostatné CSS webu. V článku doplň tému nad nadpisom (`.kicker`, názov služby) a čas čítania v riadku autora: počet slov článku delený 200, zaokrúhlený na minúty. Riadok „Aktualizované“ pridaj až vtedy, keď sa dátum zmeny líši od dátumu publikovania.
 
 ## Pravidlá
 

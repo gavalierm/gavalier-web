@@ -1,0 +1,12 @@
+{
+  // Statický web gavalier.sk bez Worker skriptu: Cloudflare servíruje súbory z koreňa repozitára.
+  // Čo sa nenahrá, určuje .assetsignore. Postup a rozhodnutie: docs/cloudflare-hosting.md
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gavalier-web",
+  "compatibility_date": "2026-11-11",
+  "assets": {
+    "directory": "./",
+    // /blog/ -> blog/index.html a /blog -> /blog/ (predvolená hodnota, uvedená výslovne)
+    "html_handling": "auto-trailing-slash"
+  }
+}

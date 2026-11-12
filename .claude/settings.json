@@ -6,11 +6,6 @@
   "autoMemoryEnabled": false,
   "autoCompactWindow": 200000,
   "permissions": {
-    "deny": [
-      "Edit(../gavalier-brain/**)",
-      "Edit(~/.claude/**)",
-      "Edit(/.claude/skills/**)"
-    ],
     "ask": [
       "Bash(git reset --hard)",
       "Bash(git reset --hard *)",

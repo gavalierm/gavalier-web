@@ -140,15 +140,14 @@
       all.push({ h, chs, vis: false, revealed: false, size: 40 });
     });
 
+    // iba polohy pre vzdialenosť od kurzora; rozloženie sa nemení (znak kódu je ::after nad pôvodným písmenom)
     function measure() {
       for (const H of all) {
         H.size = parseFloat(getComputedStyle(H.h).fontSize);
-        for (const o of H.chs) { o.s.textContent = o.c; o.s.classList.remove('is-hot'); o.hot = false; o.s.style.width = ''; }
         for (const o of H.chs) {
           const r = o.s.getBoundingClientRect();
-          o.w = r.width; o.x = r.left + scrollX + r.width / 2; o.y = r.top + scrollY + r.height / 2;
+          o.x = r.left + scrollX + r.width / 2; o.y = r.top + scrollY + r.height / 2;
         }
-        for (const o of H.chs) o.s.style.width = o.w + 'px';
       }
     }
     measure();
@@ -165,8 +164,8 @@
     }), { threshold: .6 });
     all.forEach(H => io.observe(H.h));
 
-    const hot = o => { o.s.textContent = G[Math.random() * G.length | 0]; if (!o.hot) { o.hot = true; o.s.classList.add('is-hot'); } };
-    const cool = o => { o.hot = false; o.s.textContent = o.c; o.s.classList.remove('is-hot'); };
+    const hot = o => { o.s.dataset.g = G[Math.random() * G.length | 0]; if (!o.hot) { o.hot = true; o.s.classList.add('is-hot'); } };
+    const cool = o => { o.hot = false; o.s.classList.remove('is-hot'); };
 
     tickers.push(now => {
       const px = ptr.x + scrollX, py = ptr.y + scrollY, on = live(now);

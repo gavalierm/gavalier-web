@@ -15,9 +15,15 @@
 
 /* ---------- 04 Dešifrovanie ---------- */
 .lab-w { white-space: nowrap; }
-.lab-ch { display: inline-block; text-align: center; }
-.lab-ch.is-hot { font-family: var(--lab-mono); font-weight: 700; letter-spacing: 0; color: var(--lab-blue); }
-.headline-mark .lab-ch.is-hot { color: #fff; }
+.lab-ch { position: relative; }
+.lab-ch.is-hot { color: transparent; }
+.lab-ch.is-hot::after {
+  content: attr(data-g); position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--lab-mono); font-weight: 700; letter-spacing: 0; line-height: 1;
+  color: var(--lab-blue);
+}
+.headline-mark .lab-ch.is-hot::after { color: #fff; }
 
 /* ---------- 07 Vrstvy v 3D ---------- */
 .hero.lab3d-host { perspective: 1600px; }

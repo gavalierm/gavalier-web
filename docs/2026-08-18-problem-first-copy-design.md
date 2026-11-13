@@ -41,18 +41,18 @@ Teplý, ľudský, benefit-first. Druhá osoba, jednoduché slová. AI je dôvod,
 
 | # | Sekcia | Nadpis | Úloha |
 |---|--------|--------|-------|
-| 1 | Hero | Ste tu **správne.** | potvrdí odporúčanie, telefón ako CTA |
-| 2 | Situácie | **Poradím zdarma.** / Nech riešite čokoľvek. | self-selection, AI body navrchu |
-| 3 | Záruka ⭐ | **Ručím za to.** / Štyrmi spôsobmi. | toto uzatvára obchody |
-| 4 | Cena | **Koľko to stojí?** / Zmestíme sa. | zabíja obavu, na ktorej to padá |
-| 5 | Priebeh | **Štyri kroky.** / Od problému k riešeniu. | znižuje bariéru kontaktu |
-| 6 | Služby | **Detaily.** / Podľa toho, čo riešite. | päť akordeónov podľa problému, AI prvé, eventy posledné |
-| 7 | Logá | **Logá.** / Klasický trik. | priznáva, že časť sú partneri |
-| 8 | Recenzie | **Ako to dopadlo.** / Ich slovami. | dôkaz |
-| 9 | Kto to robí | **A kto to robí?** / Ja a ľudia okolo mňa. | identita až tesne pred kontaktom |
-| 10 | Kontakt | **Zavolajte.** / Telefón povie viac. | telefón pred mailom |
+| 1 | Hero | Ste tu **správne.** | potvrdí odporúčanie, osobné predstavenie, telefón ako CTA |
+| 2 | Kto to robí | **Kto to robí?** / Aby ste vedeli, komu voláte. | osoba a dôvera hneď za hero, pás troch faktov |
+| 3 | Situácie | **Poradím zdarma.** / Nech riešite čokoľvek. | self-selection, AI body navrchu |
+| 4 | Recenzie | **Ako to dopadlo.** / Ich slovami. | dôkaz pred záväzkami |
+| 5 | Záruka ⭐ | **Ručím za to.** / Štyrmi spôsobmi. | toto uzatvára obchody |
+| 6 | Cena | **Koľko to stojí?** / Zmestíme sa. | zabíja obavu, na ktorej to padá |
+| 7 | Priebeh | **Štyri kroky.** / Od problému k riešeniu. | znižuje bariéru kontaktu |
+| 8 | Služby | **Detaily.** / Podľa toho, čo riešite. | päť akordeónov podľa problému, AI prvé, eventy posledné |
+| 9 | Logá | **Logá.** / Klasický trik. | priznáva, že časť sú partneri |
+| 10 | Kontakt | **Zavolajte.** / Telefón povie viac. | telefón pred mailom; päta (služby, články, identita) je samostatný `<footer>` |
 
-Sekcie 2, 3 a 5 bežia v existujúcom komponente `.experience__areas` — bez nového CSS.
+Sekcie 2, 3, 5 a 7 bežia v existujúcom komponente `.experience__areas` — bez nového CSS.
 
 ## Situácie (sekcia 2)
 
@@ -135,3 +135,10 @@ Vizuál, farby, typografia, existujúce CSS a JS, logá klientov, citáty recenz
 - **Slovník:** zákazka → problém (cena, recenzie, Kto to robí, meta, OG, llms.txt). Zostáva „ručí … za každého subdodávateľa, ktorého k zákazke priberie“ (zákazka = spolupráca).
 - **Cena:** tvar „za pár desiatok eur aj za tisíce“ (D-0008) je podľa operátora 2026-11-13 nahradený (D-0011) vetou „Na cene sa dohodneme vopred a viete, koľko stojí riešenie.“ v tele, schema, FAQ, meta, OG, Twitter a llms.txt (index.html aj stránky služieb); „podľa toho, čo treba spraviť“ sa vypustilo. Na stránkach služieb sa vypustila aj opakujúca sa veta „Cenu poviem dopredu a platí“, ostáva „Ak sa práca natiahne, dodatočné hodiny neúčtujem.“
 - **Vedome nie:** nové sľuby (návrh na jednu stranu, prístupy a kód patria klientovi, ukončenie po každom kroku) ani tracker zaseknutých problémov.
+
+## Aktualizácia 2026-11-13 (osoba a dôvera hneď za hero, D-0012)
+
+- **Prečo:** návštevník z vyhľadávania je chladný a web je postavený na Marcelovom mene; osoba, ktorej majú volať, nemôže byť až na konci. Hero preto začína „Dobrý deň, som Marcel.“ a veta o Cavaleers z hero odišla do sekcie Kto to robí.
+- **Presun sekcií:** Kto to robí (bez „A“) je hneď za hero; Recenzie sú pred Zárukou. Poradie: Hero, Kto to robí, Situácie, Recenzie, Záruka, Cena, Priebeh, Detaily, Logá, Kontakt. Hamburger a tlačidlá „Ďalej“ sledujú nové poradie, kotvy (id) sa nemenili.
+- **Kto to robí:** odseky skrátené, aby sa fakt nehovoril dvakrát, a pod nimi pás troch faktov (12+ rokov, Na odporúčanie, Tím Cavaleers) v `.experience__areas`. Citát HB Reavis ostal iba v recenziách: sú teraz o dve sekcie nižšie a duplicita by rušila.
+- **Päta ako je zvykom:** zoznamy Služby a Z blogu a identita (sídlo, IČO, DIČ) sú v samostatnom `<footer>` na úplnom konci homepage a piatich stránok služieb; sekcia Zavolajte obsahuje iba nadpis, text, telefón a e-mail. CSS `blog.css` sa nepripojilo (prepisuje body, odkazy a menu), použili sa existujúce triedy `footer__*`, nové CSS nevzniklo.

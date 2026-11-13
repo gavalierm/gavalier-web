@@ -1,10 +1,7 @@
 {
-  "enabledPlugins": {
-    "workflow@skills-dir": true,
-    "workflow@inline": false
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
   },
-  "autoMemoryEnabled": false,
-  "autoCompactWindow": 200000,
   "permissions": {
     "ask": [
       "Bash(git reset --hard)",
@@ -23,7 +20,11 @@
       "Bash(git rebase -i *)"
     ]
   },
-  "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
-  }
+  "enabledPlugins": {
+    "workflow@skills-dir": true,
+    "workflow@inline": false,
+    "claude-seo@agricidaniel-claude-seo": true
+  },
+  "autoCompactWindow": 200000,
+  "autoMemoryEnabled": false
 }

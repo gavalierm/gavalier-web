@@ -17,3 +17,4 @@ deploy-do-cloudflare.sh
 blog/_sablona
 blog/ZOZNAM-TEM.md
 .DS_Store
+.mcp.json

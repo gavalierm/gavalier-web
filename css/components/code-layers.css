@@ -1,0 +1,84 @@
+/* ========================================
+   Kód pod povrchom: 3D vrstvy hero a dešifrovanie nadpisov (js/code-layers.js, D-0013, D-0014)
+   ======================================== */
+:root {
+  --cl-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --cl-blue: #007AFF;
+  --cl-blue-l: #3395FF;
+}
+
+/* ---------- Dešifrovanie nadpisov ---------- */
+.cl-w { white-space: nowrap; }
+.cl-ch { position: relative; }
+.cl-ch.is-hot { color: transparent; }
+.cl-ch.is-hot::after {
+  content: attr(data-g); position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--cl-mono); font-weight: 700; letter-spacing: 0; line-height: 1;
+  color: var(--cl-blue);
+}
+.headline-mark .cl-ch.is-hot::after { color: #fff; }
+
+/* ---------- 3D vrstvy hero ---------- */
+.hero.cl-host { perspective: 1600px; }
+.hero__top.cl-stack { padding: 0; transform-style: preserve-3d; transform-origin: 50% 55%; will-change: transform; }
+.cl-ui {
+  position: relative;
+  padding-top: var(--space-13);
+  padding-bottom: var(--space-10);
+  will-change: transform, opacity;
+}
+@media (min-width: 768px) {
+  .cl-ui { padding-bottom: var(--space-12); }
+}
+.cl-plane {
+  position: absolute; inset: 0; overflow: hidden;
+  opacity: 0; visibility: hidden; will-change: transform, opacity;
+  outline: 1px solid rgba(51,149,255,.8);
+}
+.is-open > .cl-plane,
+.cl-plane.is-top { visibility: visible; }
+.hero__top:not(.is-open) > .cl-plane { outline: none; }
+.is-open > .cl-ui { background: color-mix(in srgb, var(--theme-bg) 88%, transparent); outline: 1px solid rgba(51,149,255,.8); }
+
+.cl-html { background: #0a0f1a; }
+.cl-code { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.cl-css > .cl-ui {
+  height: 100%;
+  background-color: #06101f;
+  background-image: linear-gradient(rgba(51,149,255,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(51,149,255,.13) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.cl-tag {
+  position: absolute; left: 16px; top: 16px; z-index: 9;
+  font: 700 12px/1 var(--cl-mono); color: #fff; background: var(--cl-blue);
+  padding: 5px 8px; border-radius: 4px; pointer-events: none;
+  opacity: 0; transition: opacity .3s ease;
+}
+.is-open .cl-tag { opacity: 1; }
+
+.cl-hint {
+  position: absolute; right: 16px; bottom: 16px; z-index: 9;
+  font: 600 12px/1 var(--cl-mono); color: var(--cl-blue);
+  border: 1px solid currentColor; border-radius: 999px; padding: 7px 11px;
+  background: var(--theme-bg); pointer-events: none;
+  transition: opacity .3s ease;
+}
+.cl-plane .cl-hint { color: #7fb8ff; background: #0a0f1a; }
+.cl-css .cl-ui .cl-hint { display: none; }
+.is-open .cl-hint { opacity: 0; }
+
+/* výkres hero (CSS vrstva) */
+.cl-wire [data-cl] { position: relative; outline: 1px dashed rgba(51,149,255,.6); outline-offset: 4px; }
+.cl-wire .hero__byline { color: var(--cl-blue-l); }
+.cl-wire .hero__title { color: transparent; -webkit-text-stroke: 1.5px var(--cl-blue-l); }
+.cl-wire .headline-mark { background: transparent; color: transparent; outline: 1.5px solid var(--cl-blue-l); }
+.cl-wire [data-cl]::before {
+  content: attr(data-cl); position: absolute; right: 0; bottom: 100%; margin-bottom: 8px;
+  font: 500 12px/1 var(--cl-mono); letter-spacing: 0; text-transform: none;
+  color: #7fb8ff; -webkit-text-stroke: 0; white-space: nowrap;
+}
+.cl-wire .hero__portrait { filter: grayscale(1) brightness(.6) sepia(1) hue-rotate(175deg) saturate(3); opacity: .6; }
+.cl-img-label { position: absolute; right: 16px; top: 56px; z-index: 3; font: 500 12px/1 var(--cl-mono); color: #7fb8ff; }

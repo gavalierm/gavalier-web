@@ -118,3 +118,10 @@ Vizuál, farby, typografia, existujúce CSS a JS, logá klientov, citáty recenz
 - **12+ rokov:** platí pre weby, aplikácie, zvuk a video; AI a automatizácie pribudli nedávno (znenie tela).
 - **Rozpočet:** schema už netvrdí „podľa rozpočtu klienta“; rozsah sa prispôsobuje, cena nevzniká podľa rozpočtu (znenie tela).
 - **Cena:** všade „za pár desiatok eur aj za tisíce“ (nie „od … po“).
+
+## Aktualizácia 2026-11-13 (SEO fáza 3)
+
+- **Nová stránka /ai-poradenstvo/ (AI poradenstvo pre firmy):** ponuka poradenstva, nie kurz (SERP na „ai poradenstvo“ obsadzujú kurzy). Píše iba z toho, čo už na webe je: situácie z homepage, rozlíšenie automatizácia / AI agent, kontrola človekom, príklad s AI marketingom, postup, záruka, cena. Forma platenej služby (hodiny, balíky) sa nedefinuje; platí „hovor aj návrh riešenia sú zadarmo a nezáväzné“. V navigácii je prvá, v pätách, sitemap, llms.txt, OfferCatalog, hero, situácii 01 a akordeóne Code & IT.
+- **/seo-llm-optimalizacia/ → obchodný variant „SEO optimalizácia“** (480 hľadaní mesačne, KD 3): title, H1, úvod a schema ako ponuka služby; návodový obsah ostáva blogu a stránka naň odkazuje hneď v úvode. Adresa sa nemení. Štítok v navigácii a pätách je „SEO optimalizácia“.
+- **Stránky služieb rozšírené na ~800 a viac slov:** každá má vlastný postup, „Čo dostanete“ a „Od čoho závisí cena“ (zoznam faktorov bez čísel a kotiev). Spoločné bloky (postup z troch krokov, cena, FAQ o výsledku a mieste) sú skrátené alebo prepísané podľa služby; text spoločný všetkým štyrom klesol z ~25–28 % na ~13 %.
+- **Čo sa vedome nepridalo:** údaje a zodpovednosť pri AI agentoch (SXO-04), nové referencie, mená klientov a výsledky (vstup operátora). Disavow sa nerobí.

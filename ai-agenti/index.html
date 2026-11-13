@@ -77,7 +77,7 @@
       "breadcrumb": {
         "@id": "https://www.gavalier.sk/ai-agenti/#breadcrumb"
       },
-      "dateModified": "2026-11-11",
+      "dateModified": "2026-11-13",
       "author": {
         "@id": "https://www.gavalier.sk/#person"
       },
@@ -177,7 +177,7 @@
         },
         {
           "@type": "Question",
-          "name": "Čo ak mi výsledok nebude sedieť?",
+          "name": "Čo ak agent nebude robiť to, na čom sme sa dohodli?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Platíte len za výsledok. Ak dodané nesedí s dohodou, peniaze nepýtam."
@@ -207,10 +207,11 @@
   <nav class="site-nav" id="siteNav" aria-label="Hlavné menu" hidden>
     <div class="site-nav__inner">
       <ol class="site-nav__list">
+        <li class="site-nav__item"><a href="/ai-poradenstvo/" class="site-nav__link">AI poradenstvo</a></li>
         <li class="site-nav__item"><a href="/automatizacia/" class="site-nav__link">Automatizácia</a></li>
         <li class="site-nav__item"><a href="/tvorba-webu/" class="site-nav__link">Tvorba webu</a></li>
         <li class="site-nav__item"><a href="/ai-agenti/" class="site-nav__link">AI agenti</a></li>
-        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO a LLM</a></li>
+        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO optimalizácia</a></li>
         <li class="site-nav__item"><a href="/blog/" class="site-nav__link">Blog</a></li>
         <li class="site-nav__item"><a href="/#zaruka" class="site-nav__link">Záruka</a></li>
         <li class="site-nav__item"><a href="/#ako-to-funguje" class="site-nav__link">Cena</a></li>
@@ -266,17 +267,43 @@
         <li>Nasadenie a dohľad nad agentom, aby bežal spoľahlivo a dalo sa kontrolovať, čo robí.</li>
       </ul>
       <h2>Kedy AI agent dáva zmysel</h2>
-      <p>AI agent sa hodí tam, kde úloha nie je čisto mechanická: treba prečítať text, zaradiť ho, zhrnúť alebo pripraviť podklad. Ak sa postup dá zapísať do pevných pravidiel, stačí zvyčajne obyčajná automatizácia, ktorá je lacnejšia a predvídateľnejšia. Poviem vám, ktorá z možností sa hodí vo vašom prípade.</p>
-      <p>AI robí aj chyby. Preto pri agentoch navrhujem kontrolu výstupov človekom tam, kde by chyba stála peniaze.</p>
-      <h2>Ako to prebieha</h2>
+      <p>AI agent sa hodí tam, kde úloha nie je čisto mechanická: treba prečítať text, zaradiť ho, zhrnúť alebo pripraviť podklad. Ak sa postup dá zapísať do pevných pravidiel, stačí zvyčajne obyčajná <a href="/automatizacia/">automatizácia</a>, ktorá je lacnejšia a predvídateľnejšia. Ak sa ešte rozhodujete, čo sa vo vašom prípade hodí, začať sa dá <a href="/ai-poradenstvo/">AI poradenstvom</a>.</p>
+      <p>Typické úlohy pre agenta:</p>
+      <ul>
+        <li>Prečíta prichádzajúce správy (e-maily, formuláre, požiadavky) a zaradí ich tam, kam patria.</li>
+        <li>Zhrnie dlhší text alebo pripraví podklad, ktorý potom skontrolujete a schválite.</li>
+        <li>Porovná údaje medzi systémami a upozorní na to, čo nesedí.</li>
+        <li>Zoberie údaje z viacerých miest do jedného dashboardu.</li>
+      </ul>
+      <p>AI robí aj chyby. Preto pri agentoch navrhujem kontrolu výstupov človekom tam, kde by chyba stála peniaze. Vy rozhodnete, čo agent spraví sám a čo iba pripraví na schválenie.</p>
+      <h2>Príklad z praxe</h2>
+      <p>Jeden klient chcel zvládnuť AI marketing. Po rozhovore sa ukázalo, že mu stačí prehľad, ktorý mu ukázal, kde má proces medzery. Agent ani veľký projekt netreba vždy: často je najkratšia cesta menšia, než sa čakalo.</p>
+      <h2>Ako prebieha zákazka</h2>
       <ol>
-        <li>Zavoláte na <a href="tel:+421915697915">+421 915 697 915</a> alebo napíšete. Stačí pár viet, nemusí to byť odborné.</li>
-        <li>Doptám sa na detaily, aby som pochopil, o čo ide. Často sa pritom ukáže, že sa to dá spraviť jednoduchšie. Poviem, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo.</li>
-        <li>Ak vám to sedí, ide sa robiť. Ak nie, nič neplatí.</li>
+        <li><strong>Rozhovor.</strong> Zavoláte na <a href="tel:+421915697915">+421 915 697 915</a> alebo napíšete. Stačí pár viet o tom, čo dnes robíte ručne a v akých systémoch. Nemusí to byť odborné.</li>
+        <li><strong>Návrh.</strong> Doptám sa na detaily a poviem, či stačí automatizácia, alebo sa hodí agent. Potom, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo. Hovor aj návrh riešenia sú zadarmo a nezáväzné. Ak vám nesedí, nič neplatí.</li>
+        <li><strong>Prvá verzia.</strong> Agent sa napojí na vaše údaje a systémy a rieši to najdôležitejšie. Zvyšok sa dorobí, keď na to príde čas.</li>
+        <li><strong>Kontrola.</strong> Tam, kde by chyba stála peniaze, nastavím kontrolu výstupov človekom.</li>
+        <li><strong>Nasadenie a dohľad.</strong> Agent beží spoľahlivo a dá sa sledovať, čo robí. Keď sa po čase zmení proces alebo treba niečo doladiť, stačí zavolať.</li>
       </ol>
-      <h2>Koľko to stojí</h2>
-      <div class="page-note"><p>Zákazky beriem za pár desiatok eur aj za tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem. Hovor aj návrh riešenia sú zadarmo a nezáväzné.</p></div>
-      <p>Presnú cenu poviem po krátkom telefonáte, dopredu a záväzne.</p>
+      <h2>Čo dostanete</h2>
+      <ul>
+        <li>Agenta nasadeného na vaše údaje a systémy, ktorý robí dohodnutú prácu.</li>
+        <li>Dashboard, ak je súčasťou zadania.</li>
+        <li>Kontrolu výstupov tam, kde na nej záleží, a možnosť vidieť, čo agent robí.</li>
+        <li>Cenu dopredu, ktorá platí aj vtedy, keď sa práca natiahne.</li>
+        <li>Telefón na mňa aj po odovzdaní.</li>
+      </ul>
+      <h2>Od čoho závisí cena</h2>
+      <div class="page-note"><p>Zákazky beriem za pár desiatok eur aj za tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem.</p></div>
+      <p>Najviac ju ovplyvňuje:</p>
+      <ul>
+        <li>koľko systémov má agent čítať alebo napĺňať a či majú API,</li>
+        <li>či stačia pevné pravidlá, alebo treba úsudok AI nad textom,</li>
+        <li>či a v akom rozsahu má výstup kontrolovať človek,</li>
+        <li>či má byť súčasťou aj dashboard.</li>
+      </ul>
+      <p>Rozpočet mi pokojne povedzte hneď. Nie preto, aby som podľa neho nacenil, ale aby som vedel, akú verziu <strong>má zmysel navrhnúť</strong>. Skoro všetko sa dá spraviť vo viacerých verziách: od tej, ktorá rieši to najdôležitejšie a funguje hneď, až po plnú. Záruky nájdete na <a href="/#zaruka">hlavnej stránke</a>.</p>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
@@ -300,15 +327,15 @@
           <p class="faq__a">Zákazky beriem za pár desiatok eur aj za tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí, dodatočné hodiny pri natiahnutej práci neúčtujem.</p>
         </details>
         <details class="faq__item">
-          <summary class="faq__q"><h3>Čo ak mi výsledok nebude sedieť?</h3></summary>
+          <summary class="faq__q"><h3>Čo ak agent nebude robiť to, na čom sme sa dohodli?</h3></summary>
           <p class="faq__a">Platíte len za výsledok. Ak dodané nesedí s dohodou, peniaze nepýtam.</p>
         </details>
       </div>
       <h2>Súvisiace stránky a články</h2>
       <ul class="related">
-        <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Ako automatizovať fakturáciu a e-maily v malej firme<span class="related__desc">Postup od mapovania procesu po prvú automatizáciu, bez zbytočného nástroja.</span></a></li>
+        <li><a href="/ai-poradenstvo/">AI poradenstvo pre firmy<span class="related__desc">Keď treba najprv zistiť, čo sa vo firme oplatí.</span></a></li>
         <li><a href="/automatizacia/">Automatizácia firemných procesov<span class="related__desc">Keď stačí obyčajný skript bez AI.</span></a></li>
-        <li><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov<span class="related__desc">Čo ovplyvňujeme na vlastnom webe a čo nie: crawlery, štruktúrované dáta, obsah.</span></a></li>
+        <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Ako automatizovať fakturáciu a e-maily v malej firme<span class="related__desc">Postup od mapovania procesu po prvú automatizáciu, bez zbytočného nástroja.</span></a></li>
         <li><a href="/tvorba-webu/">Tvorba webu na mieru<span class="related__desc">Webové aplikácie a rozhrania pre agentov.</span></a></li>
       </ul>
       <aside class="page-author" aria-labelledby="page-author-name">
@@ -354,10 +381,11 @@
         <nav aria-label="Služby">
           <span class="footer__links-title">Služby</span>
           <ul>
+          <li><a href="/ai-poradenstvo/">AI poradenstvo pre firmy</a></li>
           <li><a href="/automatizacia/">Automatizácia firemných procesov</a></li>
           <li><a href="/tvorba-webu/">Tvorba webu na mieru</a></li>
           <li><a href="/ai-agenti/">AI agenti pre firmy</a></li>
-          <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia</a></li>
+          <li><a href="/seo-llm-optimalizacia/">SEO optimalizácia webu</a></li>
           </ul>
         </nav>
         <nav aria-label="Blog">

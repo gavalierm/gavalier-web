@@ -9,10 +9,11 @@ IČO: 47 786 825 · DIČ: 1080715911
 
 ## Služby (samostatné stránky)
 
+- [AI poradenstvo pre firmy](https://www.gavalier.sk/ai-poradenstvo/): rozhovor o tom, kde sa AI vo firme oplatí, výber medzi automatizáciou a AI agentom a prvý krok; na požiadanie aj samotné riešenie.
 - [Automatizácia firemných procesov](https://www.gavalier.sk/automatizacia/): nahradenie opakovanej ručnej práce skriptami a prepojenie systémov, ktoré spolu nehovoria.
 - [Tvorba webu na mieru](https://www.gavalier.sk/tvorba-webu/): weby, eshopy a PWA aplikácie na mieru, vrátane hostingu, nasadenia a správy.
 - [AI agenti pre firmy](https://www.gavalier.sk/ai-agenti/): návrh a nasadenie AI agentov a dashboardov nad firemnými údajmi.
-- [SEO a LLM optimalizácia](https://www.gavalier.sk/seo-llm-optimalizacia/): štruktúrované dáta, sémantické HTML, sitemap a pravidlá pre crawlery vyhľadávačov a AI asistentov.
+- [SEO optimalizácia webu](https://www.gavalier.sk/seo-llm-optimalizacia/): SEO pre Google aj AI asistentov: štruktúrované dáta, sémantické HTML, sitemap, pravidlá pre crawlery a meranie.
 
 ## Blog
 

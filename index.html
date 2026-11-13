@@ -214,6 +214,17 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
+                "@id": "https://www.gavalier.sk/ai-poradenstvo/#service",
+                "name": "AI poradenstvo pre firmy",
+                "description": "Poradenstvo pre firmy o tom, kde sa AI oplatí použiť: výber medzi automatizáciou a AI agentom, zadanie pre AI, kontrola výstupov a prvý krok k nasadeniu.",
+                "url": "https://www.gavalier.sk/ai-poradenstvo/",
+                "provider": { "@id": "https://www.gavalier.sk/#service" }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
                 "@id": "https://www.gavalier.sk/automatizacia/#service",
                 "name": "Automatizácia firemných procesov",
                 "description": "Automatizácia rutinnej práce vo firme: prepájanie systémov, ktoré spolu nehovoria, spracovanie údajov, reporty a e-maily skriptom namiesto ručného klikania.",
@@ -248,8 +259,8 @@
               "itemOffered": {
                 "@type": "Service",
                 "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#service",
-                "name": "SEO a LLM optimalizácia",
-                "description": "Technické SEO a optimalizácia webu pre AI asistentov: štruktúrované dáta a schema.org, sémantické HTML, sitemap.xml, robots.txt a llms.txt.",
+                "name": "SEO optimalizácia webu",
+                "description": "Technické SEO a optimalizácia webu pre Google aj AI asistentov: štruktúrované dáta a schema.org, sémantické HTML, sitemap.xml, robots.txt a llms.txt.",
                 "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
                 "provider": { "@id": "https://www.gavalier.sk/#service" }
               }
@@ -371,10 +382,11 @@
   <nav class="site-nav" id="siteNav" aria-label="Hlavné menu" hidden>
     <div class="site-nav__inner">
       <ol class="site-nav__list">
+        <li class="site-nav__item"><a href="/ai-poradenstvo/" class="site-nav__link">AI poradenstvo</a></li>
         <li class="site-nav__item"><a href="/automatizacia/" class="site-nav__link">Automatizácia</a></li>
         <li class="site-nav__item"><a href="/tvorba-webu/" class="site-nav__link">Tvorba webu</a></li>
         <li class="site-nav__item"><a href="/ai-agenti/" class="site-nav__link">AI agenti</a></li>
-        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO a LLM</a></li>
+        <li class="site-nav__item"><a href="/seo-llm-optimalizacia/" class="site-nav__link">SEO optimalizácia</a></li>
         <li class="site-nav__item"><a href="/blog/" class="site-nav__link">Blog</a></li>
         <li class="site-nav__item"><a href="#zaruka" class="site-nav__link">Záruka</a></li>
         <li class="site-nav__item"><a href="#ako-to-funguje" class="site-nav__link">Cena</a></li>
@@ -441,7 +453,7 @@
             <strong>Najrýchlejšia cesta je zavolať</strong>. Poviem vám rovno, či to viem vyriešiť, ako a čo to bude stáť.
           </p>
           <p class="hero__roles hero__services">
-            <a href="/automatizacia/">Automatizácia rutiny</a> a <a href="/ai-agenti/">AI agenti</a> &middot; <a href="/tvorba-webu/">Weby a eshopy</a> &middot; Webové aplikácie &middot; Hosting &middot; Siete s partnermi &middot; Live streamy &middot; Zvuk, svetlá a video na eventy
+            <a href="/ai-poradenstvo/">AI poradenstvo</a> &middot; <a href="/automatizacia/">Automatizácia rutiny</a> a <a href="/ai-agenti/">AI agenti</a> &middot; <a href="/tvorba-webu/">Weby a eshopy</a> &middot; Webové aplikácie &middot; Hosting &middot; Siete s partnermi &middot; Live streamy &middot; Zvuk, svetlá a video na eventy
           </p>
           <div class="section-nav">
             <a href="tel:+421915697915" class="link-arrow">+421 915 697 915</a>
@@ -468,7 +480,7 @@
             <span class="experience__area-index">01</span>
             <h3 class="experience__area-name">Kupujete AI kurzy?</h3>
             <p class="experience__area-skills">
-              Kurz sľuboval, že to zvládnete za víkend, predplatné beží ďalej, ale výsledok nie je taký, aký ste čakali. AI dnes zvládne skoro všetko &ndash; len jej treba presne povedať, čo má robiť. To sa dá naučiť a rád vám <strong>ukážem ako</strong>. <a href="/ai-agenti/">Ako pracujem s AI agentmi</a>.
+              Kurz sľuboval, že to zvládnete za víkend, predplatné beží ďalej, ale výsledok nie je taký, aký ste čakali. AI dnes zvládne skoro všetko &ndash; len jej treba presne povedať, čo má robiť. To sa dá naučiť a rád vám <strong>ukážem ako</strong>. <a href="/ai-poradenstvo/">AI poradenstvo pre firmy</a> a <a href="/ai-agenti/">AI agenti</a>.
             </p>
           </li>
 
@@ -678,7 +690,7 @@
               <div class="section__summary-text">
                 <h2 class="section__title">Code &amp; IT</h2>
                 <p class="section__summary-description">
-                  Automatizácie, AI agenti, weby a aplikácie. AI-first stack, Claude Code v pipeline. <a href="/automatizacia/">Podrobnosti o službách</a>.
+                  AI poradenstvo, automatizácie, AI agenti, weby a aplikácie. AI-first stack, Claude Code v pipeline. <a href="/ai-poradenstvo/">AI poradenstvo</a>, <a href="/automatizacia/">automatizácia</a>.
                 </p>
               </div>
             </div>
@@ -686,6 +698,10 @@
           </summary>
           <div class="section__content">
             <div class="articles">
+              <article class="article">
+                <h3 class="article__title">AI poradenstvo pre firmy</h3>
+                <p class="article__text">Zistíme, kde sa AI vo vašej firme oplatí a čo spraviť ako prvé. Nie kurz, ale rozhovor <strong>o vašich procesoch</strong>. <a href="/ai-poradenstvo/">Viac o AI poradenstve</a>.</p>
+              </article>
               <article class="article">
                 <h3 class="article__title">Automatizácia rutinnej práce</h3>
                 <p class="article__text">Nahadzovanie produktov, prepisovanie údajov medzi systémami, reporty skladané ručne. Čo dnes robí človek klikaním, môže robiť skript &ndash; a vy sa k tomu už <strong>nemusíte vracať</strong>. <a href="/automatizacia/">Viac o automatizácii</a>.</p>
@@ -699,8 +715,8 @@
                 <p class="article__text">Postavím presne to, čo váš biznis potrebuje. Žiadne preplácané šablóny – moderný stack, čistý kód, výsledok, ktorý <strong>zodpovedá tomu, čo potrebujete</strong>. <a href="/tvorba-webu/">Viac o tvorbe webu</a>.</p>
               </article>
               <article class="article">
-                <h3 class="article__title">SEO + LLM optimalizácia</h3>
-                <p class="article__text">Pripravím web tak, aby vás mohli nájsť aj <strong>cez AI</strong>: ChatGPT, Perplexity, Google. Štruktúrované dáta, schema.org, sémantické HTML. <a href="/seo-llm-optimalizacia/">Viac o SEO a LLM optimalizácii</a>.</p>
+                <h3 class="article__title">SEO optimalizácia pre Google aj AI</h3>
+                <p class="article__text">Pripravím web tak, aby vás mohli nájsť aj <strong>cez AI</strong>: ChatGPT, Perplexity, Google. Štruktúrované dáta, schema.org, sémantické HTML. <a href="/seo-llm-optimalizacia/">Viac o SEO optimalizácii</a>.</p>
               </article>
               <article class="article">
                 <h3 class="article__title">AI-first pipeline (nie vibe coding)</h3>
@@ -1354,10 +1370,11 @@
         <nav aria-label="Služby">
           <span class="footer__links-title">Služby</span>
           <ul>
+          <li><a href="/ai-poradenstvo/">AI poradenstvo pre firmy</a></li>
           <li><a href="/automatizacia/">Automatizácia firemných procesov</a></li>
           <li><a href="/tvorba-webu/">Tvorba webu na mieru</a></li>
           <li><a href="/ai-agenti/">AI agenti pre firmy</a></li>
-          <li><a href="/seo-llm-optimalizacia/">SEO a LLM optimalizácia</a></li>
+          <li><a href="/seo-llm-optimalizacia/">SEO optimalizácia webu</a></li>
           </ul>
         </nav>
         <nav aria-label="Blog">

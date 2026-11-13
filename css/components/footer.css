@@ -165,7 +165,7 @@
 /* ========================================
    Site footer — compact, one screen (2026-11-13)
    Kontakt nad pätou bez prázdnej diery, päta v troch stĺpcoch:
-   kto som | služby | články, pod tým krátky záver.
+   kto som | služby | články, pod tým pôvodný záver (Ste na konci stránky).
    ======================================== */
 
 .section.footer {
@@ -185,8 +185,11 @@
 .site-footer {
   background: var(--theme-bg);
   color: var(--theme-text-primary);
-  border-top: 1px solid var(--theme-border-color);
   padding: var(--space-9) var(--space-4) var(--space-8);
+}
+
+.site-footer .container {
+  align-items: stretch;
 }
 
 @media (min-width: 768px) {
@@ -245,26 +248,5 @@
 }
 
 .site-footer .footer__meta dt {
-  min-width: 3.5em;
-}
-
-.site-footer .footer__closer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-3) var(--space-6);
-  margin-top: var(--space-8);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--theme-border-color);
-}
-
-.site-footer .footer__closer-slogan {
-  font-size: var(--text-body);
-  margin: 0;
-}
-
-.site-footer .footer__closer-cta {
-  font-size: var(--text-heading);
-  margin-top: 0;
+  min-width: 4.5em;
 }

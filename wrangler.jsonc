@@ -7,6 +7,8 @@
   "assets": {
     "directory": "./",
     // /blog/ -> blog/index.html a /blog -> /blog/ (predvolená hodnota, uvedená výslovne)
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    // Neznáma adresa vráti stav 404 a najbližší súbor 404.html (vlastná stránka)
+    "not_found_handling": "404-page"
   }
 }

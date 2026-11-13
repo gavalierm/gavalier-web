@@ -66,6 +66,14 @@
   margin: 0;
 }
 
+/* Odkaz na stránku služby v texte situácie */
+.experience__area-skills a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 /* Arrow link CTA — text only, no background, no border */
 .link-arrow {
   display: inline-flex;

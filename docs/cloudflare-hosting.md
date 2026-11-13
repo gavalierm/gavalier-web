@@ -5,6 +5,8 @@ Stav: hotovo. Od 2026-11-11 beží gavalier.sk na Cloudflare Workers (static ass
 ## Ako to funguje
 
 - `wrangler.jsonc`: názov `gavalier-web`, `assets.directory = "./"` (koreň repozitára), `html_handling = "auto-trailing-slash"` (`/blog/` je `blog/index.html`, `/blog` presmeruje na `/blog/`). Bez Worker skriptu.
+- `not_found_handling = "404-page"`: neznáma adresa vráti stav 404 a súbor `404.html` (vlastná stránka, `noindex`). Cloudflare vlastnú stránku podľa dokumentácie posiela navigáciám prehliadača (hlavička `Sec-Fetch-Mode: navigate`), preto ju `overenie-webu.sh` žiada s touto hlavičkou.
+- `_redirects`: trvalé presmerovania 301 (`/blog`, `/index.html`, adresy bez lomky a `index.html` stránok, veľké písmená `/AI-agenti/`). Bez nich dáva `auto-trailing-slash` dočasné 307. Nová stránka = pridaj do `_redirects` jej varianty bez lomky a s `index.html`.
 - `.assetsignore`: čo sa nenahrá (`docs/`, `agentic/`, `.claude/`, `blog/_sablona/`, `blog/ZOZNAM-TEM.md` a ďalšie). Nový súbor, ktorý nepatrí na web, pridaj sem.
 - Custom domény `www.gavalier.sk` a `gavalier.sk`; apex presmerúva 301 na `https://www.gavalier.sk/` (Redirect Rule v dashboarde, `_redirects` hostiteľa nevie).
 - DNS zóny je na Cloudflare; záznamy MX a TXT (e-mail, overenie Search Console) sa pri zmenách webu nemenia.

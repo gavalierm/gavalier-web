@@ -384,6 +384,59 @@
   gap: var(--space-4);
 }
 
+/* CTA pod úvodným odsekom (telefón a e-mail hneď na prvej obrazovke) */
+.page-cta--lead {
+  margin-top: var(--space-6);
+}
+
+/* Blok autora pred záverečným kontaktom */
+.prose .page-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin: var(--space-10) 0 var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid var(--theme-border-color-strong);
+  border-radius: var(--radius-lg);
+}
+
+.prose .page-author__photo {
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  background: var(--theme-bg-secondary);
+}
+
+.prose .page-author__text p {
+  margin: 0 0 var(--space-2);
+}
+
+.prose .page-author__text .page-author__name {
+  font-weight: var(--font-bold);
+  color: var(--theme-text-primary);
+}
+
+/* Citát klienta (text z homepage, doslovne) */
+.prose .page-quote {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-4) var(--space-6);
+  border-left: 3px solid var(--theme-border-color-strong);
+}
+
+.prose .page-quote p {
+  margin: 0 0 var(--space-2);
+}
+
+.prose .page-quote footer {
+  font-size: var(--text-micro);
+  font-weight: var(--font-bold);
+  color: var(--theme-text-secondary);
+}
+
 /* Zoznam článkov v /blog/ */
 .post-list {
   list-style: none;

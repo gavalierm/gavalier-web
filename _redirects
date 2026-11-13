@@ -1,0 +1,21 @@
+# Presmerovania Cloudflare Workers (static assets). Syntax: https://developers.cloudflare.com/workers/static-assets/redirects/
+# Zdroj: SEO audit 2026-11-13 (technical.md, bod 9). Bez nich dáva html_handling auto-trailing-slash dočasné 307.
+# Presmerovania sa vykonajú pred súbormi aj hlavičkami. Cieľ má vždy lomku na konci, aby nevznikol reťazec.
+/index.html / 301
+/blog /blog/ 301
+/blog/index.html /blog/ 301
+/blog/ako-sa-objavit-v-odpovediach-chatgpt /blog/ako-sa-objavit-v-odpovediach-chatgpt/ 301
+/blog/ako-sa-objavit-v-odpovediach-chatgpt/index.html /blog/ako-sa-objavit-v-odpovediach-chatgpt/ 301
+/blog/ako-automatizovat-fakturaciu-a-emaily /blog/ako-automatizovat-fakturaciu-a-emaily/ 301
+/blog/ako-automatizovat-fakturaciu-a-emaily/index.html /blog/ako-automatizovat-fakturaciu-a-emaily/ 301
+/ai-agenti /ai-agenti/ 301
+/ai-agenti/index.html /ai-agenti/ 301
+/automatizacia /automatizacia/ 301
+/automatizacia/index.html /automatizacia/ 301
+/tvorba-webu /tvorba-webu/ 301
+/tvorba-webu/index.html /tvorba-webu/ 301
+/seo-llm-optimalizacia /seo-llm-optimalizacia/ 301
+/seo-llm-optimalizacia/index.html /seo-llm-optimalizacia/ 301
+# Veľké písmená v adrese (v audite /AI-agenti/); bez presmerovania je to 404.
+/AI-agenti /ai-agenti/ 301
+/AI-agenti/ /ai-agenti/ 301

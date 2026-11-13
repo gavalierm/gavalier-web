@@ -1,6 +1,6 @@
 # Marcel Gavalier
 
-> Weby a aplikácie, automatizácie a AI, siete, zvuk a video na eventy. Marcel Gavalier z Popradu rieši to, na čo by ste inak zháňali troch dodávateľov. Cenu povie dopredu, klient platí len za výsledok. Zákazky berie od pár desiatok eur po tisíce. Väčšina klientov prichádza na odporúčanie od iných klientov.
+> Automatizácie a AI, weby a aplikácie, zvuk a video na eventy; siete a infraštruktúru koordinuje s preverenými partnermi. Marcel Gavalier z Popradu rieši to, na čo by ste inak zháňali troch dodávateľov. Cenu povie dopredu, klient platí len za výsledok. Zákazky berie za pár desiatok eur aj za tisíce. Väčšina klientov prichádza na odporúčanie od iných klientov.
 
 Kontakt: +421 915 697 915 · marcel@gavalier.sk
 Web: https://www.gavalier.sk
@@ -39,25 +39,25 @@ Klient môže rozpočet povedať rovno — nie preto, aby podľa neho Marcel nac
 
 Veľa vecí dnes stojí menej než pred dvoma rokmi.
 
-## S čím za ním ľudia chodia
+## Situácie, s ktorými za ním ľudia chodia
 
-1. **Roky niečo nefunguje a klient sa to bojí riešiť** — dodávateľa pozná osobne, vyhodiť ho je nepríjemné, tak radšej trpí. Často stačí jedno popoludnie a je po probléme, bez rozviazania vzťahov.
-2. **Klient sa to skúša naučiť sám** — ChatGPT, návody, kurz za víkend. Nástroje má každý; chýba odpoveď na otázku, čo vlastne treba spraviť.
-3. **Klient chce jedno, potrebuje iné** — napríklad sa chce naučiť AI marketing, pritom stačí jeden prehľad, ktorý ukáže, kde v procese tečú peniaze. Marcel overuje zadanie skôr, než sa začne stavať.
-4. **Ručná robota, ktorú zvládne stroj** — nahadzovanie produktov na eshop, prepisovanie údajov medzi systémami, reporty skladané po večeroch. Dnes najlacnejšia vec, ktorú si dá klient spraviť.
-5. **Blíži sa akcia, ktorá nesmie zlyhať** — konferencia, koncert, prenos naživo. Zvuk, kamery, stream aj svetlá na jedného človeka.
+1. **Kupujete AI kurzy?** Nástroje má dnes každý. AI zvládne skoro všetko, len jej treba presne povedať, čo má robiť. To sa dá naučiť a Marcel rád ukáže ako.
+2. **AI vám nahodí produkty.** Nahadzovanie produktov na eshop, prepisovanie údajov z jedného systému do druhého, reporty skladané po večeroch: toto všetko dnes zvládne stroj. Je to najlacnejšia vec, akú si dá klient spraviť, a vráti sa za pár týždňov.
+3. **Drobnosť, ktorá vás brzdí?** Niečo, čo malo byť dávno hotové, žerie čas aj peniaze a dnes je to už aj zastarané. Marcel sa na to pozrie s nadhľadom a ušetrí čas aj peniaze.
+4. **Určite viete ako na to?** Klient vie, kam sa chce dostať, len zatiaľ nie je jasné, čo k tomu treba. Jeden klient chcel zvládnuť AI marketing, nakoniec mu stačil prehľad, ktorý ukázal, kde má proces medzery. Spolu to rozoberú a nájdu najkratšiu cestu.
+5. **Chystáte podujatie?** Konferencie, koncerty, firemné akcie. Zvuk, kamery, live stream aj svetlá, kompletná technika aj obsluha z jedného miesta. Klient rieši program, techniku nechá na Marcela.
 
 ## Oblasti
 
 ### Code & IT
-JavaScript, TypeScript · PHP, Python, Bash · REST, JSON · SQL · MikroTik a Ubiquiti · Git, CI/CD · Claude Code agenti v dev workflow.
+JavaScript, TypeScript · PHP, Python, Bash · REST, JSON · SQL · Git, CI/CD · Claude Code agenti v dev workflow.
 
 Automatizácie a AI: napojenie rôznych systémov do jedného celku, dashboardy nad firemným workflow, odstránenie ručnej práce.
 
 **Pointa:** Stack je dnes druhoradý. Treba rozumieť objektovému programovaniu, klásť správne otázky a držať sa E2E testov. Zvyšok dotiahne Claude Code.
 
 ### Network & Infra
-Linux administrácia, MikroTik a Ubiquiti siete, WiFi, Docker, SSL/TLS hardening, bezpečnostné audity. Časť realizujú preverení partneri, koordinuje a garantuje Marcel.
+Siete Marcel sám nerobí, ale roky je obklopený ľuďmi, ktorí ich robia denne, a vie, koho na čo zavolať. Zoženie správneho človeka pre konkrétnu situáciu: MikroTik a Ubiquiti konfigurátori, Linux administrátori, bezpečnostní špecialisti. Jeden kontakt, jedna zodpovednosť: Marcel prekladá požiadavky, koordinuje ľudí, drží termíny a rozpočet, skontroluje návrh a ručí za každého partnera. Bezpečnostné audity a penetračné testy realizujú špecialisti.
 
 ### Audio \ Video & Stage
 Multi-cam produkcia · live stream kamkoľvek (YouTube, Twitch, Facebook, vlastné RTMP, korporátne platformy) · FOH mixing a line array · DMX svetelná réžia · color grading · acoustic treatment · stage design.
@@ -78,6 +78,6 @@ Silná stránka: pochopiť, čo klient naozaj potrebuje (často je to niečo in�
 
 ## Poznámka k tomuto súboru
 
-Tento súbor je stručný prehľad webu https://www.gavalier.sk. Rovnaké informácie sú na samotnom webe v HTML a v štruktúrovaných dátach schema.org (ProfessionalService, Person, Service, FAQPage, BlogPosting). Google Search súbor llms.txt nepoužíva; slúži ako pomôcka pre nástroje, ktoré ho čítajú.
+Tento súbor je stručný prehľad webu https://www.gavalier.sk. Rovnaké informácie sú na samotnom webe v HTML a v štruktúrovaných dátach schema.org (ProfessionalService, Person, Service, BlogPosting). Google Search súbor llms.txt nepoužíva; slúži ako pomôcka pre nástroje, ktoré ho čítajú.
 
 Najrýchlejšia cesta ku kontaktu je telefón: +421 915 697 915.

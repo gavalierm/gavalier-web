@@ -107,3 +107,14 @@ Vizuál, farby, typografia, existujúce CSS a JS, logá klientov, citáty recenz
 
 - **Cavaleers v logách klientov** — je to firma Marcelovho brata a v hero je uvedená ako jeho skupina; odporúčam z pásu lôg vybrať.
 - **Sekcia Network & Infra** — servery boli z webu vyhodené, siete zostali.
+
+## Aktualizácia 2026-11-13 (SEO fáza 1)
+
+- **FAQ na homepage:** `FAQPage` sa zo schema odstránil a viditeľné FAQ sa nepridalo. Dôvody: štruktúra sekcií vyššie je uzavretá a FAQ by bola jedenásta sekcia, ktorá opakuje cenu, záruku a priebeh z tela; odpovede boli v tretej osobe, telo je v prvej; Google FAQ rozšírený výsledok ukončil, takže markup nemá SERP prínos. Zhodu s telom drží vlastné telo, súhrn pre AI nesie `llms.txt`. FAQ na podstránkach služieb zostáva (je tam viditeľné).
+- **D-0005:** siete = koordinácia, nie vlastná práca. Sieťar a „robím siete“ sú preč z tela, schema, meta, päty, manifestu a llms.txt.
+- **D-0006:** územie iba Slovensko (`areaServed` je jedna krajina; Česko a EÚ preč).
+- **D-0007:** `sameAs` v Person a u autora blogu: LinkedIn a GitHub.
+- **Project & People** bol iba v schema; nahradil ho Service Network & Infra podľa tela (koordinácia partnerov).
+- **12+ rokov:** platí pre weby, aplikácie, zvuk a video; AI a automatizácie pribudli nedávno (znenie tela).
+- **Rozpočet:** schema už netvrdí „podľa rozpočtu klienta“; rozsah sa prispôsobuje, cena nevzniká podľa rozpočtu (znenie tela).
+- **Cena:** všade „za pár desiatok eur aj za tisíce“ (nie „od … po“).

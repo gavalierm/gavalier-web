@@ -5,7 +5,7 @@ Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písa
 ## Pravidlá pre všetky články
 
 - Návod alebo prehľad, nie vymyslená prípadová štúdia. Reálny príklad (aj anonymizovaný) pridať len s údajmi, ktoré Marcel overí.
-- Čísla, ceny a časy iba overené. Čo chýba, ostáva ako `<!-- TODO(Marcel): doplniť -->`.
+- Čísla, ceny a časy iba overené. Čo chýba, sa zapíše do `docs/otvorene-texty.md` (nie do HTML komentára, ten je v zdroji stránky verejný).
 - Odpoveď na hlavnú otázku v prvom odseku, 2 až 3 vety zhrnutia hore, FAQ na konci, odkaz na príslušnú službu.
 - Sieťové a audio/video témy sem nepatria. Blog je o programovaní, webe, automatizácii a AI.
 

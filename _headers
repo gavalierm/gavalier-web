@@ -1,0 +1,34 @@
+# Hlavičky odpovedí Cloudflare Workers (static assets). Syntax: https://developers.cloudflare.com/workers/static-assets/headers/
+# Pozor: ak sa na jednu adresu hodia dve pravidlá, rovnaké hlavičky sa spoja do jednej hodnoty.
+# Preto je Cache-Control iba v pravidlách, ktoré sa neprekrývajú, a nie v /*.
+# Rozhodnutie o cache: dlhá cache iba tam, kde sa súbor mení zriedka; HTML, llms.txt, sitemap a robots sa overujú pri každej návšteve.
+
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy: frame-ancestors 'none'
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+# Logá klientov, ikony a obrázky projektov sa nemenia pod rovnakým názvom: 30 dní.
+/assets/clients/*
+  Cache-Control: public, max-age=2592000
+/assets/icons/*
+  Cache-Control: public, max-age=2592000
+/assets/images/*
+  Cache-Control: public, max-age=2592000
+
+# Portrét a oko v hlavičke (názov nesie rozmer, pri novej verzii zmeň názov): 7 dní.
+/assets/gavo_edited-*
+  Cache-Control: public, max-age=604800
+/assets/gavo_colored_eye.*
+  Cache-Control: public, max-age=604800
+
+# CSS a JS majú v odkaze ?v=, ale číslo sa mení ručne, preto iba 1 deň (nie immutable na rok).
+/css/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=86400

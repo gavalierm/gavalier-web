@@ -97,7 +97,8 @@
       planes.forEach(q => q.classList.toggle('is-top', q === p));
     };
 
-    let s = 0, pinned = false, flat = true, open = false, lastKey = '';
+    const HOLD = 6000, DWELL = 350;
+    let s = 0, pinned = false, flat = true, open = false, lastKey = '', lastInside = -1e9, hover = null, hoverSince = 0;
     const t0 = performance.now();
     const setOpen = on => { if (on !== open) { open = on; top.classList.toggle('is-open', on); } };
 
@@ -112,18 +113,20 @@
     tickers.push(now => {
       if (scrollY > box.t + box.h) return;
       const on = live(now);
-      // otvorí sa nad portrétom, otvorené ostane, kým je kurzor nad hero
-      let target = pinned || (on && (open ? inBox(box, ptr.x, ptr.y, 40) : inBox(pbox, ptr.x, ptr.y))) ? 1 : 0;
+      const mouse = fine && ptr.t > 0;
+      // otvorí sa nad portrétom; otvorené ostane, kým je kurzor nad hero, a ešte HOLD ms potom
+      if (on && (open ? inBox(box, ptr.x, ptr.y, 40) : inBox(pbox, ptr.x, ptr.y))) lastInside = now;
+      let target = pinned || now - lastInside < HOLD ? 1 : 0;
       if (!reduce && now - t0 > 900 && now - t0 < 2600) target = 1; // ukážka pri načítaní
       const key = `${ptr.x},${ptr.y}`;
-      if (open && s > .9 && on && key !== lastKey && now > cooldown) {
-        const p = planeAt(ptr.x, ptr.y);
-        if (p && p !== order[2]) { cycleTo(p); cooldown = now + 900; }
+      if (open && s > .9 && mouse) {
+        if (key !== lastKey) { const p = planeAt(ptr.x, ptr.y); if (p !== hover) { hover = p; hoverSince = now; } }
+        if (hover && hover !== order[2] && now - hoverSince > DWELL && now > cooldown) { cycleTo(hover); cooldown = now + 600; hover = null; }
       }
       const zt = p => (order.indexOf(p) - 1) * 130 * s;
       const zSettled = planes.every(p => Math.abs(zt(p) - z.get(p)) < .5);
       const settled = Math.abs(target - s) < .002 && zSettled;
-      if (settled && (target === 0 || key === lastKey)) {
+      if (settled && (target === 0 || key === lastKey) && !(hover && hover !== order[2])) {
         if (target === 0 && !flat) {
           s = 0; order = [html, css, ui]; planes.forEach(p => { z.set(p, 0); p.style.transform = ''; p.classList.remove('is-top'); });
           top.style.transform = ''; css.style.opacity = html.style.opacity = '';

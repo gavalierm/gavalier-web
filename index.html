@@ -9,7 +9,7 @@
     gtag('js', new Date());
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Marcel Gavalier, Poprad: AI a automatizácie, weby a aplikácie, zvuk a video na eventy, siete s partnermi. Cena dopredu, platíte len za výsledok. +421 915 697 915.">
+  <meta name="description" content="Marcel Gavalier, Poprad: riešim problémy, nie zákazky. AI a automatizácie, weby a aplikácie, eventy, siete s partnermi. Cena dopredu, platíte len za výsledok. +421 915 697 915.">
   <meta name="keywords" content="Coder, programátor, AI Engineer, AI agent, Claude Code, Anthropic Claude, web developer, AI-first development, Audio \ Video Producer, FOH sound engineer, live streaming, multi-cam produkcia, DMX svetelná réžia, color grading, MikroTik, Ubiquiti, IT konzultant, freelancer Poprad, Slovensko">
   <meta name="author" content="Marcel Gavalier">
   <meta name="creator" content="Marcel Gavalier">
@@ -22,7 +22,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gavalier.sk/">
   <meta property="og:title" content="Ste tu správne — Marcel Gavalier">
-  <meta property="og:description" content="AI a automatizácie, weby a aplikácie, zvuk a video na eventy, siete s partnermi. Cenu poviem dopredu a platíte len za výsledok. Zákazky za pár desiatok eur aj za tisíce.">
+  <meta property="og:description" content="AI a automatizácie, weby a aplikácie, zvuk a video na eventy, siete s partnermi. Cenu poviem dopredu a platíte len za výsledok. Na cene sa dohodneme vopred a viete, koľko stojí riešenie.">
   <meta property="og:image" content="https://www.gavalier.sk/assets/og_image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -35,7 +35,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.gavalier.sk/">
   <meta name="twitter:title" content="Ste tu správne — Marcel Gavalier">
-  <meta name="twitter:description" content="AI a automatizácie, weby a aplikácie, zvuk a video na eventy, siete s partnermi. Cena dopredu, platíte len za výsledok. Volajte +421 915 697 915.">
+  <meta name="twitter:description" content="Riešim problémy, nie zákazky. AI a automatizácie, weby a aplikácie, eventy, siete s partnermi. Cena dopredu, platíte len za výsledok. Volajte +421 915 697 915.">
   <meta name="twitter:image" content="https://www.gavalier.sk/assets/og_image.png">
   <meta name="twitter:image:alt" content="Marcel Gavalier">
 
@@ -130,8 +130,16 @@
           "CI/CD"
         ],
         "knowsLanguage": [
-          { "@type": "Language", "name": "Slovak", "alternateName": "sk" },
-          { "@type": "Language", "name": "English", "alternateName": "en" }
+          {
+            "@type": "Language",
+            "name": "Slovak",
+            "alternateName": "sk"
+          },
+          {
+            "@type": "Language",
+            "name": "English",
+            "alternateName": "en"
+          }
         ],
         "sameAs": [
           "https://sk.linkedin.com/in/marcelgavalier",
@@ -144,9 +152,7 @@
           "addressLocality": "Poprad",
           "addressCountry": "SK"
         },
-        "worksFor": {
-          "@id": "https://www.gavalier.sk/#service"
-        }
+        "worksFor": { "@id": "https://www.gavalier.sk/#service" }
       },
       {
         "@type": "ProfessionalService",
@@ -197,101 +203,127 @@
           "name": "Služby",
           "itemListElement": [
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/#service-code",
-                "name": "Code & IT",
-                "alternateName": "Automatizácie, AI agenti, weby a aplikácie",
-                "description": "Automatizácia rutinnej práce, AI agenti a dashboardy, prepojenie systémov, ktoré spolu nehovoria. Vývoj webových aplikácií a softvéru s AI-first prístupom. JavaScript, TypeScript, PHP, Python. REST API, SQL databázy, Git, CI/CD. Claude Code agents v pipeline.",
-                "serviceType": "Software Development",
-                "url": "https://www.gavalier.sk/#sluzby",
-                "provider": { "@id": "https://www.gavalier.sk/#service" },
-                "areaServed": { "@type": "Country", "name": "Slovakia" }
-              }
+              "@type": "OfferCatalog",
+              "name": "Menej rutiny",
+              "description": "Čo dnes robí človek klikaním, môže robiť skript.",
+              "url": "https://www.gavalier.sk/#programovanie",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/automatizacia/#service",
+                    "name": "Automatizácia firemných procesov",
+                    "description": "Automatizácia rutinnej práce vo firme: prepájanie systémov, ktoré spolu nehovoria, spracovanie údajov, reporty a e-maily skriptom namiesto ručného klikania.",
+                    "url": "https://www.gavalier.sk/automatizacia/",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" }
+                  }
+                }
+              ]
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/ai-poradenstvo/#service",
-                "name": "AI poradenstvo pre firmy",
-                "description": "Poradenstvo pre firmy o tom, kde sa AI oplatí použiť: výber medzi automatizáciou a AI agentom, zadanie pre AI, kontrola výstupov a prvý krok k nasadeniu.",
-                "url": "https://www.gavalier.sk/ai-poradenstvo/",
-                "provider": { "@id": "https://www.gavalier.sk/#service" }
-              }
+              "@type": "OfferCatalog",
+              "name": "Prehľad, kde to škrípe",
+              "description": "Najprv zistiť, kde sa práca zasekáva, potom riešiť.",
+              "url": "https://www.gavalier.sk/#prehlad",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/ai-poradenstvo/#service",
+                    "name": "AI poradenstvo pre firmy",
+                    "description": "Poradenstvo pre firmy o tom, kde sa AI oplatí použiť: výber medzi automatizáciou a AI agentom, zadanie pre AI, kontrola výstupov a prvý krok k nasadeniu.",
+                    "url": "https://www.gavalier.sk/ai-poradenstvo/",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/ai-agenti/#service",
+                    "name": "AI agenti a dashboardy",
+                    "description": "Návrh a nasadenie AI agentov pre firemné procesy a dashboardy, ktoré spájajú systémy, ktoré spolu nehovoria, do jedného prehľadu.",
+                    "url": "https://www.gavalier.sk/ai-agenti/",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" }
+                  }
+                }
+              ]
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/automatizacia/#service",
-                "name": "Automatizácia firemných procesov",
-                "description": "Automatizácia rutinnej práce vo firme: prepájanie systémov, ktoré spolu nehovoria, spracovanie údajov, reporty a e-maily skriptom namiesto ručného klikania.",
-                "url": "https://www.gavalier.sk/automatizacia/",
-                "provider": { "@id": "https://www.gavalier.sk/#service" }
-              }
+              "@type": "OfferCatalog",
+              "name": "Web, ktorý pracuje",
+              "description": "Web, ktorý nájdu ľudia aj AI a ktorý si upravíte sami.",
+              "url": "https://www.gavalier.sk/#web",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/tvorba-webu/#service",
+                    "name": "Tvorba webu na mieru",
+                    "description": "Vývoj webov, eshopov a PWA aplikácií na mieru, vrátane hostingu, domény, nasadenia, CMS pre netechnikov a správy po spustení.",
+                    "url": "https://www.gavalier.sk/tvorba-webu/",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#service",
+                    "name": "SEO optimalizácia webu",
+                    "description": "Technické SEO a optimalizácia webu pre Google aj AI asistentov: štruktúrované dáta a schema.org, sémantické HTML, sitemap.xml, robots.txt a llms.txt.",
+                    "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" }
+                  }
+                }
+              ]
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/tvorba-webu/#service",
-                "name": "Tvorba webu na mieru",
-                "description": "Vývoj webov, eshopov a PWA aplikácií na mieru, vrátane hostingu, domény, nasadenia, CMS pre netechnikov a správy po spustení.",
-                "url": "https://www.gavalier.sk/tvorba-webu/",
-                "provider": { "@id": "https://www.gavalier.sk/#service" }
-              }
+              "@type": "OfferCatalog",
+              "name": "Siete bez starostí",
+              "description": "Sám to nerobím, ale viem, koho zavolať. Jeden kontakt, jedna zodpovednosť.",
+              "url": "https://www.gavalier.sk/#it-networks",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/#service-network-infra",
+                    "name": "Network & Infra",
+                    "alternateName": "Koordinácia sietí a infraštruktúry cez preverených partnerov",
+                    "description": "Sám to Marcel nerobí, ale roky je obklopený ľuďmi, ktorí to robia denne, a vie, koho na čo zavolať. Zoženie správneho človeka pre konkrétnu situáciu: MikroTik a Ubiquiti konfigurátori, Linux administrátori, bezpečnostní špecialisti. Jeden kontakt, jedna zodpovednosť: Marcel prekladá požiadavky, koordinuje ľudí, drží termíny a rozpočet, skontroluje návrh a ručí za každého partnera.",
+                    "serviceType": "Network & Infrastructure Coordination",
+                    "url": "https://www.gavalier.sk/#it-networks",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" },
+                    "areaServed": { "@type": "Country", "name": "Slovakia" }
+                  }
+                }
+              ]
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/ai-agenti/#service",
-                "name": "AI agenti a dashboardy",
-                "description": "Návrh a nasadenie AI agentov pre firemné procesy a dashboardy, ktoré spájajú systémy, ktoré spolu nehovoria, do jedného prehľadu.",
-                "url": "https://www.gavalier.sk/ai-agenti/",
-                "provider": { "@id": "https://www.gavalier.sk/#service" }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#service",
-                "name": "SEO optimalizácia webu",
-                "description": "Technické SEO a optimalizácia webu pre Google aj AI asistentov: štruktúrované dáta a schema.org, sémantické HTML, sitemap.xml, robots.txt a llms.txt.",
-                "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
-                "provider": { "@id": "https://www.gavalier.sk/#service" }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/#service-stage-screen",
-                "name": "Audio \\ Video & Stage",
-                "alternateName": "Audio \\ Video Produkcia a Live Streaming",
-                "description": "Multi-cam produkcia, live stream multi-platform, FOH mixing a line array, DMX svetelná réžia, color grading, acoustic treatment, stage design. Eventy, koncerty, konferencie.",
-                "serviceType": "Media Production",
-                "url": "https://www.gavalier.sk/#sluzby",
-                "provider": { "@id": "https://www.gavalier.sk/#service" },
-                "areaServed": { "@type": "Country", "name": "Slovakia" }
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.gavalier.sk/#service-network-infra",
-                "name": "Network & Infra",
-                "alternateName": "Koordinácia sietí a infraštruktúry cez preverených partnerov",
-                "description": "Sám to Marcel nerobí, ale roky je obklopený ľuďmi, ktorí to robia denne, a vie, koho na čo zavolať. Zoženie správneho človeka pre konkrétnu situáciu: MikroTik a Ubiquiti konfigurátori, Linux administrátori, bezpečnostní špecialisti. Jeden kontakt, jedna zodpovednosť: Marcel prekladá požiadavky, koordinuje ľudí, drží termíny a rozpočet, skontroluje návrh a ručí za každého partnera.",
-                "serviceType": "Network & Infrastructure Coordination",
-                "url": "https://www.gavalier.sk/#it-networks",
-                "provider": { "@id": "https://www.gavalier.sk/#service" },
-                "areaServed": { "@type": "Country", "name": "Slovakia" }
-              }
+              "@type": "OfferCatalog",
+              "name": "Akcia bez starostí",
+              "description": "Vy riešite program, techniku nechajte na mňa.",
+              "url": "https://www.gavalier.sk/#streaming",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "@id": "https://www.gavalier.sk/#service-stage-screen",
+                    "name": "Audio \\ Video & Stage",
+                    "alternateName": "Audio \\ Video Produkcia a Live Streaming",
+                    "description": "Multi-cam produkcia, live stream multi-platform, FOH mixing a line array, DMX svetelná réžia, color grading, acoustic treatment, stage design. Eventy, koncerty, konferencie.",
+                    "serviceType": "Media Production",
+                    "url": "https://www.gavalier.sk/#sluzby",
+                    "provider": { "@id": "https://www.gavalier.sk/#service" },
+                    "areaServed": { "@type": "Country", "name": "Slovakia" }
+                  }
+                }
+              ]
             }
           ]
         }
@@ -333,29 +365,43 @@
       {
         "@type": "ItemList",
         "@id": "https://www.gavalier.sk/#services-list",
-        "name": "Hlavné oblasti expertízy",
-        "description": "Tri oblasti, v ktorých Marcel pracuje: automatizácie, AI a weby, siete s partnermi, zvuk a video na eventy",
+        "name": "Hlavné oblasti, podľa problému",
+        "description": "Päť skupín podľa toho, čo klient rieši: menej rutiny, prehľad, kde to škrípe, web, ktorý pracuje, siete bez starostí a akcia bez starostí",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Code & IT",
+            "name": "Menej rutiny",
             "url": "https://www.gavalier.sk/#programovanie",
-            "description": "Automatizácie, AI agenti, weby a aplikácie, Claude Code agents v pipeline"
+            "description": "Automatizácia rutinnej práce, CMS pre netechnikov"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Network & Infra",
+            "name": "Prehľad, kde to škrípe",
+            "url": "https://www.gavalier.sk/#prehlad",
+            "description": "AI poradenstvo, AI agenti a dashboardy, kontrola architektúry a špecifikácie"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Web, ktorý pracuje",
+            "url": "https://www.gavalier.sk/#web",
+            "description": "Custom web a PWA, dizajn, SEO optimalizácia, hosting a deployment, AI-first pipeline"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Siete bez starostí",
             "url": "https://www.gavalier.sk/#it-networks",
             "description": "Koordinácia preverených partnerov pre siete a infraštruktúru, jeden kontakt"
           },
           {
             "@type": "ListItem",
-            "position": 3,
-            "name": "Audio \\ Video & Stage",
+            "position": 5,
+            "name": "Akcia bez starostí",
             "url": "https://www.gavalier.sk/#streaming",
-            "description": "Multi-cam produkcia, live streaming, FOH sound, DMX lighting, color grading"
+            "description": "Multi-cam produkcia, live streaming, FOH sound, DMX lighting, akustické úpravy"
           }
         ]
       }
@@ -435,25 +481,16 @@
         </div>
       </div>
 
-      <div class="hero__roles-strip">
-        <div class="container">
-          <p class="hero__roles">
-            AI a automatizácie &middot; Weby a aplikácie &middot; Siete s partnermi &middot; Eventy
-          </p>
-        </div>
-      </div>
-
       <div class="hero__bottom">
         <div class="container">
           <p class="hero__lede">
-            Robím automatizácie, weby a aplikácie, zvuk a video na eventy; siete koordinujem. Väčšinou to, čo dnes potrebuje každá <strong>moderná firma či domácnosť</strong>.
+            <strong>Riešim problémy,</strong> nie zákazky.
+            <br><br>
+            Povedzte mi, čo vás brzdí. Riešením môže byť skript, web, AI agent alebo len dobrá rada &ndash; vyberieme to, čo problém naozaj vyrieši.
             <br><br>
             Som členom skupiny <a href="https://cavaleers.com/" target="_blank" rel="noopener noreferrer">Cavaleers</a>, čo je tím skúsených freelancerov.
             <br><br>
             <strong>Najrýchlejšia cesta je zavolať</strong>. Poviem vám rovno, či to viem vyriešiť, ako a čo to bude stáť.
-          </p>
-          <p class="hero__roles hero__services">
-            <a href="/ai-poradenstvo/">AI poradenstvo</a> &middot; <a href="/automatizacia/">Automatizácia rutiny</a> a <a href="/ai-agenti/">AI agenti</a> &middot; <a href="/tvorba-webu/">Weby a eshopy</a> &middot; Webové aplikácie &middot; Hosting &middot; Siete s partnermi &middot; Live streamy &middot; Zvuk, svetlá a video na eventy
           </p>
           <div class="section-nav">
             <a href="tel:+421915697915" class="link-arrow">+421 915 697 915</a>
@@ -586,14 +623,14 @@
         <header class="section-lead">
           <h2 class="section-lead__headline"><span class="headline-mark">Koľko to stojí?</span></h2>
           <p class="section-lead__subhead">
-            Beriem zákazky za pár desiatok eur aj za tisíce. <strong>Podľa toho</strong>, čo treba spraviť.
+            Na cene sa <strong>dohodneme vopred</strong> a viete, koľko stojí riešenie.
           </p>
         </header>
 
         <div class="how-it-works__body">
 
           <p class="how-it-works__para">
-            Drobná úprava na pol hodiny je rovnako <strong>legitímna zákazka</strong> ako projekt na tri mesiace. S malou vecou vás neposielam preč a nerobím z nej veľkú.
+            Drobnosť na pol hodiny je rovnako <strong>dôležitý problém</strong> ako projekt na tri mesiace. S malou vecou vás neposielam preč a nerobím z nej veľkú.
           </p>
 
           <blockquote class="how-it-works__quote">
@@ -626,9 +663,9 @@
       <div class="container">
 
         <header class="section-lead">
-          <h2 class="section-lead__headline"><span class="headline-mark">Tri kroky.</span></h2>
+          <h2 class="section-lead__headline"><span class="headline-mark">Štyri kroky.</span></h2>
           <p class="section-lead__subhead">
-            Po prvom hovore viete, <strong>na čom ste</strong>. Bez formulárov na dvadsať políčok a bez čakania na ponuku dva týždne.
+            Od problému k riešeniu. Po prvom hovore viete, <strong>na čom ste</strong>. Bez formulárov na dvadsať políčok a bez čakania na ponuku dva týždne.
           </p>
         </header>
 
@@ -636,25 +673,33 @@
 
           <li class="experience__area">
             <span class="experience__area-index">01</span>
-            <h3 class="experience__area-name">Zavoláte</h3>
+            <h3 class="experience__area-name">Pomenujeme problém</h3>
             <p class="experience__area-skills">
-              Alebo napíšete, ak je vám to bližšie. Stačí pár viet o tom, čo riešite &ndash; nemusí to byť odborné, <strong>stačí po ľudsky</strong>.
+              Zavoláte alebo napíšete pár viet o tom, čo vás brzdí &ndash; nemusí to byť odborné, <strong>stačí po ľudsky</strong>. Opýtam sa na pár vecí, aby som pochopil, o čo ide.
             </p>
           </li>
 
           <li class="experience__area">
             <span class="experience__area-index">02</span>
-            <h3 class="experience__area-name">Poviem cenu</h3>
+            <h3 class="experience__area-name">Poviem riešenie</h3>
             <p class="experience__area-skills">
-              Opýtam sa na pár vecí, aby som pochopil, o čo ide &ndash; často sa pritom ukáže, že sa to dá <strong>spraviť jednoduchšie</strong>. Potom poviem, čo by som spravil, koľko to bude stáť a dokedy.
+              Často sa ukáže, že sa to dá <strong>spraviť jednoduchšie</strong>. Poviem, čo by som spravil, koľko to bude stáť a dokedy. Ak stačí menší zásah, poviem vám to rovno.
             </p>
           </li>
 
           <li class="experience__area">
             <span class="experience__area-index">03</span>
-            <h3 class="experience__area-name">Urobím to</h3>
+            <h3 class="experience__area-name">Vyriešim to</h3>
             <p class="experience__area-skills">
               Ak vám to sedí, ideme. Ak nie, nič sa nedeje &ndash; hovor aj návrh riešenia sú <strong>zadarmo a nezáväzné</strong>.
+            </p>
+          </li>
+
+          <li class="experience__area">
+            <span class="experience__area-index">04</span>
+            <h3 class="experience__area-name">Ďalší problém</h3>
+            <p class="experience__area-skills">
+              Keď príde ďalšia vec, voláte niekomu, kto ju <strong>už pozná</strong>. Nehľadáte nikoho nového a nevysvetľujete to odznova.
             </p>
           </li>
 
@@ -674,23 +719,57 @@
         <header class="section-lead">
           <h2 class="section-lead__headline"><span class="headline-mark">Detaily.</span></h2>
           <p class="section-lead__subhead">
-            Ak vás zaujíma konkrétne čo a ako, tu to je. Ak nie, pokojne preskočte &ndash; na hovore sa aj tak dostaneme k tomu, čo potrebujete <strong>práve vy</strong>.
+            Podľa toho, čo riešite. Ak vás zaujíma konkrétne čo a ako, tu to je. Ak nie, pokojne preskočte &ndash; na hovore sa aj tak dostaneme k tomu, čo potrebujete <strong>práve vy</strong>.
           </p>
         </header>
 
-        <!-- Weby -->
+        <!-- Menej rutiny -->
         <details class="section__accordion" id="programovanie" data-section="programovanie">
           <summary class="section__summary">
             <div class="section__summary-card">
               <div class="section__summary-icon" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <div class="section__summary-text">
-                <h2 class="section__title">Code &amp; IT</h2>
+                <h2 class="section__title">Menej rutiny</h2>
                 <p class="section__summary-description">
-                  AI poradenstvo, automatizácie, AI agenti, weby a aplikácie. AI-first stack, Claude Code v pipeline. <a href="/ai-poradenstvo/">AI poradenstvo</a>, <a href="/automatizacia/">automatizácia</a>.
+                  Čo dnes robí človek klikaním, môže robiť skript. <a href="/automatizacia/">Automatizácia</a>.
+                </p>
+              </div>
+            </div>
+            <span class="section__summary-indicator" aria-hidden="true"></span>
+          </summary>
+          <div class="section__content">
+            <div class="articles">
+              <article class="article">
+                <h3 class="article__title">Automatizácia rutinnej práce</h3>
+                <p class="article__text">Nahadzovanie produktov, prepisovanie údajov medzi systémami, reporty skladané ručne. Čo dnes robí človek klikaním, môže robiť skript &ndash; a vy sa k tomu už <strong>nemusíte vracať</strong>. <a href="/automatizacia/">Viac o automatizácii</a>.</p>
+              </article>
+              <article class="article">
+                <h3 class="article__title">CMS pre netechnikov</h3>
+                <p class="article__text">Texty, fotky aj ceny si upravujete sami. Pri každej zmene len <strong>kliknete a uložíte</strong> – bez čakania na programátora.</p>
+              </article>
+            </div>
+            <div class="section__cta">
+              <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+            </div>
+          </div>
+        </details>
+        <!-- Prehľad, kde to škrípe -->
+        <details class="section__accordion" id="prehlad" data-section="prehlad">
+          <summary class="section__summary">
+            <div class="section__summary-card">
+              <div class="section__summary-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div class="section__summary-text">
+                <h2 class="section__title">Prehľad, kde to škrípe</h2>
+                <p class="section__summary-description">
+                  Najprv zistiť, kde sa práca zasekáva, potom riešiť. <a href="/ai-poradenstvo/">AI poradenstvo</a>, <a href="/ai-agenti/">AI agenti</a>.
                 </p>
               </div>
             </div>
@@ -703,36 +782,12 @@
                 <p class="article__text">Zistíme, kde sa AI vo vašej firme oplatí a čo spraviť ako prvé. Nie kurz, ale rozhovor <strong>o vašich procesoch</strong>. <a href="/ai-poradenstvo/">Viac o AI poradenstve</a>.</p>
               </article>
               <article class="article">
-                <h3 class="article__title">Automatizácia rutinnej práce</h3>
-                <p class="article__text">Nahadzovanie produktov, prepisovanie údajov medzi systémami, reporty skladané ručne. Čo dnes robí človek klikaním, môže robiť skript &ndash; a vy sa k tomu už <strong>nemusíte vracať</strong>. <a href="/automatizacia/">Viac o automatizácii</a>.</p>
-              </article>
-              <article class="article">
                 <h3 class="article__title">AI agenti a dashboardy</h3>
                 <p class="article__text">Systémy, ktoré spolu nehovoria, viem prepojiť do jedného prehľadu. Na jednom mieste uvidíte, kde proces škrípe &ndash; často to stačí na to, aby sa <strong>našli úspory</strong>. <a href="/ai-agenti/">Viac o AI agentoch</a>.</p>
               </article>
               <article class="article">
-                <h3 class="article__title">Custom web a PWA aplikácie</h3>
-                <p class="article__text">Postavím presne to, čo váš biznis potrebuje. Žiadne preplácané šablóny – moderný stack, čistý kód, výsledok, ktorý <strong>zodpovedá tomu, čo potrebujete</strong>. <a href="/tvorba-webu/">Viac o tvorbe webu</a>.</p>
-              </article>
-              <article class="article">
-                <h3 class="article__title">SEO optimalizácia pre Google aj AI</h3>
-                <p class="article__text">Pripravím web tak, aby vás mohli nájsť aj <strong>cez AI</strong>: ChatGPT, Perplexity, Google. Štruktúrované dáta, schema.org, sémantické HTML. <a href="/seo-llm-optimalizacia/">Viac o SEO optimalizácii</a>.</p>
-              </article>
-              <article class="article">
-                <h3 class="article__title">AI-first pipeline (nie vibe coding)</h3>
-                <p class="article__text">Pracujem s Claude Code agentami a ďalšími AI nástrojmi, ale kód mám plne <strong>pod kontrolou</strong>. Cez code review neprejde ani jeden mŕtvy riadok &ndash; každý PR čítam, každej zmene rozumiem, na každý prípad mám E2E testy. AI mi zrýchľuje rutinu, ale nenahrádza <strong>môj úsudok</strong>.</p>
-              </article>
-              <article class="article">
-                <h3 class="article__title">Dizajn pre návštevníka</h3>
-                <p class="article__text">UX/UI postavené tak, aby návštevník <strong>našiel, čo hľadá</strong>, a vedel vás kontaktovať. Funguje na mobile aj na desktope.</p>
-              </article>
-              <article class="article">
-                <h3 class="article__title">Hosting, doména, deployment</h3>
-                <p class="article__text">Hosting, doména a nasadenie (CI/CD) podľa toho, čo je <strong>pre vás vhodné</strong>.</p>
-              </article>
-              <article class="article">
-                <h3 class="article__title">CMS pre netechnikov</h3>
-                <p class="article__text">Texty, fotky aj ceny si upravujete sami. Pri každej zmene len <strong>kliknete a uložíte</strong> – bez čakania na programátora.</p>
+                <h3 class="article__title">Kontrola architektúry a špecifikácie</h3>
+                <p class="article__text">Aj keď infru rieši partner, sám si pozriem návrh – či dáva zmysel, či nie je over/under-engineered, či sedí s tým, čo aplikácia naozaj potrebuje. Staviame len to, čo <strong>má naozaj zmysel</strong>.</p>
               </article>
             </div>
             <div class="section__cta">
@@ -740,7 +795,53 @@
             </div>
           </div>
         </details>
-        <!-- IT Siete -->
+        <!-- Web, ktorý pracuje -->
+        <details class="section__accordion" id="web" data-section="web">
+          <summary class="section__summary">
+            <div class="section__summary-card">
+              <div class="section__summary-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="section__summary-text">
+                <h2 class="section__title">Web, ktorý pracuje</h2>
+                <p class="section__summary-description">
+                  Web, ktorý nájdu ľudia aj AI a ktorý si upravíte sami. <a href="/tvorba-webu/">Tvorba webu</a>, <a href="/seo-llm-optimalizacia/">SEO optimalizácia</a>.
+                </p>
+              </div>
+            </div>
+            <span class="section__summary-indicator" aria-hidden="true"></span>
+          </summary>
+          <div class="section__content">
+            <div class="articles">
+              <article class="article">
+                <h3 class="article__title">Custom web a PWA aplikácie</h3>
+                <p class="article__text">Postavím presne to, čo váš biznis potrebuje. Žiadne preplácané šablóny – moderný stack, čistý kód, výsledok, ktorý <strong>zodpovedá tomu, čo potrebujete</strong>. <a href="/tvorba-webu/">Viac o tvorbe webu</a>.</p>
+              </article>
+              <article class="article">
+                <h3 class="article__title">Dizajn pre návštevníka</h3>
+                <p class="article__text">UX/UI postavené tak, aby návštevník <strong>našiel, čo hľadá</strong>, a vedel vás kontaktovať. Funguje na mobile aj na desktope.</p>
+              </article>
+              <article class="article">
+                <h3 class="article__title">SEO optimalizácia pre Google aj AI</h3>
+                <p class="article__text">Pripravím web tak, aby vás mohli nájsť aj <strong>cez AI</strong>: ChatGPT, Perplexity, Google. Štruktúrované dáta, schema.org, sémantické HTML. <a href="/seo-llm-optimalizacia/">Viac o SEO optimalizácii</a>.</p>
+              </article>
+              <article class="article">
+                <h3 class="article__title">Hosting, doména, deployment</h3>
+                <p class="article__text">Hosting, doména a nasadenie (CI/CD) podľa toho, čo je <strong>pre vás vhodné</strong>.</p>
+              </article>
+              <article class="article">
+                <h3 class="article__title">AI-first pipeline (nie vibe coding)</h3>
+                <p class="article__text">Pracujem s Claude Code agentami a ďalšími AI nástrojmi, ale kód mám plne <strong>pod kontrolou</strong>. Cez code review neprejde ani jeden mŕtvy riadok &ndash; každý PR čítam, každej zmene rozumiem, na každý prípad mám E2E testy. AI mi zrýchľuje rutinu, ale nenahrádza <strong>môj úsudok</strong>.</p>
+              </article>
+            </div>
+            <div class="section__cta">
+              <a href="#contact" class="btn btn--primary btn--lg">Bezplatná konzultácia</a>
+            </div>
+          </div>
+        </details>
+        <!-- Siete bez starostí -->
         <details class="section__accordion" id="it-networks" data-section="it-networks">
           <summary class="section__summary">
             <div class="section__summary-card">
@@ -750,9 +851,9 @@
                 </svg>
               </div>
               <div class="section__summary-text">
-                <h2 class="section__title">Network &amp; Infra</h2>
+                <h2 class="section__title">Siete bez starostí</h2>
                 <p class="section__summary-description">
-                  Sám to nerobím. Ale roky som obklopený ľuďmi, ktorí to robia denne – a viem, koho na čo zavolať. Jeden kontakt, jedna zodpovednosť.
+                  Sám to nerobím, ale viem, koho zavolať. Jeden kontakt, jedna zodpovednosť.
                 </p>
               </div>
             </div>
@@ -773,10 +874,6 @@
                 <p class="article__text">Každý partner si u mňa odrobil referencie — nepošlem niekoho, koho by som si nezavolal sám. Za každého, koho k vám pošlem, <strong>ručím svojou značkou</strong>.</p>
               </article>
               <article class="article">
-                <h3 class="article__title">Kontrola architektúry a špecifikácie</h3>
-                <p class="article__text">Aj keď infru rieši partner, sám si pozriem návrh – či dáva zmysel, či nie je over/under-engineered, či sedí s tým, čo aplikácia naozaj potrebuje. Staviame len to, čo <strong>má naozaj zmysel</strong>.</p>
-              </article>
-              <article class="article">
                 <h3 class="article__title">Bezpečnostný audit cez partnerov</h3>
                 <p class="article__text">Pravidelné bezpečnostné kontroly, penetračné testy, audit infraštruktúry – realizujú špecialisti, koordinujem ja. Útoky sú dnes bežná vec &ndash; váš tím na ne má byť <strong>vždy pripravený</strong>.</p>
               </article>
@@ -786,7 +883,7 @@
             </div>
           </div>
         </details>
-        <!-- Audio \ Video & Stage -->
+        <!-- Akcia bez starostí -->
         <details class="section__accordion" id="streaming" data-section="streaming">
           <summary class="section__summary">
             <div class="section__summary-card">
@@ -796,9 +893,9 @@
                 </svg>
               </div>
               <div class="section__summary-text">
-                <h2 class="section__title">Audio \ Video &amp; Stage</h2>
+                <h2 class="section__title">Akcia bez starostí</h2>
                 <p class="section__summary-description">
-                  Multi-cam video, live stream, FOH sound. Akcia, ktorá vyzerá ako od top štúdia.
+                  Vy riešite program, techniku nechajte na mňa.
                 </p>
               </div>
             </div>
@@ -1249,7 +1346,7 @@
         <header class="section-lead">
           <h2 class="section-lead__headline"><span class="headline-mark">Ako to dopadlo.</span></h2>
           <p class="section-lead__subhead">
-            Šesť firiem, šesť rôznych zákaziek, jedna otázka: <strong>dopadlo to dobre</strong>?
+            Šesť firiem, šesť rôznych problémov, jedna otázka: <strong>dopadlo to dobre</strong>?
           </p>
         </header>
 
@@ -1330,7 +1427,7 @@
           </blockquote>
 
           <p class="how-it-works__closer">
-            Väčšina mojich klientov prišla na odporúčanie od iných klientov. Každá dobre odvedená zákazka mi <strong>privedie ďalšiu</strong> &ndash; a to je dôvod, prečo si tie záruky môžem dovoliť.
+            Väčšina mojich klientov prišla na odporúčanie od iných klientov. Každý dobre vyriešený problém mi <strong>privedie ďalšieho klienta</strong> &ndash; a to je dôvod, prečo si tie záruky môžem dovoliť.
           </p>
 
         </div>

@@ -21,13 +21,11 @@ Pri chybe tokenu alebo účtu Cloudflare píš Ronovi poštou (@ron/main).
 
 ## Overenie po nasadení
 
+`deploy-do-cloudflare.sh` po nasadení sám spustí `overenie-webu.sh`: apex 301 na www, hlavné stránky 200, súbory mimo webu (`/docs`, deploy skripty, `.mcp.json`, `wrangler.jsonc`) 404, canonical na www. Konkrétnu zmenu over argumentmi `/cesta` (čaká 200) alebo `/cesta=text` (čaká 200 a text v obsahu):
+
 ```
-curl -sI https://gavalier.sk/            # 301 na https://www.gavalier.sk/
-curl -sI https://www.gavalier.sk/        # 200
-curl -sI https://www.gavalier.sk/blog    # presmerovanie na /blog/
-for u in /automatizacia/ /tvorba-webu/ /ai-agenti/ /seo-llm-optimalizacia/ /blog/ /robots.txt /sitemap.xml /llms.txt; do curl -s -o /dev/null -w "$u %{http_code}\n" https://www.gavalier.sk$u; done
-curl -s -o /dev/null -w "%{http_code}\n" https://www.gavalier.sk/docs/blog-postup.md   # 404, nepatrí na web
-for u in /docs /deploy.sh /deploy-do-cloudflare.sh; do curl -s -o /dev/null -w "$u %{http_code}\n" https://www.gavalier.sk$u; done   # 404
+sh deploy-do-cloudflare.sh /BingSiteAuth.xml=0496B536
+sh overenie-webu.sh /blog/=Nový článok     # samostatne, bez nasadenia
 ```
 
 ## Návrat späť

@@ -77,37 +77,70 @@
     measure();
     addEventListener('resize', () => { if (flat) measure(); });
     addEventListener('load', () => { if (flat) measure(); });
-    const overPortrait = (x, y) => {
+    const inBox = (b, x, y, pad = 0) => {
       const px = x + scrollX, py = y + scrollY;
-      return px >= pbox.l && px <= pbox.r && py >= pbox.t && py <= pbox.b;
+      return px >= b.l - pad && px <= (b.r ?? b.l + b.w) + pad && py >= b.t - pad && py <= (b.b ?? b.t + b.h) + pad;
     };
-    top.addEventListener('click', e => { if (overPortrait(e.clientX, e.clientY)) pinned = !pinned; });
+
+    // poradie vrstiev zdola nahor; prejdenie na vrstvu pod povrchom ju vytiahne hore (cyklus)
+    const planes = [html, css, ui];
+    let order = [html, css, ui];
+    const z = new Map(planes.map(p => [p, 0]));
+    let cooldown = 0;
+    const planeAt = (x, y) => {
+      const el = document.elementFromPoint(x, y);
+      if (!el || !top.contains(el)) return null;
+      return el.closest('.lab3d-plane') || (el.closest('.lab3d-ui') === ui ? ui : null);
+    };
+    const cycleTo = p => {
+      while (order[order.length - 1] !== p) order = [order[order.length - 1], ...order.slice(0, -1)];
+      planes.forEach(q => q.classList.toggle('is-top', q === p));
+    };
 
     let s = 0, pinned = false, flat = true, open = false, lastKey = '';
     const t0 = performance.now();
     const setOpen = on => { if (on !== open) { open = on; top.classList.toggle('is-open', on); } };
 
+    top.addEventListener('click', e => {
+      if (open) {
+        const p = planeAt(e.clientX, e.clientY);
+        if (p && p !== order[2]) { cycleTo(p); cooldown = performance.now() + 700; pinned = true; return; }
+      }
+      if (inBox(pbox, e.clientX, e.clientY)) pinned = !pinned;
+    });
+
     tickers.push(now => {
       if (scrollY > box.t + box.h) return;
-      let target = pinned || (live(now) && overPortrait(ptr.x, ptr.y)) ? 1 : 0;
+      const on = live(now);
+      // otvorí sa nad portrétom, otvorené ostane, kým je kurzor nad hero
+      let target = pinned || (on && (open ? inBox(box, ptr.x, ptr.y, 40) : inBox(pbox, ptr.x, ptr.y))) ? 1 : 0;
       if (!reduce && now - t0 > 900 && now - t0 < 2600) target = 1; // ukážka pri načítaní
-      const settled = Math.abs(target - s) < .002;
       const key = `${ptr.x},${ptr.y}`;
+      if (open && s > .9 && on && key !== lastKey && now > cooldown) {
+        const p = planeAt(ptr.x, ptr.y);
+        if (p && p !== order[2]) { cycleTo(p); cooldown = now + 900; }
+      }
+      const zt = p => (order.indexOf(p) - 1) * 130 * s;
+      const zSettled = planes.every(p => Math.abs(zt(p) - z.get(p)) < .5);
+      const settled = Math.abs(target - s) < .002 && zSettled;
       if (settled && (target === 0 || key === lastKey)) {
         if (target === 0 && !flat) {
-          s = 0; top.style.transform = ''; ui.style.transform = ''; html.style.transform = '';
-          css.style.opacity = html.style.opacity = ''; setOpen(false); flat = true; measure();
+          s = 0; order = [html, css, ui]; planes.forEach(p => { z.set(p, 0); p.style.transform = ''; p.classList.remove('is-top'); });
+          top.style.transform = ''; css.style.opacity = html.style.opacity = '';
+          setOpen(false); flat = true; measure();
         }
         return;
       }
       lastKey = key; flat = false;
       s = reduce ? target : s + (target - s) * .08;
       setOpen(s > .01);
-      const mx = live(now) ? (ptr.x + scrollX - box.l) / box.w - .5 : 0;
-      const my = live(now) ? (ptr.y + scrollY - box.t) / box.h - .5 : 0;
+      const mx = on ? (ptr.x + scrollX - box.l) / box.w - .5 : 0;
+      const my = on ? (ptr.y + scrollY - box.t) / box.h - .5 : 0;
       top.style.transform = `scale(${1 - .14 * s}) rotateX(${(28 - my * 10) * s}deg) rotateY(${mx * 10 * s}deg) rotateZ(${(-7 + mx * 5) * s}deg)`;
-      ui.style.transform = `translateZ(${130 * s}px)`;
-      html.style.transform = `translateZ(${-130 * s}px)`;
+      planes.forEach(p => {
+        const zc = reduce ? zt(p) : z.get(p) + (zt(p) - z.get(p)) * .12;
+        z.set(p, zc); p.style.transform = `translateZ(${zc.toFixed(1)}px)`;
+      });
       css.style.opacity = html.style.opacity = Math.min(1, s * 6).toFixed(3);
     });
   }

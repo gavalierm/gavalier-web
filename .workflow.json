@@ -1,4 +1,5 @@
 {
   "brain": "../gavalier-brain",
-  "visibility": "public"
+  "visibility": "public",
+  "domain": ".."
 }

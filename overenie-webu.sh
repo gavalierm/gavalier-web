@@ -13,7 +13,7 @@ code() { curl -s -o /dev/null -w "%{http_code}" "$1"; }
 check "apex https://gavalier.sk/" 301 "$(code https://gavalier.sk/)"
 loc=$(curl -sI https://gavalier.sk/ | tr -d '\r' | sed -n 's/^[Ll]ocation: //p')
 check "apex presmeruje na" "$W/" "$loc"
-for u in / /automatizacia/ /tvorba-webu/ /ai-agenti/ /seo-llm-optimalizacia/ /blog/ /robots.txt /sitemap.xml /llms.txt; do
+for u in / /automatizacia/ /tvorba-webu/ /ai-agenti/ /ai-poradenstvo/ /seo-llm-optimalizacia/ /blog/ /robots.txt /sitemap.xml /llms.txt; do
   check "$u" 200 "$(code "$W$u")"
 done
 for u in /docs /docs/blog-postup.md /deploy.sh /deploy-do-cloudflare.sh /overenie-webu.sh /.mcp.json /wrangler.jsonc; do

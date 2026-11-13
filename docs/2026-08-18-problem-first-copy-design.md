@@ -45,8 +45,8 @@ Teplý, ľudský, benefit-first. Druhá osoba, jednoduché slová. AI je dôvod,
 | 2 | Situácie | **Poradím zdarma.** / Nech riešite čokoľvek. | self-selection, AI body navrchu |
 | 3 | Záruka ⭐ | **Ručím za to.** / Štyrmi spôsobmi. | toto uzatvára obchody |
 | 4 | Cena | **Koľko to stojí?** / Zmestíme sa. | zabíja obavu, na ktorej to padá |
-| 5 | Priebeh | **Tri kroky.** / To je celé. | znižuje bariéru kontaktu |
-| 6 | Služby | **Detaily.** / Rozbaľme to. | akordeóny, Code & IT prvé, Audio\Video posledné |
+| 5 | Priebeh | **Štyri kroky.** / Od problému k riešeniu. | znižuje bariéru kontaktu |
+| 6 | Služby | **Detaily.** / Podľa toho, čo riešite. | päť akordeónov podľa problému, AI prvé, eventy posledné |
 | 7 | Logá | **Logá.** / Klasický trik. | priznáva, že časť sú partneri |
 | 8 | Recenzie | **Ako to dopadlo.** / Ich slovami. | dôkaz |
 | 9 | Kto to robí | **A kto to robí?** / Ja a ľudia okolo mňa. | identita až tesne pred kontaktom |
@@ -125,3 +125,13 @@ Vizuál, farby, typografia, existujúce CSS a JS, logá klientov, citáty recenz
 - **/seo-llm-optimalizacia/ → obchodný variant „SEO optimalizácia“** (480 hľadaní mesačne, KD 3): title, H1, úvod a schema ako ponuka služby; návodový obsah ostáva blogu a stránka naň odkazuje hneď v úvode. Adresa sa nemení. Štítok v navigácii a pätách je „SEO optimalizácia“.
 - **Stránky služieb rozšírené na ~800 a viac slov:** každá má vlastný postup, „Čo dostanete“ a „Od čoho závisí cena“ (zoznam faktorov bez čísel a kotiev). Spoločné bloky (postup z troch krokov, cena, FAQ o výsledku a mieste) sú skrátené alebo prepísané podľa služby; text spoločný všetkým štyrom klesol z ~25–28 % na ~13 %.
 - **Čo sa vedome nepridalo:** údaje a zodpovednosť pri AI agentoch (SXO-04), nové referencie, mená klientov a výsledky (vstup operátora). Disavow sa nerobí.
+
+## Aktualizácia 2026-11-13 (riešim problémy, nie zákazky, D-0010)
+
+- **Hero:** nová veta **Riešim problémy,** nie zákazky. a odstavec „Povedzte mi, čo vás brzdí…“; pás s odbormi, veta „Robím automatizácie…“ aj riadok štítkov služieb s odkazmi sú preč (operátor: zoznam pôsobil nasilu kvôli SEO; podstránky odkazujú navigácia, Detaily a päta).
+- **Priebeh:** štyri kroky namiesto troch (Pomenujeme problém, Poviem riešenie, Vyriešim to, Ďalší problém); krok 04 preberá záruku „Ostávam k dispozícii“.
+- **Detaily:** päť akordeónov podľa problému (Menej rutiny, Prehľad kde to škrípe, Web ktorý pracuje, Siete bez starostí, Akcia bez starostí) namiesto Code & IT / Network & Infra / Audio\Video & Stage; položky sa len presunuli, OfferCatalog a ItemList v schema sú preskupené rovnako.
+- **Stránky služieb:** nová sekcia „S čím vám to pomôže“ (situácie z textov, ktoré už na webe sú), „Čo konkrétne spravím“ → „Ako to vyriešim“, „Ako prebieha zákazka“ → „Ako to vyriešime“; H1, title a adresy sa nemenili.
+- **Slovník:** zákazka → problém (cena, recenzie, Kto to robí, meta, OG, llms.txt). Zostáva „ručí … za každého subdodávateľa, ktorého k zákazke priberie“ (zákazka = spolupráca).
+- **Cena:** tvar „za pár desiatok eur aj za tisíce“ (D-0008) je podľa operátora 2026-11-13 nahradený (D-0011) vetou „Na cene sa dohodneme vopred a viete, koľko stojí riešenie.“ v tele, schema, FAQ, meta, OG, Twitter a llms.txt (index.html aj stránky služieb); „podľa toho, čo treba spraviť“ sa vypustilo. Na stránkach služieb sa vypustila aj opakujúca sa veta „Cenu poviem dopredu a platí“, ostáva „Ak sa práca natiahne, dodatočné hodiny neúčtujem.“
+- **Vedome nie:** nové sľuby (návrh na jednu stranu, prístupy a kód patria klientovi, ukončenie po každom kroku) ani tracker zaseknutých problémov.

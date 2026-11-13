@@ -115,3 +115,10 @@
 .hero__services {
   margin-top: var(--space-8);
 }
+
+.hero__services a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}

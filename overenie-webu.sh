@@ -19,6 +19,11 @@ done
 for u in /docs /docs/blog-postup.md /deploy.sh /deploy-do-cloudflare.sh /overenie-webu.sh /.mcp.json /wrangler.jsonc; do
   check "$u (nepatrí na web)" 404 "$(code "$W$u")"
 done
+for u in /blog /index.html /AI-agenti/; do
+  check "$u (trvalé presmerovanie)" 301 "$(code "$W$u")"
+done
+check "/neexistuje-stranka (vlastná 404)" 404 "$(code "$W/neexistuje-stranka")"
+if curl -s -H 'Sec-Fetch-Mode: navigate' "$W/neexistuje-stranka" | grep -qF 'Stránka sa nenašla'; then echo "OK    404 má vlastnú stránku"; else echo "CHYBA 404 nemá vlastnú stránku"; fail=1; fi
 canon=$(curl -s "$W/" | grep -o '<link rel="canonical" href="[^"]*"' | head -1)
 case "$canon" in *"$W/"*) check "canonical domovskej stránky" www www ;; *) check "canonical domovskej stránky" www "${canon:-chýba}" ;; esac
 

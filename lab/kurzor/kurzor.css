@@ -39,6 +39,8 @@
 }
 .lab3d-plane { position: absolute; inset: 0; overflow: hidden; opacity: 0; visibility: hidden; will-change: transform, opacity; outline: 1px solid rgba(51,149,255,.8); }
 .is-open > .lab3d-plane { visibility: visible; }
+.lab3d-plane.is-top { visibility: visible; }
+.hero__top:not(.is-open) > .lab3d-plane { outline: none; }
 .is-open > .lab3d-ui { background: color-mix(in srgb, var(--theme-bg) 88%, transparent); outline: 1px solid rgba(51,149,255,.8); }
 .lab3d-html { background: #0a0f1a; padding: var(--space-10) 5vw; }
 .lab3d-html pre { margin: 0; font: 500 13px/1.6 var(--lab-mono); white-space: pre; color: var(--c-base); }

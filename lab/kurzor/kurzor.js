@@ -97,26 +97,34 @@
       planes.forEach(q => q.classList.toggle('is-top', q === p));
     };
 
-    const HOLD = 6000, DWELL = 350;
-    let s = 0, pinned = false, flat = true, open = false, lastKey = '', lastInside = -1e9, hover = null, hoverSince = 0;
+    const DWELL = 350, GRACE = 400;
+    let s = 0, pinned = false, flat = true, open = false, lastKey = '', lastInside = -1e9, hover = null, hoverSince = 0, prev = 0;
     const t0 = performance.now();
     const setOpen = on => { if (on !== open) { open = on; top.classList.toggle('is-open', on); } };
+    ui.classList.add('is-top');
+    // viditeľnosť vrstiev: navrchu je vždy plná, ostatné podľa rozloženia (v pokoji skryté)
+    const fade = () => planes.forEach(p => { p.style.opacity = p === order[2] ? '1' : Math.min(1, s * 6).toFixed(3); });
+    fade();
+    // myš opustila okno: kurzor už nie je nad hero
+    document.documentElement.addEventListener('mouseleave', () => { ptr.x = ptr.y = -9999; });
 
     top.addEventListener('click', e => {
       if (open) {
         const p = planeAt(e.clientX, e.clientY);
-        if (p && p !== order[2]) { cycleTo(p); cooldown = performance.now() + 700; pinned = true; return; }
+        if (p && p !== order[2]) { cycleTo(p); cooldown = performance.now() + 600; hover = null; return; }
       }
-      if (inBox(pbox, e.clientX, e.clientY)) pinned = !pinned;
+      if (!fine && inBox(pbox, e.clientX, e.clientY)) pinned = !pinned; // dotyk: ťuknutie na fotku otvorí/zavrie
     });
 
     tickers.push(now => {
+      // plynulosť podľa času, nie počtu snímok (pomalý počítač nespomalí animáciu)
+      const dt = Math.min(100, prev ? now - prev : 16); prev = now;
       if (scrollY > box.t + box.h) return;
       const on = live(now);
       const mouse = fine && ptr.t > 0;
-      // otvorí sa nad portrétom; otvorené ostane, kým je kurzor nad hero, a ešte HOLD ms potom
-      if (on && (open ? inBox(box, ptr.x, ptr.y, 40) : inBox(pbox, ptr.x, ptr.y))) lastInside = now;
-      let target = pinned || now - lastInside < HOLD ? 1 : 0;
+      // otvorí sa nad portrétom, otvorené ostane, kým je kurzor nad hero; potom sa zloží do vrstvy, ktorá je navrchu
+      if (mouse && (open ? inBox(box, ptr.x, ptr.y, 40) : on && inBox(pbox, ptr.x, ptr.y))) lastInside = now;
+      let target = pinned || now - lastInside < GRACE ? 1 : 0;
       if (!reduce && now - t0 > 900 && now - t0 < 2600) target = 1; // ukážka pri načítaní
       const key = `${ptr.x},${ptr.y}`;
       if (open && s > .9 && mouse) {
@@ -124,27 +132,27 @@
         if (hover && hover !== order[2] && now - hoverSince > DWELL && now > cooldown) { cycleTo(hover); cooldown = now + 600; hover = null; }
       }
       const zt = p => (order.indexOf(p) - 1) * 130 * s;
-      const zSettled = planes.every(p => Math.abs(zt(p) - z.get(p)) < .5);
-      const settled = Math.abs(target - s) < .002 && zSettled;
-      if (settled && (target === 0 || key === lastKey) && !(hover && hover !== order[2])) {
+      const settled = Math.abs(target - s) < .002 && planes.every(p => Math.abs(zt(p) - z.get(p)) < .5);
+      const waiting = hover && hover !== order[2];
+      if (settled && !waiting && (target === 0 || key === lastKey)) {
         if (target === 0 && !flat) {
-          s = 0; order = [html, css, ui]; planes.forEach(p => { z.set(p, 0); p.style.transform = ''; p.classList.remove('is-top'); });
-          top.style.transform = ''; css.style.opacity = html.style.opacity = '';
-          setOpen(false); flat = true; measure();
+          s = 0; planes.forEach(p => { z.set(p, 0); p.style.transform = ''; });
+          top.style.transform = ''; fade();
+          setOpen(false); flat = true; hover = null; measure();
         }
         return;
       }
       lastKey = key; flat = false;
-      s = reduce ? target : s + (target - s) * .08;
+      s = reduce || Math.abs(target - s) < .01 ? target : s + (target - s) * (1 - Math.exp(-dt / 220));
       setOpen(s > .01);
       const mx = on ? (ptr.x + scrollX - box.l) / box.w - .5 : 0;
       const my = on ? (ptr.y + scrollY - box.t) / box.h - .5 : 0;
       top.style.transform = `scale(${1 - .14 * s}) rotateX(${(28 - my * 10) * s}deg) rotateY(${mx * 10 * s}deg) rotateZ(${(-7 + mx * 5) * s}deg)`;
       planes.forEach(p => {
-        const zc = reduce ? zt(p) : z.get(p) + (zt(p) - z.get(p)) * .12;
+        const zc = reduce || Math.abs(zt(p) - z.get(p)) < .5 ? zt(p) : z.get(p) + (zt(p) - z.get(p)) * (1 - Math.exp(-dt / 160));
         z.set(p, zc); p.style.transform = `translateZ(${zc.toFixed(1)}px)`;
       });
-      css.style.opacity = html.style.opacity = Math.min(1, s * 6).toFixed(3);
+      fade();
     });
   }
 

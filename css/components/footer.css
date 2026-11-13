@@ -161,3 +161,110 @@
   font-size: 0.85em;
   margin-left: var(--space-2);
 }
+
+/* ========================================
+   Site footer — compact, one screen (2026-11-13)
+   Kontakt nad pätou bez prázdnej diery, päta v troch stĺpcoch:
+   kto som | služby | články, pod tým krátky záver.
+   ======================================== */
+
+.section.footer {
+  padding-bottom: var(--space-9);
+}
+
+.footer .footer__channels:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .footer .footer__channels:last-child {
+    padding: var(--space-9) 0;
+  }
+}
+
+.site-footer {
+  background: var(--theme-bg);
+  color: var(--theme-text-primary);
+  border-top: 1px solid var(--theme-border-color);
+  padding: var(--space-9) var(--space-4) var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    padding: var(--space-9) var(--space-6) var(--space-8);
+  }
+}
+
+.site-footer .footer__links {
+  margin: 0;
+  padding-top: 0;
+  border-top: 0;
+  gap: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .site-footer .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__id {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer .footer__links {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+
+  .site-footer__id {
+    grid-column: auto;
+  }
+}
+
+.site-footer .footer__identity {
+  margin-bottom: var(--space-4);
+}
+
+.site-footer .footer__name {
+  font-size: var(--text-heading);
+}
+
+.site-footer .footer__meta {
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.site-footer .footer__meta-row {
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.site-footer .footer__meta dt {
+  min-width: 3.5em;
+}
+
+.site-footer .footer__closer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--theme-border-color);
+}
+
+.site-footer .footer__closer-slogan {
+  font-size: var(--text-body);
+  margin: 0;
+}
+
+.site-footer .footer__closer-cta {
+  font-size: var(--text-heading);
+  margin-top: 0;
+}

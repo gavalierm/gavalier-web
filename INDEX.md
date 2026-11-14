@@ -66,6 +66,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-geo-f-sitemap.xml | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_sitemap.xml |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-gh.html | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/gh.html |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-page.tmp | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/page.tmp |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-geo-r-home.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_home.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeautomatizacia-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeautomatizacia_.err |  | seo | 2026-11-14 |

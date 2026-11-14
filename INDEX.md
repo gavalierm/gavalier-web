@@ -40,3 +40,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-findings-agentic.md | Agent-readiness audit: https://www.gavalier.sk (2026-11-13) |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-findings-content.md | gavalier.sk: Content Quality and On-Page SEO findings |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-findings-geo.md | GEO / AI Search Readiness: https://www.gavalier.sk |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-findings-schema.md | Schema / Structured Data and Open Graph audit: https://www.gavalier.sk |  | seo | 2026-11-14 |

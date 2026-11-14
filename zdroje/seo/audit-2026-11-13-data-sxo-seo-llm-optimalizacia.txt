@@ -1,0 +1,37 @@
+SEO a LLM optimalizácia webu
+SEO a LLM optimalizácia znamená pripraviť web tak, aby mu rozumeli vyhľadávače aj AI asistenti ako ChatGPT, Perplexity či Google: štruktúrované dáta, schema.org, sémantické HTML, sitemap a pravidlá pre crawlery. Garantovať citáciu v odpovedi AI nikto nemôže, dá sa však odstrániť to, čo vás z odpovedí vyraďuje.
+Čo konkrétne spravím
+- Štruktúrované dáta (JSON-LD, schema.org): organizácia, služby, články, FAQ a omrvinková navigácia.
+- Sémantické HTML: jeden nadpis H1, logické H2 a H3, odseky, ktoré priamo odpovedajú na otázku.
+- sitemap.xml so skutočnými adresami a dátumom poslednej zmeny.
+- robots.txt s pravidlami pre vyhľadávacie a AI crawlery (napríklad OAI-SearchBot, ktorý používa vyhľadávanie ChatGPT).
+- llms.txt: stručný prehľad webu pre AI nástroje. Google ho pri vyhľadávaní nepoužíva, iné nástroje ho čítať môžu.
+- Obrázky s alt textom, rozmermi a lazy loadingom a prepojenie stránok medzi sebou.
+Čo sa dá a čo sa nedá sľúbiť
+Nikto nemôže zaručiť, že vás ChatGPT alebo Google ocituje. Odpovede AI sa menia a nie sú pod vašou kontrolou. Dá sa zabezpečiť, aby ste neboli vyradení kvôli technickej chybe: zablokovanému crawleru, chýbajúcej mape stránok, nejasnej štruktúre alebo textu, ktorý neodpovedá na otázky.
+Preto k službe patrí aj meranie. Odporúčam zapísať si raz mesačne, či sa web objavuje pri typických otázkach, a pripojiť Google Search Console a Bing Webmaster Tools.
+Ako to prebieha
+- Zavoláte na +421 915 697 915 alebo napíšete. Stačí pár viet, nemusí to byť odborné.
+- Doptám sa na detaily, aby som pochopil, o čo ide. Často sa pritom ukáže, že sa to dá spraviť jednoduchšie. Poviem, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo.
+- Ak vám to sedí, ide sa robiť. Ak nie, nič neplatí.
+Koľko to stojí
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem. Hovor aj návrh riešenia sú zadarmo a nezáväzné.
+Presnú cenu poviem po krátkom telefonáte, dopredu a záväzne.
+Najčastejšie otázky
+Čo je LLM optimalizácia?
+Je to príprava webu tak, aby mu rozumeli aj AI asistenti (ChatGPT, Perplexity, Google AI). Zahŕňa štruktúrované dáta, sémantické HTML, jasný text s priamymi odpoveďami a správne nastavené pravidlá pre crawlery.
+Zaručíte, že ma ChatGPT bude citovať?
+Nie. Nikto to zaručiť nemôže, odpovede AI sa menia. Dá sa však odstrániť technické prekážky, kvôli ktorým by ste nemuseli byť v odpovediach vôbec.
+Potrebujem súbor llms.txt?
+Nie je nutný. Google ho pri vyhľadávaní nepoužíva. Pre iné nástroje je to lacná pomôcka, preto ho pri weboch pridávam, ale nespoliehajte sa na neho.
+Zobrazí sa môj web vo vyhľadávaní ChatGPT?
+Vyhľadávanie ChatGPT používa crawler OAI-SearchBot. Ak ho robots.txt nezablokuje, web sa môže zobraziť. Pozor, nie je to záruka.
+Pomôžu štruktúrované dáta s hodnotením v Google?
+Štruktúrované dáta pomáhajú vyhľadávačom pochopiť obsah stránky. Priamy vplyv na poradie sľúbiť nemožno. Pozor, Google už rozšírené výsledky FAQ vo vyhľadávaní nezobrazuje.
+Koľko SEO a LLM optimalizácia stojí?
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí.
+Dá sa to nasadiť aj na existujúci web?
+Áno. Väčšinu úprav (štruktúrované dáta, sitemap, robots.txt, texty, obrázky) môžem spraviť aj na webe, ktorý už beží.
+Súvisiace stránky a články
+Chcete to prebrať?
+Zavolajte alebo napíšte. Hovor aj návrh riešenia sú zadarmo a nezáväzné.

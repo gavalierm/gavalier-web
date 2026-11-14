@@ -1,0 +1,37 @@
+Tvorba webu na mieru
+Postavím web alebo webovú aplikáciu presne podľa toho, čo váš biznis potrebuje, bez preplácaných šablón. Postarám sa aj o hosting, doménu a nasadenie a o správu po spustení. Cenu poviem dopredu a platíte len za výsledok.
+Čo konkrétne spravím
+- Web alebo webovú aplikáciu na mieru, bez hotových šablón.
+- PWA aplikáciu, ak má web fungovať aj ako aplikácia v mobile.
+- Dizajn postavený na konverziách: funguje na mobile aj desktope a rýchlo sa načíta.
+- Hosting, doménu a nasadenie (CI/CD), aby sa zmeny dostali na web jednoducho.
+- CMS pre netechnikov, v ktorom si texty, fotky aj ceny upravíte sami.
+- Správu webu po spustení: aktualizácie, drobné úpravy a zmeny.
+Ako pracujem
+Pracujem s AI nástrojmi (Claude Code), ale kód mám plne pod kontrolou. Každú zmenu v kóde čítam a kontrolujem, kritické prípady pokrývam E2E testami. AI zrýchľuje rutinu, nenahrádza môj úsudok.
+Tento web (gavalier.sk) je postavený ako statické HTML, CSS a JavaScript bez frameworku a bez databázy. Takto je rýchly a jednoduchý na údržbu. Pri vašom projekte vyberiem technológiu podľa toho, čo skutočne potrebujete.
+Ako to prebieha
+- Zavoláte na +421 915 697 915 alebo napíšete. Stačí pár viet, nemusí to byť odborné.
+- Doptám sa na detaily, aby som pochopil, o čo ide. Často sa pritom ukáže, že sa to dá spraviť jednoduchšie. Poviem, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo.
+- Ak vám to sedí, ide sa robiť. Ak nie, nič neplatí.
+Koľko to stojí
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem. Hovor aj návrh riešenia sú zadarmo a nezáväzné.
+Presnú cenu poviem po krátkom telefonáte, dopredu a záväzne.
+Najčastejšie otázky
+Koľko stojí web na mieru?
+Zákazky beriem od pár desiatok eur po tisíce, podľa rozsahu. Drobná úprava na pol hodiny je rovnako legitímna zákazka ako projekt na tri mesiace. Cenu poviem dopredu a platí.
+Prečo web na mieru a nie šablóna?
+Šablóna nemusí zodpovedať tomu, čo váš biznis potrebuje, a často je preplácaná prvkami, ktoré nepoužijete. Na mieru dostanete presne to, čo treba, s čistým kódom.
+Viem si web po odovzdaní upravovať sám?
+Áno. Ak chcete, nasadím CMS pre netechnikov, v ktorom si texty, fotky aj ceny upravíte kliknutím a uložením, bez čakania na programátora.
+Postaráte sa o hosting a doménu?
+Áno. Zabezpečím hosting, doménu aj nasadenie, takže sa nemusíte starať o technickú stránku.
+Starám sa o web aj po spustení?
+Áno. Odovzdaním spolupráca nekončí. Keď po čase potrebujete niečo pridať alebo doladiť, stačí zavolať.
+Dokážete web aj upraviť, nielen postaviť nový?
+Áno. Zákazka môže byť aj malá úprava existujúceho webu.
+Pracujete aj mimo Popradu?
+Áno, pre klientov na celom Slovensku. Základom je telefonát alebo e-mail.
+Súvisiace stránky a články
+Chcete to prebrať?
+Zavolajte alebo napíšte. Hovor aj návrh riešenia sú zadarmo a nezáväzné.

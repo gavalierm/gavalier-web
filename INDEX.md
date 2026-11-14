@@ -49,6 +49,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-geo-f-.well-known-agent-card.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_agent-card.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-f-.well-known-agent.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_agent.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-f-.well-known-ai-plugin.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_ai-plugin.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-geo-f-.well-known-api-catalog | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_api-catalog |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-f-ai.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_ai.txt |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-f-humans.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_humans.txt |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-f-index.md | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_index.md |  | seo | 2026-11-14 |

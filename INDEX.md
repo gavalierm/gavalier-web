@@ -30,6 +30,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-data-bing-geturlinfo.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-GetUrlInfo.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-links.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-links.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-www-getcrawlstats.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-www-GetCrawlStats.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-data-bing-www-getfeeds.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-www-GetFeeds.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-crux-history-origin.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-history-origin.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-crux-origin.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-origin.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-crux-url.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-url.json |  | seo | 2026-11-14 |

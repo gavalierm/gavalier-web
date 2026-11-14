@@ -36,3 +36,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-data-dfs-serp-3.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-serp-3.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-dfs-serp-4.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-serp-4.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-gsc-90d.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-90d.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-data-gsc-sitemaps.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-sitemaps.json |  | seo | 2026-11-14 |

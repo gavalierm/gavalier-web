@@ -1,0 +1,26 @@
+{
+  "property": "sc-domain:gavalier.sk",
+  "sitemaps": [
+    {
+      "path": "https://www.gavalier.sk/sitemap.xml",
+      "last_submitted": "2026-05-16T08:15:06.238Z",
+      "is_pending": false,
+      "is_index": false,
+      "type": "sitemap",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "6"
+        },
+        {
+          "type": "image",
+          "submitted": "1"
+        }
+      ],
+      "indexation_note": "Sitemaps API contents[].submitted reflects submitted URL counts only. Use the URL Inspection API as the indexation truth for whether specific URLs are indexed."
+    }
+  ],
+  "error": null
+}

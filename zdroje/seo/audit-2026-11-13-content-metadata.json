@@ -1,0 +1,42 @@
+[
+ {
+  "url": "https://www.gavalier.sk/",
+  "title": "Marcel Gavalier — Weby, IT siete, eventy a live prenosy",
+  "description": "Marcel Gavalier, Poprad: AI a automatizácie, weby a aplikácie, siete, zvuk a video na eventy. Cena dopredu, platíte len za výsledok. +421 915 697 915."
+ },
+ {
+  "url": "https://www.gavalier.sk/automatizacia/",
+  "title": "Automatizácia firemných procesov | Marcel Gavalier",
+  "description": "Automatizácia rutinnej práce: prepisovanie údajov, reporty, e-maily, nahadzovanie produktov. Cena dopredu, platíte za výsledok. Poprad, celé Slovensko."
+ },
+ {
+  "url": "https://www.gavalier.sk/tvorba-webu/",
+  "title": "Tvorba webu na mieru a PWA aplikácie | Marcel Gavalier",
+  "description": "Web na mieru bez preplácaných šablón: moderný stack, čistý kód, hosting a správa. Cena dopredu, platíte za výsledok. Poprad, celé Slovensko."
+ },
+ {
+  "url": "https://www.gavalier.sk/ai-agenti/",
+  "title": "AI agenti a dashboardy pre firmy | Marcel Gavalier",
+  "description": "AI agenti a dashboardy: prepojím systémy do jedného prehľadu a nasadím agenta na opakovanú prácu. Cena dopredu, platíte za výsledok. Poprad."
+ },
+ {
+  "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+  "title": "SEO a LLM optimalizácia webu | Marcel Gavalier",
+  "description": "SEO a optimalizácia pre ChatGPT, Perplexity a Google: štruktúrované dáta, schema.org, sémantické HTML, sitemap a robots. Poprad, celé Slovensko."
+ },
+ {
+  "url": "https://www.gavalier.sk/blog/",
+  "title": "Blog o automatizácii, webe a AI | Marcel Gavalier",
+  "description": "Praktické návody o automatizácii procesov, tvorbe webov, AI agentoch a viditeľnosti webu v odpovediach ChatGPT a vo vyhľadávačoch."
+ },
+ {
+  "url": "https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/",
+  "title": "Ako sa objaviť v odpovediach ChatGPT | Marcel Gavalier",
+  "description": "Čo môžete na vlastnom webe ovplyvniť, aby vás našli ChatGPT, Perplexity a Google: crawlery, robots.txt, štruktúra textu a štruktúrované dáta."
+ },
+ {
+  "url": "https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/",
+  "title": "Automatizácia fakturácie a e-mailov v malej firme | Gavalier",
+  "description": "Praktický postup pre malú firmu: zmapovať proces, vybrať, čo automatizovať, začať malým krokom a spočítať úsporu. Bez zbytočných nástrojov."
+ }
+]

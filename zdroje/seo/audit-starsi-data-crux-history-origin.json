@@ -1,0 +1,8 @@
+{
+  "target": "https://gavalier.sk",
+  "form_factor": "ALL",
+  "metrics": {},
+  "collection_periods": [],
+  "trends": {},
+  "error": "No CrUX history data for this origin. Insufficient Chrome traffic volume for eligibility."
+}

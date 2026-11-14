@@ -26,5 +26,9 @@
   "zdroje/seo/audit-starsi-data-bing-links.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-links.json",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-data-crux-history-origin.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-history-origin.json",
+    "date": "2026-11-14"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "data": {
+    "site_url": "https://gavalier.sk/",
+    "count_page": 0,
+    "targets_available_on_page": 0,
+    "targets_expanded": 0,
+    "detail_pages_fetched": 0,
+    "total_returned": 0,
+    "complete": true,
+    "links": [],
+    "warnings": [],
+    "partial_errors": []
+  },
+  "error": null,
+  "metadata": {
+    "source": "bing_webmaster",
+    "endpoint": "GetLinkCounts+GetUrlLinks",
+    "timestamp": "2026-11-13T14:08:18Z"
+  }
+}

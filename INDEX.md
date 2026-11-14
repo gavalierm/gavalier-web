@@ -93,6 +93,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-sxo-automatizacia.render.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/automatizacia.render.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-automatizacia.render.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/automatizacia.render.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-automatizacia.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/automatizacia.txt |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-sxo-comp-c1.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c1.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c10.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c10.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c11.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c11.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c12.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c12.json |  | seo | 2026-11-14 |

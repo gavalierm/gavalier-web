@@ -106,5 +106,9 @@
   "zdroje/seo/audit-starsi-findings-sitemap.md": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/sitemap.md",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-findings-sxo.md": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/sxo.md",
+    "date": "2026-11-14"
   }
 }

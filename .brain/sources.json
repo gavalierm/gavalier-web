@@ -91,6 +91,10 @@
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-sitemaps.json",
     "date": "2026-11-14"
   },
+  "zdroje/seo/audit-starsi-data-suhrn-realne-data.md": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/SUHRN-REALNE-DATA.md",
+    "date": "2026-11-14"
+  },
   "zdroje/seo/audit-starsi-findings-agentic.md": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/agentic.md",
     "date": "2026-11-14"

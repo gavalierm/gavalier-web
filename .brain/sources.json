@@ -58,5 +58,9 @@
   "zdroje/seo/audit-starsi-data-dfs-referring-domains.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-referring-domains.json",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-data-dfs-search-volume.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-search-volume.json",
+    "date": "2026-11-14"
   }
 }

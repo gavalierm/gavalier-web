@@ -207,6 +207,10 @@
     "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_home.err",
     "date": "2026-11-14"
   },
+  "zdroje/seo/audit-2026-11-13-data-geo-r-home.json": {
+    "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_home.json",
+    "date": "2026-11-14"
+  },
   "zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.err": {
     "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.err",
     "date": "2026-11-14"

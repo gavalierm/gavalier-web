@@ -23,3 +23,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-data-bing-counts.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-counts.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-links.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-links.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-crux-history-origin.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-history-origin.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-data-crux-origin.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-origin.json |  | seo | 2026-11-14 |

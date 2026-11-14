@@ -515,6 +515,10 @@
     "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): gsc/ga4_props.py",
     "date": "2026-11-14"
   },
+  "zdroje/seo/audit-2026-11-13-gsc-ga4-streams.py": {
+    "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): gsc/ga4_streams.py",
+    "date": "2026-11-14"
+  },
   "zdroje/seo/audit-starsi-action-plan.md": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): ACTION-PLAN.md",
     "date": "2026-11-14"

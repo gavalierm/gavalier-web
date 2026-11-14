@@ -17,3 +17,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | vystupy/dokumenty/seo/audit-2026-11-13/findings/technical.md | Technical SEO + Performance + Images: gavalier.sk (audit 2026-11-13) |  |  |  |
 | zdroje/blog-redizajn/base.css | Referencne CSS pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
 | zdroje/blog-redizajn/blog.html | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
+| zdroje/blog-redizajn/gm.ttf | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |

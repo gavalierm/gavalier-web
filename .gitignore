@@ -12,3 +12,4 @@ node_modules/
 # Lokálne nastavenia a kľúče SEO služieb (mimo gitu, repo je verejné)
 .claude/settings.local.json
 .mcp.json
+temy/*/tmp/

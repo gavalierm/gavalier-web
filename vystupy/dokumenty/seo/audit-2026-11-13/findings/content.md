@@ -1,6 +1,6 @@
 # Content Quality a On-Page SEO – gavalier.sk
 
-Dátum: 2026-11-13 · Rozsah: index.html, 4 stránky služieb, blog (zoznam + 2 články), llms.txt · Zdroj: repo (`/home/agentic-root/agentic/Gavalier/gavalier-web`) a živý web `https://www.gavalier.sk` (všetkých 8 stránok aj llms.txt sa bajtovo zhodujú so zdrojom, overené `cmp` 2026-11-13). Pravidlá textov: `docs/2026-08-18-problem-first-copy-design.md`.
+Dátum: 2026-11-13 · Rozsah: index.html, 4 stránky služieb, blog (zoznam + 2 články), llms.txt · Zdroj: repo (`/home/agentic-root/agentic/Gavalier/gavalier-web`) a živý web `https://www.gavalier.sk` (všetkých 8 stránok aj llms.txt sa bajtovo zhodujú so zdrojom, overené `cmp` 2026-11-13). Pravidlá textov: `vystupy/dokumenty/2026-08-18-problem-first-copy-design.md`.
 
 ## Skóre
 

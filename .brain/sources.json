@@ -70,5 +70,9 @@
   "zdroje/seo/audit-starsi-data-dfs-serp-2.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-serp-2.json",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-data-dfs-serp-3.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-serp-3.json",
+    "date": "2026-11-14"
   }
 }

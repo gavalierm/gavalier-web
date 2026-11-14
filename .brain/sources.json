@@ -18,5 +18,9 @@
   "zdroje/blog-redizajn/post.html": {
     "description": "Referencny subor (HTML, font) pre redizajn blogu",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-data-bing-counts.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-counts.json",
+    "date": "2026-11-14"
   }
 }

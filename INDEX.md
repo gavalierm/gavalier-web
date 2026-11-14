@@ -20,3 +20,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/blog-redizajn/gm.ttf | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
 | zdroje/blog-redizajn/gm.woff2 | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
 | zdroje/blog-redizajn/post.html | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
+| zdroje/seo/audit-starsi-data-bing-counts.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-counts.json |  | seo | 2026-11-14 |

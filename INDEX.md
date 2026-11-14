@@ -70,6 +70,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeautomatizacia-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeautomatizacia_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeautomatizacia-.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeautomatizacia_.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-geo-r-homeblog-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeblog_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeblog-ako-automatizovat-fakturaciu-a-emaily-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeblog_ako-automatizovat-fakturaciu-a-emaily_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeblog-ako-automatizovat-fakturaciu-a-emaily-.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeblog_ako-automatizovat-fakturaciu-a-emaily_.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeblog-ako-sa-objavit-v-odpovediach-chatgpt-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeblog_ako-sa-objavit-v-odpovediach-chatgpt_.err |  | seo | 2026-11-14 |

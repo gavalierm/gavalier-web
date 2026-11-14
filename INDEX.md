@@ -38,3 +38,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-data-gsc-90d.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-90d.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-gsc-sitemaps.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-sitemaps.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-findings-agentic.md | Agent-readiness audit: https://www.gavalier.sk (2026-11-13) |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-findings-content.md | gavalier.sk: Content Quality and On-Page SEO findings |  | seo | 2026-11-14 |

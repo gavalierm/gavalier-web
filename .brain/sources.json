@@ -63,6 +63,10 @@
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-www-GetFeeds.json",
     "date": "2026-11-14"
   },
+  "zdroje/seo/audit-starsi-data-bing-www-getrankandtrafficstats.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-www-GetRankAndTrafficStats.json",
+    "date": "2026-11-14"
+  },
   "zdroje/seo/audit-starsi-data-crux-history-origin.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-history-origin.json",
     "date": "2026-11-14"

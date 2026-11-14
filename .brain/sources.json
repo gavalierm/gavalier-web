@@ -14,5 +14,9 @@
   "zdroje/blog-redizajn/gm.woff2": {
     "description": "Referencny subor (HTML, font) pre redizajn blogu",
     "date": "2026-11-14"
+  },
+  "zdroje/blog-redizajn/post.html": {
+    "description": "Referencny subor (HTML, font) pre redizajn blogu",
+    "date": "2026-11-14"
   }
 }

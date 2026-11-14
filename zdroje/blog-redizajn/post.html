@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en" class="h-full bg-void" style="view-transition-name:root"> <head><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="color-scheme" content="dark"><link rel="icon" href="/favicon.svg"><meta name="description" content="Everything you'd ever need to know about what a harness is and how they work."><meta name="twitter:image" content="https://t3.gg/images/twitter.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@t3dotgg"><meta property="og:title" content="What is a &#34;harness&#34;?"><meta property="og:description" content="Everything you'd ever need to know about what a harness is and how they work."><meta property="og:image" content="https://t3.gg/images/twitter.png"><title>What is a &quot;harness&quot;?</title><meta name="theme-color" content="#050505"><script defer data-domain="astro.t3.gg" src="/js/script.js"></script><link rel="stylesheet" href="/_astro/BaseLayout.BamHy8CQ.css"><script type="module" src="/_astro/page.CY1iZwUD.js"></script></head> <body class="min-h-full bg-void font-mono text-text selection:bg-accent/20"> <main class="flex flex-col text-text">  <div class="mx-auto w-full max-w-2xl px-6 py-16"> <article class="prose prose-invert prose-lg max-w-none"> <header class="not-prose mb-12 border-b border-white/10 pb-8"> <h1 class="text-text mb-3 text-2xl font-medium tracking-tight"> What is a &quot;harness&quot;? </h1> <time datetime="Thu Oct 22 2026 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-muted text-sm">October 22, 2026</time> </header> <p><img src="/images/what-is-a-harness/cover.jpg" alt="Interface vs harness"></p>
+<p>I’m going to be honest here: I’m writing this because I’m tired of having to explain it, and it seems like there’s no single “resource” that properly explains what a harness actually is.</p>
+<p>By the end of this article, you should know everything you’d ever need to know about what a harness is and how they work.</p>
+<h2 id="humans-use-interfaces">Humans use interfaces</h2>
+<p>Generally speaking, humans don’t use computers by writing code. They use an interface of some form, be it a terminal, a website, or an app.</p>
+<p>Theoretically speaking, a human could just write unique python or js code for every task they want to complete. Instead of making them do that, we give them access to that code via buttons, hotkeys, commands, etc.</p>
+<p>Examples of interfaces: Chrome, Claude Code, ChatGPT App (prev. Codex)</p>
+<p>It is also worth noting that humans don’t see the code underneath…usually. The human only sees the interface.</p>
+<h2 id="llms-use-harnesses">LLMs use harnesses</h2>
+<p>By default, all an LLM can do is generate text. In order for a language model to do anything more, it needs tools. Most llms are now trained to work with tools like “read_file” (for accessing files on your computer), “edit_file” (for changing those files), “bash” (for running commands), and “search” (for finding data online).</p>
+<p>The LLM still just sends text though! It can’t click a button like a human. As such, we need a custom text format for the LLM to use that indicates “you should run some code”. Let’s say we give the LLM a format for calling tools, such as:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#E1E4E8">&#x3C;</span><span style="color:#FDAEB7;font-style:italic">read_file</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"README.md"</span><span style="color:#E1E4E8">></span></span></code></pre>
+<p>Now the LLM knows it can respond in this format. But it’s still just text, it doesn’t do anything! Would be like typing on a keyboard or moving a mouse while the computer is off.</p>
+<p>Something has to interpret these responses, and then run the right code based on what the LLM responded with.</p>
+<p>In order for an LLM to actually do stuff, it needs:</p>
+<ul>
+<li>Tools that can do things (read_file, edit_file, bash, search etc)</li>
+<li>A special syntax for calling those tools via text</li>
+<li>A system that parses the message to identify that syntax and run the code</li>
+<li>A method to give the response from the tool back to the LLM</li>
+<li>A list of tools available w/ descriptions of how to use them</li>
+</ul>
+<p>That is the harness.</p>
+<h2 id="isnt-claude-code-a-harness">”Isn’t Claude Code a harness?”</h2>
+<p>Kind of.</p>
+<p>Claude Code has 2 parts: <strong>the interface</strong> and <strong>the harness</strong></p>
+<p>When you run “claude” in your terminal, the Claude TUI opens. When you go to the “code” tab in the Claude desktop app, the Claude Code GUI opens. Neither of these are harnesses.</p>
+<p>Under the hood, Claude Code uses the Anthropic Agent SDK to interface with the agent. ChatGPT does the same, with the ChatGPT/Codex app interfacing with the Codex App Server (built into the CLI).</p>
+<p><img src="/images/what-is-a-harness/interfaces-and-harnesses.png" alt="Humans see interfaces, LLMs see harnesses"></p>
+<p>I understand why people are confused: <strong>Claude Code and Codex both bake the harness into their apps.</strong></p>
+<p>You can bake the same harness into other apps though! Some examples of this:</p>
+<ul>
+<li>The Cursor harness is used by Grok Bot</li>
+<li>The Anthropic Agents SDK and Codex App Server are used by T3 Code</li>
+<li>Pi is used by OpenClaw</li>
+</ul>
+<p>The harness is a separate piece, rarely if ever exposed to the humans using the apps.</p>
+<h2 id="who-owns-the-tools">Who owns the tools?</h2>
+<p>Let’s imagine a harness as a kitchen.</p>
+<p>Kitchens have lots of different tools. Pots, pans, knives, spatulas, blenders and more.</p>
+<p>No kitchen has everything that every chef needs.</p>
+<p>Good harnesses are built with this assumption, allowing users to bring their own tools.</p>
+<p>To be clear: <strong>most of the important tools are provided directly by a harness.</strong> Codex and Claude Code both include a lot of tools, while other harnesses like Pi are much more minimal.</p>
+<p>This is where things start to get messy, so let me draw another diagram.</p>
+<p><img src="/images/what-is-a-harness/tool-plane.png" alt="The tool plane sits above the human and LLM layer"></p>
+<p>The orange box is meant to be “things included by Claude Code” (agents sdk to be clear).</p>
+<p>There are lots of custom tools you can add, such as the TypeScript plugin to give your LLM some tools to check your code, or the CUA plugin to allow agents to control your computer.</p>
+<p>Note the line between the “tool plane” and the human/llm layer. Neither the human nor the LLM can see or touch the tools. We have no way of knowing if they exist. The harness is what exposes them, both to the LLM and to the interface (which is how we see them)</p>
+<h2 id="mcp-makes-things-a-bit-messier">MCP makes things a bit messier</h2>
+<p>MCP (Model Context Protocol) is a standard to make it easier to let harnesses access external stuff. To put it simply: tools are “run code here to do a thing”, MCPs are “make an API request somewhere else to do a thing”.</p>
+<p>Tools provide the code directly. MCPs let the code live somewhere else, but the LLM can still make requests to do things using the MCP.</p>
+<p>The most common usecase for MCPs is to expose data to your LLMs. Want ChatGPT to look through your emails? MCP. Want Claude to go through the analytics for your site? MCP.</p>
+<p>Chrome Extensions are kind of like tools. They can change how a website works, and they do that by running code on your computer in Chrome.</p>
+<p>MCPs are more like websites. You don’t have to install anything, you just need to know the URL. Once you have that, you (should) get all the info you need to use it :)</p>
+<p>Pulled all together, it looks something like this:</p>
+<p><img src="/images/what-is-a-harness/tool-and-data-planes.png" alt="Tool plane, human and LLM layer, and data plane"></p>
+<p>…wait, what is T3 Code doing there? Let me explain.</p>
+<p><img src="/images/what-is-a-harness/t3-code-mcp.png" alt="T3 Code MCP"></p>
+<p>T3 Code exposes custom functionality to LLMs, to do things that the harnesses don’t. For example, we allow threads using Claude Code to spawn subagents in Codex. Other tools do this too, see Herdr, Orca, and Superset for some examples.</p>
+<p>So why is this exposed as an MCP? Is this just some cheap trick to get out of making our own harness?</p>
+<p>Recall this quote from earlier:</p>
+<blockquote>
+<p>Tools provide the code directly. MCPs let the code live somewhere else, but the LLM can still make requests to do things using the MCP.</p>
+</blockquote>
+<p>T3 Code has a lot of code to enable cool functionality such as multi-harness subagents. Technically speaking, we could have rebuilt all of T3 Code’s coolest features as a set of plugins for Claude Code, Codex, Antigravity, Pi, Cursor, Muse…</p>
+<p>Or we could keep all the code in T3 Code itself, and expose a simple MCP server for the LLMs to use instead :)</p>
+<p>To go back to the kitchen example, MCPs are almost like recipes. They’re a method to do a thing, but they aren’t the thing itself.</p>
+<p>T3 Code is providing a cookbook to the kitchen. It doesn’t change how the kitchen operates at all. If the chefs decide they want to look at our cook book, awesome! They can also ignore it entirely, changing nothing.</p>
+<h2 id="so-what-is-an-agent">…so what is an agent?</h2>
+<p>Do you know how proud I am that I got this far without saying “agent” over and over without defining it? That was not easy lol.</p>
+<p>tl;dr - An agent is what happens when you combine a harness and an LLM.</p>
+<p>LLMs just generate text, they don’t do anything. Harnesses are just kitchens, they can’t cook anything. The combo of the LLM and the harness creates an “agent”.</p>
+<p>Different “agents” are often simply different harness configurations, such as custom tools, instructions, MCP servers, etc.</p>
+<h2 id="is-t3-code-a-harness">Is T3 Code a harness?</h2>
+<p>No. T3 Code doesn’t work if you don’t bring a harness.</p>
+<p>To go back to the kitchen example:</p>
+<ul>
+<li>Chef = LLM</li>
+<li>Kitchen = harness</li>
+<li>T3 Code = restaurant</li>
+</ul>
+<p>T3 Code is a restaurant that lets you bring whatever kitchen you want. We have our own recipes we like, and we provide that cookbook to each kitchen, but the chef won’t open it unless you tell them to :)</p>
+<h2 id="for-those-who-want-to-go-deeper">For those who want to go deeper…</h2>
+<p>If you like these types of top to bottom explanations, tell your boss to pay for the <a href="https://soydev.link/mega">Mega.dev</a> course I’m putting out next week. I go way more in depth on all this there :)</p>
+<p>Also check out <a href="https://t3.codes/">T3 Code</a>. It’s <a href="https://github.com/pingdotgg/t3code">open source</a>, so you can ask your agent to explain how it works to go way deeper</p>
+<hr>
+<p><em>Originally posted <a href="https://x.com/theo/status/2113424203345265053">on X</a>.</em></p> </article> </div>  <aside class="mb-8 text-center"> <a href="/blog" class="group mt-8 -mb-4 inline-flex items-center justify-center gap-2 p-2 text-muted transition-colors duration-200 hover:text-text"> <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path> </svg> <span class="text-sm tracking-wide">blog</span> </a> </aside> <footer class="[--space:--spacing(6)] sm:[--space:--spacing(10)] border-t border-white/5 pt-(--space) pb-safe-offset-(--space) mb-8"> <div class="container mx-auto px-4"> <div class="flex w-full items-center justify-center gap-x-6 text-sm tracking-wider"> <a href="https://github.com/t3dotgg" target="_blank" rel="noopener noreferrer" class="text-muted transition-colors duration-200 hover:text-text"> gh </a><a href="https://twitter.com/theo" target="_blank" rel="noopener noreferrer" class="text-muted transition-colors duration-200 hover:text-text"> x </a><a href="https://youtube.com/@theo" target="_blank" rel="noopener noreferrer" class="text-muted transition-colors duration-200 hover:text-text"> yt </a><a href="https://twitch.tv/theo" target="_blank" rel="noopener noreferrer" class="text-muted transition-colors duration-200 hover:text-text"> twitch </a><a href="https://discord.gg/xHdCpcPHRE" target="_blank" rel="noopener noreferrer" class="text-muted transition-colors duration-200 hover:text-text"> discord </a> </div> </div> </footer> </main> </body></html>

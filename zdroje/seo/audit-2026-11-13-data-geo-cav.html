@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cavaleers — Budujeme značky odvážných</title>
+<meta name="description" content="Cavaleers — full-servisová marketingová agentúra pre odvážnych. Pomáhame firmám rásť rýchlejšie a za férovejšiu cenu." />
+<meta name="keywords" content="marketingová agentúra, branding, full-servisová agentúra, Cavaleers, značka, odvážni, Slovensko" />
+<meta name="author" content="Cavaleers" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#00fff6" />
+
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+<link rel="icon" type="image/x-icon" href="favicon/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+
+<link rel="canonical" href="https://cavaleers.com/" />
+
+<link rel="preload" as="image" href="cavaleers-logo.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cavaleers" />
+<meta property="og:title" content="Cavaleers — Budujeme značky odvážných" />
+<meta property="og:description" content="Full-servisová marketingová agentúra. Pomáhame firmám rásť rýchlejšie a za férovejšiu cenu." />
+<meta property="og:image" content="https://cavaleers.com/cavaleers-web-homepage-desktop-pic1.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta property="og:url" content="https://cavaleers.com/" />
+<meta property="og:locale" content="sk_SK" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cavaleers — Budujeme značky odvážných" />
+<meta name="twitter:description" content="Full-servisová marketingová agentúra. Pomáhame firmám rásť rýchlejšie a za férovejšiu cenu." />
+<meta name="twitter:image" content="https://cavaleers.com/cavaleers-web-homepage-desktop-pic1.jpg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cavaleers",
+  "url": "https://cavaleers.com/",
+  "logo": "https://cavaleers.com/cavaleers-logo.svg",
+  "description": "Full-servisová marketingová agentúra pre odvážnych.",
+  "email": "hello@cavaleers.com",
+  "telephone": "+421 918 757 503",
+  "areaServed": "SK",
+  "sameAs": []
+}
+</script>
+
+<style>
+@font-face {
+  font-family: 'Sora';
+  src: url('FONT/Sora/Sora-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('FONT/Sora/Sora-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('FONT/Sora/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('FONT/Sora/Sora-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Sora';
+  src: url('FONT/Sora/Sora-ExtraBold.ttf') format('truetype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('FONT/PPEditorial/PPEditorialNew-UltraboldItalic.otf') format('opentype');
+  font-weight: 800; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial New';
+  src: url('FONT/PPEditorial/PPEditorialNew-Italic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  color: #e6ecef;
+  background-color: #050505;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+
+:root {
+  --blue: #00fff6;
+  --yellow: #ffff00;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(var(--brightness, 0.85));
+  will-change: filter;
+}
+
+.hero--blue  .hero__bg { background-image: url('cavaleers-web-homepage-desktop-pic1.jpg'); }
+.hero--yellow .hero__bg { background-image: url('cavaleers-web-homepage-desktop-pic2.jpg'); }
+
+@media (max-width: 768px) {
+  .hero--blue  .hero__bg { background-image: url('cavaleers-web-homepage-phone-pic1.jpg'); }
+  .hero--yellow .hero__bg { background-image: url('cavaleers-web-homepage-phone-pic2.jpg'); }
+}
+
+.ring-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65vw;
+  height: 65vw;
+  pointer-events: none;
+  will-change: transform;
+  transform:
+    translate(-50%, -50%)
+    scale(var(--scale, 0.5))
+    rotate(var(--rotate, 0deg));
+}
+
+@media (max-width: 768px) {
+  .ring-wrap {
+    width: 80vh;
+    height: 80vh;
+    transform:
+      translate(-50%, -50%)
+      scale(var(--scale, 0.4))
+      rotate(calc(-45deg + var(--rotate, 0deg)));
+  }
+}
+
+.dot-anchor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  will-change: transform;
+  transform: translate(var(--dx, 0px), var(--dy, 0px));
+}
+.dot-anchor--tr { top: 4%; left: 96%; }
+.dot-anchor--bl { top: 96%; left: 4%; }
+
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: currentColor;
+  filter: drop-shadow(0 0 20px currentColor);
+  transform: translate(-50%, -50%);
+  animation: pulse 2.6s ease-in-out infinite;
+}
+.dot--tr {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid currentColor;
+}
+.dot--bl {
+  width: 51px;
+  height: 51px;
+  animation-delay: 1.3s;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50%      { transform: translate(-50%, -50%) scale(1.35); opacity: 0.7; }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.hero__logo {
+  display: block;
+  width: clamp(160px, 20vw, 240px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: calc(-0.5 * clamp(160px, 20vw, 240px)) auto clamp(-14px, -0.6vw, -2px);
+  position: relative;
+  z-index: 1;
+}
+.hero__text {
+  position: relative;
+}
+.hero__text::before {
+  content: '';
+  position: absolute;
+  inset: -14% -10%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 70% at center, rgba(0,0,0,0.4), transparent 75%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, #000 35%, transparent 75%);
+          mask-image: radial-gradient(ellipse 70% 70% at center, #000 35%, transparent 75%);
+}
+
+.hero__title {
+  font-weight: 500;
+  font-size: clamp(3.06rem, 10.8vw, 5.76rem);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  color: #e6ecef;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+.hero__title em {
+  display: block;
+  font-family: 'PP Editorial New', serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.06em;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  margin-top: 0.03em;
+}
+
+.hero__subtitle {
+  font-weight: 700;
+  font-size: clamp(1.05rem, 4.4vw, 1.4rem);
+  line-height: 1.4;
+  margin: clamp(16px, 2.5vw, 28px) auto 0;
+  max-width: 760px;
+  color: #e6ecef;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+}
+.hero__subtitle em {
+  display: block;
+  margin-top: 0.25em;
+  font-family: 'PP Editorial New', serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.1em;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: clamp(22px, 3vw, 36px);
+  padding: 14px 36px;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  border-radius: 999px;
+  background: #fff;
+  color: #0a0a0a;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  white-space: nowrap;
+  isolation: isolate;
+}
+.btn:hover { animation: btnWobble 1.1s ease-in-out forwards; }
+
+@keyframes btnWobble {
+  0%   { transform: scale(1, 1)         translateY(0); }
+  18%  { transform: scale(1.04, 0.96)   translateY(-2px); }
+  36%  { transform: scale(0.97, 1.03)   translateY(-5px); }
+  54%  { transform: scale(1.025, 0.975) translateY(-3px); }
+  72%  { transform: scale(0.99, 1.01)   translateY(-4px); }
+  88%  { transform: scale(1.01, 0.99)   translateY(-3px); }
+  100% { transform: scale(1, 1)         translateY(-3px); }
+}
+
+.hero--blue   { color: var(--blue); }
+.hero--yellow { color: var(--yellow); }
+
+.hero--blue   .hero__title em,
+.hero--blue   .hero__subtitle em { color: var(--blue);   text-shadow: 0 0 28px rgba(0,255,246,0.45), 0 0 60px rgba(0,255,246,0.22); }
+.hero--yellow .hero__title em,
+.hero--yellow .hero__subtitle em { color: var(--yellow); text-shadow: 0 0 28px rgba(255,255,0,0.45), 0 0 60px rgba(255,255,0,0.22); }
+
+.hero--blue   .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px 4px rgba(0,255,246,0.6), 0 0 70px 18px rgba(0,255,246,0.3);
+}
+.hero--yellow .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px 4px rgba(255,255,0,0.65), 0 0 70px 18px rgba(255,255,0,0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="hero hero--blue">
+  <div class="hero__bg"></div>
+  <div class="ring-wrap" aria-hidden="true">
+    <span class="dot-anchor dot-anchor--tr"><span class="dot dot--tr"></span></span>
+    <span class="dot-anchor dot-anchor--bl"><span class="dot dot--bl"></span></span>
+  </div>
+  <div class="hero__content">
+    <img src="cavaleers-logo.svg" alt="Cavaleers" width="240" height="240" decoding="async" class="hero__logo" />
+    <div class="hero__text">
+      <h1 class="hero__title">
+        Budujeme značky
+        <em>odvážných</em>
+      </h1>
+      <p class="hero__subtitle">
+        Sme full-servisová agentúra, ktorá <em>pomáha firmám rásť rýchlejšie a&nbsp;za&nbsp;férovejšiu cenu.</em>
+      </p>
+      <a href="#hero-yellow" class="btn">Zistiť viac</a>
+    </div>
+  </div>
+</section>
+
+<section class="hero hero--yellow" id="hero-yellow">
+  <div class="hero__bg"></div>
+  <div class="ring-wrap" aria-hidden="true">
+    <span class="dot-anchor dot-anchor--tr"><span class="dot dot--tr"></span></span>
+    <span class="dot-anchor dot-anchor--bl"><span class="dot dot--bl"></span></span>
+  </div>
+  <div class="hero__content">
+    <div class="hero__text">
+      <h1 class="hero__title">
+        Posuňme spolu
+        <em>váš biznis ďalej</em>
+      </h1>
+      <p class="hero__subtitle">
+        Náš web ešte nie je hotový, <em>čas venujeme výsledkom našich klientov.</em>
+      </p>
+      <a href="mailto:hello@cavaleers.com" class="btn">hello@cavaleers.com</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mobileMQ = window.matchMedia('(max-width: 768px)');
+  const sections = document.querySelectorAll('.hero');
+  const anchors = document.querySelectorAll('.dot-anchor');
+  const anchorState = new Map();
+  anchors.forEach(a => anchorState.set(a, { dx: 0, dy: 0 }));
+
+  let mouseX = -9999, mouseY = -9999;
+  let mouseInside = false;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    mouseInside = true;
+  });
+  window.addEventListener('mouseleave', () => { mouseInside = false; });
+
+  const DODGE_THRESHOLD = 140;
+  const DODGE_MAX = 95;
+  const LERP = 0.22;
+
+  if (reduce) {
+    sections.forEach(s => {
+      s.style.setProperty('--brightness', '0.7');
+      s.style.setProperty('--scale', '1');
+      s.style.setProperty('--rotate', '0deg');
+    });
+    return;
+  }
+
+  function update() {
+    const vh = window.innerHeight;
+    const scaleDelta = mobileMQ.matches ? 0.85 : 1.2;
+    const scaleStart = mobileMQ.matches ? 0.4 : 0.4;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const denom = rect.height + vh;
+      let p = 1 - (rect.bottom / denom);
+      if (p < 0) p = 0;
+      else if (p > 1) p = 1;
+
+      const visibility = 1 - Math.abs(0.5 - p) * 2;
+      const brightness = (0.25 + visibility * 0.65).toFixed(3);
+      const scale = (scaleStart + p * scaleDelta).toFixed(3);
+      const rotate = (p * 45).toFixed(2) + 'deg';
+
+      section.style.setProperty('--brightness', brightness);
+      section.style.setProperty('--scale', scale);
+      section.style.setProperty('--rotate', rotate);
+    });
+
+    anchors.forEach(anchor => {
+      const dot = anchor.firstElementChild;
+      const r = dot.getBoundingClientRect();
+      let targetX = 0, targetY = 0;
+
+      if (mouseInside && r.width > 0) {
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        const dx = mouseX - cx;
+        const dy = mouseY - cy;
+        const dist = Math.hypot(dx, dy);
+
+        if (dist < DODGE_THRESHOLD && dist > 0) {
+          const force = (1 - dist / DODGE_THRESHOLD) * DODGE_MAX;
+          const pushX = (-dx / dist) * force;
+          const pushY = (-dy / dist) * force;
+
+          const section = anchor.closest('.hero');
+          const parentScale = parseFloat(section.style.getPropertyValue('--scale')) || 1;
+          const parentRot = parseFloat(section.style.getPropertyValue('--rotate')) || 0;
+          const rad = parentRot * Math.PI / 180;
+          const cos = Math.cos(rad);
+          const sin = Math.sin(rad);
+
+          targetX = (pushX * cos + pushY * sin) / parentScale;
+          targetY = (-pushX * sin + pushY * cos) / parentScale;
+        }
+      }
+
+      const s = anchorState.get(anchor);
+      s.dx += (targetX - s.dx) * LERP;
+      s.dy += (targetY - s.dy) * LERP;
+      anchor.style.setProperty('--dx', s.dx.toFixed(1) + 'px');
+      anchor.style.setProperty('--dy', s.dy.toFixed(1) + 'px');
+    });
+
+    requestAnimationFrame(update);
+  }
+  update();
+})();
+</script>
+
+</body>
+</html>

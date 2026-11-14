@@ -18,3 +18,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/blog-redizajn/base.css | Referencne CSS pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
 | zdroje/blog-redizajn/blog.html | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
 | zdroje/blog-redizajn/gm.ttf | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |
+| zdroje/blog-redizajn/gm.woff2 | Referencny subor (HTML, font) pre redizajn blogu |  | blog-redizajn | 2026-11-14 |

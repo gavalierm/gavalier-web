@@ -106,6 +106,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c7.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c7.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c8.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c8.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-comp-c9.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/comp/c9.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-sxo-ddg1.html | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/ddg1.html |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-ddg11.html | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/ddg11.html |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-ddg12.html | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/ddg12.html |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-sxo-ddg13.html | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/sxo/ddg13.html |  | seo | 2026-11-14 |

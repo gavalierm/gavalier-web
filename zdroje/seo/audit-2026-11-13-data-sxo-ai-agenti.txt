@@ -1,0 +1,33 @@
+AI agenti pre firmy
+AI agent je program, ktorý za vás vykoná úlohu s viacerými krokmi (prečíta údaje, rozhodne podľa pravidiel a spraví ďalší krok). Navrhnem ho a nasadím na vaše údaje a systémy, prípadne spojím viac systémov do jedného dashboardu. Cenu poviem dopredu a platíte len za výsledok.
+Čo konkrétne spravím
+- AI agentov na opakovanú prácu s údajmi a textom, kde pravidlá nie sú vždy čisto mechanické.
+- Dashboardy, ktoré zo systémov, čo spolu nehovoria, urobia jeden prehľad. Na jednom mieste uvidíte, kde proces škrípe.
+- Prepojenie agenta s vašimi systémami cez API a databázy.
+- Nasadenie a dohľad nad agentom, aby bežal spoľahlivo a dalo sa kontrolovať, čo robí.
+Kedy AI agent dáva zmysel
+AI agent sa hodí tam, kde úloha nie je čisto mechanická: treba prečítať text, zaradiť ho, zhrnúť alebo pripraviť podklad. Ak sa postup dá zapísať do pevných pravidiel, stačí zvyčajne obyčajná automatizácia, ktorá je lacnejšia a predvídateľnejšia. Poviem vám, ktorá z možností sa hodí vo vašom prípade.
+AI robí aj chyby. Preto pri agentoch navrhujem kontrolu výstupov človekom tam, kde by chyba stála peniaze.
+Ako to prebieha
+- Zavoláte na +421 915 697 915 alebo napíšete. Stačí pár viet, nemusí to byť odborné.
+- Doptám sa na detaily, aby som pochopil, o čo ide. Často sa pritom ukáže, že sa to dá spraviť jednoduchšie. Poviem, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo.
+- Ak vám to sedí, ide sa robiť. Ak nie, nič neplatí.
+Koľko to stojí
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem. Hovor aj návrh riešenia sú zadarmo a nezáväzné.
+Presnú cenu poviem po krátkom telefonáte, dopredu a záväzne.
+Najčastejšie otázky
+Čo je AI agent?
+Program, ktorý vykoná úlohu s viacerými krokmi: prečíta údaje, rozhodne sa podľa zadania a spraví ďalší krok, napríklad pripraví podklad alebo zaradí správu. Na rozdiel od obyčajného skriptu zvláda aj úlohy, kde pravidlá nie sú čisto mechanické.
+Kedy stačí obyčajná automatizácia a kedy treba AI agenta?
+Ak sa postup dá zapísať do pevných pravidiel, stačí automatizácia. AI agent sa hodí, keď treba pracovať s textom a úsudkom. Pri prvom hovore vám poviem, čo sa hodí vo vašom prípade.
+Môže AI agent urobiť chybu?
+Áno, AI robí aj chyby. Pri agentoch preto navrhujem kontrolu výstupov človekom tam, kde by chyba stála peniaze.
+Čo je dashboard a načo mi je?
+Dashboard je jeden prehľad údajov z viacerých systémov. Vďaka nemu na jednom mieste uvidíte, kde proces škrípe, a často sa tak nájdu úspory.
+Koľko AI agent stojí?
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí, dodatočné hodiny pri natiahnutej práci neúčtujem.
+Čo ak mi výsledok nebude sedieť?
+Platíte len za výsledok. Ak dodané nesedí s dohodou, peniaze nepýtam.
+Súvisiace stránky a články
+Chcete to prebrať?
+Zavolajte alebo napíšte. Hovor aj návrh riešenia sú zadarmo a nezáväzné.

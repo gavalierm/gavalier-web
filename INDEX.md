@@ -44,3 +44,4 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-starsi-findings-sitemap.md | Sitemap audit: https://www.gavalier.sk (2026-11-13) |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-findings-sxo.md | SXO audit: https://www.gavalier.sk (2026-11-13) |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-findings-technical.md | Technical SEO audit: https://www.gavalier.sk (2026-11-13) |  | seo | 2026-11-14 |
+| zdroje/seo/audit-starsi-psi-home.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): psi-home.json |  | seo | 2026-11-14 |

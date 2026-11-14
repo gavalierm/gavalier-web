@@ -1,0 +1,1570 @@
+{
+  "url": "https://www.gavalier.sk/",
+  "psi": {
+    "mobile": {
+      "url": "https://www.gavalier.sk/",
+      "strategy": "mobile",
+      "lighthouse_version": "13.6.0",
+      "lighthouse_scores": {
+        "performance": 67,
+        "accessibility": 93,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lab_metrics": {
+        "first-contentful-paint": {
+          "value": 1654.738860763688,
+          "display": "1.7\u00a0s",
+          "score": 0.93
+        },
+        "largest-contentful-paint": {
+          "value": 10051.685221339769,
+          "display": "10.1\u00a0s",
+          "score": 0
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0\u00a0ms",
+          "score": 1
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0",
+          "score": 1
+        },
+        "speed-index": {
+          "value": 7228.95398701839,
+          "display": "7.2\u00a0s",
+          "score": 0.29
+        },
+        "interactive": {
+          "value": 10051.685221339769,
+          "display": "10.1\u00a0s",
+          "score": 0.26
+        }
+      },
+      "field_metrics": {},
+      "opportunities": [],
+      "diagnostics": [
+        {
+          "id": "total-byte-weight",
+          "title": "Avoids enormous network payloads",
+          "display": "Total size was 1,679\u00a0KiB",
+          "score": 1,
+          "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "title": "Minimizes main-thread work",
+          "display": "0.1\u00a0s",
+          "score": 1,
+          "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)"
+        },
+        {
+          "id": "bootup-time",
+          "title": "JavaScript execution time",
+          "display": "",
+          "score": null,
+          "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/)."
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "display": "",
+          "score": null,
+          "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)"
+        },
+        {
+          "id": "long-tasks",
+          "title": "Avoid long main-thread tasks",
+          "display": "",
+          "score": null,
+          "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "display": "",
+          "score": 1,
+          "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "display": "",
+          "score": 1,
+          "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+        }
+      ],
+      "failed_audits": [
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "display": "",
+          "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations."
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": "",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast)."
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "display": "Est savings of 1,260\u00a0KiB",
+          "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)."
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "display": "Est savings of 620\u00a0ms",
+          "description": "Requests are blocking the page\u2019s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path."
+        },
+        {
+          "id": "link-in-text-block",
+          "title": "Links rely on color to be distinguishable.",
+          "score": 0,
+          "display": "",
+          "description": "Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. [Learn how to make links distinguishable](https://dequeuniversity.com/rules/axe/4.14/link-in-text-block)."
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "display": "",
+          "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0,
+          "display": "10.1\u00a0s",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.26,
+          "display": "10.1\u00a0s",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.29,
+          "display": "7.2\u00a0s",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+        }
+      ],
+      "passed_audits_count": 87,
+      "seo_audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn\u2019t blocked from indexing",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "pass": true
+        }
+      ],
+      "accessibility_audits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": ""
+        },
+        {
+          "id": "link-in-text-block",
+          "title": "Links rely on color to be distinguishable.",
+          "score": 0,
+          "display": ""
+        }
+      ],
+      "audit_details": {
+        "color-contrast": {
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'snippet': '<a href=\"https://cavaleers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">', 'explanation': 'Fix any of the following:\\n  Element has insufficient color contrast of 4.01 (foreground colo"
+            },
+            {
+              "node": "{'type': 'node', 'path': '1,HTML,1,BODY,7,MAIN,11,SECTION,0,DIV,2,DETAILS,0,SUMMARY,0,DIV,1,DIV,1,P,1,A', 'explanation': 'Fix any of the following:\\n  Element has insufficient color contrast of 4.01 ("
+            },
+            {
+              "node": "{'nodeLabel': 'prekro\u010dil na\u0161e o\u010dak\u00e1vania', 'path': '1,HTML,1,BODY,7,MAIN,15,SECTION,0,DIV,1,DIV,0,ARTICLE,0,BLOCKQUOTE,1,MARK', 'type': 'node', 'snippet': '<mark class=\"headline-mark\">', 'boundingRect"
+            },
+            {
+              "node": "{'lhId': '1-11-MARK', 'selector': 'div.testimonials__rail > article.testimonials__card > blockquote.testimonials__text > mark.headline-mark', 'boundingRect': {'width': 260, 'bottom': 10590, 'right': 6"
+            },
+            {
+              "node": "{'nodeLabel': 'Cavaleers', 'path': '1,HTML,1,BODY,7,MAIN,17,SECTION,0,DIV,1,DIV,1,P,1,A', 'type': 'node', 'snippet': '<a href=\"https://cavaleers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">', 'exp"
+            }
+          ],
+          "total_items": 5
+        },
+        "clickjacking-mitigation": {
+          "title": "Mitigate clickjacking with XFO or CSP",
+          "headings": [
+            "description",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No frame control policy found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "image-delivery-insight": {
+          "title": "Improve image delivery",
+          "headings": [
+            "node",
+            "url",
+            "totalBytes",
+            "wastedBytes"
+          ],
+          "items": [
+            {
+              "node": "{'lhId': 'page-0-IMG', 'boundingRect': {'width': 323, 'bottom': 306, 'right': 412, 'left': 89, 'top': 0, 'height': 306}, 'snippet': '<img src=\"assets/gavo_edited.png\" alt=\"\" class=\"hero__portrait\" ari",
+              "url": "https://www.gavalier.sk/assets/gavo_edited.png",
+              "totalBytes": 1340165,
+              "wastedBytes": 1289729
+            }
+          ],
+          "total_items": 1
+        },
+        "aria-allowed-role": {
+          "title": "Uses ARIA roles only on compatible elements",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'boundingRect': {'right': 358, 'height': 280, 'bottom': 10767, 'width': 338, 'left': 21, 'top': 10487}, 'lhId': '1-0-ARTICLE', 'snippet': '<article class=\"testimonials__card\" role=\"listitem\">', 'sele"
+            },
+            {
+              "node": "{'explanation': 'Fix any of the following:\\n  ARIA role listitem is not allowed for given element', 'lhId': '1-1-ARTICLE', 'boundingRect': {'top': 10487, 'width': 338, 'right': 712, 'left': 374, 'bott"
+            },
+            {
+              "node": "{'lhId': '1-2-ARTICLE', 'selector': 'section#recenzie > div.container > div.testimonials__rail > article.testimonials__card', 'explanation': 'Fix any of the following:\\n  ARIA role listitem is not all"
+            },
+            {
+              "node": "{'lhId': '1-3-ARTICLE', 'nodeLabel': 'O web sa nemus\u00edme stara\u0165. Marcel ho dr\u017e\u00ed v chode roky. Pocit istoty je na nezap\u2026', 'boundingRect': {'right': 1420, 'bottom': 10767, 'height': 280, 'top': 10487, '"
+            },
+            {
+              "node": "{'nodeLabel': 'Festivalov\u00e9 FOH zvl\u00e1dne bez kvapky potu.\\n\\nNEW LEVEL MEDIA\\n\\nFOH ZVUK', 'explanation': 'Fix any of the following:\\n  ARIA role listitem is not allowed for given element', 'snippet': '"
+            }
+          ],
+          "total_items": 6
+        },
+        "network-server-latency": {
+          "title": "Server Backend Latencies",
+          "headings": [
+            "origin",
+            "serverResponseTime"
+          ],
+          "items": [
+            {
+              "origin": "https://www.gavalier.sk",
+              "serverResponseTime": 1
+            },
+            {
+              "origin": "https://fonts.googleapis.com",
+              "serverResponseTime": 1
+            },
+            {
+              "origin": "https://fonts.gstatic.com",
+              "serverResponseTime": 1
+            }
+          ],
+          "total_items": 3
+        },
+        "render-blocking-insight": {
+          "title": "Render-blocking requests",
+          "headings": [
+            "url",
+            "totalBytes",
+            "wastedMs"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/css/sections/testimonials.css?v=20260514",
+              "totalBytes": 1660,
+              "wastedMs": 160
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/button.css?v=20260514",
+              "totalBytes": 1542,
+              "wastedMs": 477
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/page.css?v=20261112",
+              "totalBytes": 3119,
+              "wastedMs": 160
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/site-nav.css?v=20261111",
+              "totalBytes": 1914,
+              "wastedMs": 160
+            },
+            {
+              "url": "https://www.gavalier.sk/css/sections/experience.css?v=20260514",
+              "totalBytes": 1390,
+              "wastedMs": 160
+            }
+          ],
+          "total_items": 16
+        },
+        "total-byte-weight": {
+          "title": "Avoids enormous network payloads",
+          "headings": [
+            "url",
+            "totalBytes"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/assets/gavo_edited.png",
+              "totalBytes": 1340782
+            },
+            {
+              "url": "https://www.gavalier.sk/assets/gavo_colored_eye.png",
+              "totalBytes": 285899
+            },
+            {
+              "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+              "totalBytes": 25248
+            },
+            {
+              "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2",
+              "totalBytes": 16024
+            },
+            {
+              "url": "https://www.gavalier.sk/",
+              "totalBytes": 15675
+            }
+          ],
+          "total_items": 10
+        },
+        "baseline": {
+          "title": "Baseline Features",
+          "headings": [
+            "featureId",
+            "displayStatus",
+            "source"
+          ],
+          "items": [
+            {
+              "featureId": "https://webstatus.dev/features/marker",
+              "displayStatus": "{'type': 'baseline-status', 'displayString': 'Limited Availability', 'status': 'limited'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/box-decoration-break",
+              "displayStatus": "{'status': 'limited', 'type': 'baseline-status', 'displayString': 'Limited Availability'}",
+              "source": "https://www.gavalier.sk/js/back-to-top.js?v=20260514"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/scrollbar-color",
+              "displayStatus": "{'type': 'baseline-status', 'status': 'low', 'displayString': 'Newly Available (2025-12-12)'}",
+              "source": "https://www.gavalier.sk/js/back-to-top.js?v=20260514"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/details-content",
+              "displayStatus": "{'status': 'low', 'displayString': 'Newly Available (2025-09-16)', 'type': 'baseline-status'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/scrollbar-width",
+              "displayStatus": "{'displayString': 'Newly Available (2024-12-11)', 'status': 'low', 'type': 'baseline-status'}",
+              "source": "https://www.gavalier.sk/js/back-to-top.js?v=20260514"
+            }
+          ],
+          "total_items": 15
+        },
+        "link-in-text-block": {
+          "title": "Links rely on color to be distinguishable.",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'path': '1,HTML,1,BODY,7,MAIN,11,SECTION,0,DIV,2,DETAILS,0,SUMMARY,0,DIV,1,DIV,1,P,1,A', 'snippet': '<a href=\"/automatizacia/\">', 'type': 'node', 'nodeLabel': 'Podrobnosti o slu\u017eb\u00e1ch', 'selector': 'd"
+            }
+          ],
+          "total_items": 1
+        },
+        "has-hsts": {
+          "title": "Use a strong HSTS policy",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No HSTS header found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "origin-isolation": {
+          "title": "Ensure proper origin isolation with COOP",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No COOP header found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "dom-size-insight": {
+          "title": "Optimize DOM size",
+          "headings": [
+            "statistic",
+            "node",
+            "value"
+          ],
+          "items": [
+            {
+              "statistic": "Total elements",
+              "value": "{'value': 1156, 'granularity': 1, 'type': 'numeric'}"
+            },
+            {
+              "statistic": "DOM depth",
+              "node": "{'boundingRect': {'height': 25, 'width': 91, 'bottom': 8851, 'top': 8826, 'right': 143, 'left': 52}, 'path': '1,HTML,1,BODY,7,MAIN,11,SECTION,0,DIV,2,DETAILS,1,DIV,0,DIV,0,ARTICLE,1,P,24,STRONG,0,SPAN",
+              "value": "{'type': 'numeric', 'granularity': 1, 'value': 11}"
+            },
+            {
+              "statistic": "Most children",
+              "node": "{'lhId': 'page-9-P', 'snippet': '<p class=\"article__text\" data-words-wrapped=\"true\">', 'selector': 'div.section__content > div.articles > article.article > p.article__text', 'nodeLabel': 'div.section_",
+              "value": "{'value': 44, 'granularity': 1, 'type': 'numeric'}"
+            }
+          ],
+          "total_items": 3
+        },
+        "csp-xss": {
+          "title": "Ensure CSP is effective against XSS attacks",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No CSP found in enforcement mode",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "network-rtt": {
+          "title": "Network Round Trip Times",
+          "headings": [
+            "origin",
+            "rtt"
+          ],
+          "items": [
+            {
+              "origin": "https://fonts.googleapis.com",
+              "rtt": 0.8999999999999999
+            },
+            {
+              "origin": "https://www.gavalier.sk",
+              "rtt": 0.011644101224025814
+            },
+            {
+              "origin": "https://fonts.gstatic.com",
+              "rtt": 0.0011022344583140012
+            }
+          ],
+          "total_items": 3
+        },
+        "trusted-types-xss": {
+          "title": "Mitigate DOM-based XSS with Trusted Types",
+          "headings": [
+            "description",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No `Content-Security-Policy` header with Trusted Types directive found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "main-thread-tasks": {
+          "title": "Tasks",
+          "headings": [
+            "startTime",
+            "duration"
+          ],
+          "items": [
+            {
+              "startTime": 117.435,
+              "duration": 12.687
+            },
+            {
+              "startTime": 131.388,
+              "duration": 11.042
+            },
+            {
+              "startTime": 146.504,
+              "duration": 8.563
+            },
+            {
+              "startTime": 289.655,
+              "duration": 28.496
+            },
+            {
+              "startTime": 319.229,
+              "duration": 10.735
+            }
+          ],
+          "total_items": 6
+        },
+        "viewport-insight": {
+          "title": "Optimize viewport for mobile",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'nodeLabel': 'head > meta', 'lhId': 'page-8-META', 'boundingRect': {'bottom': 0, 'left': 0, 'width': 0, 'height': 0, 'top': 0, 'right': 0}, 'snippet': '<meta name=\"viewport\" content=\"width=device-wid"
+            }
+          ],
+          "total_items": 1
+        },
+        "network-requests": {
+          "title": "Network Requests",
+          "headings": [
+            "url",
+            "protocol",
+            "networkRequestTime",
+            "networkEndTime",
+            "transferSize",
+            "resourceSize",
+            "statusCode",
+            "mimeType",
+            "resourceType"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/",
+              "protocol": "h2",
+              "networkRequestTime": 1.087999939918518,
+              "networkEndTime": 114.6690000295639,
+              "transferSize": 15675,
+              "resourceSize": 76721,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "Document"
+            },
+            {
+              "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap",
+              "protocol": "h2",
+              "networkRequestTime": 127.99000000953674,
+              "networkEndTime": 134.52999997138977,
+              "transferSize": 1518,
+              "resourceSize": 13074,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/variables.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 128.07400000095367,
+              "networkEndTime": 228.34500002861023,
+              "transferSize": 2881,
+              "resourceSize": 7307,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/base.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 128.13899993896484,
+              "networkEndTime": 235.60800004005432,
+              "transferSize": 1714,
+              "resourceSize": 3464,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/layout.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 128.29100000858307,
+              "networkEndTime": 220.5460000038147,
+              "transferSize": 2298,
+              "resourceSize": 5571,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            }
+          ],
+          "total_items": 27
+        },
+        "mainthread-work-breakdown": {
+          "title": "Minimizes main-thread work",
+          "headings": [
+            "groupLabel",
+            "duration"
+          ],
+          "items": [
+            {
+              "groupLabel": "Other",
+              "duration": 53.85480000000003
+            },
+            {
+              "groupLabel": "Style & Layout",
+              "duration": 45.59760000000001
+            },
+            {
+              "groupLabel": "Script Evaluation",
+              "duration": 17.841600000000003
+            },
+            {
+              "groupLabel": "Parse HTML & CSS",
+              "duration": 17.811600000000002
+            },
+            {
+              "groupLabel": "Rendering",
+              "duration": 4.8
+            }
+          ],
+          "total_items": 6
+        },
+        "server-response-time": {
+          "title": "Initial server response time was short",
+          "headings": [
+            "url",
+            "responseTime"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/",
+              "responseTime": 3
+            }
+          ],
+          "total_items": 1
+        },
+        "third-parties-insight": {
+          "title": "3rd parties",
+          "headings": [
+            "entity",
+            "transferSize",
+            "mainThreadTime"
+          ],
+          "items": [
+            {
+              "entity": "Google Fonts",
+              "transferSize": 42790,
+              "mainThreadTime": 0.3960000276565552
+            }
+          ],
+          "total_items": 1
+        },
+        "resource-summary": {
+          "title": "Resources Summary",
+          "headings": [
+            "label",
+            "requestCount",
+            "transferSize"
+          ],
+          "items": [
+            {
+              "label": "Total",
+              "requestCount": 27,
+              "transferSize": 1719555
+            },
+            {
+              "label": "Image",
+              "requestCount": 2,
+              "transferSize": 1626681
+            },
+            {
+              "label": "Font",
+              "requestCount": 2,
+              "transferSize": 41272
+            },
+            {
+              "label": "Stylesheet",
+              "requestCount": 17,
+              "transferSize": 29986
+            },
+            {
+              "label": "Document",
+              "requestCount": 1,
+              "transferSize": 15675
+            }
+          ],
+          "total_items": 9
+        }
+      },
+      "analysis_timestamp": "2026-11-13T13:32:24.258Z",
+      "error": null
+    },
+    "desktop": {
+      "url": "https://www.gavalier.sk/",
+      "strategy": "desktop",
+      "lighthouse_version": "13.6.0",
+      "lighthouse_scores": {
+        "performance": 92,
+        "accessibility": 93,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lab_metrics": {
+        "first-contentful-paint": {
+          "value": 473.77648134318446,
+          "display": "0.5\u00a0s",
+          "score": 1
+        },
+        "largest-contentful-paint": {
+          "value": 1815.8577213126498,
+          "display": "1.8\u00a0s",
+          "score": 0.69
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "display": "0\u00a0ms",
+          "score": 1
+        },
+        "cumulative-layout-shift": {
+          "value": 0.02060293760817147,
+          "display": "0.021",
+          "score": 1
+        },
+        "speed-index": {
+          "value": 823.2007740715442,
+          "display": "0.8\u00a0s",
+          "score": 0.99
+        },
+        "interactive": {
+          "value": 1815.85772131265,
+          "display": "1.8\u00a0s",
+          "score": 0.97
+        }
+      },
+      "field_metrics": {},
+      "opportunities": [],
+      "diagnostics": [
+        {
+          "id": "total-byte-weight",
+          "title": "Avoids enormous network payloads",
+          "display": "Total size was 1,679\u00a0KiB",
+          "score": 1,
+          "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "title": "Minimizes main-thread work",
+          "display": "0.2\u00a0s",
+          "score": 1,
+          "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)"
+        },
+        {
+          "id": "bootup-time",
+          "title": "JavaScript execution time",
+          "display": "0.0\u00a0s",
+          "score": 1,
+          "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/)."
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "display": "1 layout shift found",
+          "score": 1,
+          "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)"
+        },
+        {
+          "id": "long-tasks",
+          "title": "Avoid long main-thread tasks",
+          "display": "",
+          "score": null,
+          "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "display": "",
+          "score": 1,
+          "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "display": "",
+          "score": 1,
+          "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+        }
+      ],
+      "failed_audits": [
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "display": "Est savings of 1,278\u00a0KiB",
+          "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)."
+        },
+        {
+          "id": "link-in-text-block",
+          "title": "Links rely on color to be distinguishable.",
+          "score": 0,
+          "display": "",
+          "description": "Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. [Learn how to make links distinguishable](https://dequeuniversity.com/rules/axe/4.14/link-in-text-block)."
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "display": "",
+          "description": "A forced reflow occurs when JavaScript queries geometric properties (such as `offsetWidth`) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations."
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": "",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.14/color-contrast)."
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "display": "",
+          "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "display": "Est savings of 180\u00a0ms",
+          "description": "Requests are blocking the page\u2019s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path."
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.69,
+          "display": "1.8\u00a0s",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+        }
+      ],
+      "passed_audits_count": 92,
+      "seo_audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn\u2019t blocked from indexing",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "pass": true
+        }
+      ],
+      "accessibility_audits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": ""
+        },
+        {
+          "id": "link-in-text-block",
+          "title": "Links rely on color to be distinguishable.",
+          "score": 0,
+          "display": ""
+        }
+      ],
+      "audit_details": {
+        "network-server-latency": {
+          "title": "Server Backend Latencies",
+          "headings": [
+            "origin",
+            "serverResponseTime"
+          ],
+          "items": [
+            {
+              "origin": "https://www.gavalier.sk",
+              "serverResponseTime": 1
+            },
+            {
+              "origin": "https://fonts.gstatic.com",
+              "serverResponseTime": 1
+            },
+            {
+              "origin": "https://fonts.googleapis.com",
+              "serverResponseTime": 0
+            }
+          ],
+          "total_items": 3
+        },
+        "image-delivery-insight": {
+          "title": "Improve image delivery",
+          "headings": [
+            "node",
+            "url",
+            "totalBytes",
+            "wastedBytes"
+          ],
+          "items": [
+            {
+              "node": "{'nodeLabel': 'main > section#hero > div.hero__top > img.hero__portrait', 'type': 'node', 'snippet': '<img src=\"assets/gavo_edited.png\" alt=\"\" class=\"hero__portrait\" aria-hidden=\"true\" width=\"1144\" he",
+              "url": "https://www.gavalier.sk/assets/gavo_edited.png",
+              "totalBytes": 1340165,
+              "wastedBytes": 1308953
+            }
+          ],
+          "total_items": 1
+        },
+        "origin-isolation": {
+          "title": "Ensure proper origin isolation with COOP",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No COOP header found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "mainthread-work-breakdown": {
+          "title": "Minimizes main-thread work",
+          "headings": [
+            "groupLabel",
+            "duration"
+          ],
+          "items": [
+            {
+              "groupLabel": "Style & Layout",
+              "duration": 84.643
+            },
+            {
+              "groupLabel": "Other",
+              "duration": 68.96900000000014
+            },
+            {
+              "groupLabel": "Script Evaluation",
+              "duration": 22.968
+            },
+            {
+              "groupLabel": "Rendering",
+              "duration": 11.493999999999998
+            },
+            {
+              "groupLabel": "Parse HTML & CSS",
+              "duration": 10.827
+            }
+          ],
+          "total_items": 6
+        },
+        "resource-summary": {
+          "title": "Resources Summary",
+          "headings": [
+            "label",
+            "requestCount",
+            "transferSize"
+          ],
+          "items": [
+            {
+              "label": "Total",
+              "requestCount": 27,
+              "transferSize": 1719525
+            },
+            {
+              "label": "Image",
+              "requestCount": 2,
+              "transferSize": 1626673
+            },
+            {
+              "label": "Font",
+              "requestCount": 2,
+              "transferSize": 41272
+            },
+            {
+              "label": "Stylesheet",
+              "requestCount": 17,
+              "transferSize": 29986
+            },
+            {
+              "label": "Document",
+              "requestCount": 1,
+              "transferSize": 15669
+            }
+          ],
+          "total_items": 9
+        },
+        "dom-size-insight": {
+          "title": "Optimize DOM size",
+          "headings": [
+            "statistic",
+            "node",
+            "value"
+          ],
+          "items": [
+            {
+              "statistic": "Total elements",
+              "value": "{'granularity': 1, 'type': 'numeric', 'value': 1156}"
+            },
+            {
+              "statistic": "DOM depth",
+              "node": "{'type': 'node', 'boundingRect': {'top': 7894, 'width': 91, 'bottom': 7919, 'right': 536, 'left': 445, 'height': 25}, 'selector': 'article.article > p.article__text > strong > span.word', 'lhId': 'pag",
+              "value": "{'granularity': 1, 'value': 11, 'type': 'numeric'}"
+            },
+            {
+              "statistic": "Most children",
+              "node": "{'lhId': 'page-10-P', 'boundingRect': {'height': 102, 'left': 106, 'top': 8515, 'bottom': 8617, 'width': 1150, 'right': 1256}, 'nodeLabel': 'div.section__content > div.articles > article.article > p.a",
+              "value": "{'value': 44, 'type': 'numeric', 'granularity': 1}"
+            }
+          ],
+          "total_items": 3
+        },
+        "link-in-text-block": {
+          "title": "Links rely on color to be distinguishable.",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'snippet': '<a href=\"/automatizacia/\">', 'lhId': '1-8-A', 'path': '1,HTML,1,BODY,7,MAIN,11,SECTION,0,DIV,2,DETAILS,0,SUMMARY,0,DIV,1,DIV,1,P,1,A', 'type': 'node', 'explanation': 'Fix any of the follo"
+            }
+          ],
+          "total_items": 1
+        },
+        "has-hsts": {
+          "title": "Use a strong HSTS policy",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No HSTS header found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "network-rtt": {
+          "title": "Network Round Trip Times",
+          "headings": [
+            "origin",
+            "rtt"
+          ],
+          "items": [
+            {
+              "origin": "https://fonts.googleapis.com",
+              "rtt": 0.8999999999999999
+            },
+            {
+              "origin": "https://www.gavalier.sk",
+              "rtt": 0.021049235904014765
+            },
+            {
+              "origin": "https://fonts.gstatic.com",
+              "rtt": 0.0011022286330895034
+            }
+          ],
+          "total_items": 3
+        },
+        "aria-allowed-role": {
+          "title": "Uses ARIA roles only on compatible elements",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'boundingRect': {'width': 420, 'right': 484, 'top': 9621, 'bottom': 9941, 'left': 64, 'height': 320}, 'explanation': 'Fix any of the following:\\n  ARIA role listitem is not allowed for given element'"
+            },
+            {
+              "node": "{'type': 'node', 'boundingRect': {'top': 9621, 'height': 320, 'width': 420, 'right': 920, 'bottom': 9941, 'left': 500}, 'selector': 'section#recenzie > div.container > div.testimonials__rail > article"
+            },
+            {
+              "node": "{'nodeLabel': '\u0160\u013eape to, dod\u00e1va veci brut\u00e1lne r\u00fdchlo. \u010co nezn\u00e1\u0161am je, ke\u010f treba \u010daka\u0165 na progr\u2026', 'snippet': '<article class=\"testimonials__card\" role=\"listitem\">', 'type': 'node', 'selector': 'sectio"
+            },
+            {
+              "node": "{'explanation': 'Fix any of the following:\\n  ARIA role listitem is not allowed for given element', 'path': '1,HTML,1,BODY,7,MAIN,15,SECTION,0,DIV,1,DIV,3,ARTICLE', 'snippet': '<article class=\"testimo"
+            },
+            {
+              "node": "{'type': 'node', 'nodeLabel': 'Festivalov\u00e9 FOH zvl\u00e1dne bez kvapky potu.\\n\\nNEW LEVEL MEDIA\\n\\nFOH ZVUK', 'snippet': '<article class=\"testimonials__card\" role=\"listitem\">', 'selector': 'section#recenzi"
+            }
+          ],
+          "total_items": 6
+        },
+        "trusted-types-xss": {
+          "title": "Mitigate DOM-based XSS with Trusted Types",
+          "headings": [
+            "description",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No `Content-Security-Policy` header with Trusted Types directive found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "csp-xss": {
+          "title": "Ensure CSP is effective against XSS attacks",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No CSP found in enforcement mode",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "color-contrast": {
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'lhId': '1-6-A', 'snippet': '<a href=\"https://cavaleers.com/\" target=\"_blank\" rel=\"noopener noreferrer\">', 'path': '1,HTML,1,BODY,7,MAIN,1,SECTION,2,DIV,0,DIV,0,P,6,A', 'explanation': 'Fix any of the"
+            },
+            {
+              "node": "{'explanation': 'Fix any of the following:\\n  Element has insufficient color contrast of 4.01 (foreground color: #007aff, background color: #ffffff, font size: 15.0pt (20px), font weight: normal). Exp"
+            },
+            {
+              "node": "{'type': 'node', 'boundingRect': {'bottom': 10781, 'right': 1070, 'left': 976, 'width': 94, 'height': 27, 'top': 10754}, 'nodeLabel': 'Cavaleers', 'snippet': '<a href=\"https://cavaleers.com/\" target=\""
+            }
+          ],
+          "total_items": 3
+        },
+        "server-response-time": {
+          "title": "Initial server response time was short",
+          "headings": [
+            "url",
+            "responseTime"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/",
+              "responseTime": 2
+            }
+          ],
+          "total_items": 1
+        },
+        "bootup-time": {
+          "title": "JavaScript execution time",
+          "headings": [
+            "url",
+            "total",
+            "scripting",
+            "scriptParseCompile"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/",
+              "total": 95.17399999999999,
+              "scripting": 4.5680000000000005,
+              "scriptParseCompile": 0.456
+            }
+          ],
+          "total_items": 1
+        },
+        "viewport-insight": {
+          "title": "Optimize viewport for mobile",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'selector': 'head > meta', 'type': 'node', 'nodeLabel': 'head > meta', 'snippet': '<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">', 'path': '1,HTML,0,HEAD,1,META', 'boundingRe"
+            }
+          ],
+          "total_items": 1
+        },
+        "layout-shifts": {
+          "title": "Avoid large layout shifts",
+          "headings": [
+            "node",
+            "score"
+          ],
+          "items": [
+            {
+              "node": "{'lhId': 'page-1-SPAN', 'nodeLabel': 'spr\u00e1vne.', 'snippet': '<span class=\"headline-mark\">', 'path': '1,HTML,1,BODY,7,MAIN,1,SECTION,0,DIV,1,DIV,1,H1,1,SPAN', 'type': 'node', 'boundingRect': {'top': 17",
+              "score": 0.02060293760817147
+            }
+          ],
+          "total_items": 1
+        },
+        "network-requests": {
+          "title": "Network Requests",
+          "headings": [
+            "url",
+            "protocol",
+            "networkRequestTime",
+            "networkEndTime",
+            "transferSize",
+            "resourceSize",
+            "statusCode",
+            "mimeType",
+            "resourceType"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/",
+              "protocol": "h2",
+              "networkRequestTime": 1.7630000114440918,
+              "networkEndTime": 91.09700000286102,
+              "transferSize": 15669,
+              "resourceSize": 76721,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "Document"
+            },
+            {
+              "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap",
+              "protocol": "h2",
+              "networkRequestTime": 103.41099999845028,
+              "networkEndTime": 110.86500000953674,
+              "transferSize": 1518,
+              "resourceSize": 13074,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/variables.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 103.52500000596046,
+              "networkEndTime": 156.05800001323223,
+              "transferSize": 2885,
+              "resourceSize": 7307,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/base.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 103.62799999117851,
+              "networkEndTime": 141.83000001311302,
+              "transferSize": 1716,
+              "resourceSize": 3464,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://www.gavalier.sk/css/layout.css?v=20260514",
+              "protocol": "h2",
+              "networkRequestTime": 103.72200000286102,
+              "networkEndTime": 149.63199999928474,
+              "transferSize": 2296,
+              "resourceSize": 5571,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            }
+          ],
+          "total_items": 27
+        },
+        "baseline": {
+          "title": "Baseline Features",
+          "headings": [
+            "featureId",
+            "displayStatus",
+            "source"
+          ],
+          "items": [
+            {
+              "featureId": "https://webstatus.dev/features/marker",
+              "displayStatus": "{'status': 'limited', 'displayString': 'Limited Availability', 'type': 'baseline-status'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/box-decoration-break",
+              "displayStatus": "{'displayString': 'Limited Availability', 'type': 'baseline-status', 'status': 'limited'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/scrollbar-color",
+              "displayStatus": "{'displayString': 'Newly Available (2025-12-12)', 'status': 'low', 'type': 'baseline-status'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/details-content",
+              "displayStatus": "{'status': 'low', 'type': 'baseline-status', 'displayString': 'Newly Available (2025-09-16)'}",
+              "source": "https://www.gavalier.sk/"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/scrollbar-width",
+              "displayStatus": "{'status': 'low', 'type': 'baseline-status', 'displayString': 'Newly Available (2024-12-11)'}",
+              "source": "https://www.gavalier.sk/"
+            }
+          ],
+          "total_items": 15
+        },
+        "total-byte-weight": {
+          "title": "Avoids enormous network payloads",
+          "headings": [
+            "url",
+            "totalBytes"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/assets/gavo_edited.png",
+              "totalBytes": 1340784
+            },
+            {
+              "url": "https://www.gavalier.sk/assets/gavo_colored_eye.png",
+              "totalBytes": 285889
+            },
+            {
+              "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSvfedN4.woff2",
+              "totalBytes": 25248
+            },
+            {
+              "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggmxSvfedN62Zw.woff2",
+              "totalBytes": 16024
+            },
+            {
+              "url": "https://www.gavalier.sk/",
+              "totalBytes": 15669
+            }
+          ],
+          "total_items": 10
+        },
+        "third-parties-insight": {
+          "title": "3rd parties",
+          "headings": [
+            "entity",
+            "transferSize",
+            "mainThreadTime"
+          ],
+          "items": [
+            {
+              "entity": "Google Fonts",
+              "transferSize": 42790,
+              "mainThreadTime": 0.44999998807907104
+            }
+          ],
+          "total_items": 1
+        },
+        "clickjacking-mitigation": {
+          "title": "Mitigate clickjacking with XFO or CSP",
+          "headings": [
+            "description",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No frame control policy found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "main-thread-tasks": {
+          "title": "Tasks",
+          "headings": [
+            "startTime",
+            "duration"
+          ],
+          "items": [
+            {
+              "startTime": 94.535,
+              "duration": 21.132
+            },
+            {
+              "startTime": 116.34,
+              "duration": 10.164
+            },
+            {
+              "startTime": 371.587,
+              "duration": 7.241
+            },
+            {
+              "startTime": 379.908,
+              "duration": 73.551
+            },
+            {
+              "startTime": 455.15,
+              "duration": 27.018
+            }
+          ],
+          "total_items": 7
+        },
+        "render-blocking-insight": {
+          "title": "Render-blocking requests",
+          "headings": [
+            "url",
+            "totalBytes",
+            "wastedMs"
+          ],
+          "items": [
+            {
+              "url": "https://www.gavalier.sk/css/components/hero.css?v=20260514",
+              "totalBytes": 1444,
+              "wastedMs": 121
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/footer.css?v=20260514",
+              "totalBytes": 1424
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/site-nav.css?v=20261111",
+              "totalBytes": 1906
+            },
+            {
+              "url": "https://www.gavalier.sk/css/sections/article-accordion.css?v=20260514",
+              "totalBytes": 2331
+            },
+            {
+              "url": "https://www.gavalier.sk/css/components/card-unified.css?v=20260514",
+              "totalBytes": 1517,
+              "wastedMs": 121
+            }
+          ],
+          "total_items": 16
+        }
+      },
+      "analysis_timestamp": "2026-11-13T13:32:37.384Z",
+      "error": null
+    }
+  },
+  "crux": {
+    "target": "https://www.gavalier.sk/",
+    "metrics": {},
+    "collection_period": null,
+    "form_factor": "ALL",
+    "error": "No CrUX data for this origin. The site likely has insufficient Chrome traffic volume for eligibility."
+  },
+  "error": null
+}

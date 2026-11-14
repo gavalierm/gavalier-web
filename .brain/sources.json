@@ -114,5 +114,9 @@
   "zdroje/seo/audit-starsi-findings-technical.md": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/technical.md",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-psi-home.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): psi-home.json",
+    "date": "2026-11-14"
   }
 }

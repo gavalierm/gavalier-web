@@ -38,5 +38,9 @@
   "zdroje/seo/audit-starsi-data-crux-url.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/crux-url.json",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-data-dfs-backlinks-summary.json": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/dfs-backlinks-summary.json",
+    "date": "2026-11-14"
   }
 }

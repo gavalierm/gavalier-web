@@ -151,6 +151,10 @@
     "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_mcp.json",
     "date": "2026-11-14"
   },
+  "zdroje/seo/audit-2026-11-13-data-geo-f-.well-known-nlweb": {
+    "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_.well-known_nlweb",
+    "date": "2026-11-14"
+  },
   "zdroje/seo/audit-2026-11-13-data-geo-f-ai.txt": {
     "description": "Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/f_ai.txt",
     "date": "2026-11-14"

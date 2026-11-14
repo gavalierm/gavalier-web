@@ -1,0 +1,36 @@
+Automatizácia firemných procesov
+Automatizácia nahradí opakovanú ručnú prácu (prepisovanie údajov medzi systémami, ručne skladané reporty, nahadzovanie produktov) skriptom, ktorý ju spraví za vás. Navrhnem ju, naprogramujem a nasadím. Cenu poviem dopredu a platíte len za výsledok.
+Čo konkrétne spravím
+- Nahadzovanie produktov a prepisovanie údajov medzi systémami namiesto ručného kopírovania.
+- Reporty, ktoré sa dnes skladajú ručne, a ktoré sa po novom pripravia samy.
+- Prepojenie systémov, ktoré spolu nehovoria, do jedného toku údajov.
+- Skripty a integrácie cez API v JavaScripte, TypeScripte, PHP alebo Pythone (podľa toho, čo vo firme už beží).
+- Nasadenie, aby automatizácia bežala bez vášho zásahu, a úprava neskôr, keď sa zmení proces.
+Kedy sa to oplatí
+Automatizácia sa oplatí tam, kde človek robí ten istý postup opakovane a podľa jasných pravidiel. Ak sa pri tom robia chyby alebo to nikto nechce robiť, je to dobrý kandidát. Ak je postup vždy iný a rozhoduje sa pri ňom podľa citu, skript zvyčajne nepomôže.
+Často sa na začiatku ukáže, že stačí menší zásah, než ste čakali. Vtedy vám to poviem rovno a nič zbytočné nepredávam.
+Ako to prebieha
+- Zavoláte na +421 915 697 915 alebo napíšete. Stačí pár viet, nemusí to byť odborné.
+- Doptám sa na detaily, aby som pochopil, o čo ide. Často sa pritom ukáže, že sa to dá spraviť jednoduchšie. Poviem, čo by som spravil, koľko to bude stáť a dokedy, dopredu a natvrdo.
+- Ak vám to sedí, ide sa robiť. Ak nie, nič neplatí.
+Koľko to stojí
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí: ak sa práca natiahne, dodatočné hodiny neúčtujem. Hovor aj návrh riešenia sú zadarmo a nezáväzné.
+Presnú cenu poviem po krátkom telefonáte, dopredu a záväzne.
+Najčastejšie otázky
+Čo sa dá automatizovať?
+Opakované činnosti podľa jasných pravidiel: prepisovanie údajov medzi systémami, nahadzovanie produktov, ručne skladané reporty alebo rozosielanie e-mailov. Ak sa postup vždy riadi tými istými krokmi, dá sa zvyčajne prepísať do skriptu.
+Ako zistím, či sa mi automatizácia oplatí?
+Zavolajte alebo napíšte, čo robíte ručne. Poviem vám rovno, či sa to dá automatizovať, ako a čo to bude stáť. Hovor aj návrh riešenia sú zadarmo a nezáväzné.
+Koľko automatizácia stojí?
+Zákazky beriem od pár desiatok eur po tisíce, podľa toho, čo treba spraviť. Cenu poviem dopredu a platí, dodatočné hodiny pri natiahnutej práci neúčtujem.
+Čo ak mi výsledok nebude sedieť?
+Platíte len za výsledok. Ak dodané nesedí s dohodou, peniaze nepýtam.
+Čo keď sa proces neskôr zmení?
+Odovzdaním spolupráca nekončí. Keď po čase potrebujete niečo pridať alebo doladiť, stačí zavolať a nemusíte hľadať nikoho nového.
+Musím rozumieť programovaniu?
+Nie. Stačí mi pár viet o tom, čo robíte ručne. Nemusí to byť odborné, doptám sa na detaily.
+Pracujete aj mimo Popradu?
+Áno, pre klientov na celom Slovensku. Základom je telefonát alebo e-mail.
+Súvisiace stránky a články
+Chcete to prebrať?
+Zavolajte alebo napíšte. Hovor aj návrh riešenia sú zadarmo a nezáväzné.

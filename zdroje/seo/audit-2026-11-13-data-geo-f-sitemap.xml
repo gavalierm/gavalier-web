@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!--
+    Ako pridať stránku: skopíruj blok <url> nižšie, zmeň <loc> na skutočnú adresu (bez #kotvy)
+    a nastav <lastmod> na dátum poslednej reálnej zmeny obsahu (RRRR-MM-DD).
+    Šablóna článku a postup: docs/blog-postup.md
+  -->
+
+  <url>
+    <loc>https://www.gavalier.sk/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <image:image>
+      <image:loc>https://www.gavalier.sk/assets/gavo_edited.png</image:loc>
+      <image:title>Marcel Gavalier — Coder, AI Engineer, Sieťar, Audio \ Video Producer</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/automatizacia/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/tvorba-webu/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/ai-agenti/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/seo-llm-optimalizacia/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+
+</urlset>

@@ -1,11 +1,11 @@
 # Zoznam tém pre blog
 
-Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písania a publikovania je v `docs/blog-postup.md`.
+Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písania a publikovania je v skille `blog-clanok` (gavalier-brain).
 
 ## Pravidlá pre všetky články
 
 - Návod alebo prehľad, nie vymyslená prípadová štúdia. Reálny príklad (aj anonymizovaný) pridať len s údajmi, ktoré Marcel overí.
-- Čísla, ceny a časy iba overené. Čo chýba, sa zapíše do `docs/otvorene-texty.md` (nie do HTML komentára, ten je v zdroji stránky verejný).
+- Čísla, ceny a časy iba overené. Čo chýba, sa zapíše do `vystupy/dokumenty/otvorene-texty.md` (nie do HTML komentára, ten je v zdroji stránky verejný).
 - Odpoveď na hlavnú otázku v prvom odseku, 2 až 3 vety zhrnutia hore, FAQ na konci, odkaz na príslušnú službu.
 - Sieťové a audio/video témy sem nepatria. Blog je o programovaní, webe, automatizácii a AI.
 
@@ -59,4 +59,4 @@ Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písa
 
 ## Šablóna článku
 
-Súbor `blog/_sablona/index.html` je vzor (obsahuje `noindex` a na web sa nenasadzuje). Postup použitia: `docs/blog-postup.md`.
+Súbor `blog/_sablona/index.html` je vzor (obsahuje `noindex` a na web sa nenasadzuje). Postup použitia: skill `blog-clanok` (gavalier-brain).

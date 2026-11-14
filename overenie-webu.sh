@@ -1,5 +1,5 @@
 #!/bin/sh
-# Overí živý web gavalier.sk po nasadení (docs/cloudflare-hosting.md, Overenie po nasadení).
+# Overí živý web gavalier.sk po nasadení (skill hosting-cloudflare v gavalier-brain, Overenie po nasadení).
 # Použitie: sh overenie-webu.sh [/cesta[=hľadaný text] ...]
 #   Bez argumentov: základná kontrola. Argument /cesta čaká 200, /cesta=text čaká 200 a text v obsahu.
 # Výstup: riadok na kontrolu (OK/CHYBA), na konci súhrn; návratový kód 1 pri chybe.
@@ -16,7 +16,7 @@ check "apex presmeruje na" "$W/" "$loc"
 for u in / /automatizacia/ /tvorba-webu/ /ai-agenti/ /ai-poradenstvo/ /seo-llm-optimalizacia/ /blog/ /robots.txt /sitemap.xml /llms.txt; do
   check "$u" 200 "$(code "$W$u")"
 done
-for u in /docs /docs/blog-postup.md /deploy.sh /deploy-do-cloudflare.sh /overenie-webu.sh /.mcp.json /wrangler.jsonc; do
+for u in /docs /docs/blog-postup.md /vystupy/dokumenty/otvorene-texty.md /zdroje /INDEX.md /deploy.sh /deploy-do-cloudflare.sh /overenie-webu.sh /.mcp.json /wrangler.jsonc; do
   check "$u (nepatrí na web)" 404 "$(code "$W$u")"
 done
 for u in /blog /index.html /AI-agenti/; do

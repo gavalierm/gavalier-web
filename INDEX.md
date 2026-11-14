@@ -23,6 +23,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-briefs-content.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): briefs/content.txt |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-briefs-dataforseo.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): briefs/dataforseo.txt |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-briefs-geo.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): briefs/geo.txt |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-briefs-schema.txt | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): briefs/schema.txt |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-action-plan.md | Akčný plán gavalier.sk (z auditu 2026-11-13) |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-counts.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-counts.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-getcrawlstats.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-GetCrawlStats.json |  | seo | 2026-11-14 |

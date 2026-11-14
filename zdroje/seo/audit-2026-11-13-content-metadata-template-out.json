@@ -1,0 +1,91 @@
+{
+  "pages": [
+    {
+      "url": "https://www.gavalier.sk/",
+      "title": "Marcel Gavalier \u2014 Weby, IT siete, eventy a live prenosy",
+      "description": "Marcel Gavalier, Poprad: AI a automatiz\u00e1cie, weby a aplik\u00e1cie, siete, zvuk a video na eventy. Cena dopredu, plat\u00edte len za v\u00fdsledok. +421 915 697 915.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/automatizacia/",
+      "title": "Automatiz\u00e1cia firemn\u00fdch procesov | Marcel Gavalier",
+      "description": "Automatiz\u00e1cia rutinnej pr\u00e1ce: prepisovanie \u00fadajov, reporty, e-maily, nahadzovanie produktov. Cena dopredu, plat\u00edte za v\u00fdsledok. Poprad, cel\u00e9 Slovensko.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/tvorba-webu/",
+      "title": "Tvorba webu na mieru a PWA aplik\u00e1cie | Marcel Gavalier",
+      "description": "Web na mieru bez prepl\u00e1can\u00fdch \u0161abl\u00f3n: modern\u00fd stack, \u010dist\u00fd k\u00f3d, hosting a spr\u00e1va. Cena dopredu, plat\u00edte za v\u00fdsledok. Poprad, cel\u00e9 Slovensko.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/ai-agenti/",
+      "title": "AI agenti a dashboardy pre firmy | Marcel Gavalier",
+      "description": "AI agenti a dashboardy: prepoj\u00edm syst\u00e9my do jedn\u00e9ho preh\u013eadu a nasad\u00edm agenta na opakovan\u00fa pr\u00e1cu. Cena dopredu, plat\u00edte za v\u00fdsledok. Poprad.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+      "title": "SEO a LLM optimaliz\u00e1cia webu | Marcel Gavalier",
+      "description": "SEO a optimaliz\u00e1cia pre ChatGPT, Perplexity a Google: \u0161trukt\u00farovan\u00e9 d\u00e1ta, schema.org, s\u00e9mantick\u00e9 HTML, sitemap a robots. Poprad, cel\u00e9 Slovensko.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/blog/",
+      "title": "Blog o automatiz\u00e1cii, webe a AI | Marcel Gavalier",
+      "description": "Praktick\u00e9 n\u00e1vody o automatiz\u00e1cii procesov, tvorbe webov, AI agentoch a vidite\u013enosti webu v odpovediach ChatGPT a vo vyh\u013ead\u00e1va\u010doch.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/",
+      "title": "Ako sa objavi\u0165 v odpovediach ChatGPT | Marcel Gavalier",
+      "description": "\u010co m\u00f4\u017eete na vlastnom webe ovplyvni\u0165, aby v\u00e1s na\u0161li ChatGPT, Perplexity a Google: crawlery, robots.txt, \u0161trukt\u00fara textu a \u0161trukt\u00farovan\u00e9 d\u00e1ta.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    },
+    {
+      "url": "https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/",
+      "title": "Automatiz\u00e1cia faktur\u00e1cie a e-mailov v malej firme | Gavalier",
+      "description": "Praktick\u00fd postup pre mal\u00fa firmu: zmapova\u0165 proces, vybra\u0165, \u010do automatizova\u0165, za\u010da\u0165 mal\u00fdm krokom a spo\u010d\u00edta\u0165 \u00fasporu. Bez zbyto\u010dn\u00fdch n\u00e1strojov.",
+      "templated": false,
+      "severity": "none",
+      "cta_phrase": null,
+      "flags": [],
+      "signals": []
+    }
+  ],
+  "pages_checked": 8,
+  "templated_count": 0,
+  "templated_ratio": 0.0,
+  "shared_cta_phrases": {},
+  "site_flags": [],
+  "site_risk": "low",
+  "method": "heuristic"
+}

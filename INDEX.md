@@ -68,6 +68,7 @@ Súbory v zdroje/, temy/ a vystupy/, ktoré sleduje git. Generuje ho workflow pr
 | zdroje/seo/audit-2026-11-13-data-geo-page.tmp | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/page.tmp |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-2026-11-13-data-geo-r-homeai-agenti-.json | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeai-agenti_.json |  | seo | 2026-11-14 |
+| zdroje/seo/audit-2026-11-13-data-geo-r-homeautomatizacia-.err | Surove data SEO auditu 2026-11-13 (DataForSEO, GSC, PSI, briefy): data/geo/r_homeautomatizacia_.err |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-action-plan.md | Akčný plán gavalier.sk (z auditu 2026-11-13) |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-counts.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-counts.json |  | seo | 2026-11-14 |
 | zdroje/seo/audit-starsi-data-bing-getcrawlstats.json | Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/bing-GetCrawlStats.json |  | seo | 2026-11-14 |

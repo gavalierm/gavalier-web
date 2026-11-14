@@ -86,5 +86,9 @@
   "zdroje/seo/audit-starsi-data-gsc-sitemaps.json": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): data/gsc-sitemaps.json",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-findings-agentic.md": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/agentic.md",
+    "date": "2026-11-14"
   }
 }

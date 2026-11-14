@@ -1,0 +1,452 @@
+{
+  "title": "SEO a LLM optimaliz\u00e1cia webu | Marcel Gavalier",
+  "meta_description": "SEO a optimaliz\u00e1cia pre ChatGPT, Perplexity a Google: \u0161trukt\u00farovan\u00e9 d\u00e1ta, schema.org, s\u00e9mantick\u00e9 HTML, sitemap a robots. Poprad, cel\u00e9 Slovensko.",
+  "meta_robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  "canonical": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+  "h1": [
+    "SEO a LLM optimaliz\u00e1cia webu"
+  ],
+  "h2": [
+    "\u010co konkr\u00e9tne sprav\u00edm",
+    "\u010co sa d\u00e1 a \u010do sa ned\u00e1 s\u013e\u00fabi\u0165",
+    "Ako to prebieha",
+    "Ko\u013eko to stoj\u00ed",
+    "Naj\u010dastej\u0161ie ot\u00e1zky",
+    "S\u00favisiace str\u00e1nky a \u010dl\u00e1nky",
+    "Chcete to prebra\u0165?",
+    "Zavolajte."
+  ],
+  "h3": [
+    "\u010co je LLM optimaliz\u00e1cia?",
+    "Zaru\u010d\u00edte, \u017ee ma ChatGPT bude citova\u0165?",
+    "Potrebujem s\u00fabor llms.txt?",
+    "Zobraz\u00ed sa m\u00f4j web vo vyh\u013ead\u00e1van\u00ed ChatGPT?",
+    "Pom\u00f4\u017eu \u0161trukt\u00farovan\u00e9 d\u00e1ta s hodnoten\u00edm v Google?",
+    "Ko\u013eko SEO a LLM optimaliz\u00e1cia stoj\u00ed?",
+    "D\u00e1 sa to nasadi\u0165 aj na existuj\u00faci web?"
+  ],
+  "heading_outline": [
+    {
+      "level": 1,
+      "text": "SEO a LLM optimaliz\u00e1cia webu"
+    },
+    {
+      "level": 2,
+      "text": "\u010co konkr\u00e9tne sprav\u00edm"
+    },
+    {
+      "level": 2,
+      "text": "\u010co sa d\u00e1 a \u010do sa ned\u00e1 s\u013e\u00fabi\u0165"
+    },
+    {
+      "level": 2,
+      "text": "Ako to prebieha"
+    },
+    {
+      "level": 2,
+      "text": "Ko\u013eko to stoj\u00ed"
+    },
+    {
+      "level": 2,
+      "text": "Naj\u010dastej\u0161ie ot\u00e1zky"
+    },
+    {
+      "level": 3,
+      "text": "\u010co je LLM optimaliz\u00e1cia?"
+    },
+    {
+      "level": 3,
+      "text": "Zaru\u010d\u00edte, \u017ee ma ChatGPT bude citova\u0165?"
+    },
+    {
+      "level": 3,
+      "text": "Potrebujem s\u00fabor llms.txt?"
+    },
+    {
+      "level": 3,
+      "text": "Zobraz\u00ed sa m\u00f4j web vo vyh\u013ead\u00e1van\u00ed ChatGPT?"
+    },
+    {
+      "level": 3,
+      "text": "Pom\u00f4\u017eu \u0161trukt\u00farovan\u00e9 d\u00e1ta s hodnoten\u00edm v Google?"
+    },
+    {
+      "level": 3,
+      "text": "Ko\u013eko SEO a LLM optimaliz\u00e1cia stoj\u00ed?"
+    },
+    {
+      "level": 3,
+      "text": "D\u00e1 sa to nasadi\u0165 aj na existuj\u00faci web?"
+    },
+    {
+      "level": 2,
+      "text": "S\u00favisiace str\u00e1nky a \u010dl\u00e1nky"
+    },
+    {
+      "level": 2,
+      "text": "Chcete to prebra\u0165?"
+    },
+    {
+      "level": 2,
+      "text": "Zavolajte."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.gavalier.sk/assets/gavo_colored_eye.png",
+      "alt": "",
+      "width": "932",
+      "height": "228",
+      "loading": null,
+      "lazy_method": "none",
+      "resolved_src": null,
+      "srcset_candidates": [],
+      "decorative": true
+    }
+  ],
+  "links": {
+    "internal": [
+      {
+        "href": "https://www.gavalier.sk/",
+        "text": "Marcel Gavalier",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/automatizacia/",
+        "text": "Automatiz\u00e1cia",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/tvorba-webu/",
+        "text": "Tvorba webu",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/ai-agenti/",
+        "text": "AI agenti",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+        "text": "SEO a LLM",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/",
+        "text": "Blog",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/#zaruka",
+        "text": "Z\u00e1ruka",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/#ako-to-funguje",
+        "text": "Cena",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/#referencie",
+        "text": "Referencie",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/#kto-to-robi",
+        "text": "Kto to rob\u00ed",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/#contact",
+        "text": "Kontakt",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/",
+        "text": "Domov",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/",
+        "text": "Ako sa objavi\u0165 v odpovediach ChatGPT a in\u00fdch AI asistentov\u010co ovplyv\u0148ujeme na vlastnom webe a \u010do nie:",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/tvorba-webu/",
+        "text": "Tvorba webu na mieruNov\u00fd web postaven\u00fd s oh\u013eadom na SEO od za\u010diatku.",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/",
+        "text": "Ako automatizova\u0165 faktur\u00e1ciu a e-maily v malej firmePostup od mapovania procesu po prv\u00fa automatiz\u00e1ci",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/ai-agenti/",
+        "text": "AI agenti pre firmyAI v procesoch vo va\u0161ej firme.",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/automatizacia/",
+        "text": "Automatiz\u00e1cia firemn\u00fdch procesov",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/tvorba-webu/",
+        "text": "Tvorba webu na mieru",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/ai-agenti/",
+        "text": "AI agenti pre firmy",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+        "text": "SEO a LLM optimaliz\u00e1cia",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/",
+        "text": "Ako sa objavi\u0165 v odpovediach ChatGPT",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/",
+        "text": "Automatiz\u00e1cia faktur\u00e1cie a e-mailov",
+        "rel": []
+      },
+      {
+        "href": "https://www.gavalier.sk/blog/",
+        "text": "V\u0161etky \u010dl\u00e1nky",
+        "rel": []
+      }
+    ],
+    "external": [
+      {
+        "href": "tel:+421915697915",
+        "text": "+421 915 697 915",
+        "rel": []
+      },
+      {
+        "href": "tel:+421915697915",
+        "text": "+421 915 697 915",
+        "rel": []
+      },
+      {
+        "href": "mailto:marcel@gavalier.sk",
+        "text": "Nap\u00edsa\u0165",
+        "rel": []
+      },
+      {
+        "href": "tel:+421915697915",
+        "text": "Telef\u00f3n +421 915 697 915",
+        "rel": []
+      },
+      {
+        "href": "mailto:marcel@gavalier.sk",
+        "text": "Email marcel@gavalier.sk",
+        "rel": []
+      }
+    ]
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#webpage",
+      "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+      "name": "SEO a LLM optimaliz\u00e1cia webu | Marcel Gavalier",
+      "description": "SEO a optimaliz\u00e1cia pre ChatGPT, Perplexity a Google: \u0161trukt\u00farovan\u00e9 d\u00e1ta, schema.org, s\u00e9mantick\u00e9 HTML, sitemap a robots. Poprad, cel\u00e9 Slovensko.",
+      "inLanguage": "sk-SK",
+      "isPartOf": {
+        "@id": "https://www.gavalier.sk/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#breadcrumb"
+      },
+      "dateModified": "2026-11-11",
+      "mainEntity": {
+        "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#service"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#service",
+      "name": "SEO a LLM optimaliz\u00e1cia",
+      "serviceType": "Optimaliz\u00e1cia pre vyh\u013ead\u00e1va\u010de a AI asistentov",
+      "description": "Technick\u00e9 SEO a optimaliz\u00e1cia webu pre AI asistentov: \u0161trukt\u00farovan\u00e9 d\u00e1ta a schema.org, s\u00e9mantick\u00e9 HTML, sitemap.xml, robots.txt a llms.txt.",
+      "url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+      "inLanguage": "sk-SK",
+      "provider": {
+        "@type": "ProfessionalService",
+        "@id": "https://www.gavalier.sk/#service",
+        "name": "Marcel Gavalier",
+        "url": "https://www.gavalier.sk/",
+        "telephone": "+421915697915",
+        "email": "marcel@gavalier.sk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jarmo\u010dn\u00e1 30",
+          "postalCode": "058 01",
+          "addressLocality": "Poprad",
+          "addressCountry": "SK"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Slovensko"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Domov",
+          "item": "https://www.gavalier.sk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SEO a LLM optimaliz\u00e1cia webu",
+          "item": "https://www.gavalier.sk/seo-llm-optimalizacia/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.gavalier.sk/seo-llm-optimalizacia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "\u010co je LLM optimaliz\u00e1cia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je to pr\u00edprava webu tak, aby mu rozumeli aj AI asistenti (ChatGPT, Perplexity, Google AI). Zah\u0155\u0148a \u0161trukt\u00farovan\u00e9 d\u00e1ta, s\u00e9mantick\u00e9 HTML, jasn\u00fd text s priamymi odpove\u010fami a spr\u00e1vne nastaven\u00e9 pravidl\u00e1 pre crawlery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Zaru\u010d\u00edte, \u017ee ma ChatGPT bude citova\u0165?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Nikto to zaru\u010di\u0165 nem\u00f4\u017ee, odpovede AI sa menia. D\u00e1 sa v\u0161ak odstr\u00e1ni\u0165 technick\u00e9 prek\u00e1\u017eky, kv\u00f4li ktor\u00fdm by ste nemuseli by\u0165 v odpovediach v\u00f4bec."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Potrebujem s\u00fabor llms.txt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie je nutn\u00fd. Google ho pri vyh\u013ead\u00e1van\u00ed nepou\u017e\u00edva. Pre in\u00e9 n\u00e1stroje je to lacn\u00e1 pom\u00f4cka, preto ho pri weboch prid\u00e1vam, ale nespoliehajte sa na neho."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Zobraz\u00ed sa m\u00f4j web vo vyh\u013ead\u00e1van\u00ed ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vyh\u013ead\u00e1vanie ChatGPT pou\u017e\u00edva crawler OAI-SearchBot. Ak ho robots.txt nezablokuje, web sa m\u00f4\u017ee zobrazi\u0165. Pozor, nie je to z\u00e1ruka."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pom\u00f4\u017eu \u0161trukt\u00farovan\u00e9 d\u00e1ta s hodnoten\u00edm v Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\u0160trukt\u00farovan\u00e9 d\u00e1ta pom\u00e1haj\u00fa vyh\u013ead\u00e1va\u010dom pochopi\u0165 obsah str\u00e1nky. Priamy vplyv na poradie s\u013e\u00fabi\u0165 nemo\u017eno. Pozor, Google u\u017e roz\u0161\u00edren\u00e9 v\u00fdsledky FAQ vo vyh\u013ead\u00e1van\u00ed nezobrazuje."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ko\u013eko SEO a LLM optimaliz\u00e1cia stoj\u00ed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Z\u00e1kazky beriem od p\u00e1r desiatok eur po tis\u00edce, pod\u013ea toho, \u010do treba spravi\u0165. Cenu poviem dopredu a plat\u00ed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "D\u00e1 sa to nasadi\u0165 aj na existuj\u00faci web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\u00c1no. V\u00e4\u010d\u0161inu \u00faprav (\u0161trukt\u00farovan\u00e9 d\u00e1ta, sitemap, robots.txt, texty, obr\u00e1zky) m\u00f4\u017eem spravi\u0165 aj na webe, ktor\u00fd u\u017e be\u017e\u00ed."
+          }
+        }
+      ]
+    }
+  ],
+  "schema_invalid": {
+    "count": 0,
+    "samples": []
+  },
+  "open_graph": {
+    "og:type": "website",
+    "og:url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+    "og:title": "SEO a LLM optimaliz\u00e1cia webu | Marcel Gavalier",
+    "og:description": "SEO a optimaliz\u00e1cia pre ChatGPT, Perplexity a Google: \u0161trukt\u00farovan\u00e9 d\u00e1ta, schema.org, s\u00e9mantick\u00e9 HTML, sitemap a robots. Poprad, cel\u00e9 Slovensko.",
+    "og:image": "https://www.gavalier.sk/assets/og_image.png",
+    "og:image:width": "1212",
+    "og:image:height": "716",
+    "og:image:type": "image/png",
+    "og:image:alt": "Marcel Gavalier",
+    "og:locale": "sk_SK",
+    "og:site_name": "Gavalier"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:url": "https://www.gavalier.sk/seo-llm-optimalizacia/",
+    "twitter:title": "SEO a LLM optimaliz\u00e1cia webu | Marcel Gavalier",
+    "twitter:description": "SEO a optimaliz\u00e1cia pre ChatGPT, Perplexity a Google: \u0161trukt\u00farovan\u00e9 d\u00e1ta, schema.org, s\u00e9mantick\u00e9 HTML, sitemap a robots. Poprad, cel\u00e9 Slovensko.",
+    "twitter:image": "https://www.gavalier.sk/assets/og_image.png",
+    "twitter:image:alt": "Marcel Gavalier"
+  },
+  "word_count": 598,
+  "hreflang": [],
+  "hidden_text": {
+    "chars": 112,
+    "by_source": {
+      "comment": 112,
+      "template": 0,
+      "noscript": 0,
+      "hidden_attr": 0,
+      "aria_hidden": 0,
+      "inline_style": 0,
+      "sr_only_class": 0
+    },
+    "collapsed_chars": 100,
+    "samples": [
+      {
+        "source": "comment",
+        "chars": 43,
+        "text": "Hlavi\u010dka je na podstr\u00e1nkach st\u00e1le vidite\u013en\u00e1"
+      },
+      {
+        "source": "comment",
+        "chars": 21,
+        "text": "Open Graph / Facebook"
+      },
+      {
+        "source": "comment",
+        "chars": 13,
+        "text": "Favicon & PWA"
+      },
+      {
+        "source": "comment",
+        "chars": 12,
+        "text": "Twitter Card"
+      },
+      {
+        "source": "comment",
+        "chars": 10,
+        "text": "Schema.org"
+      }
+    ]
+  }
+}

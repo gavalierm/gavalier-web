@@ -94,5 +94,9 @@
   "zdroje/seo/audit-starsi-findings-content.md": {
     "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/content.md",
     "date": "2026-11-14"
+  },
+  "zdroje/seo/audit-starsi-findings-geo.md": {
+    "description": "Skorsi audit gavalier.sk (surove data, nalezy, snimky): findings/geo.md",
+    "date": "2026-11-14"
   }
 }

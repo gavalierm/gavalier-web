@@ -24,3 +24,14 @@ blog/ZOZNAM-TEM.md
 .mcp.json
 overenie-webu.sh
 .brain
+# workflow (dáta 2.1 a staršie): nikdy na web
+topics
+temy
+decisions
+memory
+logs
+.githooks
+.worktrees
+README.md
+CLAUDE.md
+AGENTS.md

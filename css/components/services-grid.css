@@ -210,3 +210,8 @@
     transition: none;
   }
 }
+
+/* cursor.css zväčšuje každý odkaz pri hoveri (a:hover scale 1.05), v mriežke to skákalo */
+.svc__row:hover {
+  transform: none;
+}

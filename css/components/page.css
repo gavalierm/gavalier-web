@@ -520,3 +520,9 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
+
+/* Tlačidlá .link-arrow v texte stránky: biely text na čiernom, nie čierny ako odkazy v .prose */
+.prose a.link-arrow {
+  color: var(--theme-bg);
+  text-decoration: none;
+}

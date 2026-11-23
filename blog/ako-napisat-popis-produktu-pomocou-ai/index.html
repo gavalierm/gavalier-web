@@ -119,7 +119,7 @@
           "name": "Môžem použiť popis od výrobcu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Môžete ho použiť ako zdroj údajov, ale nie ako hotový text. Rovnaký text má viac predajcov, takže sa od nich nijako nelíšite. Google odporúča, aby obsah nebol iba kopírovaný alebo prepisovaný, ale pridával vlastnú hodnotu."
+            "text": "Iba ako zdroj údajov, nie ako hotový text. Rovnaký text má viac predajcov a Google odporúča pridať vlastnú hodnotu."
           }
         },
         {
@@ -127,7 +127,7 @@
           "name": "Dá sa popisy produktov generovať hromadne?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dá, ak máte pevnú stavbu popisu, overené vstupné údaje a kontrolu výstupu. Začnite jedným produktom, potom malou dávkou a pred každým importom si urobte zálohu exportu."
+            "text": "Dá, ak máte pevnú stavbu, overené údaje a kontrolu výstupu. Začnite jedným produktom, potom malou dávkou a pred importom urobte zálohu."
           }
         },
         {
@@ -135,23 +135,7 @@
           "name": "Ako zistím, že AI nevymyslela parameter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Každý technický údaj musí mať zdroj, ktorý viete otvoriť. Po vygenerovaní porovnajte údaje s webom výrobcu a chýbajúci údaj vynechajte, nedomýšľajte ho."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Čo robiť, keď sa údaje výrobcu a dodávateľa líšia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Rozdiel nevyhodnocujte potichu. Použite údaj výrobcu a rozdiel zapíšte, lebo môže ísť o inú verziu produktu alebo chybu v jednom zdroji."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pomôže vlastný popis vo vyhľadávaní?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nikto vám pozíciu nezaručí. Originálny popis však odpovedá na otázky zákazníka, ktoré v texte výrobcu nie sú, a to je to, čo Google v sprievodcovi obsahom označuje ako pridanú hodnotu."
+            "text": "Každý údaj musí mať zdroj, ktorý viete otvoriť. Porovnajte ho s webom výrobcu a chýbajúci údaj vynechajte."
           }
         }
       ]
@@ -205,82 +189,68 @@
       <header class="in">
         <p class="kicker">AI agenti</p>
         <h1 class="a-title">Ako napísať popis produktu do e-shopu pomocou AI, aby nebol kópiou výrobcu</h1>
-        <p class="lede">AI vie napísať popis produktu za pár sekúnd, ale kvalitný popis dostanete iba vtedy, keď jej dáte overené údaje o produkte, pevnú stavbu textu a po zápise všetko skontrolujete proti zdroju. Bez toho dostanete text, ktorý znie dobre a môže obsahovať vymyslený parameter. Tento článok ukazuje postup od údajov po hromadné nasadenie.</p>
+        <p class="lede">AI napíše popis produktu za pár sekúnd. Bude dobrý iba vtedy, keď jej dáte overené údaje a pevnú stavbu textu. Potom všetko skontrolujte proti zdroju. Inak dostanete pekný text s vymyslenými parametrami.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Prečo kópia od výrobcu nestačí</h2>
-      <p>Text výrobcu alebo dodávateľa má rovnaký obsah na desiatkach e-shopov. Google v <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">sprievodcovi užitočným obsahom</a> odporúča, aby obsah zo zdrojov nebol iba kopírovaný alebo prepisovaný a aby pridával vlastnú hodnotu a originalitu. Prepísať ten istý text AI nástrojom do iných slov problém nerieši: ak nepridáte nič, čo zákazník inde nenájde, popis sa od ostatných nelíši.</p>
-      <p>Hodnotu popisu robí to, čo zákazník potrebuje pri rozhodovaní: pre koho produkt je, na čo ho použije, čo sa líši od podobných produktov a čo si má pred kúpou overiť.</p>
+      <h2>Prečo nestačí text od výrobcu</h2>
+      <p>Rovnaký text má desiatky e-shopov. Google v <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content">sprievodcovi užitočným obsahom</a> odporúča, aby obsah nebol iba kopírovaný alebo prepisovaný. Má pridať vlastnú hodnotu.</p>
+      <p>Prepísať text AI do iných slov to nerieši. Zákazník potrebuje vedieť, pre koho produkt je, na čo ho použije a čo si má pred kúpou overiť.</p>
 
-      <h2>Čo má popis produktu obsahovať</h2>
+      <h2>Čo má popis obsahovať</h2>
       <ul>
-        <li><strong>Úvod v jednej-dvoch vetách:</strong> čo to je a pre koho.</li>
+        <li><strong>Úvod:</strong> čo to je a pre koho.</li>
         <li><strong>Vlastnosti s dôvodom:</strong> nie „odolný materiál“, ale čo to zákazníkovi dáva.</li>
-        <li><strong>Technické údaje</strong> v tabuľke alebo zozname, každý s overiteľným zdrojom.</li>
-        <li><strong>Čo je v balení</strong> a čo si treba dokúpiť.</li>
-        <li><strong>Odpovede na otázky</strong>, ktoré zákazníci kladia pred kúpou.</li>
+        <li><strong>Technické údaje</strong> v tabuľke, každý s overiteľným zdrojom.</li>
+        <li><strong>Čo je v balení</strong> a čo treba dokúpiť.</li>
+        <li><strong>Odpovede</strong> na otázky, ktoré zákazníci kladú pred kúpou.</li>
       </ul>
 
       <h2>Ako zadať AI stavbu a tón</h2>
-      <p>Najčastejšia chyba je jednoriadkové zadanie typu „napíš popis tohto produktu“. Výsledok je pri každom produkte iný a hromadne sa nedá skontrolovať. Zadanie zafixujte:</p>
+      <p>Zadanie „napíš popis tohto produktu“ dá pri každom produkte iný výsledok. Zadanie preto zafixujte:</p>
       <ol>
-        <li><strong>Stavba popisu je pevná.</strong> Rovnaké bloky v rovnakom poradí pre celú kategóriu. Zákazník sa v e-shope orientuje rýchlejšie a vy viete, kde hľadať chybu.</li>
-        <li><strong>Tón je opísaný vetami, nie prívlastkami.</strong> Lepšie „oslovuj zákazníka priamo, krátke vety, žiadne superlatívy“ ako „buď profesionálny“.</li>
-        <li><strong>AI dostane iba údaje, ktoré ste jej dali.</strong> Povedzte jej výslovne: čo nie je vo vstupe, nepíš. Ak údaj chýba, má to nahlásiť, nie domyslieť.</li>
-        <li><strong>Každá rada má dôvod.</strong> Zákazník sa pri tipe hneď pýta „prečo“, preto k tipu patrí jedna veta s dôvodom, ktorý vychádza zo zdroja.</li>
+        <li><strong>Pevná stavba.</strong> Rovnaké bloky v rovnakom poradí v celej kategórii.</li>
+        <li><strong>Tón opíšte vetami.</strong> Napríklad „oslovuj zákazníka priamo, krátke vety, žiadne superlatívy“.</li>
+        <li><strong>AI použije iba vaše údaje.</strong> Čo chýba, má nahlásiť, nie domyslieť.</li>
       </ol>
 
       <h2>Kontrola faktov proti zdroju</h2>
-      <p>AI modely môžu vymyslieť parameter, ktorý znie vierohodne. Preto sa každý technický údaj v popise musí dať vrátiť k zdroju. Praktické pravidlá:</p>
+      <p>AI môže vymyslieť parameter, ktorý znie vierohodne. Každý údaj sa preto musí dať vrátiť k zdroju.</p>
       <ul>
-        <li>Údaje berte z webu výrobcu a z dokumentácie, nie z textu iného predajcu.</li>
-        <li>Keď sa údaj výrobcu a dodávateľa líši (výdrž, rozmer, rozsah), nerozhodujte potichu. Použite údaj výrobcu a rozdiel zapíšte, aby ho niekto vyriešil.</li>
-        <li>Údaj, ktorý uvádza iba jeden predajca a výrobca ho nepotvrdzuje, radšej vynechajte.</li>
-        <li>Ak nepoznáte presnú verziu produktu (iný objektív, farba, veľkosť), popis nepíšte a spýtajte sa. Údaje sa medzi verziami môžu líšiť.</li>
+        <li>Údaje berte z webu výrobcu, nie od iného predajcu.</li>
+        <li>Ak sa výrobca a dodávateľ líšia, použite údaj výrobcu a rozdiel zapíšte.</li>
+        <li>Údaj, ktorý výrobca nepotvrdzuje, vynechajte.</li>
+        <li>Pri prepise starého popisu porovnajte, či v novom nechýba informácia zo starého.</li>
       </ul>
-      <p>Pri prepisovaní existujúceho popisu pridajte ešte jednu kontrolu: zoznam informácií zo starého popisu porovnajte s novým. Nový text je často krajší, ale chýba v ňom jedna informácia, ktorú zákazník hľadal.</p>
-
-      <h2>Obrázky v popise</h2>
-      <p>Grafiky a fotky v popise kontrolujte rovnako prísne ako text: rovnaký pomer strán v kartách, každý obrázok s popisným atribútom <code>alt</code>, vyplnenou šírkou a výškou a bez prázdnych plôch okolo motívu, ktoré vyzerajú ako chyba. Text na grafike od výrobcu môže byť v cudzom jazyku, preto ho v popise vysvetlite slovensky.</p>
 
       <h2>Z praxe</h2>
-      <p>Takto sme postupovali pri klientskom e-shope s poľovníckymi potrebami. Popis má pevnú stavbu, údaje sa berú z webu výrobcu a rozdiel oproti dodávateľovi sa hlási namiesto toho, aby sa potichu vybral jeden. Údaj, ktorý výrobca nepotvrdzuje, sa v popise vynecháva. Po zápise sa popis na živej stránke porovnáva so súborom a každá informácia zo starého popisu sa odškrtáva, či v novom ostala. Pri úprave popisu sa mení iba pole popisu, aby sa nezmenili ceny ani parametre.</p>
+      <p>Pri klientskom e-shope s poľovníckymi potrebami má popis pevnú stavbu. Údaje berieme z webu výrobcu a rozdiel oproti dodávateľovi hlásime. Po zápise porovnávame popis na živej stránke so súborom a meníme iba pole popisu.</p>
 
-      <h2>Hromadný postup a záloha</h2>
+      <h2>Hromadný postup</h2>
       <ol>
-        <li><strong>Najprv jeden produkt.</strong> Vzorový popis schváli človek a podľa neho sa zafixuje stavba.</li>
-        <li><strong>Potom malá dávka</strong> z jednej kategórie. Skontrolujte ju na živej stránke, nielen v súbore.</li>
-        <li><strong>Záloha pred každým importom.</strong> Exportujte aktuálny stav, aby ste sa vedeli vrátiť.</li>
-        <li><strong>Po importe porovnajte export so zálohou:</strong> zmeniť sa smie iba pole, ktoré ste chceli zmeniť.</li>
-        <li><strong>Až potom ďalšia kategória.</strong></li>
+        <li><strong>Najprv jeden produkt.</strong> Vzorový popis schváli človek.</li>
+        <li><strong>Potom malá dávka</strong> z jednej kategórie, skontrolovaná na živej stránke.</li>
+        <li><strong>Pred každým importom záloha</strong> exportu.</li>
+        <li><strong>Po importe porovnajte export so zálohou.</strong> Zmeniť sa smie iba pole popisu.</li>
       </ol>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Môžem použiť popis od výrobcu?</h3></summary>
-          <p class="faq__a">Môžete ho použiť ako zdroj údajov, ale nie ako hotový text. Rovnaký text má viac predajcov, takže sa od nich nijako nelíšite. Google odporúča, aby obsah nebol iba kopírovaný alebo prepisovaný, ale pridával vlastnú hodnotu.</p>
+          <p class="faq__a">Iba ako zdroj údajov, nie ako hotový text. Rovnaký text má viac predajcov a Google odporúča pridať vlastnú hodnotu.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Dá sa popisy produktov generovať hromadne?</h3></summary>
-          <p class="faq__a">Dá, ak máte pevnú stavbu popisu, overené vstupné údaje a kontrolu výstupu. Začnite jedným produktom, potom malou dávkou a pred každým importom si urobte zálohu exportu.</p>
+          <p class="faq__a">Dá, ak máte pevnú stavbu, overené údaje a kontrolu výstupu. Začnite jedným produktom, potom malou dávkou a pred importom urobte zálohu.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Ako zistím, že AI nevymyslela parameter?</h3></summary>
-          <p class="faq__a">Každý technický údaj musí mať zdroj, ktorý viete otvoriť. Po vygenerovaní porovnajte údaje s webom výrobcu a chýbajúci údaj vynechajte, nedomýšľajte ho.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Čo robiť, keď sa údaje výrobcu a dodávateľa líšia?</h3></summary>
-          <p class="faq__a">Rozdiel nevyhodnocujte potichu. Použite údaj výrobcu a rozdiel zapíšte, lebo môže ísť o inú verziu produktu alebo chybu v jednom zdroji.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Pomôže vlastný popis vo vyhľadávaní?</h3></summary>
-          <p class="faq__a">Nikto vám pozíciu nezaručí. Originálny popis však odpovedá na otázky zákazníka, ktoré v texte výrobcu nie sú, a to je to, čo Google v sprievodcovi obsahom označuje ako pridanú hodnotu.</p>
+          <p class="faq__a">Každý údaj musí mať zdroj, ktorý viete otvoriť. Porovnajte ho s webom výrobcu a chýbajúci údaj vynechajte.</p>
         </details>
       </div>
       </div>

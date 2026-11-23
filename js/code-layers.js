@@ -197,7 +197,7 @@
   /* ---------- Dešifrovanie nadpisov ---------- */
   function scramble() {
     const G = '01<>/{}[];=$#_*+:&|~';
-    const heads = [...document.querySelectorAll('.hero__title, .section-lead__headline')].filter(h => !h.closest('.cl-css'));
+    const heads = [...document.querySelectorAll('.hero__title, .section-lead__headline, .svc__name')].filter(h => !h.closest('.cl-css'));
     const all = [];
     heads.forEach(h => {
       h.setAttribute('aria-label', h.textContent.replace(/\s+/g, ' ').trim());

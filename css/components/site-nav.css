@@ -593,3 +593,11 @@ body.nav-open .theme-toggle {
     top: calc(4rem + 0.75rem);
   }
 }
+
+/* Mobil: prepínač témy je vpravo v hlavičke, oko (fotka) ide vedľa neho */
+@media (max-width: 1023px) {
+  .site-header--theme .site-header__eye {
+    right: 3.25rem;
+    max-width: 25vw;
+  }
+}

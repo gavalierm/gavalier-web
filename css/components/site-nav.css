@@ -60,10 +60,10 @@ html {
 
 .site-header__eye {
   position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 1.75rem;
+  right: 0;
+  top: 0;
+  transform: none;
+  height: 100%;
   width: auto;
   display: block;
   user-select: none;
@@ -371,11 +371,14 @@ body.nav-open .theme-toggle {
   }
 
   .site-header__eye {
-    position: static;
+    top: 0;
+    right: 0;
     transform: none;
-    height: 2.5rem;
-    margin-right: -1.5rem;
-    flex: none;
+    height: 100%;
+  }
+
+  .site-header__bar {
+    padding-right: calc(var(--sn-h) * 700 / 171 + 1rem);
   }
 
   /* Menu */
@@ -526,6 +529,10 @@ body.nav-open .theme-toggle {
   .site-header__eye {
     display: none;
   }
+
+  .site-header__bar {
+    padding-right: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -544,5 +551,19 @@ body.nav-open .theme-toggle {
   .site-header,
   .site-nav {
     display: none;
+  }
+}
+
+/* Mobil: oko vyplní výšku hlavičky, ale orezané sprava, aby neprekrylo meno */
+@media (max-width: 1023px) {
+  .site-header__bar {
+    justify-content: flex-start;
+    padding-left: 4.5rem;
+  }
+
+  .site-header__eye {
+    max-width: 30vw;
+    object-fit: cover;
+    object-position: right center;
   }
 }

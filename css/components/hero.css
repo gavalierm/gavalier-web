@@ -3,6 +3,8 @@
    ======================================== */
 
 .hero {
+  /* hero začína pod lepiacou hlavičkou, aby ju hlavička neprekryla */
+  margin-top: 3.25rem;
   background: var(--theme-bg);
   color: var(--theme-text-primary);
   padding: 0;
@@ -121,4 +123,10 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    margin-top: 4rem;
+  }
 }

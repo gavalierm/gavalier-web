@@ -567,3 +567,18 @@ body.nav-open .theme-toggle {
     object-position: right center;
   }
 }
+
+/* Oko v hlavičke: na stránke s hero iba vtedy, keď je hero mimo obrazovky */
+.site-header__eye {
+  transition: opacity 0.25s ease;
+}
+
+.site-header.has-hero:not(.hero-out) .site-header__eye {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header__eye {
+    transition: none;
+  }
+}

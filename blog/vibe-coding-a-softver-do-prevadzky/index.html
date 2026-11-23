@@ -125,7 +125,7 @@
           "name": "Kto vymyslel pojem vibe coding?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Andrej Karpathy, spoluzakladateľ OpenAI, v februári 2025. Podľa Wikipédie ho do marca 2025 zaradil Merriam-Webster medzi trendové slangové výrazy."
+            "text": "Andrej Karpathy, spoluzakladateľ OpenAI, v februári 2025."
           }
         },
         {
@@ -133,7 +133,7 @@
           "name": "Je vibe coding to isté ako programovanie s AI asistentom?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie nutne. Pri vibe codingu v užšom zmysle sa výstup AI prijíma bez dôkladnej kontroly. Ak kód čítate, testujete a rozumiete mu, ide o programovanie s pomocou AI."
+            "text": "Nie nutne. Pri vibe codingu v užšom zmysle sa výstup AI prijíma bez dôkladnej kontroly. Ak kód čítate a testujete, ide o programovanie s pomocou AI."
           }
         },
         {
@@ -141,15 +141,7 @@
           "name": "Môžem takto postaviť web alebo e-shop?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prototyp áno. Na ostrú prevádzku s objednávkami a osobnými údajmi pridajte testy, kontrolu človekom a zálohy, alebo ho nechajte postaviť niekoho, kto za výsledok ručí."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ako zistím, že kód od AI je v poriadku?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Podľa testov, ktoré ste si určili vopred, a podľa kontroly človekom. Samotné „funguje mi to“ pri skúške jedného prípadu nestačí."
+            "text": "Prototyp áno. Na ostrú prevádzku s objednávkami a osobnými údajmi pridajte testy, kontrolu človekom a zálohy."
           }
         }
       ]
@@ -203,51 +195,45 @@
       <header class="in">
         <p class="kicker">AI poradenstvo</p>
         <h1 class="a-title">Čo je vibe coding a dá sa ním spraviť softvér, ktorý vydrží v prevádzke</h1>
-        <p class="lede">Vibe coding je programovanie, pri ktorom AI model napíše kód podľa vášho zadania v bežnej reči a vy výsledok nemusíte podrobne čítať. Na prototyp alebo jednorazový skript to stačí. Na softvér, ktorý spracúva peniaze alebo zákaznícke dáta, to samo osebe nestačí: treba testy, kontrolu človekom a malé kroky.</p>
+        <p class="lede">Vibe coding je programovanie, pri ktorom AI napíše kód podľa zadania a vy ho nemusíte čítať. Na prototyp alebo jednorazový skript to stačí. Na softvér s peniazmi alebo zákazníckymi dátami treba testy, kontrolu človekom a malé kroky.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>3 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
       <h2>Čo znamená vibe coding</h2>
-      <p>Výraz vymyslel v februári 2025 Andrej Karpathy, spoluzakladateľ OpenAI. Opísal ho ako štýl, pri ktorom sa človek „plne oddá pocitom“ a zabudne, že kód vôbec existuje (<a href="https://en.wikipedia.org/wiki/Vibe_coding">Wikipédia</a>). V užšom zmysle ide o prácu, pri ktorej sa výstup modelu prijíma bez dôkladnej kontroly a o oprave rozhodujú výsledky a ďalšie zadania. V širšom zmysle sa pojem používa pre akékoľvek programovanie s AI, čo kritizoval napríklad Andrew Ng, podľa ktorého vyvoláva dojem, že vývojári sa len riadia pocitom.</p>
+      <p>Výraz vymyslel v februári 2025 Andrej Karpathy, spoluzakladateľ OpenAI. Opísal štýl, pri ktorom sa človek „plne oddá pocitom“ a zabudne, že kód existuje (<a href="https://en.wikipedia.org/wiki/Vibe_coding">Wikipédia</a>). V užšom zmysle sa výstup AI prijíma bez dôkladnej kontroly.</p>
 
-      <h2>Kde vibe coding funguje</h2>
+      <h2>Kde funguje</h2>
       <ul>
-        <li><strong>Prototyp.</strong> Chcete rýchlo vidieť, ako by nápad vyzeral.</li>
-        <li><strong>Jednorazový skript.</strong> Premenovať súbory, prekonvertovať tabuľku, ktorú nikto nebude spúšťať druhýkrát.</li>
-        <li><strong>Softvér pre jedného používateľa.</strong> Nástroj len pre vás, kde chyba nikomu neublíži.</li>
+        <li><strong>Prototyp.</strong> Rýchlo uvidíte nápad.</li>
+        <li><strong>Jednorazový skript</strong> alebo nástroj len pre vás.</li>
       </ul>
-      <p>Spoločné je, že chyba je lacná a hneď ju vidno.</p>
 
       <h2>Kde zlyháva</h2>
-      <p>Kritici podľa prehľadu vo Wikipédii poukazujú na chýbajúcu zodpovednosť, ťažkú údržbu a vyššie riziko bezpečnostných chýb. Praktické dôsledky sú tieto:</p>
+      <p>Kritici podľa Wikipédie poukazujú na chýbajúcu zodpovednosť, ťažkú údržbu a bezpečnostné riziko. V praxi:</p>
       <ul>
-        <li><strong>Prevádzka.</strong> Keď sa program má spúšťať denne a niekto na ňom závisí, jeho správanie musí byť predvídateľné aj o pol roka.</li>
-        <li><strong>Peniaze a dáta.</strong> Chyba pri cenách, objednávkach alebo osobných údajoch stojí viac než čas strávený kontrolou.</li>
-        <li><strong>Zmeny.</strong> Kód, ktorému nikto nerozumie, sa nedá bezpečne upraviť. Každá oprava môže pokaziť niečo iné.</li>
+        <li><strong>Peniaze a dáta.</strong> Chyba v cenách alebo osobných údajoch je drahá.</li>
+        <li><strong>Zmeny.</strong> Kód, ktorému nikto nerozumie, sa nedá bezpečne upraviť.</li>
       </ul>
 
       <h2>Čo pridať, aby kód vydržal</h2>
       <ol>
-        <li><strong>Test, ktorý najprv zlyhá.</strong> Pred opravou chyby napíšte test, ktorý ju zachytí a zlyhá. Až potom chybu opravte a overte, že test prejde. Takto viete, že oprava skutočne zabrala a že sa chyba nevráti.</li>
-        <li><strong>Kontrola človekom.</strong> Zmenu, ktorú napísala AI, si prečíta človek (alebo druhý nezávislý prechod), skôr než sa dostane do prevádzky.</li>
-        <li><strong>Malé kroky.</strong> Jedna zmena, jeden dôvod, jeden test. Malá zmena sa dá prečítať, vrátiť späť a pochopiť.</li>
-        <li><strong>História zmien.</strong> Každý krok v systéme na správu verzií (git) s popisom, prečo sa urobil.</li>
+        <li><strong>Test, ktorý najprv zlyhá.</strong> Napíšte test, ktorý chybu zachytí. Potom chybu opravte. Viete, že oprava zabrala.</li>
+        <li><strong>Kontrola človekom.</strong> Zmenu od AI si prečíta človek skôr, než ide do prevádzky.</li>
+        <li><strong>Malé kroky.</strong> Jedna zmena, jeden dôvod, jeden test.</li>
       </ol>
-      <p>Tým sa z vibe codingu stáva obyčajné programovanie s pomocou AI: model píše rýchlo, človek určuje, čo sa považuje za správne.</p>
 
-      <h2>Z praxe: aplikácia pre e-shop</h2>
-      <p>Takto postupujem pri aplikácii pre klientsky e-shop. Zmeny idú cez test, ktorý najprv zlyhá, potom oprava, ktorá ho splní, a viac kôl kontroly. Dá sa to prečítať v histórii zmien: dvojice commitov označených <em>[red]</em> (test zlyháva) a <em>[green]</em> (oprava) a medzi nimi opravy po kontrole.</p>
+      <h2>Z praxe</h2>
+      <p>Tak postupujem pri aplikácii pre klientsky e-shop. Zmeny idú cez test, ktorý najprv zlyhá, a viac kôl kontroly.</p>
 
       <h2>Pre koho je vibe coding</h2>
       <ul>
-        <li><strong>Áno</strong> pre nápad, prototyp a nástroj pre vlastnú potrebu.</li>
-        <li><strong>Opatrne</strong> pre interný nástroj, na ktorom závisí tím. Pridajte aspoň testy a zálohu.</li>
-        <li><strong>Nie samotný</strong> pre e-shop, fakturáciu, zákaznícke dáta a čokoľvek, kde chyba stojí peniaze. Tam patrí postup s testami a kontrolou.</li>
+        <li><strong>Áno</strong> pre prototyp a vlastný nástroj.</li>
+        <li><strong>Nie samotný</strong> pre e-shop, fakturáciu a zákaznícke dáta.</li>
       </ul>
 
       <p><em>Zdroj tvrdení o nástrojoch: Wikipédia: Vibe coding.</em></p>
@@ -255,19 +241,15 @@
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Kto vymyslel pojem vibe coding?</h3></summary>
-          <p class="faq__a">Andrej Karpathy, spoluzakladateľ OpenAI, v februári 2025. Podľa Wikipédie ho do marca 2025 zaradil Merriam-Webster medzi trendové slangové výrazy.</p>
+          <p class="faq__a">Andrej Karpathy, spoluzakladateľ OpenAI, v februári 2025.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Je vibe coding to isté ako programovanie s AI asistentom?</h3></summary>
-          <p class="faq__a">Nie nutne. Pri vibe codingu v užšom zmysle sa výstup AI prijíma bez dôkladnej kontroly. Ak kód čítate, testujete a rozumiete mu, ide o programovanie s pomocou AI.</p>
+          <p class="faq__a">Nie nutne. Pri vibe codingu v užšom zmysle sa výstup AI prijíma bez dôkladnej kontroly. Ak kód čítate a testujete, ide o programovanie s pomocou AI.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Môžem takto postaviť web alebo e-shop?</h3></summary>
-          <p class="faq__a">Prototyp áno. Na ostrú prevádzku s objednávkami a osobnými údajmi pridajte testy, kontrolu človekom a zálohy, alebo ho nechajte postaviť niekoho, kto za výsledok ručí.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Ako zistím, že kód od AI je v poriadku?</h3></summary>
-          <p class="faq__a">Podľa testov, ktoré ste si určili vopred, a podľa kontroly človekom. Samotné „funguje mi to“ pri skúške jedného prípadu nestačí.</p>
+          <p class="faq__a">Prototyp áno. Na ostrú prevádzku s objednávkami a osobnými údajmi pridajte testy, kontrolu človekom a zálohy.</p>
         </details>
       </div>
       </div>

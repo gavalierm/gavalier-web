@@ -1,0 +1,180 @@
+/* ========================================
+   Services grid — rozcestník na úvode (Čo viem riešiť)
+   Dlaždice: ikona, názov, jedna veta, šípka. Celá karta je odkaz.
+   Mriežka 3 / 2 / 1 stĺpce; farby z premenných webu (svetlá aj tmavá téma).
+   ======================================== */
+
+.services-grid {
+  list-style: none;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.services-grid__item {
+  display: flex;
+  margin: 0;
+}
+
+/* Siedma dlaždica: celý posledný riadok, vodorovne */
+@media (min-width: 640px) {
+  .services-grid__item:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-6);
+  border: 1px solid var(--theme-border-color-strong);
+  border-radius: var(--radius-2xl);
+  background: var(--theme-bg-secondary);
+  color: var(--theme-text-primary);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.service-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  border-radius: var(--radius-full);
+  background: var(--theme-text-primary);
+  color: var(--theme-bg);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-card__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.service-card__name {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: var(--font-black);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--theme-text-primary);
+}
+
+.service-card__text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  color: var(--theme-text-secondary);
+}
+
+.service-card__arrow {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--theme-border-color-strong);
+  border-radius: var(--radius-full);
+  color: var(--theme-text-primary);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card__arrow svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.service-card:focus-visible {
+  outline: 2px solid var(--theme-text-primary);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--theme-text-primary);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .service-card:hover .service-card__icon {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .service-card:hover .service-card__arrow {
+    transform: translateX(4px);
+    background: var(--theme-text-primary);
+    color: var(--theme-bg);
+    border-color: var(--theme-text-primary);
+  }
+}
+
+/* Široká posledná dlaždica: ikona, text, šípka v jednom riadku */
+@media (min-width: 640px) {
+  .services-grid__item:last-child .service-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "icon name arrow" "icon text arrow";
+    align-items: center;
+    column-gap: var(--space-5);
+    row-gap: var(--space-2);
+  }
+
+  .services-grid__item:last-child .service-card__icon { grid-area: icon; }
+  .services-grid__item:last-child .service-card__name { grid-area: name; align-self: end; }
+  .services-grid__item:last-child .service-card__text { grid-area: text; align-self: start; }
+  .services-grid__item:last-child .service-card__arrow { grid-area: arrow; margin-top: 0; padding-top: 0; align-self: center; }
+}
+
+/* Hero: telefón a odkaz na rozcestník vedľa seba */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Sekcia Ako pracujem na úvode: odkaz na podstránku */
+.how-we-work__more {
+  margin-top: var(--space-7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__icon,
+  .service-card__arrow {
+    transition: none;
+  }
+
+  .service-card:hover,
+  .service-card:hover .service-card__arrow {
+    transform: none;
+  }
+}

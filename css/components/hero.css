@@ -12,8 +12,8 @@
 /* TOP — byline + title + portrait image */
 .hero__top {
   position: relative;
-  padding-top: var(--space-13);
-  padding-bottom: var(--space-10);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-9);
 }
 
 @media (min-width: 768px) {
@@ -88,8 +88,8 @@
 
 /* BOTTOM — lede + nav */
 .hero__bottom {
-  padding-top: var(--space-10);
-  padding-bottom: var(--space-13);
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-11);
 }
 
 @media (min-width: 768px) {

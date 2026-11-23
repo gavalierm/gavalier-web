@@ -14,6 +14,9 @@ IČO: 47 786 825 · DIČ: 1080715911
 - [Tvorba webu na mieru](https://www.gavalier.sk/tvorba-webu/): weby, eshopy a PWA aplikácie na mieru, vrátane hostingu, nasadenia a správy.
 - [AI agenti pre firmy](https://www.gavalier.sk/ai-agenti/): návrh a nasadenie AI agentov a dashboardov nad firemnými údajmi; kde agent beží, aké údaje vidí a kto zodpovedá za jeho chyby, sa dohodne vopred.
 - [SEO optimalizácia webu](https://www.gavalier.sk/seo-llm-optimalizacia/): SEO pre Google aj AI asistentov: štruktúrované dáta, sémantické HTML, sitemap, pravidlá pre crawlery a meranie.
+- [Zvuk, video a live streaming na podujatia](https://www.gavalier.sk/eventy/): konferencie, koncerty a firemné akcie; multi-cam produkcia, live stream kamkoľvek, FOH zvuk, DMX svetlá a akustické úpravy, kompletná technika aj obsluha z jedného miesta.
+- [IT siete a bezpečnosť cez preverených partnerov](https://www.gavalier.sk/it-siete/): Marcel siete a infraštruktúru sám nerobí; zoženie preverených partnerov, koordinuje ich, skontroluje návrh a ručí za nich. Jeden kontakt, jedna zodpovednosť.
+- [Ako pracujem](https://www.gavalier.sk/ako-pracujem/): záruka (štyri body), cena a postup spolupráce v štyroch krokoch.
 
 ## Blog
 

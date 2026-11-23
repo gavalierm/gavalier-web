@@ -10,7 +10,7 @@
 
   <url>
     <loc>https://www.gavalier.sk/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <image:image>
       <image:loc>https://www.gavalier.sk/assets/gavo_edited.png</image:loc>
       <image:title>Marcel Gavalier — Coder, AI Engineer, Audio a Video Producer</image:title>
@@ -40,6 +40,21 @@
   <url>
     <loc>https://www.gavalier.sk/seo-llm-optimalizacia/</loc>
     <lastmod>2026-11-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/eventy/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/it-siete/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.gavalier.sk/ako-pracujem/</loc>
+    <lastmod>2026-11-23</lastmod>
   </url>
 
   <url>

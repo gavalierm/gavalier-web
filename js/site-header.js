@@ -1,5 +1,6 @@
 /**
- * Sticky Site Header — shows after scrolling past hero
+ * Site Header — hlavička je viditeľná hneď (lepiaca hore).
+ * Skript iba pridá triedu is-scrolled (jemný tieň), keď sa stránka posunie.
  * Standalone (no ES module) so it works on file:// origin too.
  */
 (function () {
@@ -9,15 +10,10 @@
   if (!header) return;
 
   var ticking = false;
-  var threshold = window.innerWidth <= 768 ? 300 : 500;
 
   function update() {
     var y = window.scrollY || window.pageYOffset;
-    if (y > threshold) {
-      header.classList.add('show');
-    } else {
-      header.classList.remove('show');
-    }
+    header.classList.toggle('is-scrolled', y > 4);
     ticking = false;
   }
 

@@ -125,7 +125,7 @@
           "name": "Môže AI agent robiť chyby?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Áno. Môže zle pochopiť zadanie, vymyslieť si údaj alebo sa zaseknúť. Preto sa nasadzuje s kontrolou človekom, záznamom o tom, čo robil, a limitom krokov. Nezvratné kroky nech schvaľuje človek."
+            "text": "Áno. Preto sa nasadzuje s kontrolou človekom a limitom krokov. Nezvratné kroky nech schvaľuje človek."
           }
         },
         {
@@ -133,15 +133,7 @@
           "name": "Kde bežia moje údaje?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Závisí od zvoleného nástroja a jeho nastavenia. Pred nasadením si v podmienkach poskytovateľa overte, kde sa údaje spracúvajú a či sa používajú na trénovanie, a citlivé údaje do agenta nedávajte, kým to nie je jasné."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kto ručí za výsledok agenta?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AI nie je zodpovedná osoba. Za výsledok zodpovedá firma, ktorá agenta používa, a dodávateľ podľa zmluvy. Rozsah zodpovednosti a kontroly si dohodnite písomne pred nasadením."
+            "text": "Závisí od zvoleného nástroja. Pred nasadením si v podmienkach poskytovateľa overte, kde sa údaje spracúvajú a či sa trénuje na nich."
           }
         },
         {
@@ -149,7 +141,7 @@
           "name": "Je agent lepší ako automatizácia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie vždy. Pri pevných pravidlách je obyčajná automatizácia lacnejšia a predvídateľnejšia. Agent má zmysel pri úlohách, kde sa počet krokov nedá vopred určiť."
+            "text": "Nie vždy. Pri pevných pravidlách je automatizácia lacnejšia a predvídateľnejšia."
           }
         }
       ]
@@ -203,81 +195,72 @@
       <header class="in">
         <p class="kicker">AI agenti</p>
         <h1 class="a-title">Čo je AI agent a čím sa líši od chatbota a od obyčajnej automatizácie</h1>
-        <p class="lede">AI agent je program, ktorý si pri plnení úlohy sám volí kroky a nástroje, kým chatbot len odpovedá na správy a automatizácia vykonáva vopred určené kroky. Keď sú pravidlá pevné, stačí obyčajná automatizácia: je lacnejšia a predvídateľná. Agent sa oplatí tam, kde sa počet krokov nedá vopred určiť, a vždy s kontrolou človekom.</p>
+        <p class="lede">AI agent je program, ktorý si pri úlohe sám volí kroky a nástroje. Chatbot len odpovedá. Automatizácia robí vopred určené kroky. Pri pevných pravidlách stačí automatizácia: je lacnejšia a predvídateľná. Agent sa oplatí tam, kde sa počet krokov nedá určiť vopred, a vždy s kontrolou človekom.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
       <h2>Tri veci, ktoré sa zamieňajú</h2>
-      <p>Spoločnosť Anthropic v článku o <a href="https://www.anthropic.com/engineering/building-effective-agents">budovaní efektívnych agentov</a> rozlišuje dva typy systémov. <strong>Workflow</strong> sú systémy, v ktorých sú model a nástroje riadené vopred určenými krokmi v kóde. <strong>Agenti</strong> sú systémy, v ktorých si model sám riadi svoj postup a používanie nástrojov. Prakticky:</p>
+      <p>Anthropic v článku o <a href="https://www.anthropic.com/engineering/building-effective-agents">budovaní efektívnych agentov</a> rozlišuje workflow a agentov. Vo workflow riadia model vopred určené kroky v kóde. Agent si postup riadi sám. Prakticky:</p>
       <ul>
-        <li><strong>Chatbot</strong> vám odpovie na otázku. Nič iné nerobí, kým sa nespýtate.</li>
-        <li><strong>Obyčajná automatizácia</strong> vykoná vždy rovnaké kroky v rovnakom poradí: prijme e-mail s faktúrou, vyberie údaje podľa pevného vzoru, zapíše ich do tabuľky.</li>
-        <li><strong>AI agent</strong> dostane cieľ („priprav prehľad noviniek“, „zisti, prečo nesedí objednávka“), sám sa rozhodne, čo si pozrie a čo urobí ďalej, a po každom kroku vyhodnotí výsledok.</li>
+        <li><strong>Chatbot</strong> odpovie na otázku. Nič iné nerobí.</li>
+        <li><strong>Automatizácia</strong> robí vždy rovnaké kroky.</li>
+        <li><strong>AI agent</strong> dostane cieľ, napríklad „zisti, prečo nesedí objednávka“. Sám rozhodne, čo urobí ďalej.</li>
       </ul>
 
-      <h2>Ako rozhodnúť, čo potrebujete</h2>
-      <p>Anthropic radí hľadať najjednoduchšie riešenie a komplexnosť pridať, až keď je to nutné. Agentické systémy podľa neho často vymieňajú rýchlosť a cenu za lepší výkon pri úlohe. Pre malú firmu z toho vyplýva trojica otázok:</p>
+      <h2>Čo potrebujete</h2>
+      <p>Anthropic radí hľadať najjednoduchšie riešenie. Komplexnosť pridať, až keď je nutná. Opýtajte sa:</p>
       <ol>
-        <li><strong>Sú pravidlá pevné?</strong> Ak viete krok za krokom povedať, čo sa má stať, stačí automatizácia. Je lacnejšia, rýchlejšia a robí vždy to isté.</li>
-        <li><strong>Pracuje sa s nepravidelným textom?</strong> E-maily od zákazníkov, rôzne tvary faktúr, popisy. Tu pomôže AI model na jeden krok (vytiahnuť údaje, zhrnúť), ale zvyšok môže ostať pevný postup.</li>
-        <li><strong>Dá sa vopred určiť počet krokov?</strong> Ak nie (úloha vyžaduje hľadanie, skúšanie, rozhodovanie podľa medzivýsledkov), dáva zmysel agent.</li>
+        <li><strong>Sú pravidlá pevné?</strong> Potom stačí automatizácia.</li>
+        <li><strong>Je text nepravidelný?</strong> Napríklad e-maily od zákazníkov. AI pomôže v jednom kroku, zvyšok ostane pevný.</li>
+        <li><strong>Dá sa vopred určiť počet krokov?</strong> Ak nie, dáva zmysel agent.</li>
+        <li><strong>Koľko stojí chyba?</strong> Chyba v interných prehľadoch je lacná. Chyba v cenách alebo v správe zákazníkovi nie je.</li>
       </ol>
-      <p>A ešte jedna otázka, ktorá rozhoduje o miere kontroly: <strong>koľko stojí chyba?</strong> Chyba v internom prehľade je lacná. Chyba v cenách, faktúrach alebo správe zákazníkovi nie je.</p>
 
-      <h2>Čo agent potrebuje, aby fungoval</h2>
+      <h2>Čo agent potrebuje</h2>
       <ul>
-        <li><strong>Nástroje</strong>, ktoré môže použiť (čítanie dát, vyhľadávanie, zápis do systému). Anthropic zdôrazňuje, že ich návrh a popis majú veľký vplyv na výsledok.</li>
-        <li><strong>Pravidlá a zadanie.</strong> Čo je cieľ, čo smie robiť sám a kde sa musí zastaviť.</li>
-        <li><strong>Pamäť.</strong> Záznam o tom, čo je hotové a čo je ďalší krok, inak každé spustenie začína od nuly.</li>
-        <li><strong>Kontrola.</strong> Podľa Anthropicu má agent v každom kroku získavať z prostredia skutočné údaje (výsledok nástroja, spustenie kódu) a v dôležitých bodoch sa zastaviť pre človeka. Odporúča aj zastavovacie podmienky, napríklad najvyšší počet krokov.</li>
+        <li><strong>Zadanie a pravidlá.</strong> Cieľ, čo smie sám a kde sa zastaví.</li>
+        <li><strong>Kontrolu.</strong> V dôležitých bodoch sa agent zastaví pre človeka. Anthropic odporúča aj limit krokov.</li>
       </ul>
 
       <h2>Kde sa agent mýli</h2>
-      <p>Autonómia znamená vyššie náklady a možnosť, že sa chyby nabaľujú. Anthropic preto odporúča dôkladné testovanie v oddelenom prostredí a ochranné mantinely. V praxi:</p>
+      <p>Anthropic preto odporúča dôkladné testovanie v oddelenom prostredí. V praxi:</p>
       <ul>
-        <li><strong>Zle pochopí zadanie</strong> a vyrieši niečo iné. Pomáha presné zadanie a ukážka dobrého výsledku.</li>
-        <li><strong>Vymyslí si údaj.</strong> Preto sa fakty kontrolujú proti zdroju a agent má zdroj uviesť.</li>
-        <li><strong>Zasekne sa alebo sa točí v kruhu.</strong> Preto limit počtu krokov a záznam (log) toho, čo robil.</li>
-        <li><strong>Urobí nezvratnú zmenu.</strong> Odoslanie e-mailu, platba, zmazanie. Tieto kroky nech schváli človek.</li>
+        <li><strong>Vymyslí si údaj.</strong> Fakty kontrolujte proti zdroju.</li>
+        <li><strong>Urobí nezvratnú zmenu</strong>, napríklad odošle e-mail. Takéto kroky schvaľuje človek.</li>
       </ul>
 
-      <h2>Z praxe: agent s vlastnou úlohou</h2>
-      <p>Pri mojich agentoch to funguje takto. Jeden každé ráno zbiera správy o AI nástrojoch: zber robí skript, agent položky ohodnotí podľa zadania, uloží prehľad a zlyhaný zdroj vždy uvedie. Každý agent má zapísané zadanie, čo je hotové a čo je ďalší krok, takže si prácu vie odovzdať ďalšej relácii. Zber zdrojov je pritom obyčajná automatizácia; úsudok sa nechá na agenta len tam, kde ho treba.</p>
+      <h2>Z praxe</h2>
+      <p>Jeden z mojich agentov každé ráno zbiera správy o AI nástrojoch. Zber robí skript, teda obyčajná automatizácia. Agent položky ohodnotí a uloží prehľad. Úsudok mu nechávam len tam, kde je potrebný.</p>
 
-      <h2>Ako vyzerá prvý pilot</h2>
+      <h2>Prvý pilot</h2>
       <ol>
-        <li>Vyberte jednu úlohu, ktorá sa opakuje, nie je rizikovo drahá a dá sa vyhodnotiť (napríklad triedenie prichádzajúcich e-mailov alebo týždenný prehľad).</li>
-        <li>Spravte ju najprv ako obyčajnú automatizáciu a AI pridajte len do krokov, ktoré to naozaj potrebujú.</li>
-        <li>Prvé týždne nech výsledok kontroluje človek. Zapisujte, koľko chýb bolo a aké.</li>
-        <li>Autonómiu rozširujte až podľa zápisov, nie podľa dojmu.</li>
+        <li>Vyberte opakovanú úlohu, ktorá nie je rizikovo drahá.</li>
+        <li>Spravte ju ako automatizáciu. AI pridajte len tam, kde je nutná.</li>
+        <li>Prvé týždne výsledok kontroluje človek.</li>
       </ol>
 
       <h2>Ako zmerať úsporu</h2>
-      <p>Pred nasadením si zmerajte, koľko času úloha zaberá dnes (týždeň zápisov stačí). Po nasadení merajte ten istý čas aj čas kontroly výsledku. Úspora je rozdiel, nie pocit. Do výpočtu patria aj náklady na prevádzku a opravy chýb.</p>
+      <p>Zmerajte čas úlohy pred nasadením. Po nasadení merajte ten istý čas aj čas kontroly. Úspora je rozdiel, nie pocit.</p>
 
       <p><em>Zdroj tvrdení o nástrojoch: Anthropic: Building effective agents.</em></p>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Môže AI agent robiť chyby?</h3></summary>
-          <p class="faq__a">Áno. Môže zle pochopiť zadanie, vymyslieť si údaj alebo sa zaseknúť. Preto sa nasadzuje s kontrolou človekom, záznamom o tom, čo robil, a limitom krokov. Nezvratné kroky nech schvaľuje človek.</p>
+          <p class="faq__a">Áno. Preto sa nasadzuje s kontrolou človekom a limitom krokov. Nezvratné kroky nech schvaľuje človek.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Kde bežia moje údaje?</h3></summary>
-          <p class="faq__a">Závisí od zvoleného nástroja a jeho nastavenia. Pred nasadením si v podmienkach poskytovateľa overte, kde sa údaje spracúvajú a či sa používajú na trénovanie, a citlivé údaje do agenta nedávajte, kým to nie je jasné.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Kto ručí za výsledok agenta?</h3></summary>
-          <p class="faq__a">AI nie je zodpovedná osoba. Za výsledok zodpovedá firma, ktorá agenta používa, a dodávateľ podľa zmluvy. Rozsah zodpovednosti a kontroly si dohodnite písomne pred nasadením.</p>
+          <p class="faq__a">Závisí od zvoleného nástroja. Pred nasadením si v podmienkach poskytovateľa overte, kde sa údaje spracúvajú a či sa trénuje na nich.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Je agent lepší ako automatizácia?</h3></summary>
-          <p class="faq__a">Nie vždy. Pri pevných pravidlách je obyčajná automatizácia lacnejšia a predvídateľnejšia. Agent má zmysel pri úlohách, kde sa počet krokov nedá vopred určiť.</p>
+          <p class="faq__a">Nie vždy. Pri pevných pravidlách je automatizácia lacnejšia a predvídateľnejšia.</p>
         </details>
       </div>
       </div>

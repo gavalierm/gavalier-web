@@ -125,7 +125,7 @@
           "name": "Čím sa skill líši od CLAUDE.md?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CLAUDE.md sa načíta pri každej relácii a hodí sa na stále fakty a konvencie. Skill sa načíta, až keď sa použije, preto sa hodí na postupy a kontrolné zoznamy, ktoré by inak zbytočne zaberali kontext."
+            "text": "CLAUDE.md sa načíta pri každej relácii a hodí sa na stále fakty. Skill sa načíta, až keď sa použije, preto sa hodí na postupy."
           }
         },
         {
@@ -133,15 +133,7 @@
           "name": "Môže agent hook obísť?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hook beží mimo modelu, takže sa vykoná vždy, keď nastane jeho udalosť. Dokumentácia však upozorňuje, že zablokovanie úprav súborov nepokrýva príkazy v shelli, preto na ne treba samostatné pravidlá oprávnení."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kde sa nastavujú hooky?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "V súbore nastavení: ~/.claude/settings.json pre všetky vaše projekty alebo .claude/settings.json v projekte, ktorý sa zdieľa v repozitári."
+            "text": "Hook beží mimo modelu, takže sa vykoná vždy, keď nastane jeho udalosť. Dokumentácia však upozorňuje, že zablokovanie úprav súborov nepokrýva príkazy v shelli."
           }
         },
         {
@@ -149,7 +141,7 @@
           "name": "Musím vedieť programovať, aby som napísal skill?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie. Skill je text v bežnej reči s krátkym záhlavím. Hook je spravidla krátky skript, pri ňom už ide o základy programovania."
+            "text": "Nie. Skill je text v bežnej reči s krátkym záhlavím. Hook je spravidla krátky skript."
           }
         }
       ]
@@ -203,18 +195,18 @@
       <header class="in">
         <p class="kicker">AI poradenstvo</p>
         <h1 class="a-title">Čo sú skills a hooks v Claude Code a ako nimi naučím AI agenta svoj postup</h1>
-        <p class="lede">Skill je priečinok so súborom SKILL.md, v ktorom je postup pre Claude Code: načíta sa, až keď ho úloha potrebuje. Hook je príkaz, ktorý Claude Code spustí vždy v určitom bode práce, takže pravidlo sa dodrží bez ohľadu na to, či si ho model „pamätá“. Skill agenta učí, ako postupovať. Hook mu zabráni urobiť, čo nesmie.</p>
+        <p class="lede">Skill je postup pre Claude Code zapísaný v súbore SKILL.md. Načíta sa, až keď ho úloha potrebuje. Hook je príkaz, ktorý sa spustí vždy v určitom bode práce. Skill agenta učí, ako postupovať. Hook mu zabráni urobiť, čo nesmie.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
       <h2>Čo je skill</h2>
-      <p>Podľa <a href="https://code.claude.com/docs/en/skills">dokumentácie Claude Code</a> je skill priečinok so súborom <code>SKILL.md</code>. Názov priečinka sa stane príkazom. Skill môže ležať vo vašom osobnom priečinku <code>~/.claude/skills/</code> (platí pre všetky projekty) alebo v projekte v <code>.claude/skills/</code> (zdieľa sa cez repozitár).</p>
-      <p>Súbor začína záhlavím medzi dvoma riadkami <code>---</code>. Najdôležitejšie je pole <code>description</code>: Claude podľa neho rozhodne, či sa skill hodí na aktuálnu úlohu. Zvyšok súboru je postup v bežnej reči:</p>
+      <p>Podľa <a href="https://code.claude.com/docs/en/skills">dokumentácie Claude Code</a> je skill priečinok so súborom <code>SKILL.md</code>. Leží v <code>.claude/skills/</code>.</p>
+      <p>Súbor začína záhlavím. Pole <code>description</code> určuje, kedy sa skill použije. Zvyšok je postup:</p>
 <pre><code>---
 name: nasadenie
 description: Použi, keď sa nasadzuje web na ostrú doménu.
@@ -222,63 +214,48 @@ description: Použi, keď sa nasadzuje web na ostrú doménu.
 1. Over, že si na vetve main a strom je čistý.
 2. Spusti kontrolu odkazov.
 3. Až potom nasaď a over výsledok na živej adrese.</code></pre>
-      <p>Skill sa spustí dvoma spôsobmi: Claude ho načíta sám, keď popis sedí na úlohu, alebo ho vyvoláte príkazom <code>/nazov-skillu</code>. Poľom <code>disable-model-invocation: true</code> ho obmedzíte iba na ručné vyvolanie.</p>
+      <p>Skill sa spustí sám, keď popis sedí na úlohu. Alebo ho vyvoláte príkazom.</p>
 
       <h2>Skill alebo CLAUDE.md</h2>
-      <p>Súbor <code>CLAUDE.md</code> sa načíta pri každej relácii, preto sa do neho hodia stále fakty: ako sa projekt spúšťa, aké konvencie platia. Skill sa načíta, až keď sa použije, takže dlhý postup nezaberá miesto, kým ho nepotrebujete. Dokumentácia to hovorí priamo: ak sa z obsahu <code>CLAUDE.md</code> stal postup krok za krokom, presuňte ho do skillu.</p>
+      <p>Súbor <code>CLAUDE.md</code> sa načíta pri každej relácii. Patria doň stále fakty a konvencie. Skill sa načíta, až keď sa použije, preto sa hodí na dlhý postup.</p>
 
       <h2>Čo je hook</h2>
-      <p>Podľa <a href="https://code.claude.com/docs/en/hooks-guide">sprievodcu hookmi</a> sú hooky príkazy, ktoré si určíte sami a Claude Code ich spúšťa v pevných bodoch svojej práce. Rozdiel oproti pokynu v texte: hook sa vykoná vždy, nie keď sa model rozhodne. Nastavujú sa v súbore nastavení (<code>~/.claude/settings.json</code> pre vás, <code>.claude/settings.json</code> pre projekt).</p>
+      <p>Podľa <a href="https://code.claude.com/docs/en/hooks-guide">sprievodcu hookmi</a> sú hooky vaše príkazy, ktoré Claude Code spúšťa v pevných bodoch práce. Hook sa vykoná vždy. Nastavuje sa v <code>settings.json</code>.</p>
       <ul>
-        <li><strong>PostToolUse</strong> beží po použití nástroja. Typický príklad z dokumentácie: po úprave súboru automaticky spustiť formátovač.</li>
-        <li><strong>PreToolUse</strong> beží pred použitím nástroja a môže ho zablokovať. Skript skončí s kódom 2 a text, ktorý vypíše na chybový výstup, dostane Claude ako vysvetlenie, prečo sa akcia nekonala.</li>
-        <li><strong>Notification, SessionStart</strong> a ďalšie udalosti slúžia na upozornenia alebo na doplnenie kontextu na začiatku relácie.</li>
+        <li><strong>PostToolUse</strong> beží po použití nástroja. Napríklad po úprave súboru spustí formátovač.</li>
+        <li><strong>PreToolUse</strong> beží pred použitím nástroja a môže ho zablokovať. Skript skončí s kódom 2 a Claude dostane vysvetlenie.</li>
       </ul>
-      <p>Dokumentácia ukazuje aj ochranu súborov: hook pred úpravou skontroluje cestu a ak ide o <code>.env</code> alebo priečinok <code>.git/</code>, úpravu zamietne.</p>
 
-      <h2>Kedy stačí pokyn v texte a kedy treba hook</h2>
+      <h2>Pokyn alebo hook</h2>
       <ul>
-        <li><strong>Pokyn alebo skill stačí</strong>, keď ide o postup a úsudok: ako písať, v akom poradí robiť kroky, na čo si dať pozor. Chyba je nepríjemná, ale opraviteľná.</li>
-        <li><strong>Hook treba</strong>, keď pravidlo nesmie zlyhať: nesiahať na tajné súbory, nespúšťať určité príkazy, vždy spustiť formátovanie alebo kontrolu. Pokyn model môže prehliadnuť, hook nie.</li>
+        <li><strong>Pokyn alebo skill stačí</strong> pri postupe a úsudku. Chyba je opraviteľná.</li>
+        <li><strong>Hook treba</strong>, keď pravidlo nesmie zlyhať. Pokyn model môže prehliadnuť, hook nie.</li>
       </ul>
-      <p>Pre prípady, ktoré vyžadujú úsudok a nie pevné pravidlo, dokumentácia pozná aj hooky založené na otázke pre model. Pre pevné pravidlá je lepší obyčajný skript, lebo je predvídateľný.</p>
 
       <h2>Ako vyzerá dobrý skill</h2>
       <ul>
-        <li><strong>Popis ako spúšťač.</strong> Napíšte, kedy sa skill použije, nie len čo robí. Podľa popisu ho Claude vyberá.</li>
-        <li><strong>Číslované kroky</strong> v poradí, v akom sa majú vykonať, a na konci overenie výsledku.</li>
-        <li><strong>Čo agent smie bez pýtania</strong> a kde sa musí spýtať človeka. Rozhodnutia, ktoré majú dôsledky (peniaze, nasadenie na ostrý web), nech potvrdí človek.</li>
-        <li><strong>Jeden skill, jeden postup.</strong> Dlhý skill, ktorý robí viac vecí naraz, sa horšie vyberá aj dodržiava.</li>
+        <li>Popis hovorí, kedy sa skill použije.</li>
+        <li>Kroky sú číslované a na konci je overenie.</li>
+        <li>Dôležité rozhodnutia potvrdí človek.</li>
       </ul>
 
-      <h2>Z praxe: chyba sa stane skillom</h2>
-      <p>V mojom systéme AI agentov sú opakované postupy uložené ako skilly a pravidlá, ktoré sa nesmú porušiť, vynucujú hooky. Keď agent urobí chybu, po oprave sa zapíše do príslušného skillu, aby sa neopakovala. Jeden príklad: hook odmietne spojenie vetiev alebo zmenu mimo priradeného pracovného adresára, nech agent pokyn v texte akokoľvek „zabudne“ dodržať.</p>
-
-      <h2>Ako začať</h2>
-      <ol>
-        <li>Vyberte postup, ktorý agentovi vysvetľujete opakovane, a napíšte ho ako skill s dobrým popisom.</li>
-        <li>Pozorujte, kde agent postup nedodrží. Ak je to pravidlo, ktoré nesmie zlyhať, pridajte hook. Ak ide o nejasný krok, upravte skill.</li>
-        <li>Po každej chybe doplňte skill. Po niekoľkých týždňoch máte postupy, ktoré zodpovedajú vašej práci, nie všeobecným radám.</li>
-      </ol>
+      <h2>Z praxe</h2>
+      <p>V mojom systéme AI agentov sú opakované postupy skilly a pravidlá, ktoré sa nesmú porušiť, vynucujú hooky. Po každej chybe doplním skill. Hook napríklad odmietne zmenu mimo priradeného pracovného adresára.</p>
 
       <p><em>Zdroj tvrdení o nástrojoch: Claude Code dokumentácia: skills a hooks.</em></p>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Čím sa skill líši od CLAUDE.md?</h3></summary>
-          <p class="faq__a">CLAUDE.md sa načíta pri každej relácii a hodí sa na stále fakty a konvencie. Skill sa načíta, až keď sa použije, preto sa hodí na postupy a kontrolné zoznamy, ktoré by inak zbytočne zaberali kontext.</p>
+          <p class="faq__a">CLAUDE.md sa načíta pri každej relácii a hodí sa na stále fakty. Skill sa načíta, až keď sa použije, preto sa hodí na postupy.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Môže agent hook obísť?</h3></summary>
-          <p class="faq__a">Hook beží mimo modelu, takže sa vykoná vždy, keď nastane jeho udalosť. Dokumentácia však upozorňuje, že zablokovanie úprav súborov nepokrýva príkazy v shelli, preto na ne treba samostatné pravidlá oprávnení.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Kde sa nastavujú hooky?</h3></summary>
-          <p class="faq__a">V súbore nastavení: ~/.claude/settings.json pre všetky vaše projekty alebo .claude/settings.json v projekte, ktorý sa zdieľa v repozitári.</p>
+          <p class="faq__a">Hook beží mimo modelu, takže sa vykoná vždy, keď nastane jeho udalosť. Dokumentácia však upozorňuje, že zablokovanie úprav súborov nepokrýva príkazy v shelli.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Musím vedieť programovať, aby som napísal skill?</h3></summary>
-          <p class="faq__a">Nie. Skill je text v bežnej reči s krátkym záhlavím. Hook je spravidla krátky skript, pri ňom už ide o základy programovania.</p>
+          <p class="faq__a">Nie. Skill je text v bežnej reči s krátkym záhlavím. Hook je spravidla krátky skript.</p>
         </details>
       </div>
       </div>

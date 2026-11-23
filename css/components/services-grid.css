@@ -1,61 +1,68 @@
 /* ========================================
-   Čo viem riešiť — číslovaný index služieb (D-0015)
-   Veľká typografia ako hero, modrý highlight ako .headline-mark,
+   Čo viem riešiť — mriežka služieb (D-0015)
+   Rovnaké bunky v riadkoch, deliace čiary ako tabuľka,
+   veľká typografia ako hero, modrý highlight ako .headline-mark,
    názvy sa dešifrujú efektom z code-layers.js.
    ======================================== */
 
 .svc {
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-10, 4rem);
-  max-width: 1240px;
+  max-width: 1320px;
   margin: var(--space-10, 4rem) auto 0;
-  padding: 0 var(--space-6, 1.5rem);
-}
-
-@media (min-width: 1024px) {
-  .svc {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8, 2rem);
-  }
-}
-
-.svc__group {
-  font-size: var(--text-micro);
-  font-weight: var(--font-bold);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--theme-text-muted);
-  margin: 0;
-  padding-bottom: var(--space-4, 1rem);
-  border-bottom: 2px solid var(--theme-text-primary);
-}
-
-.svc__list {
-  list-style: none;
-  margin: 0;
   padding: 0;
+  border-top: 2px solid var(--theme-text-primary);
+}
+
+@media (min-width: 640px) {
+  .svc { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .svc { grid-template-columns: repeat(4, 1fr); }
 }
 
 .svc__item {
+  display: flex;
   border-bottom: 1px solid var(--theme-border-color-strong);
 }
 
+@media (min-width: 640px) {
+  .svc__item { border-right: 1px solid var(--theme-border-color-strong); }
+  .svc__item:nth-child(2n) { border-right: 0; }
+}
+
+@media (min-width: 1100px) {
+  .svc__item:nth-child(2n) { border-right: 1px solid var(--theme-border-color-strong); }
+  .svc__item:nth-child(4n) { border-right: 0; }
+}
+
 .svc__row {
+  flex: 1;
   display: grid;
   grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    "index arrow"
-    "body  body";
-  row-gap: var(--space-3, 0.75rem);
-  padding: var(--space-6, 1.5rem) 0 var(--space-7, 1.75rem);
+    "meta arrow"
+    "body body";
+  row-gap: var(--space-8, 2rem);
+  min-height: 17rem;
+  padding: var(--space-6, 1.5rem);
   color: var(--theme-text-primary);
   text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.svc__meta {
+  grid-area: meta;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  min-width: 0;
 }
 
 .svc__index {
-  grid-area: index;
-  align-self: center;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   font-weight: var(--font-bold);
@@ -63,18 +70,26 @@
   transition: color 0.25s ease;
 }
 
+.svc__group {
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-text-muted);
+}
+
 .svc__body {
   grid-area: body;
+  align-self: end;
   display: flex;
   flex-direction: column;
   gap: var(--space-3, 0.75rem);
   min-width: 0;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .svc__name {
   margin: 0;
-  font-size: clamp(1.625rem, 2.3vw, 2.125rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: var(--font-black);
   line-height: 1.08;
   letter-spacing: -0.035em;
@@ -91,8 +106,7 @@
 }
 
 .svc__text {
-  max-width: 34rem;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--theme-text-secondary);
 }
@@ -114,6 +128,30 @@
   height: 1.05rem;
 }
 
+/* posledná bunka: výzva zavolať, čierna */
+.svc__item--cta .svc__row {
+  background: var(--theme-text-primary);
+  color: var(--theme-bg);
+}
+
+.svc__item--cta .svc__group,
+.svc__item--cta .svc__index,
+.svc__item--cta .svc__text {
+  color: var(--theme-bg);
+  opacity: 0.75;
+}
+
+.svc__item--cta .svc__text {
+  font-family: var(--font-mono);
+  font-weight: var(--font-bold);
+  opacity: 1;
+}
+
+.svc__item--cta .svc__arrow {
+  border-color: var(--theme-bg);
+  color: var(--theme-bg);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .svc__row:hover .svc__mark {
     background-size: 100% 100%;
@@ -124,20 +162,25 @@
     color: #007AFF;
   }
 
-  .svc__row:hover .svc__body {
-    transform: translateX(0.35rem);
-  }
-
   .svc__row:hover .svc__arrow {
     background: var(--theme-text-primary);
     color: var(--theme-bg);
     transform: rotate(-45deg);
   }
+
+  .svc__item--cta .svc__row:hover {
+    background: #007AFF;
+  }
+
+  .svc__item--cta .svc__row:hover .svc__arrow {
+    background: var(--theme-bg);
+    color: #007AFF;
+  }
 }
 
 .svc__row:focus-visible {
   outline: 2px solid #007AFF;
-  outline-offset: 4px;
+  outline-offset: -2px;
 }
 
 .svc__row:focus-visible .svc__mark {
@@ -150,19 +193,16 @@
   color: #fff;
 }
 
-@media (max-width: 767px) {
-  .svc {
-    gap: var(--space-8, 2rem);
-    padding: 0 var(--space-5, 1.25rem);
-  }
-
-  .svc__text {
-    font-size: 1rem;
+@media (max-width: 639px) {
+  .svc__row {
+    min-height: 0;
+    row-gap: var(--space-5, 1.25rem);
+    padding: var(--space-6, 1.5rem) var(--space-2, 0.5rem);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .svc__body,
+  .svc__row,
   .svc__mark,
   .svc__arrow,
   .svc__index {

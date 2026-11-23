@@ -197,7 +197,7 @@
   /* ---------- Dešifrovanie nadpisov ---------- */
   function scramble() {
     const G = '01<>/{}[];=$#_*+:&|~';
-    const heads = [...document.querySelectorAll('.hero__title, .section-lead__headline')].filter(h => !h.closest('.cl-css'));
+    const heads = [...document.querySelectorAll('.hero__title, .section-lead__headline, .svc__name')].filter(h => !h.closest('.cl-css'));
     const all = [];
     heads.forEach(h => {
       h.setAttribute('aria-label', h.textContent.replace(/\s+/g, ' ').trim());
@@ -219,7 +219,8 @@
         }
         n.replaceWith(f);
       });
-      all.push({ h, chs, vis: false, revealed: false, size: 40 });
+      // v odkaze či tlačidle sa dešifruje iba raz pri zobrazení, nie pod kurzorom (text musí byť čitateľný)
+      all.push({ h, chs, vis: false, revealed: false, size: 40, once: !!h.closest('a, button') });
     });
 
     // iba polohy pre vzdialenosť od kurzora; rozloženie sa nemení (znak kódu je ::after nad písmenom)
@@ -257,7 +258,7 @@
         const R = Math.max(90, H.size * 1.6);
         for (const o of H.chs) {
           if (o.until > now) { if (!o.hot || Math.random() < .35) hot(o); continue; }
-          const d = on ? Math.hypot(o.x - px, o.y - py) : 1e9;
+          const d = on && !H.once ? Math.hypot(o.x - px, o.y - py) : 1e9;
           if (d < R) { if (!o.hot || Math.random() < .1 + (1 - d / R) * .35) hot(o); }
           else if (o.hot && Math.random() < .18) cool(o);
         }

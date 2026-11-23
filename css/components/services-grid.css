@@ -1,0 +1,217 @@
+/* ========================================
+   Čo viem riešiť — mriežka služieb (D-0015)
+   Rovnaké bunky v riadkoch, deliace čiary ako tabuľka,
+   veľká typografia ako hero, modrý highlight ako .headline-mark,
+   názvy sa dešifrujú efektom z code-layers.js.
+   ======================================== */
+
+.svc {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1320px;
+  margin: var(--space-10, 4rem) auto 0;
+  padding: 0;
+  border-top: 2px solid var(--theme-text-primary);
+}
+
+@media (min-width: 640px) {
+  .svc { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .svc { grid-template-columns: repeat(4, 1fr); }
+}
+
+.svc__item {
+  display: flex;
+  margin: 0; /* base.css dáva li margin-bottom, ktorý trhal čiary mriežky */
+  border-bottom: 1px solid var(--theme-border-color-strong);
+}
+
+@media (min-width: 640px) {
+  .svc__item { border-right: 1px solid var(--theme-border-color-strong); }
+  .svc__item:nth-child(2n) { border-right: 0; }
+}
+
+@media (min-width: 1100px) {
+  .svc__item:nth-child(2n) { border-right: 1px solid var(--theme-border-color-strong); }
+  .svc__item:nth-child(4n) { border-right: 0; }
+}
+
+.svc__row {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "meta arrow"
+    "body body";
+  row-gap: var(--space-8, 2rem);
+  min-height: 17rem;
+  padding: var(--space-6, 1.5rem);
+  color: var(--theme-text-primary);
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.svc__meta {
+  grid-area: meta;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.svc__index {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: var(--font-bold);
+  color: var(--theme-text-muted);
+  transition: color 0.25s ease;
+}
+
+.svc__group {
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-text-muted);
+}
+
+.svc__body {
+  grid-area: body;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+  min-width: 0;
+}
+
+.svc__name {
+  margin: 0;
+  font-size: clamp(1.375rem, 1.75vw, 1.75rem);
+  font-weight: var(--font-black);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+/* modrý box ako .headline-mark, nabehne zľava */
+.svc__mark {
+  padding: 0.02em 0.12em 0.04em;
+  margin-left: -0.12em;
+  background: linear-gradient(#007AFF, #007AFF) no-repeat 0 0 / 0% 100%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+.svc__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--theme-text-secondary);
+}
+
+.svc__arrow {
+  grid-area: arrow;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--theme-text-primary);
+  color: var(--theme-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.svc__arrow svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* posledná bunka: výzva zavolať, čierna */
+.svc__item--cta .svc__row {
+  background: var(--theme-text-primary);
+  color: var(--theme-bg);
+}
+
+.svc__item--cta .svc__group,
+.svc__item--cta .svc__index,
+.svc__item--cta .svc__text {
+  color: var(--theme-bg);
+  opacity: 0.75;
+}
+
+.svc__item--cta .svc__text {
+  font-family: var(--font-mono);
+  font-weight: var(--font-bold);
+  opacity: 1;
+}
+
+.svc__item--cta .svc__arrow {
+  border-color: var(--theme-bg);
+  color: var(--theme-bg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .svc__row:hover .svc__mark {
+    background-size: 100% 100%;
+    color: #fff;
+  }
+
+  .svc__row:hover .svc__index {
+    color: #007AFF;
+  }
+
+  .svc__row:hover .svc__arrow {
+    background: var(--theme-text-primary);
+    color: var(--theme-bg);
+    transform: rotate(-45deg);
+  }
+
+  .svc__item--cta .svc__row:hover {
+    background: #007AFF;
+  }
+
+  .svc__item--cta .svc__row:hover .svc__arrow {
+    background: var(--theme-bg);
+    color: #007AFF;
+  }
+}
+
+.svc__row:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: -2px;
+}
+
+.svc__row:focus-visible .svc__mark {
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+/* dešifrované znaky na modrom boxe ostanú biele */
+.svc__row:hover .svc__mark .cl-ch.is-hot::after {
+  color: #fff;
+}
+
+@media (max-width: 639px) {
+  .svc__row {
+    min-height: 0;
+    row-gap: var(--space-5, 1.25rem);
+    padding: var(--space-6, 1.5rem) var(--space-2, 0.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svc__row,
+  .svc__mark,
+  .svc__arrow,
+  .svc__index {
+    transition: none;
+  }
+}
+
+/* cursor.css zväčšuje každý odkaz pri hoveri (a:hover scale 1.05), v mriežke to skákalo */
+.svc__row:hover {
+  transform: none;
+}

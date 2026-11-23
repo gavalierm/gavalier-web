@@ -3,6 +3,8 @@
    ======================================== */
 
 .hero {
+  /* hero začína pod lepiacou hlavičkou, aby ju hlavička neprekryla */
+  margin-top: 3.25rem;
   background: var(--theme-bg);
   color: var(--theme-text-primary);
   padding: 0;
@@ -12,8 +14,8 @@
 /* TOP — byline + title + portrait image */
 .hero__top {
   position: relative;
-  padding-top: var(--space-13);
-  padding-bottom: var(--space-10);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-9);
 }
 
 @media (min-width: 768px) {
@@ -88,8 +90,8 @@
 
 /* BOTTOM — lede + nav */
 .hero__bottom {
-  padding-top: var(--space-10);
-  padding-bottom: var(--space-13);
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-11);
 }
 
 @media (min-width: 768px) {
@@ -121,4 +123,10 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    margin-top: 4rem;
+  }
 }

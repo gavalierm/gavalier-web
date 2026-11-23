@@ -125,15 +125,7 @@
           "name": "Ako často Shoptet aktualizuje sitemap?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Podpora Shoptetu uviedla, že sa generuje automaticky a drží vo vyrovnávacej pamäti 4 hodiny. Je to odpoveď z jednej konverzácie, nie verejná dokumentácia."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Dá sa sitemap v Shoptete upraviť?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Podľa odpovede podpory nie, generuje sa automaticky."
+            "text": "Podľa podpory Shoptetu sa generuje automaticky a drží sa vo vyrovnávacej pamäti 4 hodiny. Je to odpoveď z jednej konverzácie, nie verejná dokumentácia."
           }
         },
         {
@@ -141,7 +133,7 @@
           "name": "Ako odoslať sitemap do Search Console?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "V správe Sitemaps vložte adresu sitemap do poľa Pridať novú sitemap a kliknite na Odoslať. Potrebujete vlastnícke oprávnenia, inak sitemap uveďte v súbore robots.txt."
+            "text": "V správe Sitemaps vložte adresu do poľa Pridať novú sitemap a kliknite na Odoslať. Potrebujete vlastnícke oprávnenia, inak ju uveďte v súbore robots.txt."
           }
         },
         {
@@ -150,14 +142,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Nie. Google výslovne uvádza, že nezaručuje prechod ani indexáciu adries zo sitemap."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Obsahuje sitemap Shoptetu dátum zmeny lastmod?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sitemap klientskeho e-shopu ho 22. 11. 2026 neobsahovala. Odpoveď podpory, či ho Shoptet doplní, zatiaľ nemáme, preto neviem povedať viac."
           }
         }
       ]
@@ -211,60 +195,43 @@
       <header class="in">
         <p class="kicker">SEO a LLM</p>
         <h1 class="a-title">Ako často Shoptet aktualizuje sitemap a ako ju poslať do Search Console</h1>
-        <p class="lede">Sitemap v Shoptete sa tvorí automaticky a nedá sa upraviť; podpora Shoptetu klientskemu e-shopu uviedla, že sa drží vo vyrovnávacej pamäti 4 hodiny. Do Search Console ju pošlete v správe Sitemaps, no odoslanie nezaručí prechod ani indexáciu. Či Shoptet pri adresách uvádza dátum zmeny (lastmod), zatiaľ neviem: otázku sme podpore položili a odpoveď nemáme.</p>
+        <p class="lede">Sitemap v Shoptete sa tvorí automaticky a nedá sa upraviť. Podpora Shoptetu klientskemu e-shopu uviedla, že sa drží vo vyrovnávacej pamäti 4 hodiny. Odoslanie do Search Console nezaručí indexáciu.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>3 min čítania</span>
+          <span>1 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Kde sitemap je a ako vzniká</h2>
-      <p>Sitemap e-shopu na Shoptete je na adrese <code>https://www.example.com/sitemap.xml</code> (na vašej doméne). Podľa odpovede podpory Shoptetu, ktorú sme dostali pre klientsky e-shop, sa generuje automaticky, nedá sa upraviť a drží sa vo vyrovnávacej pamäti 4 hodiny. Je to odpoveď podpory, nie verejná dokumentácia, takže ju berte ako informáciu z jednej konverzácie. V praxi z nej plynie, že zmenu produktu nečakajte v sitemap skôr než po niekoľkých hodinách.</p>
+      <h2>Kde sitemap je</h2>
+      <p>Sitemap e-shopu je na adrese <code>https://www.example.com/sitemap.xml</code> (na vašej doméne). Podľa odpovede podpory Shoptetu sa generuje automaticky, nedá sa upraviť a drží sa vo vyrovnávacej pamäti 4 hodiny. Zmenu produktu preto čakajte v sitemap až po niekoľkých hodinách.</p>
 
-      <h2>Ako ju odoslať do Search Console</h2>
-      <p>Podľa <a href="https://support.google.com/webmasters/answer/7451001">nápovedy Google</a> musíte byť vlastníkom vlastnosti. Otvorte správu Sitemaps, do poľa Pridať novú sitemap vložte adresu a kliknite na Odoslať. Predtým si môžete pomocou kontroly adresy URL naživo overiť, že Googlebot sitemap vie načítať. Ak vlastníkom nie ste, sitemap sa dá uviesť aj v súbore robots.txt.</p>
+      <h2>Odoslanie do Search Console</h2>
+      <p>Podľa <a href="https://support.google.com/webmasters/answer/7451001">nápovedy Google</a> musíte byť vlastníkom vlastnosti. V správe Sitemaps vložte adresu do poľa Pridať novú sitemap a kliknite na Odoslať. Ak vlastníkom nie ste, uveďte sitemap v súbore robots.txt.</p>
 
-      <h2>Čo odoslanie zaručí a čo nie</h2>
-      <p>Podľa tej istej <a href="https://support.google.com/webmasters/answer/7451001">nápovedy</a> Google sitemap prečíta hneď po odoslaní a ďalej ju obnovuje vo vlastnom rytme. Zároveň platí, že neexistuje záruka, že adresa zo sitemap bude prechádzaná alebo indexovaná. Odoslanie preto nie je tlačidlo na urýchlenie indexácie. Google radí odoslať ju znova až po väčších zmenách.</p>
-      <p>Starý spôsob, ping sitemap na adresu Google, <a href="https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping">Google vyradil</a>: po vypnutí vracia chybu 404 a nič nespraví.</p>
+      <h2>Čo odoslanie zaručí</h2>
+      <p>Google sitemap prečíta hneď a potom ju obnovuje sám. Nezaručuje však, že adresy prejde alebo zaindexuje. Odoslanie preto nie je tlačidlo na urýchlenie indexácie. Odoslať ju znova stačí po väčších zmenách.</p>
 
-      <h2>Dátum zmeny (lastmod): čo vieme a čo nie</h2>
-      <p>Google podľa toho istého <a href="https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping">článku</a> používa údaj lastmod ako signál na plánovanie prechodu adries, ktoré už pozná, ale len vtedy, keď sa dlhodobo zhoduje so skutočnosťou. Pri stránkach, kde dátum nevieme spoľahlivo určiť, ho možno vynechať.</p>
-      <p>Sitemap klientskeho e-shopu na Shoptete mala 22. novembra 2026 pri adresách iba údaje o adrese, priorite a obrázkoch, bez lastmod. Pýtali sme sa podpory Shoptetu, či ho plánuje doplniť, či sa dá zapnúť a či ho môže zaradiť medzi požiadavky na vývoj. <strong>Odpoveď zatiaľ nemáme</strong>, takže neviem povedať, či a kedy sa to zmení, ani či to platí pre všetky e-shopy. Až príde odpoveď, článok doplním.</p>
-
-      <h2>Čo robiť, keď sa zmena neukazuje</h2>
-      <ul>
-        <li>Po úprave produktu počkajte aspoň tak dlho, ako trvá vyrovnávacia pamäť sitemap, teda hodiny, nie minúty.</li>
-        <li>Pomocou kontroly adresy URL v Search Console zistíte stav konkrétnej stránky a či ju Googlebot vie načítať. Že by to indexáciu urýchlilo, som neoveroval, preto to netvrdím.</li>
-        <li>Sitemap neodosielajte opakovane. Stačí ju mať odoslanú raz a po väčších zmenách ju skontrolovať v správe Sitemaps.</li>
-      </ul>
+      <h2>Dátum zmeny (lastmod)</h2>
+      <p>Google ho podľa <a href="https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping">svojho článku</a> používa na plánovanie prechodu, ale len keď sa dlhodobo zhoduje so skutočnosťou. Sitemap klientskeho e-shopu ho 22. novembra 2026 neobsahovala. Podpore sme položili otázku, či ho doplní. <strong>Odpoveď zatiaľ nemáme.</strong></p>
 
       <h2>Z praxe</h2>
-      <p>Pre klientsky e-shop sme odoslanie sitemap cez API Search Console vyskúšali a funguje: zoznam sitemap sa načíta a odoslanie prejde. Odosiela sa ručne po kontrole, pravidelné odosielanie sme nezaviedli. Google ju po odoslaní obnovuje sám.</p>
+      <p>Pre klientsky e-shop sme odoslanie sitemap cez API Search Console vyskúšali a funguje. Odosiela sa ručne po kontrole. Google ju potom obnovuje sám.</p>
 
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Ako často Shoptet aktualizuje sitemap?</h3></summary>
-          <p class="faq__a">Podpora Shoptetu uviedla, že sa generuje automaticky a drží vo vyrovnávacej pamäti 4 hodiny. Je to odpoveď z jednej konverzácie, nie verejná dokumentácia.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Dá sa sitemap v Shoptete upraviť?</h3></summary>
-          <p class="faq__a">Podľa odpovede podpory nie, generuje sa automaticky.</p>
+          <p class="faq__a">Podľa podpory Shoptetu sa generuje automaticky a drží sa vo vyrovnávacej pamäti 4 hodiny. Je to odpoveď z jednej konverzácie, nie verejná dokumentácia.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Ako odoslať sitemap do Search Console?</h3></summary>
-          <p class="faq__a">V správe Sitemaps vložte adresu sitemap do poľa Pridať novú sitemap a kliknite na Odoslať. Potrebujete vlastnícke oprávnenia, inak sitemap uveďte v súbore robots.txt.</p>
+          <p class="faq__a">V správe Sitemaps vložte adresu do poľa Pridať novú sitemap a kliknite na Odoslať. Potrebujete vlastnícke oprávnenia, inak ju uveďte v súbore robots.txt.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Zaručí odoslanie sitemap indexáciu?</h3></summary>
           <p class="faq__a">Nie. Google výslovne uvádza, že nezaručuje prechod ani indexáciu adries zo sitemap.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Obsahuje sitemap Shoptetu dátum zmeny lastmod?</h3></summary>
-          <p class="faq__a">Sitemap klientskeho e-shopu ho 22. 11. 2026 neobsahovala. Odpoveď podpory, či ho Shoptet doplní, zatiaľ nemáme, preto neviem povedať viac.</p>
         </details>
       </div>
       </div>

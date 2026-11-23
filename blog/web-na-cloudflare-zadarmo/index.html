@@ -125,7 +125,7 @@
           "name": "Je hosting webu na Cloudflare naozaj zadarmo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pre statický web áno v tom zmysle, že podľa dokumentácie Cloudflare sú požiadavky na statické súbory „free and unlimited“ a uloženie súborov nemá ďalšiu cenu. Doménu a prípadné platené služby si platíte zvlášť."
+            "text": "Pre statický web áno: podľa dokumentácie Cloudflare sú požiadavky na statické súbory „free and unlimited“. Doménu si platíte zvlášť."
           }
         },
         {
@@ -133,23 +133,7 @@
           "name": "Aké limity má plán Workers Free pre statický web?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jedna verzia môže mať najviac 20 000 súborov a každý súbor môže mať najviac 25 MiB. Plán Workers Paid dovoľuje 100 000 súborov."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Mám začať na Cloudflare Pages alebo Workers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dokumentácia Cloudflare Pages odporúča: „Start new projects with Workers“. Existujúci projekt z Pages sa dá presunúť podľa návodu Migrate to Workers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Zmení sa po presune adresa mojich stránok?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nemusí, ak súbory ostanú na rovnakých cestách. Pri predvolenom spracovaní HTML je adresa priečinka s lomkou na konci a verzia bez lomky sa presmeruje; trvalé presmerovanie 301 pridáte do súboru _redirects."
+            "text": "Jedna verzia môže mať najviac 20 000 súborov a každý súbor najviac 25 MiB. Plán Workers Paid dovoľuje 100 000 súborov."
           }
         },
         {
@@ -157,7 +141,7 @@
           "name": "Dá sa na Cloudflare presunúť WordPress?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie priamo. WordPress potrebuje PHP a databázu, statické súbory ich nespúšťajú. Možnosťou je prebudovať web na statické súbory, čo je samostatný projekt."
+            "text": "Nie priamo. WordPress potrebuje PHP a databázu, ktoré statické súbory nespúšťajú."
           }
         }
       ]
@@ -211,32 +195,30 @@
       <header class="in">
         <p class="kicker">Tvorba webu</p>
         <h1 class="a-title">Dá sa web hostovať na Cloudflare zadarmo a ako ho presunúť z bežného hostingu</h1>
-        <p class="lede">Statický web (HTML, CSS, JavaScript a obrázky bez databázy) sa dá hostovať na Cloudflare Workers so statickými súbormi a požiadavky na tieto súbory sú podľa dokumentácie Cloudflare „free and unlimited“. Zadarmo nie je doména a nehodí sa to pre web, ktorý potrebuje databázu alebo PHP. Presun je otázka súborov, jednej konfigurácie, presmerovaní a DNS.</p>
+        <p class="lede">Statický web sa dá hostovať na Cloudflare Workers zadarmo: podľa dokumentácie Cloudflare sú požiadavky na statické súbory „free and unlimited“. Doména zadarmo nie je. Web s databázou alebo PHP takto hostovať nejde.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Pre aký web to je a pre aký nie</h2>
-      <p>Cloudflare Workers so statickými súbormi (static assets) servíruje hotové súbory z priečinka. Nič sa na serveri nespúšťa: žiadne PHP, žiadna databáza, žiadny WordPress. Hodí sa preto na vizitkový web, web služieb, blog písaný ako súbory a dokumentáciu. Ak potrebujete administráciu, prihlasovanie alebo e-shop na vlastnom kóde, statické súbory nestačia a treba ďalšie služby alebo iný hosting.</p>
+      <h2>Pre aký web to je</h2>
+      <p>Workers servíruje hotové súbory z priečinka. Nespúšťa PHP ani databázu, takže WordPress nejde. Hodí sa na vizitku, web služieb a blog písaný ako súbory.</p>
 
-      <h2>Čo je zadarmo a kde sú limity</h2>
+      <h2>Limity</h2>
       <ul>
-        <li><strong>Požiadavky na súbory.</strong> Dokumentácia <a href="https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/">Billing and limitations</a> uvádza, že požiadavky na statické súbory sú „free and unlimited“ a uloženie súborov nemá ďalšiu cenu. Spoplatnené sú požiadavky, ktoré spúšťajú kód Workera.</li>
-        <li><strong>Počet súborov.</strong> Podľa <a href="https://developers.cloudflare.com/workers/platform/limits/">limitov Workers</a> môže mať jedna verzia na pláne Workers Free 20 000 súborov (na Workers Paid 100 000).</li>
-        <li><strong>Veľkosť súboru.</strong> Najviac 25 MiB na súbor na oboch plánoch.</li>
-        <li><strong>Presmerovania.</strong> Súbor <code>_redirects</code> môže mať najviac 2 100 pravidiel (2 000 statických a 100 dynamických), podľa <a href="https://developers.cloudflare.com/workers/static-assets/redirects/">dokumentácie presmerovaní</a>.</li>
-        <li><strong>Doména.</strong> Cena domény a prípadných ďalších služieb nie je súčasťou tohto článku; platí sa u registrátora a podľa vášho plánu na Cloudflare.</li>
+        <li><strong>Požiadavky na súbory:</strong> „free and unlimited“ podľa <a href="https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/">Billing and limitations</a>. Spoplatnené sú požiadavky, ktoré spúšťajú kód Workera.</li>
+        <li><strong>Počet súborov:</strong> 20 000 na verziu, na Workers Paid 100 000 (<a href="https://developers.cloudflare.com/workers/platform/limits/">limity Workers</a>).</li>
+        <li><strong>Veľkosť súboru:</strong> najviac 25 MiB.</li>
       </ul>
-      <p>Pages alebo Workers? Dokumentácia <a href="https://developers.cloudflare.com/pages/">Cloudflare Pages</a> vyzýva začínať nové projekty na Workers („Start new projects with Workers“) a existujúci projekt z Pages popisuje stránka <a href="https://developers.cloudflare.com/pages/migrate-to-workers/">Migrate to Workers</a>. Nový web preto začínajte na Workers.</p>
+      <p>Nový web začnite na Workers. Dokumentácia <a href="https://developers.cloudflare.com/pages/">Cloudflare Pages</a> to odporúča („Start new projects with Workers“). Existujúci projekt z Pages presuniete podľa návodu <a href="https://developers.cloudflare.com/pages/migrate-to-workers/">Migrate to Workers</a>.</p>
 
-      <h2>Postup presunu z bežného hostingu</h2>
+      <h2>Postup presunu</h2>
       <ol>
-        <li><strong>Mať web ako súbory.</strong> Najjednoduchšie je repozitár v Gite, kde je v koreni <code>index.html</code> a podpriečinky ako <code>/sluzby/index.html</code>.</li>
-        <li><strong>Pridať konfiguráciu.</strong> V súbore <code>wrangler.jsonc</code> uveďte názov projektu a priečinok so súbormi:
+        <li><strong>Web ako súbory.</strong> Najjednoduchšie je repozitár v Gite s <code>index.html</code> v koreni.</li>
+        <li><strong>Konfigurácia.</strong> Do <code>wrangler.jsonc</code> napíšte názov projektu a priečinok so súbormi (<a href="https://developers.cloudflare.com/workers/wrangler/configuration/">konfigurácia Wrangleru</a>):
 <pre><code>{
   "name": "moj-web",
   "compatibility_date": "2026-11-11",
@@ -245,57 +227,38 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
-}</code></pre>
-        Voľby sú v <a href="https://developers.cloudflare.com/workers/wrangler/configuration/">konfigurácii Wrangleru</a>: <code>html_handling</code> môže byť <code>auto-trailing-slash</code> (predvolené), <code>force-trailing-slash</code>, <code>drop-trailing-slash</code> alebo <code>none</code>; <code>not_found_handling</code> je <code>single-page-application</code>, <code>404-page</code> alebo <code>none</code>.</li>
-        <li><strong>Vylúčiť, čo nepatrí na web.</strong> Ak je priečinok so súbormi koreň repozitára, nahrali by sa aj interné dokumenty a skripty. Súbor <code>.assetsignore</code> určuje, čo sa nenahrá (rovnaká syntax ako <code>.gitignore</code>).</li>
-        <li><strong>Presmerovania.</strong> Pri <code>auto-trailing-slash</code> sa adresa <code>/sluzby</code> presmeruje na <code>/sluzby/</code> dočasným presmerovaním 307, ako uvádza <a href="https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/">dokumentácia spracovania HTML</a>. Ak chcete trvalé 301, pridajte riadok do <code>_redirects</code>:
-<pre><code>/sluzby /sluzby/ 301
-/sluzby/index.html /sluzby/ 301</code></pre>
-        Bez kódu sa použije 302. Presmerovanie celej domény (napríklad holej domény na <code>www</code>) <code>_redirects</code> nevie, dokumentácia výslovne uvádza, že presmerovania na úrovni domény nepodporuje.</li>
-        <li><strong>Nasadiť.</strong> Nasadenie robí <code>npx wrangler deploy</code> z priečinka projektu.</li>
-        <li><strong>Pripojiť doménu.</strong> Vlastná doména (Custom Domain) vyžaduje aktívnu zónu na Cloudflare; Cloudflare potom podľa <a href="https://developers.cloudflare.com/workers/configuration/routing/custom-domains/">dokumentácie</a> vytvorí DNS záznamy a vydá certifikáty. DNS záznamy e-mailu (MX, TXT) pri tom nemeňte a pred prepnutím si zapíšte pôvodné záznamy webu, aby ste sa vedeli vrátiť.</li>
+}</code></pre></li>
+        <li><strong>Vylúčenie súborov.</strong> Súbor <code>.assetsignore</code> (syntax ako <code>.gitignore</code>) určuje, čo sa nenahrá, napríklad interné dokumenty a skripty.</li>
+        <li><strong>Presmerovania.</strong> Adresu <code>/sluzby</code> Cloudflare presmeruje na <code>/sluzby/</code> kódom 307 (<a href="https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/">spracovanie HTML</a>). Trvalé 301 pridáte do <code>_redirects</code>:
+<pre><code>/sluzby /sluzby/ 301</code></pre>
+        Presmerovanie celej domény (holá doména na <code>www</code>) <code>_redirects</code> nevie.</li>
+        <li><strong>Nasadenie.</strong> Spustite <code>npx wrangler deploy</code>.</li>
+        <li><strong>Doména.</strong> Vlastná doména vyžaduje aktívnu zónu na Cloudflare. DNS záznamy a certifikáty potom vytvorí Cloudflare (<a href="https://developers.cloudflare.com/workers/configuration/routing/custom-domains/">dokumentácia</a>). Záznamy e-mailu (MX, TXT) nemeňte a pôvodné záznamy webu si zapíšte.</li>
       </ol>
 
       <h2>Čo skontrolovať po prepnutí</h2>
       <ul>
-        <li>Hlavné stránky vracajú stav 200 a holá doména presmeruje jedným presmerovaním 301 na tvar s <code>www</code> (alebo opačne).</li>
-        <li>Adresy bez lomky a s <code>index.html</code> idú na kanonickú adresu stavom 301, nie 307.</li>
-        <li>Neexistujúca adresa vráti stav 404 a vašu stránku „nenájdené“, nie prázdnu odpoveď.</li>
-        <li>Súbory, ktoré na webe nemajú byť (interné dokumenty, konfigurácia, skripty), vrátia 404.</li>
-        <li>Canonical, sitemap a robots.txt ukazujú na správnu doménu.</li>
-        <li>E-mail naďalej funguje.</li>
+        <li>Hlavné stránky vracajú stav 200 a holá doména presmeruje jedným 301 na tvar s <code>www</code>.</li>
+        <li>Neexistujúca adresa vráti 404 a vašu stránku „nenájdené“.</li>
+        <li>Interné súbory, ktoré na webe nemajú byť, vrátia 404.</li>
+        <li>E-mail funguje.</li>
       </ul>
 
       <h2>Z praxe</h2>
-      <p>Takto som v novembri 2026 presunul tento web z FTP hostingu na Cloudflare Workers. Koreň repozitára je priečinok so súbormi, a preto bol potrebný <code>.assetsignore</code>: po jednom nasadení sa na web dostal aj dočasný adresár nástroja <code>wrangler</code>, takže som ho do zoznamu vylúčených doplnil. Presmerovanie holej domény na <code>www</code> som nastavil pravidlom v dashboarde, lebo <code>_redirects</code> to nevie. Po každom nasadení beží skript, ktorý z živého webu overí stavové kódy hlavných stránok, súborov, ktoré tam nemajú byť, presmerovaní a stránky 404. Pôvodné DNS záznamy webu mám zapísané, aby sa dalo vrátiť. Neoveril som, ako sa správa web s veľkým počtom súborov blízko limitu, ani web s Worker kódom.</p>
-
-      <h2>Kedy ostať na klasickom hostingu</h2>
-      <ul>
-        <li>Web beží na WordPresse, PHP alebo inom systéme s databázou, ktorý nechcete prepisovať.</li>
-        <li>Potrebujete, aby hosting riešil aj poštu a ďalšie služby v jednom balíku.</li>
-        <li>Nikto v tíme nechce pracovať s Gitom a príkazovým riadkom.</li>
-      </ul>
+      <p>V novembri 2026 som takto presunul tento web z FTP hostingu. Po prvom nasadení sa na web dostal aj dočasný adresár nástroja <code>wrangler</code>, preto mám <code>.assetsignore</code>. Presmerovanie holej domény na <code>www</code> som nastavil pravidlom v dashboarde. Neoveril som web s veľkým počtom súborov blízko limitu.</p>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Je hosting webu na Cloudflare naozaj zadarmo?</h3></summary>
-          <p class="faq__a">Pre statický web áno v tom zmysle, že podľa dokumentácie Cloudflare sú požiadavky na statické súbory „free and unlimited“ a uloženie súborov nemá ďalšiu cenu. Doménu a prípadné platené služby si platíte zvlášť.</p>
+          <p class="faq__a">Pre statický web áno: podľa dokumentácie Cloudflare sú požiadavky na statické súbory „free and unlimited“. Doménu si platíte zvlášť.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Aké limity má plán Workers Free pre statický web?</h3></summary>
-          <p class="faq__a">Jedna verzia môže mať najviac 20 000 súborov a každý súbor môže mať najviac 25 MiB. Plán Workers Paid dovoľuje 100 000 súborov.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Mám začať na Cloudflare Pages alebo Workers?</h3></summary>
-          <p class="faq__a">Dokumentácia Cloudflare Pages odporúča: „Start new projects with Workers“. Existujúci projekt z Pages sa dá presunúť podľa návodu Migrate to Workers.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Zmení sa po presune adresa mojich stránok?</h3></summary>
-          <p class="faq__a">Nemusí, ak súbory ostanú na rovnakých cestách. Pri predvolenom spracovaní HTML je adresa priečinka s lomkou na konci a verzia bez lomky sa presmeruje; trvalé presmerovanie 301 pridáte do súboru _redirects.</p>
+          <p class="faq__a">Jedna verzia môže mať najviac 20 000 súborov a každý súbor najviac 25 MiB. Plán Workers Paid dovoľuje 100 000 súborov.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Dá sa na Cloudflare presunúť WordPress?</h3></summary>
-          <p class="faq__a">Nie priamo. WordPress potrebuje PHP a databázu, statické súbory ich nespúšťajú. Možnosťou je prebudovať web na statické súbory, čo je samostatný projekt.</p>
+          <p class="faq__a">Nie priamo. WordPress potrebuje PHP a databázu, ktoré statické súbory nespúšťajú.</p>
         </details>
       </div>
       </div>

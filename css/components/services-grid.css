@@ -5,9 +5,19 @@
    ======================================== */
 
 .svc {
-  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10, 4rem);
+  max-width: 1240px;
   margin: var(--space-10, 4rem) auto 0;
   padding: 0 var(--space-6, 1.5rem);
+}
+
+@media (min-width: 1024px) {
+  .svc {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8, 2rem);
+  }
 }
 
 .svc__group {
@@ -16,13 +26,9 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--theme-text-muted);
-  margin: var(--space-10, 4rem) 0 0;
+  margin: 0;
   padding-bottom: var(--space-4, 1rem);
   border-bottom: 2px solid var(--theme-text-primary);
-}
-
-.svc__group:first-child {
-  margin-top: 0;
 }
 
 .svc__list {
@@ -37,25 +43,28 @@
 
 .svc__row {
   display: grid;
-  grid-template-columns: 4.5rem 1fr auto;
-  align-items: center;
-  gap: var(--space-6, 1.5rem);
-  padding: var(--space-6, 1.5rem) 0;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "index arrow"
+    "body  body";
+  row-gap: var(--space-3, 0.75rem);
+  padding: var(--space-6, 1.5rem) 0 var(--space-7, 1.75rem);
   color: var(--theme-text-primary);
   text-decoration: none;
 }
 
 .svc__index {
-  align-self: start;
-  padding-top: 0.6em;
+  grid-area: index;
+  align-self: center;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: var(--font-bold);
   color: var(--theme-text-muted);
   transition: color 0.25s ease;
 }
 
 .svc__body {
+  grid-area: body;
   display: flex;
   flex-direction: column;
   gap: var(--space-3, 0.75rem);
@@ -65,10 +74,10 @@
 
 .svc__name {
   margin: 0;
-  font-size: clamp(1.875rem, 4.6vw, 3.5rem);
+  font-size: clamp(1.625rem, 2.3vw, 2.125rem);
   font-weight: var(--font-black);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
 /* modrý box ako .headline-mark, nabehne zľava */
@@ -82,17 +91,18 @@
 }
 
 .svc__text {
-  max-width: 38rem;
-  font-size: 1.125rem;
+  max-width: 34rem;
+  font-size: 1.0625rem;
   line-height: 1.5;
   color: var(--theme-text-secondary);
 }
 
 .svc__arrow {
+  grid-area: arrow;
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: 1.5px solid var(--theme-text-primary);
   color: var(--theme-text-primary);
@@ -100,8 +110,8 @@
 }
 
 .svc__arrow svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -115,7 +125,7 @@
   }
 
   .svc__row:hover .svc__body {
-    transform: translateX(0.5rem);
+    transform: translateX(0.35rem);
   }
 
   .svc__row:hover .svc__arrow {
@@ -142,27 +152,12 @@
 
 @media (max-width: 767px) {
   .svc {
+    gap: var(--space-8, 2rem);
     padding: 0 var(--space-5, 1.25rem);
-  }
-
-  .svc__row {
-    grid-template-columns: 2.25rem 1fr auto;
-    gap: var(--space-4, 1rem);
-    padding: var(--space-6, 1.5rem) 0;
-  }
-
-  .svc__index {
-    padding-top: 0.35em;
-    font-size: 0.75rem;
   }
 
   .svc__text {
     font-size: 1rem;
-  }
-
-  .svc__arrow {
-    width: 2.5rem;
-    height: 2.5rem;
   }
 }
 

@@ -582,3 +582,14 @@ body.nav-open .theme-toggle {
     transition: none;
   }
 }
+
+/* Prepínač témy pod hlavičkou s odstupom, aby sa jej nedotýkal */
+.theme-toggle {
+  top: calc(3.25rem + 0.75rem);
+}
+
+@media (min-width: 1024px) {
+  .theme-toggle {
+    top: calc(4rem + 0.75rem);
+  }
+}

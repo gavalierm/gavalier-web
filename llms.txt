@@ -15,7 +15,7 @@ IČO: 47 786 825 · DIČ: 1080715911
 - [AI agenti pre firmy](https://www.gavalier.sk/ai-agenti/): návrh a nasadenie AI agentov a dashboardov nad firemnými údajmi; kde agent beží, aké údaje vidí a kto zodpovedá za jeho chyby, sa dohodne vopred.
 - [SEO optimalizácia webu](https://www.gavalier.sk/seo-llm-optimalizacia/): SEO pre Google aj AI asistentov: štruktúrované dáta, sémantické HTML, sitemap, pravidlá pre crawlery a meranie.
 - [Zvuk, video a live streaming na podujatia](https://www.gavalier.sk/eventy/): konferencie, koncerty a firemné akcie; multi-cam produkcia, live stream kamkoľvek, FOH zvuk, DMX svetlá a akustické úpravy, kompletná technika aj obsluha z jedného miesta.
-- [IT siete a bezpečnosť cez preverených partnerov](https://www.gavalier.sk/it-siete/): Marcel siete a infraštruktúru sám nerobí; zoženie preverených partnerov, koordinuje ich, skontroluje návrh a ručí za nich. Jeden kontakt, jedna zodpovednosť.
+- [IT siete a bezpečnosť](https://www.gavalier.sk/it-siete/): Marcel siete a infraštruktúru sám nerobí; zoženie preverených partnerov, koordinuje ich, skontroluje návrh a ručí za nich. Jeden kontakt, jedna zodpovednosť.
 - [Ako pracujem](https://www.gavalier.sk/ako-pracujem/): záruka (štyri body), cena a postup spolupráce v štyroch krokoch.
 
 ## Blog
@@ -25,6 +25,8 @@ IČO: 47 786 825 · DIČ: 1080715911
 - [Všetky články](https://www.gavalier.sk/blog/)
 
 ## Záruka
+
+Podrobne na stránke https://www.gavalier.sk/ako-pracujem/ (záruka, cena, postup).
 
 Toto je hlavný dôvod, prečo sa klienti rozhodnú. Platia všetky štyri body naraz:
 
@@ -42,29 +44,6 @@ Skoro všetko sa dá spraviť vo viacerých verziách: od tej, ktorá rieši to 
 Klient môže rozpočet povedať rovno — nie preto, aby podľa neho Marcel nacenil, ale aby vedel, akú verziu má zmysel navrhnúť. Zavolať sa dá kedykoľvek a nič to nestojí — hovor aj návrh riešenia sú nezáväzné.
 
 Veľa vecí dnes stojí menej než pred dvoma rokmi.
-
-## Situácie, s ktorými za ním ľudia chodia
-
-1. **Kupujete AI kurzy?** Nástroje má dnes každý. AI zvládne skoro všetko, len jej treba presne povedať, čo má robiť. To sa dá naučiť a Marcel rád ukáže ako.
-2. **AI vám nahodí produkty.** Nahadzovanie produktov na eshop, prepisovanie údajov z jedného systému do druhého, reporty skladané po večeroch: toto všetko dnes zvládne stroj. Je to najlacnejšia vec, akú si dá klient spraviť, a vráti sa za pár týždňov.
-3. **Drobnosť, ktorá vás brzdí?** Niečo, čo malo byť dávno hotové, žerie čas aj peniaze a dnes je to už aj zastarané. Marcel sa na to pozrie s nadhľadom a ušetrí čas aj peniaze.
-4. **Určite viete ako na to?** Klient vie, kam sa chce dostať, len zatiaľ nie je jasné, čo k tomu treba. Jeden klient chcel zvládnuť AI marketing, nakoniec mu stačil prehľad, ktorý ukázal, kde má proces medzery. Spolu to rozoberú a nájdu najkratšiu cestu.
-5. **Chystáte podujatie?** Konferencie, koncerty, firemné akcie. Zvuk, kamery, live stream aj svetlá, kompletná technika aj obsluha z jedného miesta. Klient rieši program, techniku nechá na Marcela.
-
-## Oblasti
-
-### Code & IT
-JavaScript, TypeScript · PHP, Python, Bash · REST, JSON · SQL · Git, CI/CD · Claude Code agenti v dev workflow.
-
-Automatizácie a AI: napojenie rôznych systémov do jedného celku, dashboardy nad firemným workflow, odstránenie ručnej práce.
-
-**Pointa:** Stack je dnes druhoradý. Treba rozumieť objektovému programovaniu, klásť správne otázky a držať sa E2E testov. Zvyšok dotiahne Claude Code.
-
-### Network & Infra
-Siete Marcel sám nerobí, ale roky je obklopený ľuďmi, ktorí ich robia denne, a vie, koho na čo zavolať. Zoženie správneho človeka pre konkrétnu situáciu: MikroTik a Ubiquiti konfigurátori, Linux administrátori, bezpečnostní špecialisti. Jeden kontakt, jedna zodpovednosť: Marcel prekladá požiadavky, koordinuje ľudí, drží termíny a rozpočet, skontroluje návrh a ručí za každého partnera. Bezpečnostné audity a penetračné testy realizujú špecialisti.
-
-### Audio \ Video & Stage
-Multi-cam produkcia · live stream kamkoľvek (YouTube, Twitch, Facebook, vlastné RTMP, korporátne platformy) · FOH mixing a line array · DMX svetelná réžia · color grading · acoustic treatment · stage design.
 
 ## Ako prebieha spolupráca
 

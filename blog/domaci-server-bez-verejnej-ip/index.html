@@ -125,7 +125,7 @@
           "name": "Potrebujem na Cloudflare Tunnel verejnú IP adresu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie. Program cloudflared na vašom serveri otvorí spojenie smerom von do siete Cloudflare, takže verejná IP ani otvorený port v routeri nie sú potrebné."
+            "text": "Nie. Program cloudflared otvorí spojenie smerom von, takže verejná IP ani otvorený port v routeri nie sú potrebné."
           }
         },
         {
@@ -133,7 +133,7 @@
           "name": "Čím sa líši rýchly tunel od bežného?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rýchly tunel (trycloudflare.com) je určený na testovanie, nemá zaručenú dostupnosť, zvládne 200 súbežných požiadaviek a adresa sa pri každom spustení mení. Na stálu prevádzku slúži bežný tunel."
+            "text": "Rýchly tunel je na testovanie, nemá zaručenú dostupnosť, zvládne 200 súbežných požiadaviek a adresa sa pri každom spustení mení. Na stálu prevádzku slúži bežný tunel."
           }
         },
         {
@@ -142,22 +142,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Nie. Tunel prenáša prevádzku, ale neurčuje, kto ju smie poslať. Služba musí mať prihlásenie (napríklad Cloudflare Access) alebo vlastný kľúč."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Čo nikdy nesprístupniť z internetu bez prihlásenia?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Administráciu servera a NAS, monitorovacie panely, databázy, vzdialenú plochu a príkazový riadok, súbory a zálohy a rozhrania programov, ktoré konajú za vás."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Kedy použiť VPN namiesto tunela?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Keď službu potrebujete len vy alebo úzka skupina vašich ľudí. Verejná adresa má zmysel pre službu, ku ktorej sa musia dostať cudzí ľudia alebo programy mimo vašej siete."
           }
         }
       ]
@@ -211,79 +195,59 @@
       <header class="in">
         <p class="kicker">Automatizácia</p>
         <h1 class="a-title">Ako sprístupniť domáci server z internetu bez verejnej IP adresy</h1>
-        <p class="lede">Server bez verejnej IP adresy sa dá sprístupniť cez Cloudflare Tunnel: program cloudflared na vašom serveri sám otvorí spojenie smerom von, takže v routeri neotvárate žiadny port. Na skúšanie stačí dočasná adresa, na trvalú prevádzku treba stály tunel s vlastnou doménou. A čokoľvek, čo slúži na správu (administrácia, databázy, súbory), nikdy nesprístupňujte bez prihlásenia.</p>
+        <p class="lede">Server bez verejnej IP adresy sprístupníte cez Cloudflare Tunnel. Program cloudflared na serveri sám otvorí spojenie smerom von, takže v routeri neotvárate žiadny port. Správu servera (administráciu, databázy, súbory) nikdy nesprístupňujte bez prihlásenia.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Problém: server nemá verejnú IP</h2>
-      <p>Server alebo NAS doma, v kancelárii alebo za operátorom, ktorý adresu zdieľa, nemá adresu, na ktorú by sa dalo zvonka pripojiť. Klasické riešenie je otvoriť port v routeri, čo bez verejnej adresy nejde a aj keď ide, vystavuje to server priamo internetu.</p>
-
       <h2>Ako Cloudflare Tunnel funguje</h2>
-      <p>Podľa <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/">dokumentácie Cloudflare Tunnel</a> beží na vašej strane program <code>cloudflared</code>, ktorý „initiates an outbound connection through your firewall from the origin to the Cloudflare global network“, teda sám otvorí spojenie von do siete Cloudflare. Tunel preto prepája zdroje „without a publicly routable IP address“ a firewall môžete nastaviť tak, aby povolil iba tieto odchádzajúce spojenia a blokoval všetko prichádzajúce. Server je dosiahnuteľný len cez Cloudflare.</p>
-      <p>Postup vo všeobecnosti: na serveri nainštalujete a overíte <code>cloudflared</code> a v dashboarde alebo cez API vytvoríte tunel (návody sú na stránke <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/">Get started</a>). Potom určíte, na ktorú adresu (napríklad <code>sluzba.example.com</code>) má tunel posielať prevádzku do ktorej služby vo vašej sieti.</p>
+      <p>Podľa <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/">dokumentácie</a> program <code>cloudflared</code> sám otvorí spojenie von do siete Cloudflare. Tunel preto funguje „without a publicly routable IP address“ a firewall môže blokovať všetko prichádzajúce.</p>
+      <p>Postup: nainštalujete <code>cloudflared</code> a vytvoríte tunel v dashboarde alebo cez API (<a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/">Get started</a>). Potom určíte, ktorú adresu má tunel posielať do ktorej služby.</p>
 
       <h2>Dočasná a stála adresa</h2>
-      <p>Cloudflare ponúka aj rýchly tunel (quick tunnel) s adresou na <code>trycloudflare.com</code>, ktorý nevyžaduje účet ani doménu. Dokumentácia <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/">Quick Tunnels</a> uvádza:</p>
+      <p>Rýchly tunel s adresou na <code>trycloudflare.com</code> nevyžaduje účet ani doménu. Podľa <a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/">dokumentácie</a>:</p>
       <ul>
-        <li>sú „for testing and development“, na produkciu odporúča bežný tunel,</li>
-        <li>každý tunel zvládne najviac 200 súbežných požiadaviek, ďalšie dostanú chybu 429,</li>
-        <li>„have no uptime guarantee“, teda nemajú zaručenú dostupnosť,</li>
-        <li>adresa sa pri každom novom tuneli zmení a prístup skončí, keď sa program <code>cloudflared</code> zastaví.</li>
+        <li>je „for testing and development“,</li>
+        <li>zvládne najviac 200 súbežných požiadaviek,</li>
+        <li>má „no uptime guarantee“,</li>
+        <li>adresa sa pri každom novom tuneli zmení.</li>
       </ul>
-      <p>Dočasná adresa je teda dobrá na skúšku. Služba, na ktorú sa niečo ďalšie spolieha (iný program, zákazník, váš tím), potrebuje stálu adresu na vlastnej doméne a bežný tunel.</p>
+      <p>Na stálu službu použite bežný tunel s vlastnou doménou.</p>
 
       <h2>Čo nikdy nesprístupniť bez prihlásenia</h2>
-      <p>Tunel iba prenáša prevádzku, nerozhoduje, kto ju smie poslať. Kto pozná adresu, dostane sa k službe. Preto sa bez prihlásenia nesprístupňuje:</p>
+      <p>Tunel neurčuje, kto smie poslať prevádzku. Bez prihlásenia nesprístupňujte:</p>
       <ul>
-        <li>administrácia servera, routera, NAS a akýkoľvek panel na správu,</li>
-        <li>monitorovacie a prehľadové panely (ukazujú, čo na serveri beží),</li>
-        <li>databázy a ich správcovské nástroje,</li>
-        <li>vzdialená plocha a príkazový riadok,</li>
+        <li>administráciu servera, routera a NAS,</li>
+        <li>monitorovacie panely,</li>
+        <li>databázy,</li>
+        <li>vzdialenú plochu a príkazový riadok,</li>
         <li>súbory a zálohy,</li>
-        <li>rozhrania programov (API), ktoré konajú za vás (posielajú poštu, spúšťajú úlohy).</li>
+        <li>rozhrania programov (API), ktoré konajú za vás.</li>
       </ul>
-      <p>Pre stránky určené ľuďom je riešením Cloudflare Access, ktorý podľa <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/policies/">dokumentácie</a> určuje, kto sa k aplikácii dostane, podľa pravidiel, ktoré nastavíte. Pre služby, ktoré volá program a ten sa neprihlási ako človek, musí prístup chrániť vlastný kľúč služby a bez kľúča odpovedať chybou, nie dátami.</p>
+      <p>Pre ľudí použite Cloudflare Access (<a href="https://developers.cloudflare.com/cloudflare-one/access-controls/policies/">dokumentácia</a>). Službu volanú programom musí chrániť vlastný kľúč a bez kľúča má odpovedať chybou.</p>
 
       <h2>Kedy radšej VPN</h2>
-      <p>Ak službu potrebujete len vy alebo úzka skupina vašich ľudí a nie je určená verejnosti, nevystavujte ju vôbec a pripájajte sa cez VPN. Verejná adresa má zmysel tam, kde sa na službu musia dostať cudzí ľudia alebo programy mimo vašej siete.</p>
+      <p>Ak službu potrebujete len vy alebo váš tím, nevystavujte ju a pripájajte sa cez VPN. Verejná adresa má zmysel pre cudzích ľudí alebo programy mimo vašej siete.</p>
 
       <h2>Z praxe</h2>
-      <p>Na vlastnom serveri bez verejnej IP mám služby sprístupnené cez tunel. Jedna z nich pôvodne bežala na dočasnej adrese; v novembri 2026 som ju presunul na stálu adresu na vlastnej doméne cez ten istý tunel, ktorý už bežal. Program <code>cloudflared</code> aktualizujem pravidelne a verzie sledujem. Neoveril som, ako sa tunel správa pri veľkom objeme prenosu, ani koľko stojí tunel mimo bezplatného použitia, preto cenu neuvádzam.</p>
-
-      <h2>Kontrolný zoznam</h2>
-      <ul>
-        <li>Router nemá otvorené žiadne porty na server, tunel ide len smerom von.</li>
-        <li>Každá verejná služba má prihlásenie (Access) alebo vlastný kľúč.</li>
-        <li>Stála služba nebeží na dočasnej adrese.</li>
-        <li>Administrácia a databázy nie sú verejné vôbec.</li>
-        <li>Viete, kde a ako sa program <code>cloudflared</code> aktualizuje.</li>
-      </ul>
+      <p>Na vlastnom serveri bez verejnej IP mám služby cez tunel. V novembri 2026 som jednu presunul z dočasnej adresy na stálu na vlastnej doméne, cez ten istý tunel. Neoveril som správanie tunela pri veľkom objeme prenosu.</p>
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Potrebujem na Cloudflare Tunnel verejnú IP adresu?</h3></summary>
-          <p class="faq__a">Nie. Program cloudflared na vašom serveri otvorí spojenie smerom von do siete Cloudflare, takže verejná IP ani otvorený port v routeri nie sú potrebné.</p>
+          <p class="faq__a">Nie. Program cloudflared otvorí spojenie smerom von, takže verejná IP ani otvorený port v routeri nie sú potrebné.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Čím sa líši rýchly tunel od bežného?</h3></summary>
-          <p class="faq__a">Rýchly tunel (trycloudflare.com) je určený na testovanie, nemá zaručenú dostupnosť, zvládne 200 súbežných požiadaviek a adresa sa pri každom spustení mení. Na stálu prevádzku slúži bežný tunel.</p>
+          <p class="faq__a">Rýchly tunel je na testovanie, nemá zaručenú dostupnosť, zvládne 200 súbežných požiadaviek a adresa sa pri každom spustení mení. Na stálu prevádzku slúži bežný tunel.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Je server cez tunel automaticky chránený?</h3></summary>
           <p class="faq__a">Nie. Tunel prenáša prevádzku, ale neurčuje, kto ju smie poslať. Služba musí mať prihlásenie (napríklad Cloudflare Access) alebo vlastný kľúč.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Čo nikdy nesprístupniť z internetu bez prihlásenia?</h3></summary>
-          <p class="faq__a">Administráciu servera a NAS, monitorovacie panely, databázy, vzdialenú plochu a príkazový riadok, súbory a zálohy a rozhrania programov, ktoré konajú za vás.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Kedy použiť VPN namiesto tunela?</h3></summary>
-          <p class="faq__a">Keď službu potrebujete len vy alebo úzka skupina vašich ľudí. Verejná adresa má zmysel pre službu, ku ktorej sa musia dostať cudzí ľudia alebo programy mimo vašej siete.</p>
         </details>
       </div>
       </div>

@@ -125,7 +125,7 @@
           "name": "Dajú sa v Shoptete zobraziť farby produktu v kategórii ako samostatné položky?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Natívne nie. Dlaždica je vždy jeden produkt. Najviac sa dá zapnúť ponuka variantov pod dlaždicou. Samostatné dlaždice dostanete iba vtedy, keď je každá farba samostatný produkt."
+            "text": "Natívne nie, dlaždica je vždy jeden produkt. Samostatné dlaždice dostanete iba vtedy, keď je každá farba samostatný produkt."
           }
         },
         {
@@ -133,15 +133,7 @@
           "name": "Pomôže doplnok Varianty jako samostatné produkty?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Do výpisu kategórie nie. Podľa jeho popisu prepája samostatné produkty v detaile produktu, kde si zákazník prepína farbu."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Čo prináša vedenie farby ako samostatného produktu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Každá farba má vlastnú stránku, cenu, sklad a SEO. Pri existujúcich produktoch to znamená nové adresy, presmerovania a starostlivosť o kódy."
+            "text": "Do výpisu kategórie nie. Podľa popisu prepája produkty v detaile, kde si zákazník prepína farbu."
           }
         },
         {
@@ -149,15 +141,7 @@
           "name": "Prečo sa po importe nedá objednať variant produktu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jednou z príčin je zmiešanie variantov s rôznymi sadami variantných parametrov v jednom produkte. Zistíte to v exporte porovnaním vyplnených stĺpcov variant: v rámci jedného pairCode."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ako sa takej chybe vyhnúť?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Všetky varianty jedného produktu majú mať rovnakú sadu parametrov, rovnaký pairCode a ísť pod sebou. Po každom importe, ktorý mení variantné parametre, spravte kontrolu exportu."
+            "text": "Jednou z príčin je zmiešanie variantov s rôznymi sadami parametrov v jednom produkte. Zistíte to v exporte porovnaním stĺpcov variant: v rámci jedného pairCode."
           }
         }
       ]
@@ -211,68 +195,56 @@
       <header class="in">
         <p class="kicker">Tvorba webu</p>
         <h1 class="a-title">Varianty v Shoptete: farby v kategórii a varianty, ktoré sa nedajú objednať</h1>
-        <p class="lede">Natívne sa v kategórii Shoptetu farby jedného produktu ako samostatné dlaždice zobraziť nedajú: dlaždica je vždy jeden produkt. Najviac možno zapnúť ponuku variantov pod dlaždicou; samostatné dlaždice dá iba farba vedená ako samostatný produkt. Ak sa po importe variant nedá objednať, príčinou môže byť to, že varianty jedného produktu majú rôzne sady variantných parametrov. Nájdete to v exporte.</p>
+        <p class="lede">Farby jedného produktu sa v kategórii Shoptetu ako samostatné dlaždice natívne zobraziť nedajú, lebo dlaždica je vždy jeden produkt. Samostatné dlaždice dostanete iba vtedy, keď je každá farba vlastný produkt. Ak sa po importe variant nedá objednať, hľadajte v exporte varianty s rôznymi sadami parametrov.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Farby ako samostatné dlaždice v kategórii</h2>
-      <p>Podľa nášho prieskumu dokumentácie Shoptetu je dlaždica v zozname produktov vždy jeden produkt s jednou fotkou a jednou dostupnosťou. Pri produkte s piatimi farbami teda uvidíte jednu dlaždicu. Čo sa dá nastaviť, je <a href="https://podpora.shoptet.cz/sablony-variant/">ponuka variantov vo výpise produktov</a>: dostupné hodnoty zvoleného parametra (napríklad farby alebo veľkosti) sa zobrazia ako odkazy, na jeden riadok, a zvyšok je schovaný pod „+ další“. Funguje v kategóriách, vo vyhľadávaní aj na úvodnej strane, ale iba v podporovaných šablónach a pri jednom zvolenom parametri. Dlaždicu navyše nerozdelí.</p>
-      <p>Doplnok <a href="https://doplnky.shoptet.cz/varianty-jako-samostatne-produkty">Varianty jako samostatné produkty</a> farby do výpisu neprinesie. Podľa jeho popisu prepája samostatné produkty v detaile produktu, kde si zákazník prepne farbu, a každý prepojený produkt má vlastnú stránku, cenu, sklad, popis a SEO.</p>
+      <h2>Farby v kategórii</h2>
+      <p>Podľa nášho prieskumu dokumentácie je dlaždica v zozname vždy jeden produkt. Najviac môžete zapnúť <a href="https://podpora.shoptet.cz/sablony-variant/">ponuku variantov vo výpise</a>: hodnoty parametra sa zobrazia ako odkazy pod dlaždicou. Funguje iba v podporovaných šablónach.</p>
+      <p>Doplnok <a href="https://doplnky.shoptet.cz/varianty-jako-samostatne-produkty">Varianty jako samostatné produkty</a> farby do výpisu neprinesie. Podľa popisu prepája produkty iba v detaile, kde si zákazník prepne farbu.</p>
 
-      <h2>Jediná cesta: farba ako samostatný produkt</h2>
-      <p>Ak chcete, aby sa v kategórii objavila každá farba zvlášť, musí byť každá farba vlastný produkt. Za to sa platí:</p>
+      <h2>Farba ako samostatný produkt</h2>
+      <p>Ak chcete každú farbu v kategórii zvlášť, musí byť vlastný produkt. Znamená to, že:</p>
       <ul>
-        <li><strong>Nové adresy.</strong> Pri rozdelení existujúceho produktu vzniknú nové URL a pôvodnú treba presmerovať.</li>
-        <li><strong>Kódy a sklad.</strong> Každý produkt má vlastné kódy a vlastný sklad. Kódy, ktoré už existujú, nemeňte, kým nemusíte.</li>
-        <li><strong>Duplicitný obsah.</strong> Pri farbách rovnakého produktu treba popisy rozlíšiť, aby si produkty neprekrývali v hľadaní.</li>
+        <li>pri rozdelení vzniknú nové adresy a pôvodné treba presmerovať,</li>
+        <li>každý produkt má vlastné kódy a sklad,</li>
+        <li>popisy farieb treba rozlíšiť, aby si produkty neprekrývali v hľadaní.</li>
       </ul>
-      <p>Dá sa to aj opačne: nechať varianty pod jednou dlaždicou s ponukou variantov. Rozhodnutie závisí od toho, či ľudia hľadajú konkrétnu farbu, a od nákladov na rozdelenie existujúcich produktov. Či sa po výbere farby vo filtri zmení fotka dlaždice, dokumentácia nehovorí a neviem to potvrdiť.</p>
 
-      <h2>Prečo sa po importe nedá variant objednať</h2>
-      <p>Pri importe musia mať <a href="https://podpora.shoptet.cz/import-produktu/">všetky varianty jedného produktu</a> rovnaký <code>pairCode</code>, ísť hneď pod sebou a vlastnosti variantov sa zapisujú do stĺpcov <code>variant:názov</code> (najviac tri parametre). Zákazník si potom vyberá z hodnôt týchto parametrov.</p>
-      <p>Chyba, ktorú zákazník nahlási ako „veľkosť sa nedá vložiť do košíka“, môže vzniknúť, keď sa v jednom produkte zmiešajú varianty s rôznymi sadami variantných parametrov, teda varianty z dvoch rôznych šablón variantov. Zákazník vtedy nemá z čoho zostaviť platnú kombináciu. Pri audite klientskeho e-shopu sme takto našli niekoľko produktov a pri jednom bolo overené, že sa nedal objednať žiadny variant. Zmiešanie vzniklo pri hromadnom preradení variantov z jedného parametra na iný, nie ručne.</p>
+      <h2>Variant sa po importe nedá objednať</h2>
+      <p>Podľa <a href="https://podpora.shoptet.cz/import-produktu/">pravidiel importu</a> majú varianty jedného produktu rovnaký <code>pairCode</code>, idú hneď pod sebou a ich vlastnosti sú v stĺpcoch <code>variant:názov</code>. Chyba „veľkosť sa nedá vložiť do košíka“ môže vzniknúť, keď sa v jednom produkte zmiešajú varianty s rôznymi sadami parametrov. Zákazník vtedy nemá z čoho zostaviť platnú kombináciu.</p>
+      <p>Pri audite klientskeho e-shopu sme takto našli niekoľko produktov. Vznikli pri hromadnom preradení variantov.</p>
 
       <h2>Ako to nájsť v exporte</h2>
       <ol>
         <li>Urobte export produktov s variantmi.</li>
         <li>Zoskupte riadky podľa <code>pairCode</code>.</li>
-        <li>V každej skupine zistite, ktoré stĺpce <code>variant:</code> sú vyplnené. Ak sa sady medzi riadkami líšia (iný parameter alebo parameter navyše), produkt je podozrivý.</li>
-        <li>Skontrolujte ho v administrácii a na webe, či sa dá zvoliť a vložiť do košíka.</li>
+        <li>V každej skupine porovnajte vyplnené stĺpce <code>variant:</code>. Ak sa líšia, produkt je podozrivý.</li>
+        <li>Skontrolujte ho na webe.</li>
       </ol>
-      <p>Jednoduchý skript to zvládne aj pri tisíckach produktov.</p>
-
-      <h2>Oprava a kontrola po každom importe</h2>
-      <p>Oprava spočíva v tom, že všetky varianty produktu budú z jednej sady parametrov. Nezmyselné varianty, ktoré správny variant nahrádza, sme zmazali; kódy ostatných variantov ostali nezmenené. Po oprave nemal export žiadny zmiešaný produkt a na webe sa dala zvoliť veľkosť bez chyby. Dôležitejšie než oprava je kontrola: spustite ju po každom importe, ktorý mení variantné parametre. Majiteľ e-shopu nám povedal, že rovnaký stav videl v minulosti pri iných produktoch po ručnom aj strojovom importe a zistil to až po mesiacoch.</p>
+      <p>Opravte ho tak, aby mali všetky varianty jednu sadu parametrov. Kontrolu spravte po každom importe, ktorý mení variantné parametre.</p>
 
       <h2>Z praxe</h2>
-      <p>Obe veci sa riešili pre klientsky e-shop na Shoptete. Prieskum dokumentácie a doplnkov k farbám v kategórii skončil záverom, že natívne to nejde a doplnok na to nie je. Ostala jediná cesta: viesť každú farbu ako samostatný produkt. Pri príčine neobjednateľných variantov pomohol audit exportu, ktorý sme potom urobili súčasťou skriptov na import.</p>
+      <p>Oba problémy sme riešili pre klientsky e-shop. Farby v kategórii natívne nejdú, ostali samostatné produkty. Kontrolu exportu sme dali do skriptov na import.</p>
 
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Dajú sa v Shoptete zobraziť farby produktu v kategórii ako samostatné položky?</h3></summary>
-          <p class="faq__a">Natívne nie. Dlaždica je vždy jeden produkt. Najviac sa dá zapnúť ponuka variantov pod dlaždicou. Samostatné dlaždice dostanete iba vtedy, keď je každá farba samostatný produkt.</p>
+          <p class="faq__a">Natívne nie, dlaždica je vždy jeden produkt. Samostatné dlaždice dostanete iba vtedy, keď je každá farba samostatný produkt.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Pomôže doplnok Varianty jako samostatné produkty?</h3></summary>
-          <p class="faq__a">Do výpisu kategórie nie. Podľa jeho popisu prepája samostatné produkty v detaile produktu, kde si zákazník prepína farbu.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Čo prináša vedenie farby ako samostatného produktu?</h3></summary>
-          <p class="faq__a">Každá farba má vlastnú stránku, cenu, sklad a SEO. Pri existujúcich produktoch to znamená nové adresy, presmerovania a starostlivosť o kódy.</p>
+          <p class="faq__a">Do výpisu kategórie nie. Podľa popisu prepája produkty v detaile, kde si zákazník prepína farbu.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Prečo sa po importe nedá objednať variant produktu?</h3></summary>
-          <p class="faq__a">Jednou z príčin je zmiešanie variantov s rôznymi sadami variantných parametrov v jednom produkte. Zistíte to v exporte porovnaním vyplnených stĺpcov variant: v rámci jedného pairCode.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Ako sa takej chybe vyhnúť?</h3></summary>
-          <p class="faq__a">Všetky varianty jedného produktu majú mať rovnakú sadu parametrov, rovnaký pairCode a ísť pod sebou. Po každom importe, ktorý mení variantné parametre, spravte kontrolu exportu.</p>
+          <p class="faq__a">Jednou z príčin je zmiešanie variantov s rôznymi sadami parametrov v jednom produkte. Zistíte to v exporte porovnaním stĺpcov variant: v rámci jedného pairCode.</p>
         </details>
       </div>
       </div>

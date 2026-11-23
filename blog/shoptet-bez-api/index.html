@@ -125,7 +125,7 @@
           "name": "Má Shoptet API aj v bežnej tarife?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Podľa dokumentácie pre vývojárov je súkromný prístup k dátam e-shopu cez Shoptet API súčasťou tarify Premium a v štandardných tarifách nie je dostupný."
+            "text": "Nie. Podľa dokumentácie pre vývojárov je súkromné API súčasťou tarify Premium."
           }
         },
         {
@@ -133,7 +133,7 @@
           "name": "Dá sa Shoptet automatizovať bez API?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Áno, cez export a import produktov (XLSX, CSV alebo XML). Súbor môže upraviť skript alebo AI, pred nahratím ho skontrolujte a nahrávajte po malých dávkach."
+            "text": "Áno, cez export a import produktov (XLSX, CSV alebo XML). Súbor pred nahratím skontrolujte a nahrávajte po malých dávkach."
           }
         },
         {
@@ -141,23 +141,7 @@
           "name": "Čo sa stane s prázdnou bunkou pri importe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Podľa dokumentácie Shoptetu predvolene nič: prázdna bunka znamená „hodnotu nemeň“. Vymaže ju až zapnutá voľba na mazanie prázdnych hodnôt."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Oplatí sa ovládať administráciu Shoptetu skriptom cez prehliadač?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Iba ako doplnok tam, kde export a import nestačia. Je to krehké a Shoptet môže prístup zastaviť. Skript má pracovať pomaly a po zastavení sa na dlhšiu dobu odmlčať."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Potrebujem zálohu pred importom?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Je to rozumné odporúčanie, nie požiadavka Shoptetu. Uložený export pred importom vám dá stav, ku ktorému sa môžete vrátiť, ak sa niečo zle namapuje."
+            "text": "Nič, hodnota sa nezmení. Vymaže ju až zapnutá voľba na mazanie prázdnych hodnôt."
           }
         }
       ]
@@ -211,71 +195,55 @@
       <header class="in">
         <p class="kicker">Automatizácia</p>
         <h1 class="a-title">Ako automatizovať Shoptet, keď nemáte prístup k API</h1>
-        <p class="lede">Súkromné API k dátam e-shopu Shoptet podľa vlastnej dokumentácie ponúka iba v tarife Premium. Bez neho sa dá automatizovať cez export a import produktov: skript alebo AI upraví súbor, vy ho po malých dávkach nahráte späť. Ovládanie administrácie prehliadačom je krajné riešenie, ktoré treba robiť pomaly a s pauzou, ak ho Shoptet zastaví.</p>
+        <p class="lede">Súkromné API má Shoptet podľa vlastnej dokumentácie iba v tarife Premium. Bez neho sa dá automatizovať cez export a import produktov: skript alebo AI upraví súbor a vy ho po malých dávkach nahráte späť.</p>
         <div class="byline">
           <strong>Marcel Gavalier</strong><span class="dot"></span>
           <time datetime="2026-11-23">23. novembra 2026</time><span class="dot"></span>
-          <span>4 min čítania</span>
+          <span>2 min čítania</span>
         </div>
       </header>
 
       <div class="prose in" style="--i:2">
-      <h2>Čo Shoptet dáva podľa tarify</h2>
-      <p>Podľa <a href="https://developers.shoptet.com/">dokumentácie pre vývojárov</a> ponúka Shoptet Premium súkromný prístup k dátam e-shopu cez Shoptet API a tieto funkcie nie sú dostupné v štandardných tarifách. Ak teda API nemáte, nie je to chyba nastavenia. Rozhranie k vášmu e-shopu jednoducho nie je súčasťou tarify. Cenu Premium tarify v článku neuvádzam, aktuálny cenník je na webe Shoptetu.</p>
+      <h2>API je iba v Premium</h2>
+      <p>Podľa <a href="https://developers.shoptet.com/">dokumentácie pre vývojárov</a> je súkromné API súčasťou tarify Premium. V štandardných tarifách nie je. Ak ho nemáte, nie je to chyba nastavenia.</p>
 
-      <h2>Čo sa dá bez API: export a import</h2>
-      <p>Shoptet má <a href="https://podpora.shoptet.cz/import-produktu/">import produktov</a> zo súborov XLSX, CSV (UTF-8 alebo Windows-1250) a XML. Na to, aby ste sa nepopálili, treba poznať niekoľko pravidiel z jeho dokumentácie:</p>
+      <h2>Export a import</h2>
+      <p>Shoptet vie <a href="https://podpora.shoptet.cz/import-produktu/">importovať produkty</a> zo súborov XLSX, CSV a XML. Postup je jednoduchý: export, úprava skriptom alebo AI, kontrola a import. Pozor na tri pravidlá:</p>
       <ul>
-        <li><strong>Prázdna bunka znamená „nemeň“.</strong> Predvolene import prázdne hodnoty preskakuje. Ak zapnete voľbu na mazanie, prázdne bunky hodnoty vymažú. Chýbajúci stĺpec hodnotu tiež nemení.</li>
-        <li><strong>Nula a prázdno sú pri cene dve rôzne veci.</strong> Nula sa uloží ako cena nula.</li>
-        <li><strong>Varianty majú vlastné pravidlá.</strong> Povinný je stĺpec <code>pairCode</code>, všetky varianty jedného produktu ho musia mať rovnaký a musia ísť v tabuľke hneď pod sebou, inak sa načítajú ako samostatné duplicitné produkty.</li>
+        <li><strong>Prázdna bunka znamená „nemeň“.</strong> Vymaže ju až zapnutá voľba na mazanie.</li>
+        <li><strong>Nula nie je prázdno.</strong> Pri cene sa nula uloží ako cena nula.</li>
+        <li><strong>Varianty spája stĺpec <code>pairCode</code>.</strong> Varianty jedného produktu ho majú mať rovnaký a ísť hneď pod sebou. Inak vzniknú duplicitné produkty.</li>
       </ul>
-      <p>Na tomto základe sa dá postaviť celkom slušná automatizácia: export, úprava (skriptom alebo AI), kontrola zmien a import. Typicky takto riešite hromadné zmeny textov, cien alebo kategórií.</p>
 
-      <h2>Postup, ktorý je bezpečný</h2>
+      <h2>Bezpečný postup</h2>
       <ol>
-        <li><strong>Záloha pred každým importom.</strong> Uložte si export aktuálneho stavu s dátumom. Shoptet zálohu pred importom výslovne nevyžaduje, je to moje odporúčanie: keď sa import zle zmapuje, máte stav, ku ktorému sa viete vrátiť.</li>
-        <li><strong>Malá dávka najprv.</strong> Skúste desiatku produktov a skontrolujte výsledok v administrácii aj na webe, až potom celý súbor.</li>
-        <li><strong>Porovnanie pred a po.</strong> Po importe urobte nový export a porovnajte ho s pôvodným. Zmeniť sa majú iba stĺpce, ktoré ste chceli zmeniť.</li>
-        <li><strong>Importujte iba stĺpce, ktoré meníte.</strong> Podľa pravidla o chýbajúcich stĺpcoch to znižuje riziko, že prepíšete niečo, čo ste nechceli.</li>
+        <li>Pred importom si uložte export aktuálneho stavu. Shoptet to nevyžaduje, je to moje odporúčanie.</li>
+        <li>Najprv nahrajte asi desať produktov a skontrolujte ich.</li>
+        <li>Po importe urobte nový export a porovnajte ho s pôvodným.</li>
+        <li>Importujte iba stĺpce, ktoré meníte.</li>
       </ol>
 
-      <h2>Prehliadač riadený skriptom: hranice</h2>
-      <p>Niektoré veci sa dajú urobiť iba v administrácii, napríklad čítanie stránok, ktoré export neobsahuje. Dá sa to riešiť skriptom, ktorý ovláda prehliadač. Je to však najkrehkejšia cesta: administrácia nie je určená na strojové ovládanie, po zmene vzhľadu sa skript pokazí a Shoptet môže prístup zastaviť. Preto platí:</p>
-      <ul>
-        <li>Prehliadač používajte iba tam, kde export a import nestačia, a nie na hromadné zápisy.</li>
-        <li>Robte jednu vec po druhej, v pokojnom tempe, nie naraz vo viacerých reláciách.</li>
-        <li>Ak vás Shoptet zastaví, neskúšajte to hneď znova. Skript má prestať a počkať. Opakované pokusy o obídenie situáciu zhoršia a tento článok nemá ambíciu ukazovať, ako ochranu obchádzať.</li>
-        <li>Pracujte v čase, keď e-shop nie je pod záťažou, a prácu rozložte na menšie kroky.</li>
-      </ul>
+      <h2>Skript cez prehliadač</h2>
+      <p>Niektoré veci sú iba v administrácii. Skript, ktorý ovláda prehliadač, je však krehký a Shoptet môže prístup zastaviť. Používajte ho iba tam, kde export a import nestačia, a pracujte pomaly. Ak vás Shoptet zastaví, skript má prestať a počkať.</p>
 
       <h2>Z praxe</h2>
-      <p>Aplikácia pre klientsky e-shop s poľovníckymi potrebami na Shoptete pracuje s dátami hlavne cez export a import a časť vecí číta cez prehliadač. Po tom, čo jej Shoptet raz zastavil prístup, dostala ochrannú pauzu: po zastavení všetky automatické čítania stoja približne hodinu a pravidelné ranné úlohy sú naplánované mimo okna, v ktorom sa to stalo. Poučenie je jednoduché: automatizácia má vedieť sama prestať, nie naťahovať sa so systémom, ktorý nevlastníte.</p>
+      <p>Aplikácia pre klientsky e-shop pracuje hlavne cez export a import a časť dát číta cez prehliadač. Keď jej Shoptet raz zastavil prístup, dostala ochrannú pauzu: približne hodinu nečíta nič. Automatizácia má vedieť sama prestať.</p>
 
-      <h2>Kedy sa oplatí Premium</h2>
-      <p>Ak potrebujete oficiálne rozhranie, ktoré je určené na strojový prístup, a export a import vám už nestačia, je tarifa s API jediná podporovaná cesta. Rozhodnutie je o tom, koľko vás stojí ručná práca alebo krehké riešenie oproti rozdielu v cene tarify.</p>
+      <p>Ak potrebujete oficiálny strojový prístup, jediná podporovaná cesta je tarifa s API.</p>
 
       <h2>Najčastejšie otázky</h2>
       <div class="faq">
         <details class="faq__item" open>
           <summary class="faq__q"><h3>Má Shoptet API aj v bežnej tarife?</h3></summary>
-          <p class="faq__a">Podľa dokumentácie pre vývojárov je súkromný prístup k dátam e-shopu cez Shoptet API súčasťou tarify Premium a v štandardných tarifách nie je dostupný.</p>
+          <p class="faq__a">Nie. Podľa dokumentácie pre vývojárov je súkromné API súčasťou tarify Premium.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Dá sa Shoptet automatizovať bez API?</h3></summary>
-          <p class="faq__a">Áno, cez export a import produktov (XLSX, CSV alebo XML). Súbor môže upraviť skript alebo AI, pred nahratím ho skontrolujte a nahrávajte po malých dávkach.</p>
+          <p class="faq__a">Áno, cez export a import produktov (XLSX, CSV alebo XML). Súbor pred nahratím skontrolujte a nahrávajte po malých dávkach.</p>
         </details>
         <details class="faq__item">
           <summary class="faq__q"><h3>Čo sa stane s prázdnou bunkou pri importe?</h3></summary>
-          <p class="faq__a">Podľa dokumentácie Shoptetu predvolene nič: prázdna bunka znamená „hodnotu nemeň“. Vymaže ju až zapnutá voľba na mazanie prázdnych hodnôt.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Oplatí sa ovládať administráciu Shoptetu skriptom cez prehliadač?</h3></summary>
-          <p class="faq__a">Iba ako doplnok tam, kde export a import nestačia. Je to krehké a Shoptet môže prístup zastaviť. Skript má pracovať pomaly a po zastavení sa na dlhšiu dobu odmlčať.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="faq__q"><h3>Potrebujem zálohu pred importom?</h3></summary>
-          <p class="faq__a">Je to rozumné odporúčanie, nie požiadavka Shoptetu. Uložený export pred importom vám dá stav, ku ktorému sa môžete vrátiť, ak sa niečo zle namapuje.</p>
+          <p class="faq__a">Nič, hodnota sa nezmení. Vymaže ju až zapnutá voľba na mazanie prázdnych hodnôt.</p>
         </details>
       </div>
       </div>

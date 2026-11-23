@@ -16,7 +16,7 @@ Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písa
 | 1 | `ako-sa-objavit-v-odpovediach-chatgpt` | napísaný | `/seo-llm-optimalizacia/` |
 | 2 | `ako-automatizovat-fakturaciu-a-emaily` | napísaný | `/automatizacia/` |
 | 3 | `web-na-mieru-alebo-sablona` | návrh | `/tvorba-webu/` |
-| 4 | `ai-agent-alebo-obycajna-automatizacia` | návrh | `/ai-agenti/` |
+| 4 | `ai-agent-alebo-obycajna-automatizacia` | napísaný | `/ai-agenti/` |
 | 5 | `technicke-seo-maleho-webu-kontrolny-zoznam` | návrh | `/seo-llm-optimalizacia/` |
 
 ### 3. Web na mieru alebo šablóna: ako sa rozhodnúť
@@ -61,7 +61,7 @@ Tento súbor sa na web nenasadzuje (`.assetsignore` ho vynecháva). Postup písa
 
 Posledný beh blog-z-prace: 2026-11-23
 
-Postup je v skille `blog-z-prace` (gavalier-brain). Témy vznikli z práce za posledných 30 dní. Otázka je to, čo ľudia hľadajú; vlastná práca je v článku iba dôkaz. Dopyt: Google Ads cez DataForSEO, Slovensko, jazyk sk, priemer hľadaní za mesiac, merané 2026-11-23. SERP: Google, Slovensko, 2026-11-23. Našepkávač meraný nebol. Zdroj z práce pre klienta je tu anonymný (toto repo je verejné), presný zdroj je v braine. Meno klienta, ceny, interné čísla a mená ľudí idú do článku iba po výslovnom áno Marcela pri danom článku. Stav všetkých: kandidát, čaká na výber.
+Postup je v skille `blog-z-prace` (gavalier-brain). Témy vznikli z práce za posledných 30 dní. Otázka je to, čo ľudia hľadajú; vlastná práca je v článku iba dôkaz. Dopyt: Google Ads cez DataForSEO, Slovensko, jazyk sk, priemer hľadaní za mesiac, merané 2026-11-23. SERP: Google, Slovensko, 2026-11-23. Našepkávač meraný nebol. Zdroj z práce pre klienta je tu anonymný (toto repo je verejné), presný zdroj je v braine. Meno klienta, ceny, interné čísla a mená ľudí idú do článku iba po výslovnom áno Marcela pri danom článku. Stav: Marcel 2026-11-23 vybral všetky. Napísaných je 11 článkov (K3 ako návrh 4, K10 a K12 spolu): `skills-a-hooks-v-claude-code` (K1), `vibe-coding-a-softver-do-prevadzky` (K2), `ai-agent-alebo-obycajna-automatizacia` (K3), `web-na-cloudflare-zadarmo` (K4), `seo-audit-eshopu-s-ai` (K5), `domaci-server-bez-verejnej-ip` (K6, výnimka z pravidla o sieťových témach), `shoptet-bez-api` (K7), `ako-napisat-popis-produktu-pomocou-ai` (K8), `shoptet-sitemap-search-console` (K9), `varianty-v-shoptete` (K10 a K12), `ako-pomenovat-produkty-v-eshope` (K11).
 
 | # | Hlavná otázka | Dopyt | Služba |
 |---|---------------|-------|--------|

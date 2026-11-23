@@ -19,6 +19,17 @@ IČO: 47 786 825 · DIČ: 1080715911
 
 - [Ako sa objaviť v odpovediach ChatGPT a iných AI asistentov](https://www.gavalier.sk/blog/ako-sa-objavit-v-odpovediach-chatgpt/): ktoré crawlery OpenAI čo robia, čo nastaviť v robots.txt a ako písať text, ktorý vie AI použiť.
 - [Ako automatizovať fakturáciu a e-maily v malej firme](https://www.gavalier.sk/blog/ako-automatizovat-fakturaciu-a-emaily/): postup od zmapovania procesu po prvú automatizáciu a výpočet úspory.
+- [Čo sú skills a hooks v Claude Code a ako nimi naučím AI agenta svoj postup](https://www.gavalier.sk/blog/skills-a-hooks-v-claude-code/): ako Claude Code naučiť váš postup cez skill a vynútiť pravidlá cez hook.
+- [Čo je vibe coding a dá sa ním spraviť softvér, ktorý vydrží v prevádzke](https://www.gavalier.sk/blog/vibe-coding-a-softver-do-prevadzky/): kde vibe coding stačí, kde zlyháva a čo pridať, aby kód od AI vydržal.
+- [Čo je AI agent a čím sa líši od chatbota a od obyčajnej automatizácie](https://www.gavalier.sk/blog/ai-agent-alebo-obycajna-automatizacia/): čo je AI agent, kedy stačí obyčajná automatizácia a ako začať malým pilotom.
+- [Dá sa web hostovať na Cloudflare zadarmo a ako ho presunúť z bežného hostingu](https://www.gavalier.sk/blog/web-na-cloudflare-zadarmo/): kedy sa dá statický web hostovať na Cloudflare bez poplatku, aké sú limity a ako ho presunúť z bežného hostingu.
+- [Dokáže AI spraviť SEO audit e-shopu a čo má taký audit obsahovať](https://www.gavalier.sk/blog/seo-audit-eshopu-s-ai/): čo má obsahovať SEO audit e-shopu, čo z neho zvládne AI sama a prečo bez dát zo Search Console nestačí.
+- [Ako sprístupniť domáci server z internetu bez verejnej IP adresy](https://www.gavalier.sk/blog/domaci-server-bez-verejnej-ip/): ako sprístupniť domáci server cez Cloudflare Tunnel a čo nikdy nesprístupniť bez prihlásenia.
+- [Ako automatizovať Shoptet, keď nemáte prístup k API](https://www.gavalier.sk/blog/shoptet-bez-api/): čo sa dá v Shoptete automatizovať cez export a import a ako pri tom pracovať šetrne a so zálohou.
+- [Ako napísať popis produktu do e-shopu pomocou AI, aby nebol kópiou výrobcu](https://www.gavalier.sk/blog/ako-napisat-popis-produktu-pomocou-ai/): od overených údajov cez pevnú stavbu popisu a zadanie pre AI až po kontrolu faktov.
+- [Ako často Shoptet aktualizuje sitemap a ako ju poslať do Search Console](https://www.gavalier.sk/blog/shoptet-sitemap-search-console/): ako vzniká sitemap v Shoptete, ako ju odoslať do Search Console a čo odoslanie nezaručí.
+- [Varianty v Shoptete: farby v kategórii a varianty, ktoré sa nedajú objednať](https://www.gavalier.sk/blog/varianty-v-shoptete/): prečo sa farby v kategórii nedajú zobraziť ako samostatné dlaždice a ako nájsť varianty, ktoré sa nedajú objednať.
+- [Ako pomenovať produkty v e-shope, aby ich ľudia našli](https://www.gavalier.sk/blog/ako-pomenovat-produkty-v-eshope/): poradie značky, modelu a druhu tovaru, čo do názvu nepatrí a ako premenovať existujúce produkty po dávkach.
 - [Všetky články](https://www.gavalier.sk/blog/)
 
 ## Záruka

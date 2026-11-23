@@ -253,7 +253,7 @@
       <p>Ak službu potrebujete len vy alebo úzka skupina vašich ľudí a nie je určená verejnosti, nevystavujte ju vôbec a pripájajte sa cez VPN. Verejná adresa má zmysel tam, kde sa na službu musia dostať cudzí ľudia alebo programy mimo vašej siete.</p>
 
       <h2>Z praxe</h2>
-      <p>Na vlastnom serveri (bez verejnej IP) mám tunel pre dve služby. Panel na správu a sledovanie je za prihlásením cez Cloudflare Access. Druhú službu volá program, ktorý neumie poslať hlavičky Access, preto je bez Access, ale chránená vlastným kľúčom: bez neho odpovie chybou 401, voľne dostupné je iba hlásenie o stave. Pôvodne bežala na dočasnej adrese; v novembri 2026 som ju presunul na stálu adresu na vlastnej doméne cez ten istý tunel, ktorý už bežal. Program <code>cloudflared</code> sa aktualizuje pravidelne a verzie sledujem. Neoveril som, ako sa tunel správa pri veľkom objeme prenosu, ani koľko stojí tunel mimo bezplatného použitia, preto cenu neuvádzam.</p>
+      <p>Na vlastnom serveri bez verejnej IP mám služby sprístupnené cez tunel. Jedna z nich pôvodne bežala na dočasnej adrese; v novembri 2026 som ju presunul na stálu adresu na vlastnej doméne cez ten istý tunel, ktorý už bežal. Program <code>cloudflared</code> aktualizujem pravidelne a verzie sledujem. Neoveril som, ako sa tunel správa pri veľkom objeme prenosu, ani koľko stojí tunel mimo bezplatného použitia, preto cenu neuvádzam.</p>
 
       <h2>Kontrolný zoznam</h2>
       <ul>

@@ -46,6 +46,8 @@ body {
 }
 ::selection { background: var(--accent); color: #fff; }
 a { color: inherit; text-decoration: none; }
+/* layout.css (kvôli päte webu) zvýrazňuje každý strong modrým boxom; blog zvýraznenia nemá */
+strong { background: none; color: inherit; padding: 0; line-height: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
 .wrap { width: 100%; max-width: calc(var(--col) + 3rem); margin: 0 auto; padding: 0 1.5rem; }

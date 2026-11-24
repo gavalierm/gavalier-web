@@ -161,3 +161,17 @@
     display: block;
   }
 }
+
+/* Stránka /referencie/: všetky citácie v mriežke namiesto karuselu */
+.testimonials__rail--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  overflow: visible;
+  padding: var(--space-2) 0 var(--space-6);
+  margin-top: var(--space-8);
+  scroll-snap-type: none;
+}
+
+.testimonials__rail--grid .testimonials__card {
+  width: auto;
+}

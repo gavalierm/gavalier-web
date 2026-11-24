@@ -57,7 +57,8 @@
 
 /* Massive headline */
 .hero__title {
-  font-size: clamp(2.75rem, 11vw, 7rem);
+  /* najmenšie písmo tak, aby sa „Váš človek na“ zmestilo do riadku aj na 320 px */
+  font-size: clamp(2.25rem, 11vw, 7rem);
   font-weight: var(--font-black);
   line-height: 0.95;
   letter-spacing: -0.045em;
@@ -65,6 +66,11 @@
   margin: 0;
 }
 
+
+/* zlom nadpisu je iba pevný <br>, riadok sa sám nezalomí */
+.hero__line {
+  white-space: nowrap;
+}
 
 /* ROLES STRIP — full-bleed horizontal lines that visually cut the portrait */
 .hero__roles-strip {

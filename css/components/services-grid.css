@@ -198,7 +198,7 @@
   .svc__row {
     min-height: 0;
     row-gap: var(--space-5, 1.25rem);
-    padding: var(--space-6, 1.5rem) var(--space-2, 0.5rem);
+    padding: var(--space-6, 1.5rem);
   }
 }
 

@@ -52,7 +52,10 @@
 
   <!-- CSS blogu (samostatné, bez ostatných štýlov webu) -->
   <link rel="stylesheet" href="/css/components/site-nav.css?v=20261124a">
-  <link rel="stylesheet" href="/css/components/blog.css?v=20261123b">
+  <link rel="stylesheet" href="/css/variables.css?v=20260514">
+  <link rel="stylesheet" href="/css/layout.css?v=20260514">
+  <link rel="stylesheet" href="/css/components/footer.css?v=20261124a">
+  <link rel="stylesheet" href="/css/components/blog.css?v=20261124b">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -351,32 +354,71 @@ description: Použi, keď sa nasadzuje web na ostrú doménu.
     </section>
   </main>
 
-  <footer class="foot" id="contact">
-    <div class="wrap foot__in">
-      <nav aria-label="Služby">
-        <span class="foot__title">Služby</span>
-        <ul>
+  <section id="contact" class="section section--narrow footer">
+    <div class="container">
+
+      <header class="section-lead">
+        <h2 class="section-lead__headline"><span class="headline-mark">Zavolajte.</span></h2>
+      </header>
+
+      <div class="footer__channels">
+        <a href="tel:+421915697915" class="footer__channel">
+          <span class="footer__channel-label">Telefón</span>
+          <span class="footer__channel-value">+421 915 697 915</span>
+        </a>
+        <a href="mailto:marcel@gavalier.sk" class="footer__channel">
+          <span class="footer__channel-label">Email</span>
+          <span class="footer__channel-value">marcel@gavalier.sk</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__links">
+        <div class="site-footer__id">
+          <div class="footer__identity">
+            <p class="footer__name">Marcel Gavalier</p>
+            <p class="footer__role">Coder · AI Engineer · Audio \ Video Engineer</p>
+          </div>
+          <dl class="footer__meta">
+            <div class="footer__meta-row">
+              <dt>Sídlo</dt>
+              <dd>Jarmočná 30, 058 01 Poprad</dd>
+            </div>
+            <div class="footer__meta-row">
+              <dt>IČO</dt>
+              <dd>47 786 825</dd>
+            </div>
+            <div class="footer__meta-row">
+              <dt>DIČ</dt>
+              <dd>1080715911</dd>
+            </div>
+          </dl>
+        </div>
+        <nav aria-label="Služby">
+          <span class="footer__links-title">Služby</span>
+          <ul>
           <li><a href="/ai-poradenstvo/">AI poradenstvo pre firmy</a></li>
           <li><a href="/automatizacia/">Automatizácia firemných procesov</a></li>
           <li><a href="/ai-agenti/">AI agenti pre firmy</a></li>
           <li><a href="/tvorba-webu/">Tvorba webu na mieru</a></li>
-          <li><a href="/seo-llm-optimalizacia/">SEO optimalizácia webu</a></li>
-          <li><a href="/eventy/">Eventy a live streaming</a></li>
-          <li><a href="/it-siete/">IT siete cez partnerov</a></li>
+          <li><a href="/seo-llm-optimalizacia/">SEO optimalizácia webu pre Google a AI</a></li>
+          <li><a href="/eventy/">Zvuk, video a live streaming na podujatia</a></li>
+          <li><a href="/it-siete/">IT siete a bezpečnosť</a></li>
           <li><a href="/ako-pracujem/">Ako pracujem</a></li>
-        </ul>
-      </nav>
-      <div>
-        <span class="foot__title">Kontakt</span>
-        <ul>
-          <li><a href="tel:+421915697915">+421 915 697 915</a></li>
-          <li><a href="mailto:marcel@gavalier.sk">marcel@gavalier.sk</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Blog">
+          <span class="footer__links-title">Z blogu</span>
+          <ul>
+          <li><a href="/blog/ako-sa-objavit-v-odpovediach-chatgpt/">Ako sa objaviť v odpovediach ChatGPT</a></li>
+          <li><a href="/blog/ako-automatizovat-fakturaciu-a-emaily/">Automatizácia fakturácie a e&#8209;mailov</a></li>
           <li><a href="/blog/">Všetky články</a></li>
-        </ul>
-      </div>
-      <div>
-        <span class="foot__title">Marcel Gavalier</span>
-        <p class="foot__legal">Jarmočná 30, 058 01 Poprad<br>IČO 47 786 825<br>DIČ 1080715911</p>
+          </ul>
+        </nav>
       </div>
     </div>
   </footer>

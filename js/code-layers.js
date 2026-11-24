@@ -18,7 +18,8 @@
     if (e.pointerType !== 'mouse') return;
     ptr.x = e.clientX; ptr.y = e.clientY; ptr.t = performance.now();
   }, { passive: true });
-  document.documentElement.addEventListener('mouseleave', () => { ptr.x = ptr.y = -9999; });
+  // odchod z okna: kurzor zabudni celý (aj čas), inak by -9999 vošlo do náklonu hero ako obrovský uhol
+  document.documentElement.addEventListener('mouseleave', () => { ptr.x = ptr.y = -9999; ptr.t = -1e9; });
   const live = now => fine && now - ptr.t < 4000;
   const tickers = [];
   const loop = now => { for (const f of tickers) f(now); requestAnimationFrame(loop); };
@@ -167,8 +168,10 @@
       lastKey = key;
       if (hover && hover !== order[2] && open && now - hoverSince > DWELL && now > cooldown) { cycleTo(hover); cooldown = now + 500; hover = null; }
 
-      const mxT = on && target ? (ptr.x + scrollX - box.l) / box.w - .5 : 0;
-      const myT = on && target ? (ptr.y + scrollY - box.t) / box.h - .5 : 0;
+      // náklon iba z polohy v hero, orezaný na okraj (kurzor mimo hero nesmie hero pretočiť)
+      const clamp = v => Math.max(-.5, Math.min(.5, v));
+      const mxT = on && target ? clamp((ptr.x + scrollX - box.l) / box.w - .5) : 0;
+      const myT = on && target ? clamp((ptr.y + scrollY - box.t) / box.h - .5) : 0;
       const zt = p => (order.indexOf(p) - 1) * 130 * s;
       const waiting = hover && hover !== order[2] && open;
       const settled = s === target && tx === mxT && ty === myT && planes.every(p => z.get(p) === zt(p));

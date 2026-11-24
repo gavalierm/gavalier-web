@@ -58,17 +58,6 @@ html {
   padding: 1rem 1.5rem;
 }
 
-.site-header__eye {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: none;
-  height: 100%;
-  width: auto;
-  display: block;
-  user-select: none;
-  pointer-events: none;
-}
 
 .site-header__burger {
   position: absolute;
@@ -370,12 +359,6 @@ body.nav-open .theme-toggle {
     display: inline-flex;
   }
 
-  .site-header__eye {
-    top: 0;
-    right: 0;
-    transform: none;
-    height: 100%;
-  }
 
   .site-header__bar {
     padding-right: calc(var(--sn-h) * 700 / 171 + 1rem);
@@ -526,10 +509,6 @@ body.nav-open .theme-toggle {
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-  .site-header__eye {
-    display: none;
-  }
-
   .site-header__bar {
     padding-right: 1.5rem;
   }
@@ -554,32 +533,11 @@ body.nav-open .theme-toggle {
   }
 }
 
-/* Mobil: oko vyplní výšku hlavičky, ale orezané sprava, aby neprekrylo meno */
+/* Mobil: meno vľavo hneď za hamburgerom */
 @media (max-width: 1023px) {
   .site-header__bar {
     justify-content: flex-start;
     padding-left: 4.5rem;
-  }
-
-  .site-header__eye {
-    max-width: 30vw;
-    object-fit: cover;
-    object-position: right center;
-  }
-}
-
-/* Oko v hlavičke: na stránke s hero iba vtedy, keď je hero mimo obrazovky */
-.site-header__eye {
-  transition: opacity 0.25s ease;
-}
-
-.site-header.has-hero:not(.hero-out) .site-header__eye {
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-header__eye {
-    transition: none;
   }
 }
 
@@ -591,13 +549,5 @@ body.nav-open .theme-toggle {
 @media (min-width: 1024px) {
   .theme-toggle {
     top: calc(4rem + 0.75rem);
-  }
-}
-
-/* Mobil: prepínač témy je vpravo v hlavičke, oko (fotka) ide vedľa neho */
-@media (max-width: 1023px) {
-  .site-header--theme .site-header__eye {
-    right: 3.25rem;
-    max-width: 25vw;
   }
 }

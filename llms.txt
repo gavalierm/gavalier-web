@@ -16,7 +16,7 @@ IČO: 47 786 825 · DIČ: 1080715911
 - [SEO optimalizácia webu](https://www.gavalier.sk/seo-llm-optimalizacia/): SEO pre Google aj AI asistentov: štruktúrované dáta, sémantické HTML, sitemap, pravidlá pre crawlery a meranie.
 - [Zvuk, video a live streaming na podujatia](https://www.gavalier.sk/eventy/): konferencie, koncerty a firemné akcie; multi-cam produkcia, live stream kamkoľvek, FOH zvuk, DMX svetlá a akustické úpravy, kompletná technika aj obsluha z jedného miesta.
 - [IT siete a bezpečnosť](https://www.gavalier.sk/it-siete/): Marcel siete a infraštruktúru sám nerobí; zoženie preverených partnerov, koordinuje ich, skontroluje návrh a ručí za nich. Jeden kontakt, jedna zodpovednosť.
-- [Ako pracujem](https://www.gavalier.sk/ako-pracujem/): záruka (štyri body), cena a postup spolupráce v štyroch krokoch.
+- [Ako pracujem](https://www.gavalier.sk/ako-pracujem/): postup v troch krokoch a záruka (štyri body).
 
 ## Blog
 
@@ -37,7 +37,7 @@ IČO: 47 786 825 · DIČ: 1080715911
 
 ## Záruka
 
-Podrobne na stránke https://www.gavalier.sk/ako-pracujem/ (záruka, cena, postup).
+Podrobne na stránke https://www.gavalier.sk/ako-pracujem/ (postup, záruka).
 
 Toto je hlavný dôvod, prečo sa klienti rozhodnú. Platia všetky štyri body naraz:
 

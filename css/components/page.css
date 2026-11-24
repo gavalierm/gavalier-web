@@ -471,56 +471,6 @@
   margin: 0 0 var(--space-3);
 }
 
-/* Odkazy v pätičke (služby, blog) */
-.footer__links {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-7);
-  margin: 0 0 var(--space-12);
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--theme-border-color);
-}
-
-@media (min-width: 640px) {
-  .footer__links {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
-  }
-}
-
-.footer__links-title {
-  display: block;
-  margin: 0 0 var(--space-4);
-  font-size: var(--text-micro);
-  font-weight: var(--font-bold);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--theme-text-primary);
-}
-
-.footer__links ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer__links li {
-  margin: 0 0 var(--space-3);
-}
-
-.footer__links a {
-  font-size: var(--text-body);
-  font-weight: var(--font-bold);
-  color: var(--theme-text-primary);
-  text-decoration: none;
-}
-
-.footer__links a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
 /* Tlačidlá .link-arrow v texte stránky: biely text na čiernom, nie čierny ako odkazy v .prose */
 .prose a.link-arrow {
   color: var(--theme-bg);

@@ -360,10 +360,6 @@ body.nav-open .theme-toggle {
   }
 
 
-  .site-header__bar {
-    padding-right: calc(var(--sn-h) * 700 / 171 + 1rem);
-  }
-
   /* Menu */
   .site-menu {
     display: block;
@@ -505,12 +501,6 @@ body.nav-open .theme-toggle {
     font-weight: 500;
     letter-spacing: 0;
     color: var(--sn-muted);
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .site-header__bar {
-    padding-right: 1.5rem;
   }
 }
 

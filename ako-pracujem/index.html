@@ -56,8 +56,8 @@
   <link rel="stylesheet" href="/css/components/site-nav.css?v=20261124b">
   <link rel="stylesheet" href="/css/components/footer.css?v=20261124a">
   <link rel="stylesheet" href="/css/sections/experience.css?v=20261124b">
-  <link rel="stylesheet" href="/css/sections/how-it-works.css?v=20260514">
   <link rel="stylesheet" href="/css/components/page.css?v=20261124a">
+  <link rel="stylesheet" href="/css/components/services-grid.css?v=20261124a">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -235,7 +235,7 @@
 
           <li class="experience__area">
             <span class="experience__area-index">03</span>
-            <h3 class="experience__area-name">Vyriešim to</h3>
+            <h3 class="experience__area-name">Pustím sa do práce</h3>
             <p class="experience__area-skills">
               Ak vám návrh sedí, ideme. Ak nie, nič sa nedeje: hovor aj návrh riešenia sú <strong>zadarmo a nezáväzné</strong>.
             </p>
@@ -247,32 +247,48 @@
     </section>
 
     <!-- Pricing -->
-    <section class="section section--narrow how-it-works" id="ako-to-funguje" data-section="ako-to-funguje">
+    <section class="section section--narrow experience" id="ako-to-funguje" data-section="ako-to-funguje">
       <div class="container">
 
         <header class="section-lead">
           <h2 class="section-lead__headline"><span class="headline-mark">Koľko to stojí?</span></h2>
         </header>
 
-        <div class="how-it-works__body">
+        <ol class="experience__areas">
 
-          <p class="how-it-works__para">
-            Malá vec je pre mňa rovnako <strong>dôležitý problém</strong> ako veľký projekt.
-          </p>
+          <li class="experience__area">
+            <span class="experience__area-index">01</span>
+            <h3 class="experience__area-name">Aj malá vec</h3>
+            <p class="experience__area-skills">
+              Drobnosť je pre mňa rovnako <strong>dôležitý problém</strong> ako veľký projekt.
+            </p>
+          </li>
 
-          <blockquote class="how-it-works__quote">
-            Rozpočet mi pokojne povedzte hneď. Nie preto, aby som podľa neho nacenil &ndash; ale aby som vedel, akú verziu <strong>má zmysel navrhnúť</strong>.
-          </blockquote>
+          <li class="experience__area">
+            <span class="experience__area-index">02</span>
+            <h3 class="experience__area-name">Rozpočet povedzte hneď</h3>
+            <p class="experience__area-skills">
+              Nie preto, aby som podľa neho nacenil, ale aby som vedel, akú verziu <strong>má zmysel navrhnúť</strong>.
+            </p>
+          </li>
 
-          <p class="how-it-works__para">
-            Najprv spravíme verziu, ktorá rieši to najdôležitejšie a <strong>funguje hneď</strong>. Zvyšok dorobíme, keď ho naozaj treba.
-          </p>
+          <li class="experience__area">
+            <span class="experience__area-index">03</span>
+            <h3 class="experience__area-name">Najprv to hlavné</h3>
+            <p class="experience__area-skills">
+              Prvá verzia rieši to najdôležitejšie a <strong>funguje hneď</strong>. Zvyšok dorobíme, keď ho naozaj treba.
+            </p>
+          </li>
 
-          <p class="how-it-works__closer">
-            AI zrazila cenu práce, preto veľa vecí dnes <strong>stojí menej</strong> než pred dvoma rokmi.
-          </p>
+          <li class="experience__area">
+            <span class="experience__area-index">04</span>
+            <h3 class="experience__area-name">AI zrazila ceny</h3>
+            <p class="experience__area-skills">
+              Veľa vecí dnes <strong>stojí menej</strong> než pred dvoma rokmi.
+            </p>
+          </li>
 
-        </div>
+        </ol>
 
       </div>
     </section>
@@ -324,19 +340,23 @@
       </div>
     </section>
 
-    <section class="section section--narrow">
-    <div class="container">
-    <div class="prose">
-      <h2>Kam ďalej</h2>
-      <ul class="related">
-        <li><a href="/ai-poradenstvo/">AI poradenstvo pre firmy<span class="related__desc">Čo sa vo firme oplatí.</span></a></li>
-        <li><a href="/automatizacia/">Automatizácia firemných procesov<span class="related__desc">Skript namiesto ručného klikania.</span></a></li>
-        <li><a href="/tvorba-webu/">Tvorba webu na mieru<span class="related__desc">Weby a webové aplikácie.</span></a></li>
-        <li><a href="/eventy/">Zvuk, video a live streaming na podujatia<span class="related__desc">Technika aj obsluha z jedného miesta.</span></a></li>
-        <li><a href="/it-siete/">IT siete a bezpečnosť cez preverených partnerov<span class="related__desc">Jeden kontakt, jedna zodpovednosť.</span></a></li>
-      </ul>
-    </div>
-    </div>
+    <!-- Kam ďalej — rozcestník ako na úvodnej stránke -->
+    <section class="section services" id="kam-dalej">
+      <div class="container">
+
+        <header class="section-lead">
+          <h2 class="section-lead__headline"><span class="headline-mark">Kam ďalej</span></h2>
+        </header>
+
+        <ul class="svc">
+          <li class="svc__item"><a class="svc__row" href="/ai-poradenstvo/"><span class="svc__meta"><span class="svc__index">01</span><span class="svc__group">AI a automatizácie</span></span><span class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="svc__body"><h3 class="svc__name"><span class="svc__mark">AI poradenstvo pre firmy</span></h3><span class="svc__text">Čo sa vo firme oplatí.</span></span></a></li>
+          <li class="svc__item"><a class="svc__row" href="/automatizacia/"><span class="svc__meta"><span class="svc__index">02</span><span class="svc__group">AI a automatizácie</span></span><span class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="svc__body"><h3 class="svc__name"><span class="svc__mark">Automatizácia firemných procesov</span></h3><span class="svc__text">Skript namiesto ručného klikania.</span></span></a></li>
+          <li class="svc__item"><a class="svc__row" href="/tvorba-webu/"><span class="svc__meta"><span class="svc__index">03</span><span class="svc__group">Web</span></span><span class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="svc__body"><h3 class="svc__name"><span class="svc__mark">Tvorba webu na mieru</span></h3><span class="svc__text">Weby a webové aplikácie.</span></span></a></li>
+          <li class="svc__item"><a class="svc__row" href="/eventy/"><span class="svc__meta"><span class="svc__index">04</span><span class="svc__group">Technika</span></span><span class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="svc__body"><h3 class="svc__name"><span class="svc__mark">Zvuk, video a live streaming na podujatia</span></h3><span class="svc__text">Technika aj obsluha z jedného miesta.</span></span></a></li>
+          <li class="svc__item"><a class="svc__row" href="/it-siete/"><span class="svc__meta"><span class="svc__index">05</span><span class="svc__group">Technika</span></span><span class="svc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="svc__body"><h3 class="svc__name"><span class="svc__mark">IT siete a bezpečnosť cez preverených partnerov</span></h3><span class="svc__text">Jeden kontakt, jedna zodpovednosť.</span></span></a></li>
+        </ul>
+
+      </div>
     </section>
   </main>
 

@@ -117,3 +117,28 @@
 .link-arrow:hover::after {
   transform: translateX(4px);
 }
+
+/* Skupina tlačidiel (.section-nav, .page-cta): medzera aj pri zalomení;
+   na mobile pod sebou, na celú šírku, text v strede */
+.section-nav:has(.link-arrow),
+.page-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+@media (max-width: 639px) {
+  .section-nav:has(.link-arrow),
+  .page-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+  }
+
+  .section-nav .link-arrow,
+  .page-cta .link-arrow {
+    justify-content: center;
+    align-self: stretch;
+  }
+}
